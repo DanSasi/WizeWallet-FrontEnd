@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionHistoryActivity">
+
+    <TextView
+        android:id="@+id/tv_textTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        style="@style/contactFont"
+        android:text="Transaction History"
+        android:textColor="#082431"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/img_back_arrow_transactionHistory"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="48dp"
+        android:background="#fff"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_textTransaction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_textTransaction"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/et_searchTransaction"
+        style="@style/contactFont"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/search_bar"
+        android:drawableEnd="@drawable/ic_search"
+        android:hint="Search"
+        android:autofillHints="name"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:textColor="#000"
+        android:textColorHint="#2C3A4B"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_all_transactions"
+        style="@style/contactFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="261dp"
+        android:text="All Transactions"
+        android:textColor="#082431"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_searchTransaction"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_transactionHistory"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="44dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_all_transactions"
+        app:layout_constraintTop_toBottomOf="@+id/tv_all_transactions"
+        app:layout_constraintVertical_bias="0.081" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

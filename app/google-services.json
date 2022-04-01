@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "227447347987",
+    "project_id": "hit18-96124",
+    "storage_bucket": "hit18-96124.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227447347987:android:6fb30a4d16d568986c98e6",
+        "android_client_info": {
+          "package_name": "com.hit.digitalwallethitapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227447347987-ppbnfr9mjp63em4d7o5c7eqq7fcf8qes.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq16bDDfxt1KH1SWQZpv8iAfkrQQt3BAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227447347987-ppbnfr9mjp63em4d7o5c7eqq7fcf8qes.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
