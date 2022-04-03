@@ -21,7 +21,7 @@ public class TopUpScreen extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TopUpScreen.this,BalanceScreen.class);
+                Intent intent = new Intent(TopUpScreen.this,getParentActivityIntent().getClass());
                 startActivity(intent);
             }
         });

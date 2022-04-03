@@ -27,7 +27,7 @@ public class WithdrawScreen extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(WithdrawScreen.this,MenuScreen.class);
+                Intent intent = new Intent(WithdrawScreen.this,ElectricityBillScreen.class);
                 startActivity(intent);
             }
         });

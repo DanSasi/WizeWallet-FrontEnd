@@ -13,6 +13,7 @@ public class LoginActivity extends AppCompatActivity {
 //    Button loginButton;
     TabLayout tabLayout;
     ViewPager viewPager;
+    CustomSpinner userSpinner;
     FloatingActionButton fb,google,twitter;
     float v=0;
 
@@ -32,6 +33,10 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("SignUp"));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        userSpinner = findViewById(R.id.logintab_userOptin);
+
+
+
 
         final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this,tabLayout.getTabCount());
         viewPager.setAdapter(adapter);

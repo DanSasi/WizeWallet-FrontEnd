@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,8 +21,8 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
     RecyclerView recyclerView;
     private BalanceListAdapter.BalanceViewHolder.RecycleViewClickListener clickListener;
 
-    ImageView transfer, topup, more;
-    TextView transferText, topupText, moreText;
+    ImageView transfer, topup, more , tips;
+    TextView transferText, topupText, moreText , tipText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,15 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
                 startActivity(gotoTopup);
             }
         });
+        tips = findViewById(R.id.imageView6);
+        tips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoTips = new Intent(BalanceScreen.this,ElectricityBillScreen.class);
+                startActivity(gotoTips);
+
+            }
+        });
 
         more = findViewById(R.id.imageView8);
         more.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +69,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         transferText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTransferText = new Intent(BalanceScreen.this, ContactListScreen.class);
+                Intent gotoTransferText = new Intent(BalanceScreen.this,BalanceScreen.class);
                 startActivity(gotoTransferText);
             }
         });
@@ -68,6 +80,15 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
             public void onClick(View v) {
                 Intent gotoTopupText = new Intent(BalanceScreen.this, TopUpScreen.class);
                 startActivity(gotoTopupText);
+            }
+        });
+
+        tipText = findViewById(R.id.textView8);
+        tipText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoTipText = new Intent(BalanceScreen.this, ElectricityBillScreen.class);
+                startActivity(gotoTipText);
             }
         });
 

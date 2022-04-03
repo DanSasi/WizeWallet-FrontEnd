@@ -33,7 +33,7 @@ public class ElectricityBillScreen extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent( ElectricityBillScreen.this,SendMoneyScreen.class);
+                Intent intent =new Intent( ElectricityBillScreen.this,BalanceScreen.class);
                 startActivity(intent);
             }
         });

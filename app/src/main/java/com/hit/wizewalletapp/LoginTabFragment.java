@@ -48,7 +48,7 @@ public class LoginTabFragment extends Fragment {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),ContactListScreen.class);
+                Intent intent = new Intent(getActivity(),BalanceScreen.class);
                 intent.putExtra("value", 1);
                 startActivity(intent);
             }
