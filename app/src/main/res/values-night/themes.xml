@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.DigitalWalletHITAPP" parent="Theme.AppCompat.NoActionBar">
+    <style name="Theme.WizeWallet." parent="Theme.AppCompat.NoActionBar">
 
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>

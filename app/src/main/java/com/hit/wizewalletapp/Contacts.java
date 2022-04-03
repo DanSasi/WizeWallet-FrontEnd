@@ -1,4 +1,4 @@
-package com.hit.digitalwallethitapp;
+package com.hit.wizewalletapp;
 
 public class Contacts {
     String userName, accNo;

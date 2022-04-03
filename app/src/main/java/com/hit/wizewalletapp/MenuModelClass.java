@@ -1,4 +1,4 @@
-package com.hit.digitalwallethitapp;
+package com.hit.wizewalletapp;
 
 public class MenuModelClass {
     int id,img;

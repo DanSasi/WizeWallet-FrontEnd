@@ -10,7 +10,7 @@
 
     <!--changes-->
 
-    <com.hit.digitalwallethitapp.CustomSpinner
+    <com.hit.wizewalletapp.CustomSpinner
         android:id="@+id/spinner_mambers"
         android:layout_width="match_parent"
         android:layout_height="60dp"

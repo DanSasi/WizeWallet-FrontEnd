@@ -1,20 +1,11 @@
-package com.hit.digitalwallethitapp;
+package com.hit.wizewalletapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-
-import java.util.ArrayList;
-
-import android.os.Bundle;
 import android.widget.ImageView;
 
 public class ElectricityBillScreen extends AppCompatActivity {

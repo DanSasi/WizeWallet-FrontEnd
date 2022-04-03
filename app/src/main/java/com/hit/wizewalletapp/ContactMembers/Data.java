@@ -1,6 +1,6 @@
-package com.hit.digitalwallethitapp.ContactMembers;
+package com.hit.wizewalletapp.ContactMembers;
 
-import com.hit.digitalwallethitapp.R;
+import com.hit.wizewalletapp.R;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.hit.digitalwallethitapp;
+package com.hit.wizewalletapp;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MenuAdapterClass extends RecyclerView.Adapter<MenuAdapterClass.ListViewHolder>{

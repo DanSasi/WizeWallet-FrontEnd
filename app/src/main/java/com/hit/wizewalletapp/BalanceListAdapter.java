@@ -1,4 +1,4 @@
-package com.hit.digitalwallethitapp;
+package com.hit.wizewalletapp;
 
 import android.content.Context;
 import android.view.LayoutInflater;

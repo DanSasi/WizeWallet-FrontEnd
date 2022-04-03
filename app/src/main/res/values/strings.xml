@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DigitalWalletHITAPP</string>
+    <string name="app_name">WizeWallet</string>
 
     <string-array name="account_types">
         <item>Personal Account</item>

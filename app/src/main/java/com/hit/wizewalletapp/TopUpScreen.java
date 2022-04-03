@@ -1,4 +1,4 @@
-package com.hit.digitalwallethitapp;
+package com.hit.wizewalletapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 

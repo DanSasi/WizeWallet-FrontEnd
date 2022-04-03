@@ -1,4 +1,4 @@
-package com.hit.digitalwallethitapp;
+package com.hit.wizewalletapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,11 +9,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 
 
-import com.ebanx.swipebtn.OnStateChangeListener;
 import com.ebanx.swipebtn.SwipeButton;
-import com.hit.digitalwallethitapp.ContactMembers.Data;
-
-import java.util.ArrayList;
+import com.hit.wizewalletapp.ContactMembers.Data;
 
 
 public class SendMoneyScreen extends AppCompatActivity implements CustomSpinner.OnSpinnerEventsListener  {

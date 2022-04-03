@@ -1,4 +1,4 @@
-package com.hit.digitalwallethitapp;
+package com.hit.wizewalletapp;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.hit.digitalwallethitapp.ContactMembers.members;
+import com.hit.wizewalletapp.ContactMembers.members;
 
 import java.util.List;
 
