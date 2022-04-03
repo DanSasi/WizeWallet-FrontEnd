@@ -102,16 +102,6 @@
             android:textSize="14sp"
             android:textStyle="normal" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="175sp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:letterSpacing="0.1"
-            android:textColor="@color/topic_black"
-            android:text="Customize" />
-
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
