@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Fragments;
 
 
 import android.os.Bundle;
@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.hit.wizewalletapp.Activities.LoginActivity;
+import com.hit.wizewalletapp.R;
 
 public class SignupTabFragment extends Fragment {
 
@@ -91,23 +93,23 @@ public class SignupTabFragment extends Fragment {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-//        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.signup_tab_fragment, container, false);
-//
-//
-//        login = root.findViewById(R.id.SignUp);
-//
-//        login.setOnClickListener(new  View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                ( (LoginActivity)getActivity()).setCurrentItem(0);
-//            }
-//        });
-//        return root;
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.signup_tab_fragment, container, false);
 
-        objectSignUpFragment =  (ViewGroup) inflater.inflate(R.layout.signup_tab_fragment, container, false);
 
-        attachToXML();
-        return objectSignUpFragment;
+        login = root.findViewById(R.id.SignUp);
 
+        login.setOnClickListener(new  View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ( (LoginActivity)getActivity()).setCurrentItem(0);
+            }
+        });
+        return root;
+//        */
+//        objectSignUpFragment =  (ViewGroup) inflater.inflate(R.layout.signup_tab_fragment, container, false);
+//
+//        attachToXML();
+//        return objectSignUpFragment;
+//        */
     }
 }

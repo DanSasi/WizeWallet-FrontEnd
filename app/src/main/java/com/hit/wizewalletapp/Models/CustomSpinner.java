@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Models;
 
 import android.content.Context;
 import android.content.res.Resources;

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TopUpScreen"
-    android:background="#E5E5E5">
+    tools:context=".Activities.TopUpScreen"
+    android:background="@drawable/backgroundimg">
 
     <TextView
         android:id="@+id/textView"

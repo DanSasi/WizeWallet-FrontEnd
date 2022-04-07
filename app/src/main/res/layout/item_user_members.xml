@@ -22,24 +22,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_toEndOf="@+id/image"
-        android:text="Name"
+        android:text="User: "
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Bank"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/user_name_tv"
-        android:layout_marginStart="8dp"
-        android:layout_toEndOf="@+id/image"
-        android:textColor="@color/gray"
-        android:text="Bank"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toEndOf="@+id/image"
-        app:layout_constraintTop_toBottomOf="@+id/user_name_tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

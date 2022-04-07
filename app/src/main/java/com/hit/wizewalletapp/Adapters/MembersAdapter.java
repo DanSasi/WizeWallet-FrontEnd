@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.hit.wizewalletapp.ContactMembers.members;
+import com.hit.wizewalletapp.Data.ContactsData.members;
+import com.hit.wizewalletapp.R;
 
 import java.util.List;
 
@@ -45,7 +46,8 @@ public class MembersAdapter extends BaseAdapter {
         View rootView = LayoutInflater.from(context)
                 .inflate(R.layout.item_members, viewGroup, false);
 
-        TextView txtName = rootView.findViewById(R.id.name);
+
+        TextView txtName = rootView.findViewById(R.id.user_name_tv);
         ImageView image = rootView.findViewById(R.id.image);
         TextView txtBank = rootView.findViewById(R.id.Bank);
 

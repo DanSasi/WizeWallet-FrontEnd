@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.hit.wizewalletapp.R;
 
 public class ElectricityBillScreen extends AppCompatActivity {
 
@@ -33,7 +35,7 @@ public class ElectricityBillScreen extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent( ElectricityBillScreen.this,BalanceScreen.class);
+                Intent intent =new Intent( ElectricityBillScreen.this, BalanceScreen.class);
                 startActivity(intent);
             }
         });

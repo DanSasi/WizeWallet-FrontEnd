@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.hit.wizewalletapp.Models.MenuModelClass;
+import com.hit.wizewalletapp.R;
 
 import java.util.List;
 

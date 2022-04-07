@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.ContactMembers;
+package com.hit.wizewalletapp.Data.ContactsData;
 
 import java.io.Serializable;
 

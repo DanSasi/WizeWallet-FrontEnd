@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
+import com.hit.wizewalletapp.Adapters.LoginAdapter;
+import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +24,6 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
 //    Button loginButton;
     TabLayout tabLayout;
     ViewPager viewPager;
-    CustomSpinner userSpinner;
     FloatingActionButton fb,google,twitter;
     private List<String> categories;
     private Spinner spinnerCategories;
@@ -59,6 +60,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         tabLayout.addTab(tabLayout.newTab().setText("Login"));
         tabLayout.addTab(tabLayout.newTab().setText("SignUp"));
 
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 //        userSpinner = findViewById(R.id.spinner);
 //        Spinner spinner = findViewById(R.id.spinner1);
@@ -72,6 +74,8 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
 
         final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this,tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
+
+
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
@@ -90,6 +94,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         google.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(600).start();
         twitter.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(800).start();
         tabLayout.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
+
 
 
 

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context=".SendMoneyScreen">
+    android:background="@drawable/backgroundimg"
+    tools:context=".Activities.SendMoneyScreen">
 
 
     <!--changes-->
 
-    <com.hit.wizewalletapp.CustomSpinner
+    <com.hit.wizewalletapp.Models.CustomSpinner
         android:id="@+id/spinner_mambers"
         android:layout_width="match_parent"
         android:layout_height="60dp"

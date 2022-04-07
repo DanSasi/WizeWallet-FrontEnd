@@ -12,38 +12,38 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:replace="android:label">
         <activity
-            android:name="com.hit.wizewalletapp.LoginActivity"
+            android:name="com.hit.wizewalletapp.Activities.LoginActivity"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.MainActivity"
+            android:name="com.hit.wizewalletapp.Activities.MainActivity"
             android:exported="true" />
 
         <activity
-            android:name="com.hit.wizewalletapp.TransactionHistoryActivity"
+            android:name="com.hit.wizewalletapp.Activities.TransactionHistoryActivity"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.BalanceScreen"
+            android:name="com.hit.wizewalletapp.Activities.BalanceScreen"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.SendMoneyScreen"
+            android:name="com.hit.wizewalletapp.Activities.SendMoneyScreen"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.MenuScreen"
+            android:name="com.hit.wizewalletapp.Activities.MenuScreen"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.TopUpScreen"
+            android:name="com.hit.wizewalletapp.Activities.TopUpScreen"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.WithdrawScreen"
+            android:name="com.hit.wizewalletapp.Activities.WithdrawScreen"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.ContactListScreen"
+            android:name="com.hit.wizewalletapp.Activities.ContactListScreen"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.ElectricityBillScreen"
+            android:name="com.hit.wizewalletapp.Activities.ElectricityBillScreen"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.SplashScreen"
+            android:name="com.hit.wizewalletapp.Activities.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

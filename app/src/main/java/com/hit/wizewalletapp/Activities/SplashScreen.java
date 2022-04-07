@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Activities;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.hit.wizewalletapp.R;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -46,7 +48,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent i = new Intent(SplashScreen.this,LoginActivity.class);
+                Intent i = new Intent(SplashScreen.this, LoginActivity.class);
                 startActivity(i);
 
                 finish();

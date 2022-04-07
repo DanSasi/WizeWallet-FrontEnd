@@ -1,8 +1,10 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.hit.wizewalletapp.R;
 
 
 public class MainActivity extends AppCompatActivity {

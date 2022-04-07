@@ -1,8 +1,7 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,10 +10,13 @@ import android.widget.Spinner;
 
 
 import com.ebanx.swipebtn.SwipeButton;
-import com.hit.wizewalletapp.ContactMembers.Data;
+import com.hit.wizewalletapp.Adapters.MembersAdapter;
+import com.hit.wizewalletapp.Data.ContactsData.Data;
+import com.hit.wizewalletapp.Models.CustomSpinner;
+import com.hit.wizewalletapp.R;
 
 
-public class SendMoneyScreen extends AppCompatActivity implements CustomSpinner.OnSpinnerEventsListener  {
+public class SendMoneyScreen extends AppCompatActivity implements CustomSpinner.OnSpinnerEventsListener {
 
 
     private CustomSpinner spinner_members;

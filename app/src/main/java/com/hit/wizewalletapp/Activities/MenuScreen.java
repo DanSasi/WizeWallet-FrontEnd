@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +8,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.hit.wizewalletapp.Adapters.MenuAdapterClass;
+import com.hit.wizewalletapp.Models.MenuModelClass;
+import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
 

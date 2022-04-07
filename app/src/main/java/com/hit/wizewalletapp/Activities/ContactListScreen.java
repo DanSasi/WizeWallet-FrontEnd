@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +8,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.hit.wizewalletapp.Adapters.ContactListAdapter;
+import com.hit.wizewalletapp.Adapters.Contacts;
+import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
 
@@ -32,7 +36,7 @@ public class ContactListScreen extends AppCompatActivity implements ContactListA
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ContactListScreen.this,BalanceScreen.class);
+                Intent intent = new Intent(ContactListScreen.this, BalanceScreen.class);
                 startActivity(intent);
             }
         });
@@ -90,7 +94,7 @@ public class ContactListScreen extends AppCompatActivity implements ContactListA
 
     @Override
     public void onClick(int position) {
-        Intent intent = new Intent(ContactListScreen.this,SendMoneyScreen.class);
+        Intent intent = new Intent(ContactListScreen.this, SendMoneyScreen.class);
         startActivity(intent);
     }
 }

@@ -1,10 +1,14 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import com.hit.wizewalletapp.Adapters.BalanceListAdapter;
+import com.hit.wizewalletapp.Models.BalanceModel;
+import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
 

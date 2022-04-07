@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Models;
 
 public class BalanceModel {
     int photo;

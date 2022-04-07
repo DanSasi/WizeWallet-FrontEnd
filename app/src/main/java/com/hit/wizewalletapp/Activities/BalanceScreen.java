@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp;
+package com.hit.wizewalletapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,16 +6,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.TimePicker;
-import android.widget.Toast;
+
+import com.hit.wizewalletapp.Adapters.BalanceListAdapter;
+import com.hit.wizewalletapp.Models.BalanceModel;
+import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
 
-public class BalanceScreen extends AppCompatActivity implements BalanceListAdapter.BalanceViewHolder.RecycleViewClickListener{
+public class BalanceScreen extends AppCompatActivity implements BalanceListAdapter.BalanceViewHolder.RecycleViewClickListener {
     BalanceListAdapter balanceListAdapter;
     ArrayList<BalanceModel> bData;
     RecyclerView recyclerView;
@@ -33,7 +34,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         transfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTransfer = new Intent(BalanceScreen.this,ContactListScreen.class);
+                Intent gotoTransfer = new Intent(BalanceScreen.this, ContactListScreen.class);
                 startActivity(gotoTransfer);
             }
         });
@@ -42,7 +43,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         topup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTopup = new Intent(BalanceScreen.this,TopUpScreen.class);
+                Intent gotoTopup = new Intent(BalanceScreen.this, TopUpScreen.class);
                 startActivity(gotoTopup);
             }
         });
@@ -50,7 +51,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTips = new Intent(BalanceScreen.this,ElectricityBillScreen.class);
+                Intent gotoTips = new Intent(BalanceScreen.this, ElectricityBillScreen.class);
                 startActivity(gotoTips);
 
             }
@@ -60,7 +61,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoMore = new Intent(BalanceScreen.this,MenuScreen.class);
+                Intent gotoMore = new Intent(BalanceScreen.this, MenuScreen.class);
                 startActivity(gotoMore);
             }
         });

@@ -5,9 +5,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BalanceScreen"
+    tools:context="Activities.BalanceScreen"
     android:padding="40dp"
     android:background="@drawable/backgroundimg">
+
 
     <LinearLayout
         android:id="@+id/linearLayout6"
@@ -43,7 +44,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Nis 10,000"
-            android:textStyle="italic"
             android:textAlignment="center"
             android:textColor="#2C2C63"
             android:textSize="35dp"
@@ -113,10 +113,9 @@
             <TextView
                 android:id="@+id/textView6"
                 style="@style/icon_texts"
-                android:layout_width="80dp"
+                android:layout_width="102dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
@@ -127,11 +126,9 @@
             <TextView
                 android:id="@+id/textView7"
                 style="@style/icon_texts"
-                android:layout_width="70dp"
+                android:layout_width="94dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:clickable="true"
@@ -142,24 +139,22 @@
             <TextView
                 android:id="@+id/textView8"
                 style="@style/icon_texts"
-                android:layout_width="75dp"
+                android:layout_width="82dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="18dp"
                 android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:clickable="true"
                 android:focusable="true"
-                android:gravity="center_horizontal"
                 android:text="Tips"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/text_more"
                 style="@style/icon_texts"
-                android:layout_width="60dp"
+                android:layout_width="89dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="23dp"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:clickable="true"
