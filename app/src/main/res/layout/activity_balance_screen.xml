@@ -5,9 +5,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BalanceScreen"
+    tools:context=".Activities.BalanceScreen"
     android:padding="40dp"
-    android:background="@drawable/balance_screen_background">
+    android:background="#94DAFF">
 
 
     <LinearLayout
@@ -44,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Nis 10,000"
+            android:textStyle="italic"
             android:textAlignment="center"
             android:textColor="#2C2C63"
             android:textSize="35dp"
