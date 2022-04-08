@@ -53,13 +53,13 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
     private void getData() {
         menu_items = new ArrayList<>();
         menu_items.add(new MenuModelClass(1,R.drawable.icon, "Send Money"));
-        menu_items.add(new MenuModelClass(2,R.drawable.icon2,"Tasks"));
-        menu_items.add(new MenuModelClass(3,R.drawable.tipsimage,"Tips"));
-        menu_items.add(new MenuModelClass(4,R.drawable.icon4,"Withdraw"));
-        menu_items.add(new MenuModelClass(5,R.drawable.icon5,"History Transaction"));
-        menu_items.add(new MenuModelClass(6,R.drawable.icon6,"Request Payment"));
-        menu_items.add(new MenuModelClass(7,R.drawable.icon7,"Settings"));
-        menu_items.add(new MenuModelClass(8,R.drawable.icon8,"Help"));
+      //  menu_items.add(new MenuModelClass(2,R.drawable.icon2,"Tasks"));
+        //menu_items.add(new MenuModelClass(3,R.drawable.tipsimage,"Tips"));
+        menu_items.add(new MenuModelClass(2,R.drawable.icon4,"Withdraw"));
+        menu_items.add(new MenuModelClass(3,R.drawable.icon5,"History Transaction"));
+        menu_items.add(new MenuModelClass(4,R.drawable.icon6,"Request Payment"));
+        menu_items.add(new MenuModelClass(5,R.drawable.icon7,"Settings"));
+        menu_items.add(new MenuModelClass(6,R.drawable.icon8,"Help"));
     }
 
 
@@ -77,8 +77,8 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
                 break;
 
             case 2:
-                Intent intent1 = new Intent(MenuScreen.this, TopUpScreen.class);
-                startActivity(intent1);
+                Intent intent3 = new Intent(MenuScreen.this, WithdrawScreen.class);
+                startActivity(intent3);
                 break;
 
             case 3:
@@ -86,10 +86,8 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
                 startActivity(intent2);
                 break;
 
-            case 4:
-                Intent intent3 = new Intent(MenuScreen.this, WithdrawScreen.class);
-                startActivity(intent3);
-                break;
+            // TODO: 4/8/2022 need to add new screens!!!
+
         }
 
         }
