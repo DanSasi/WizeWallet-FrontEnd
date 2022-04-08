@@ -19,36 +19,18 @@ import com.hit.wizewalletapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoginActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class LoginActivity extends AppCompatActivity {
 
-//    Button loginButton;
+    //    Button loginButton;
     TabLayout tabLayout;
     ViewPager viewPager;
     FloatingActionButton fb,google,twitter;
-    private List<String> categories;
-    private Spinner spinnerCategories;
     float v=0;
-
-    private String [] user = {"Parent","Child"};
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//
-//        Spinner spinner = (Spinner)findViewById(R.id.spinner1);
-//        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(LoginTabFragment.this, android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.Spinner_items));
-//        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(myAdapter);
-
-//        spinner.setOnItemClickListener(this);
-//
-//        ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item,user);
-//        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(aa);
-
 
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_Pager);
@@ -60,22 +42,10 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         tabLayout.addTab(tabLayout.newTab().setText("Login"));
         tabLayout.addTab(tabLayout.newTab().setText("SignUp"));
 
-
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-//        userSpinner = findViewById(R.id.spinner);
-//        Spinner spinner = findViewById(R.id.spinner1);
-////        Spinner spinner = findViewById(R.id.spinner1);
-//        ArrayAdapter<CharSequence> adapterUsr = ArrayAdapter.createFromResource(this,R.array.spinner_list, android.R.layout.simple_spinner_item);
-//        adapterUsr.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(adapterUsr);
-//        spinner.setOnItemClickListener(this);
 
-
-
-        final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this,tabLayout.getTabCount());
+        final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this,2);
         viewPager.setAdapter(adapter);
-
-
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
@@ -97,24 +67,10 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
 
 
 
-
     }
 
     public void setCurrentItem(int which) {
-            viewPager.setCurrentItem(which);
+        viewPager.setCurrentItem(which);
 
     }
-
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this, user[position] , Toast.LENGTH_SHORT).show();
-    }
-
-
-    public void onNothingSelected(AdapterView<?> parent) {
-        // TODO Auto-generated method stub
-
-    }
-
 }

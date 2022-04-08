@@ -59,7 +59,7 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
         menu_items.add(new MenuModelClass(3,R.drawable.icon5,"History Transaction"));
         menu_items.add(new MenuModelClass(4,R.drawable.icon6,"Request Payment"));
         menu_items.add(new MenuModelClass(5,R.drawable.icon7,"Settings"));
-        menu_items.add(new MenuModelClass(6,R.drawable.icon8,"Help"));
+       // menu_items.add(new MenuModelClass(6,R.drawable.icon8,"Help"));
     }
 
 
@@ -77,12 +77,12 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
                 break;
 
             case 2:
-                Intent intent3 = new Intent(MenuScreen.this, WithdrawScreen.class);
-                startActivity(intent3);
+                Intent intent1 = new Intent(MenuScreen.this, WithdrawScreen.class);
+                startActivity(intent1);
                 break;
 
             case 3:
-                Intent intent2 = new Intent(MenuScreen.this, ElectricityBillScreen.class);
+                Intent intent2 = new Intent(MenuScreen.this, TransactionHistoryActivity.class);
                 startActivity(intent2);
                 break;
 
