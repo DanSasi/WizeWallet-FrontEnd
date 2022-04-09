@@ -28,7 +28,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_balance_screen);
+        setContentView(R.layout.activity_balance_child_screen);
 
         transfer = findViewById(R.id.imageView4);
         transfer.setOnClickListener(new View.OnClickListener() {
