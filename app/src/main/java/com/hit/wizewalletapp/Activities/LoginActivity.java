@@ -1,6 +1,7 @@
 package com.hit.wizewalletapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
@@ -14,23 +15,29 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
 import com.hit.wizewalletapp.Adapters.LoginAdapter;
+import com.hit.wizewalletapp.Fragments.LoginTabFragment;
+import com.hit.wizewalletapp.Fragments.SignupTabFragment;
 import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
+@SuppressWarnings("ALL")
+public class LoginActivity extends AppCompatActivity  {
 
-public class LoginActivity extends AppCompatActivity {
-
-    //    Button loginButton;
+//    Button loginButton;
     TabLayout tabLayout;
     ViewPager viewPager;
     FloatingActionButton fb,google,twitter;
     float v=0;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
 
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_Pager);
@@ -39,15 +46,13 @@ public class LoginActivity extends AppCompatActivity {
         twitter = findViewById(R.id.fab_twitter);
 
 
-        tabLayout.addTab(tabLayout.newTab().setText("Login"));
-        tabLayout.addTab(tabLayout.newTab().setText("SignUp"));
+        tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
-        final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this,2);
-        viewPager.setAdapter(adapter);
-
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        LoginAdapter loginAdapter = new LoginAdapter(getSupportFragmentManager(),
+                FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        loginAdapter.addFragment(new LoginTabFragment(),"LOG IN");
+        loginAdapter.addFragment(new SignupTabFragment(),"SIGN UP");
+        viewPager.setAdapter(loginAdapter);
 
 
         fb.setTranslationY(300);
@@ -67,10 +72,21 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+
     }
 
     public void setCurrentItem(int which) {
-        viewPager.setCurrentItem(which);
+            viewPager.setCurrentItem(which);
 
     }
+
+
+
+
+
+    public void onNothingSelected(AdapterView<?> parent) {
+        // TODO Auto-generated method stub
+
+    }
+
 }

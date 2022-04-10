@@ -40,6 +40,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation'com.ebanx:swipe-button:0.4.0'
     implementation 'com.stripe:stripe-android:19.3.0'
-
+ 
 
 }

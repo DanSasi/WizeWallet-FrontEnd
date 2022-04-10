@@ -22,6 +22,7 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
     ImageView arr;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +44,7 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
     }
 
     private void setAdapter() {
-        menuAdapterClass = new MenuAdapterClass(MenuScreen.this, menu_items, this::onClicklistener);
+        menuAdapterClass = new MenuAdapterClass(MenuScreen.this, menu_items,this::onClicklistener);
         recyclerView.setAdapter(menuAdapterClass);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -52,14 +53,11 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
     private void getData() {
         menu_items = new ArrayList<>();
         menu_items.add(new MenuModelClass(1, R.drawable.icon, "Send Money"));
-        //  menu_items.add(new MenuModelClass(2,R.drawable.icon2,"Tasks"));
-        //menu_items.add(new MenuModelClass(3,R.drawable.tipsimage,"Tips"));
         menu_items.add(new MenuModelClass(2, R.drawable.icon4, "Withdraw"));
         menu_items.add(new MenuModelClass(3, R.drawable.icon5, "History Transaction"));
         menu_items.add(new MenuModelClass(4, R.drawable.icon6, "Request Payment"));
         menu_items.add(new MenuModelClass(5, R.drawable.icon7, "Settings"));
-        // menu_items.add(new MenuModelClass(6,R.drawable.icon8,"Help"));
-        menu_items.add(new MenuModelClass(6, R.drawable.logout_icon, "Logout"));
+        menu_items.add(new MenuModelClass(6, R.drawable.icon_logout, "Logout"));
     }
 
 
@@ -77,26 +75,21 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
                 break;
 
             case 2:
-                Intent intent1 = new Intent(MenuScreen.this, WithdrawScreen.class);
+                Intent intent1 = new Intent(MenuScreen.this, TopUpScreen.class);
                 startActivity(intent1);
                 break;
 
             case 3:
-                Intent intent2 = new Intent(MenuScreen.this, TransactionHistoryActivity.class);
+                Intent intent2 = new Intent(MenuScreen.this, ElectricityBillScreen.class);
                 startActivity(intent2);
                 break;
 
-            // TODO: 4/8/2022 need to add new screens!!!
-
-            case 6:
-                Intent intent3 = new Intent(MenuScreen.this, LoginActivity.class);
+            case 4:
+                Intent intent3 = new Intent(MenuScreen.this, WithdrawScreen.class);
                 startActivity(intent3);
                 break;
+        }
 
         }
 
-
     }
-
-
-}

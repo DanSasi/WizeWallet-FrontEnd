@@ -2,45 +2,49 @@ package com.hit.wizewalletapp.Adapters;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.hit.wizewalletapp.Fragments.LoginTabFragment;
 import com.hit.wizewalletapp.Fragments.SignupTabFragment;
 
+import java.util.ArrayList;
 
 
-public class LoginAdapter extends FragmentStatePagerAdapter {
+@SuppressWarnings("ALL")
+public class LoginAdapter extends FragmentPagerAdapter {
+    private final ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
+    private final ArrayList<String> fragmentTitle = new ArrayList<>();
 
+    public LoginAdapter(@NonNull FragmentManager fm, int behavor) {
+        super(fm,behavor);
+    }
 
-    private Context context;
-    int totalTabs;
-
-    public LoginAdapter(FragmentManager fm,Context context, int totalTabs){
-        super(fm);
-        this.context = context;
-        this.totalTabs = totalTabs;
+    @NonNull
+    @Override
+    public Fragment getItem(int position) {
+        return fragmentArrayList.get(position);
     }
 
     @Override
     public int getCount() {
-        return totalTabs;
+       return fragmentArrayList.size();
     }
 
-    public Fragment getItem(int position){
-        switch (position){
-            case 0:
-                LoginTabFragment loginTabFragment = new LoginTabFragment();
-                return loginTabFragment;
+    public void addFragment(Fragment fragment, String title){
+        fragmentArrayList.add(fragment);
+        fragmentTitle.add(title);
+    }
 
-            case 1:
-                SignupTabFragment signupTabFragment = new SignupTabFragment();
-                return signupTabFragment;
-
-            default:
-                return null;
-        }
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position){
+        return fragmentTitle.get(position);
     }
 }
+
 
