@@ -31,7 +31,7 @@
             android:name="com.hit.wizewalletapp.Activities.MenuScreen"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.Activities.TopUpScreen"
+            android:name="com.hit.wizewalletapp.Activities.TipsScreen"
             android:exported="true" />
         <activity
             android:name="com.hit.wizewalletapp.Activities.WithdrawScreen"
@@ -40,7 +40,7 @@
             android:name="com.hit.wizewalletapp.Activities.ContactListScreen"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.Activities.ElectricityBillScreen"
+            android:name="com.hit.wizewalletapp.Activities.TasksScreen"
             android:exported="true" />
         <activity
             android:name="com.hit.wizewalletapp.Activities.SplashScreen"
@@ -51,6 +51,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"

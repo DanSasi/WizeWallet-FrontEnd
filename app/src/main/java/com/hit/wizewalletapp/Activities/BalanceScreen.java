@@ -43,7 +43,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         topup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTopup = new Intent(BalanceScreen.this, TopUpScreen.class);
+                Intent gotoTopup = new Intent(BalanceScreen.this, TasksScreen.class);
                 startActivity(gotoTopup);
             }
         });
@@ -51,7 +51,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTips = new Intent(BalanceScreen.this, ElectricityBillScreen.class);
+                Intent gotoTips = new Intent(BalanceScreen.this, TipsScreen.class);
                 startActivity(gotoTips);
 
             }
@@ -79,7 +79,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         topupText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTopupText = new Intent(BalanceScreen.this, TopUpScreen.class);
+                Intent gotoTopupText = new Intent(BalanceScreen.this, TasksScreen.class);
                 startActivity(gotoTopupText);
             }
         });
@@ -88,7 +88,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         tipText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTipText = new Intent(BalanceScreen.this, ElectricityBillScreen.class);
+                Intent gotoTipText = new Intent(BalanceScreen.this, TipsScreen.class);
                 startActivity(gotoTipText);
             }
         });

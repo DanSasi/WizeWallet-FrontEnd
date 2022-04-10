@@ -75,18 +75,19 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
                 break;
 
             case 2:
-                Intent intent1 = new Intent(MenuScreen.this, TopUpScreen.class);
+                Intent intent1 = new Intent(MenuScreen.this, WithdrawScreen.class);
                 startActivity(intent1);
                 break;
 
             case 3:
-                Intent intent2 = new Intent(MenuScreen.this, ElectricityBillScreen.class);
+                Intent intent2 = new Intent(MenuScreen.this, TransactionHistoryActivity.class);
                 startActivity(intent2);
                 break;
+                
 
-            case 4:
-                Intent intent3 = new Intent(MenuScreen.this, WithdrawScreen.class);
-                startActivity(intent3);
+            case 6:
+                Intent intent4 = new Intent(MenuScreen.this,LoginActivity.class);
+                startActivity(intent4);
                 break;
         }
 

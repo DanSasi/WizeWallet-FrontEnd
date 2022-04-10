@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 import com.hit.wizewalletapp.R;
 
-public class ElectricityBillScreen extends AppCompatActivity {
+public class TipsScreen extends AppCompatActivity {
 
         ImageView backArrow;
         private Button button;
@@ -18,7 +18,7 @@ public class ElectricityBillScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_electricity_bill_screen);
+        setContentView(R.layout.activity_tips_screen);
 
 
         backArrow = findViewById(R.id.backArrow);
@@ -35,7 +35,7 @@ public class ElectricityBillScreen extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent( ElectricityBillScreen.this, BalanceScreen.class);
+                Intent intent =new Intent( TipsScreen.this, BalanceScreen.class);
                 startActivity(intent);
             }
         });
