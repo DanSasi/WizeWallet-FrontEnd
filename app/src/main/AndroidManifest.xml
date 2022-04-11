@@ -12,38 +12,35 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:replace="android:label">
         <activity
-            android:name="com.hit.wizewalletapp.Activities.LoginActivity"
+            android:name=".Activities.LoginActivity"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.Activities.MainActivity"
+            android:name=".Activities.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.TransactionHistoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.BalanceScreen"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.SendMoneyScreen"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.MenuScreen"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.TipsScreen"
             android:exported="true" />
 
         <activity
-            android:name="com.hit.wizewalletapp.Activities.TransactionHistoryActivity"
+            android:name=".Activities.ContactListScreen"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.Activities.BalanceScreen"
+            android:name=".Activities.TasksScreen"
             android:exported="true" />
         <activity
-            android:name="com.hit.wizewalletapp.Activities.SendMoneyScreen"
-            android:exported="true" />
-        <activity
-            android:name="com.hit.wizewalletapp.Activities.MenuScreen"
-            android:exported="true" />
-        <activity
-            android:name="com.hit.wizewalletapp.Activities.TipsScreen"
-            android:exported="true" />
-        <activity
-            android:name="com.hit.wizewalletapp.Activities.WithdrawScreen"
-            android:exported="true" />
-        <activity
-            android:name="com.hit.wizewalletapp.Activities.ContactListScreen"
-            android:exported="true" />
-        <activity
-            android:name="com.hit.wizewalletapp.Activities.TasksScreen"
-            android:exported="true" />
-        <activity
-            android:name="com.hit.wizewalletapp.Activities.SplashScreen"
+            android:name=".Activities.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,7 +48,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
 
         <meta-data
             android:name="preloaded_fonts"

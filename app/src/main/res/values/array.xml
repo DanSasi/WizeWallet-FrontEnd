@@ -10,6 +10,12 @@
         <item>Maor</item>
 
     </array>
+    <array name="usertype">
+        <item>Parent</item>
+        <item>Child</item>
+    </array>
+
+
 
     <array name="members_images">
         <item>@drawable/imageprofile</item>
@@ -20,6 +26,10 @@
         <item>@drawable/imageprofile</item>
 
     </array>
+
+
+
+
 
 
 
