@@ -55,7 +55,7 @@ public class SendMoneyScreen extends AppCompatActivity implements CustomSpinner.
         arr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SendMoneyScreen.this, MenuScreen.class);
+                Intent intent = new Intent(SendMoneyScreen.this, ContactListScreen.class);
                 startActivity(intent);
             }
         });

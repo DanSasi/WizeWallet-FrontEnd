@@ -22,7 +22,7 @@
 
         android:layout_marginRight="35dp"
         android:layout_marginBottom="30dp"
-        android:popupBackground="#F1F1F9"
+        android:popupBackground="@color/white"
         android:background="@drawable/bg_spinner_members"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"

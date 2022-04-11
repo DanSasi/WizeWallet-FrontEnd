@@ -52,8 +52,7 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
 
     private void getData() {
         menu_items = new ArrayList<>();
-        menu_items.add(new MenuModelClass(1, R.drawable.icon, "Send Money"));
-        menu_items.add(new MenuModelClass(2, R.drawable.icon4, "Withdraw"));
+//        menu_items.add(new MenuModelClass(1, R.drawable.icon, "Send Money"));
         menu_items.add(new MenuModelClass(3, R.drawable.icon5, "History Transaction"));
         menu_items.add(new MenuModelClass(4, R.drawable.icon6, "Request Payment"));
         menu_items.add(new MenuModelClass(5, R.drawable.icon7, "Settings"));
@@ -74,10 +73,6 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
                 startActivity(intent);
                 break;
 
-            case 2:
-                Intent intent1 = new Intent(MenuScreen.this, WithdrawScreen.class);
-                startActivity(intent1);
-                break;
 
             case 3:
                 Intent intent2 = new Intent(MenuScreen.this, TransactionHistoryActivity.class);

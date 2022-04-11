@@ -24,9 +24,11 @@ public class TasksScreen extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TasksScreen.this,getParentActivityIntent().getClass());
+                Intent intent = new Intent(TasksScreen.this,BalanceScreen.class);
                 startActivity(intent);
             }
         });
     }
+
+
 }
