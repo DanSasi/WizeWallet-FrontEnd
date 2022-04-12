@@ -102,6 +102,17 @@ public class LoginTabFragment extends Fragment implements CustomSpinner.OnSpinne
                             Log.d("TAG",accessToken);
                             Log.d("TAG",refreshToken);
 
+                            String item = userSpinner.getSelectedItem().toString();
+                            if (item.equals("Parent")) {
+                                Intent intent = new Intent(getActivity(), SendMoneyScreen.class);
+                                startActivity(intent);
+                            } else if (item.equals("Child")) {
+                                Intent intent = new Intent(getActivity(), BalanceScreen.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
+                            }
+
                             Toast.makeText(v.getContext(), "Login OK", Toast.LENGTH_LONG).show();
                         } else if (response.code() == 400) {
                             Toast.makeText(v.getContext(), "wrong email or password/already have user", Toast.LENGTH_LONG).show();
