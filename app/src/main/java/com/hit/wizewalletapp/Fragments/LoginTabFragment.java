@@ -3,6 +3,7 @@ package com.hit.wizewalletapp.Fragments;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import androidx.fragment.app.Fragment;
 
 import com.hit.wizewalletapp.Activities.BalanceScreen;
 import com.hit.wizewalletapp.Activities.LoginActivity;
+import com.hit.wizewalletapp.Activities.LoginResult;
+import com.hit.wizewalletapp.Activities.RetrofitInterface;
 import com.hit.wizewalletapp.Activities.SendMoneyScreen;
 import com.hit.wizewalletapp.Activities.TipsScreen;
 import com.hit.wizewalletapp.Adapters.UserMembersAdapter;
@@ -25,13 +28,19 @@ import com.hit.wizewalletapp.Models.CustomSpinner;
 import com.hit.wizewalletapp.R;
 
 import java.io.BufferedReader;
+import java.util.HashMap;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class LoginTabFragment extends Fragment  implements CustomSpinner.OnSpinnerEventsListener {
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+public class LoginTabFragment extends Fragment implements CustomSpinner.OnSpinnerEventsListener {
 
     TextView email;
-
     TextView password;
     TextView logAs;
     Spinner userSpinner;
@@ -39,44 +48,104 @@ public class LoginTabFragment extends Fragment  implements CustomSpinner.OnSpinn
     TextView forgetPass;
     Button login;
 
+    //Retrofit, the URL is the phone emulator + server port
+    private Retrofit retrofit;
+    private RetrofitInterface retrofitInterface;
+    private String BASE_URL = "http://10.0.2.2:3000";
 
+    //    CustomSpinner spinner;
+    float v = 0;
 
-
-//    CustomSpinner spinner;
-    float v=0;
-
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savadInstanceState){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savadInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.login_tab_fragment, container, false);
-        
+
+        //Retrofit instance
+        retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        retrofitInterface = retrofit.create(RetrofitInterface.class);
+
         email = root.findViewById(R.id.email);
         password = root.findViewById(R.id.password);
         forgetPass = root.findViewById(R.id.forgetPass);
         login = root.findViewById(R.id.login);
-        userSpinner= (Spinner) root.findViewById(R.id.logfrag_userSpinner);
+        userSpinner = (Spinner) root.findViewById(R.id.logfrag_userSpinner);
         logAs = root.findViewById(R.id.text_changeUser);
 
         adapter = new UserMembersAdapter(getActivity(), UserData.getUsersDataList());
         userSpinner.setAdapter(adapter);
 
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              String item = userSpinner.getSelectedItem().toString();
-              if(item.equals("Parent")){
-                  Intent intent = new Intent(getActivity(),SendMoneyScreen.class);
-                  startActivity(intent);
-              }else if(item.equals("Child")){
-                  Intent intent = new Intent(getActivity(), BalanceScreen.class);
-                  startActivity(intent);
-              }else{
-                  Toast.makeText(getContext(),"Error", Toast.LENGTH_SHORT).show();
-              }
+                //get the user mail and password put in map and send to server
+                HashMap<String, String> userLoginMap = new HashMap<>();
+                userLoginMap.put("email", email.getText().toString());
+                userLoginMap.put("password", password.getText().toString());
+
+                //send the request to the server side
+                Call<LoginResult> call = retrofitInterface.executeLogin(userLoginMap);
+
+                //get the response from server side
+                call.enqueue(new Callback<LoginResult>() {
+                    @Override
+                    public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
+                        //code 200 is OK , 400 not
+                        if (response.code() == 200) {
+                            //get the result from the response body
+                            //check if we get tha token right
+                            LoginResult loginResult = response.body();
+                            String accessToken = loginResult.getAccessToken();
+                            String refreshToken = loginResult.getRefreshToken();
+
+                            Log.d("TAG",accessToken);
+                            Log.d("TAG",refreshToken);
+
+                            String item = userSpinner.getSelectedItem().toString();
+                            if (item.equals("Parent")) {
+                                Intent intent = new Intent(getActivity(), SendMoneyScreen.class);
+                                startActivity(intent);
+                            } else if (item.equals("Child")) {
+                                Intent intent = new Intent(getActivity(), BalanceScreen.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
+                            }
+
+                            Toast.makeText(v.getContext(), "Login OK", Toast.LENGTH_LONG).show();
+                        } else if (response.code() == 400) {
+                            Toast.makeText(v.getContext(), "wrong email or password/already have user", Toast.LENGTH_LONG).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<LoginResult> call, Throwable t) {
+                        Toast.makeText(v.getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
+
 
             }
         });
 
 
+//        login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String item = userSpinner.getSelectedItem().toString();
+//                if (item.equals("Parent")) {
+//                    Intent intent = new Intent(getActivity(), SendMoneyScreen.class);
+//                    startActivity(intent);
+//                } else if (item.equals("Child")) {
+//                    Intent intent = new Intent(getActivity(), BalanceScreen.class);
+//                    startActivity(intent);
+//                } else {
+//                    Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
+//                }
+//
+//            }
+//        });
 
 
         email.setTranslationX(800);
@@ -100,8 +169,6 @@ public class LoginTabFragment extends Fragment  implements CustomSpinner.OnSpinn
         login.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(700).start();
         logAs.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(700).start();
         userSpinner.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-
-
 
 
         return root;
