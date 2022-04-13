@@ -25,10 +25,16 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
     ImageView transfer, topup, more , tips;
     TextView transferText, topupText, moreText , tipText;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_balance_child_screen);
+
+        String refreshToken = getIntent().getStringExtra("refresh");
+
+
 
         transfer = findViewById(R.id.imageView4);
         transfer.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +68,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
             @Override
             public void onClick(View v) {
                 Intent gotoMore = new Intent(BalanceScreen.this, MenuScreen.class);
+                gotoMore.putExtra("refresh",refreshToken);
                 startActivity(gotoMore);
             }
         });

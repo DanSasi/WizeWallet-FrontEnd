@@ -104,10 +104,12 @@ public class LoginTabFragment extends Fragment implements CustomSpinner.OnSpinne
 
                             String item = userSpinner.getSelectedItem().toString();
                             if (item.equals("Parent")) {
-                                Intent intent = new Intent(getActivity(), SendMoneyScreen.class);
+                                Intent intent = new Intent(getActivity(), BalanceScreen.class);
+                                intent.putExtra("refresh",refreshToken);
                                 startActivity(intent);
                             } else if (item.equals("Child")) {
                                 Intent intent = new Intent(getActivity(), BalanceScreen.class);
+                                intent.putExtra("refresh",refreshToken);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();

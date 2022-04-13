@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -14,6 +15,13 @@ import com.hit.wizewalletapp.Models.MenuModelClass;
 import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.ListViewHolder.RecycleViewClickListener {
     MenuAdapterClass menuAdapterClass;
@@ -21,12 +29,27 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
     RecyclerView recyclerView;
     ImageView arr;
 
+    //Retrofit, the URL is the phone emulator + server port
+    private Retrofit retrofit;
+    private RetrofitInterface retrofitInterface;
+    private String BASE_URL = "http://10.0.2.2:3000";
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_screen);
+
+
+
+
+        //Retrofit instance
+        retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        retrofitInterface = retrofit.create(RetrofitInterface.class);
 
         recyclerView = findViewById(R.id.recyclerView);
         getData();
@@ -44,7 +67,7 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
     }
 
     private void setAdapter() {
-        menuAdapterClass = new MenuAdapterClass(MenuScreen.this, menu_items,this::onClicklistener);
+        menuAdapterClass = new MenuAdapterClass(MenuScreen.this, menu_items, this::onClicklistener);
         recyclerView.setAdapter(menuAdapterClass);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -78,14 +101,37 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
                 Intent intent2 = new Intent(MenuScreen.this, TransactionHistoryActivity.class);
                 startActivity(intent2);
                 break;
-                
+
 
             case 6:
-                Intent intent4 = new Intent(MenuScreen.this,LoginActivity.class);
-                startActivity(intent4);
+                //get the refresh token send it with key put in map
+                //map is like json
+                HashMap<String,String>map = new HashMap<>();
+                String refreshToken = getIntent().getStringExtra("refresh");
+                String tokenToSend = "authorization " + refreshToken;
+                map.put("authorization",tokenToSend);
+                Call<Void> call = retrofitInterface.executeLogout(map);
+
+                call.enqueue(new Callback<Void>() {
+                    @Override
+                    public void onResponse(Call<Void> call, Response<Void> response) {
+                        if (response.code() == 200){
+                            Log.d("TAG","logout user");
+                            Intent intent4 = new Intent(MenuScreen.this, LoginActivity.class);
+                            startActivity(intent4);
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Void> call, Throwable t) {
+
+                    }
+                });
+
+
                 break;
         }
 
-        }
-
     }
+
+}
