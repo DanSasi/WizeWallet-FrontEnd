@@ -35,7 +35,7 @@ public class TipsScreen extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent( TipsScreen.this, BalanceScreen.class);
+                Intent intent =new Intent( TipsScreen.this, ChildBalanceScreen.class);
                 startActivity(intent);
             }
         });

@@ -36,7 +36,7 @@ public class ContactListScreen extends AppCompatActivity implements ContactListA
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ContactListScreen.this, BalanceScreen.class);
+                Intent intent = new Intent(ContactListScreen.this, ChildBalanceScreen.class);
                 startActivity(intent);
             }
         });

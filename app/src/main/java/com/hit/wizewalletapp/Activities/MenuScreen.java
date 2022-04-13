@@ -37,7 +37,7 @@ public class MenuScreen extends AppCompatActivity implements MenuAdapterClass.Li
         arr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuScreen.this, BalanceScreen.class);
+                Intent intent = new Intent(MenuScreen.this, ChildBalanceScreen.class);
                 startActivity(intent);
             }
         });

@@ -1,8 +1,4 @@
-package com.hit.wizewalletapp.Activities;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.hit.wizewalletapp.Activities.ParentFolder;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,17 +6,26 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Adapters.BalanceListAdapter;
-import com.hit.wizewalletapp.Models.BalanceModel;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.hit.wizewalletapp.Activities.ContactListScreen;
+import com.hit.wizewalletapp.Activities.MenuScreen;
+import com.hit.wizewalletapp.Activities.TasksScreen;
+import com.hit.wizewalletapp.Activities.TipsScreen;
+import com.hit.wizewalletapp.Activities.TransactionHistoryActivity;
+import com.hit.wizewalletapp.Adapters.BalanceListParentAdapter;
+import com.hit.wizewalletapp.Models.BalanceParentModel;
 import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
 
-public class BalanceScreen extends AppCompatActivity implements BalanceListAdapter.BalanceViewHolder.RecycleViewClickListener {
-    BalanceListAdapter balanceListAdapter;
-    ArrayList<BalanceModel> bData;
+public class ParentBalanceScreen extends AppCompatActivity implements BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener {
+    BalanceListParentAdapter balanceListAdapter;
+    ArrayList<BalanceParentModel> bData;
     RecyclerView recyclerView;
-    private BalanceListAdapter.BalanceViewHolder.RecycleViewClickListener clickListener;
+    private BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener clickListener;
 
     ImageView transfer, topup, more , tips;
     TextView transferText, topupText, moreText , tipText;
@@ -28,13 +33,13 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_balance_child_screen);
+        setContentView(R.layout.activity_balance_parent_screen);
 
         transfer = findViewById(R.id.imageView4);
         transfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTransfer = new Intent(BalanceScreen.this, ContactListScreen.class);
+                Intent gotoTransfer = new Intent(ParentBalanceScreen.this, ContactListScreen.class);
                 startActivity(gotoTransfer);
             }
         });
@@ -43,7 +48,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         topup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTopup = new Intent(BalanceScreen.this, TasksScreen.class);
+                Intent gotoTopup = new Intent(ParentBalanceScreen.this, TasksScreen.class);
                 startActivity(gotoTopup);
             }
         });
@@ -51,7 +56,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTips = new Intent(BalanceScreen.this, TipsScreen.class);
+                Intent gotoTips = new Intent(ParentBalanceScreen.this, TipsScreen.class);
                 startActivity(gotoTips);
 
             }
@@ -61,7 +66,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoMore = new Intent(BalanceScreen.this, MenuScreen.class);
+                Intent gotoMore = new Intent(ParentBalanceScreen.this, MenuScreen.class);
                 startActivity(gotoMore);
             }
         });
@@ -70,7 +75,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         transferText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTransferText = new Intent(BalanceScreen.this,BalanceScreen.class);
+                Intent gotoTransferText = new Intent(ParentBalanceScreen.this, ParentBalanceScreen.class);
                 startActivity(gotoTransferText);
             }
         });
@@ -79,7 +84,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         topupText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTopupText = new Intent(BalanceScreen.this, TasksScreen.class);
+                Intent gotoTopupText = new Intent(ParentBalanceScreen.this, TasksScreen.class);
                 startActivity(gotoTopupText);
             }
         });
@@ -88,7 +93,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         tipText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTipText = new Intent(BalanceScreen.this, TipsScreen.class);
+                Intent gotoTipText = new Intent(ParentBalanceScreen.this, TipsScreen.class);
                 startActivity(gotoTipText);
             }
         });
@@ -97,7 +102,7 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         moreText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoMore = new Intent(BalanceScreen.this, MenuScreen.class);
+                Intent gotoMore = new Intent(ParentBalanceScreen.this, MenuScreen.class);
                 startActivity(gotoMore);
             }
         });
@@ -106,11 +111,11 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
         getData();
         setDataAdapter();
 
-        bData = new ArrayList<BalanceModel>();
+        bData = new ArrayList<BalanceParentModel>();
     }
 
     private void setDataAdapter() {
-        balanceListAdapter = new BalanceListAdapter(BalanceScreen.this, bData);
+        balanceListAdapter = new BalanceListParentAdapter(ParentBalanceScreen.this, bData);
         recyclerView.setAdapter(balanceListAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -118,15 +123,15 @@ public class BalanceScreen extends AppCompatActivity implements BalanceListAdapt
 
     private void getData() {
         bData = new ArrayList<>();
-        bData.add(new BalanceModel(R.drawable.grocery_icon, "Dec 21","Birthday gift", "300", "Happy Birthday!" ));
-        bData.add(new BalanceModel(R.drawable.entertainment_icon, "Jan 22","HomeWork", "60", "Math" ));
-        bData.add(new BalanceModel(R.drawable.equipment_icon, "Feb 22","Allowance", "200", "Enjoy" ));
-        bData.add(new BalanceModel(R.drawable.officeitem_icon, "March 21","new ball", "50", "Basketball" ));
+        bData.add(new BalanceParentModel(R.drawable.grocery_icon, "Dec 21","Birthday gift", "300", "Happy Birthday!" ));
+        bData.add(new BalanceParentModel(R.drawable.entertainment_icon, "Jan 22","HomeWork", "60", "Math" ));
+        bData.add(new BalanceParentModel(R.drawable.equipment_icon, "Feb 22","Allowance", "200", "Enjoy" ));
+        bData.add(new BalanceParentModel(R.drawable.officeitem_icon, "March 21","new ball", "50", "Basketball" ));
     }
 
     @Override
     public void recycleViewClick(int position) {
-        Intent intent = new Intent(BalanceScreen.this, TransactionHistoryActivity.class);
+        Intent intent = new Intent(ParentBalanceScreen.this, TransactionHistoryActivity.class);
         startActivity(intent);
     }
 }

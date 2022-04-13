@@ -10,17 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Models.BalanceModel;
+import com.hit.wizewalletapp.Models.BalanceParentModel;
 import com.hit.wizewalletapp.R;
 
 import java.util.List;
 
-public class BalanceListAdapter extends RecyclerView.Adapter<BalanceListAdapter.BalanceViewHolder>{
+public class BalanceChildListAdapter extends RecyclerView.Adapter<BalanceChildListAdapter.BalanceViewHolder>{
     Context context;
-    List<BalanceModel> bData;
+    List<BalanceParentModel> bData;
     private BalanceViewHolder.RecycleViewClickListener clickListener;
 
-    public BalanceListAdapter(Context context, List<BalanceModel> bData) {
+    public BalanceChildListAdapter(Context context, List<BalanceParentModel> bData) {
         this.context = context;
         this.bData = bData;
         this.clickListener = clickListener;
@@ -59,7 +59,7 @@ public class BalanceListAdapter extends RecyclerView.Adapter<BalanceListAdapter.
         ImageView img_photo;
         RecycleViewClickListener recycleViewClickListener;
 
-        public BalanceViewHolder(@NonNull View itemView,Context context,List<BalanceModel> bData, RecycleViewClickListener recycleViewClickListener) {
+        public BalanceViewHolder(@NonNull View itemView, Context context, List<BalanceParentModel> bData, RecycleViewClickListener recycleViewClickListener) {
             super(itemView);
             tv_topic = itemView.findViewById(R.id.textTopic);
             tv_date = itemView.findViewById(R.id.textDate);

@@ -1,13 +1,11 @@
 package com.hit.wizewalletapp.Fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -15,22 +13,16 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.hit.wizewalletapp.Activities.BalanceScreen;
-import com.hit.wizewalletapp.Activities.LoginActivity;
+import com.hit.wizewalletapp.Activities.ChildBalanceScreen;
 import com.hit.wizewalletapp.Activities.LoginResult;
+import com.hit.wizewalletapp.Activities.ParentFolder.ParentBalanceScreen;
 import com.hit.wizewalletapp.Activities.RetrofitInterface;
-import com.hit.wizewalletapp.Activities.SendMoneyScreen;
-import com.hit.wizewalletapp.Activities.TipsScreen;
 import com.hit.wizewalletapp.Adapters.UserMembersAdapter;
 import com.hit.wizewalletapp.Data.UsersMembersData.UserData;
-import com.hit.wizewalletapp.Data.UsersMembersData.UserMembers;
 import com.hit.wizewalletapp.Models.CustomSpinner;
 import com.hit.wizewalletapp.R;
 
-import java.io.BufferedReader;
 import java.util.HashMap;
-import java.util.Objects;
-import java.util.Scanner;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -104,10 +96,10 @@ public class LoginTabFragment extends Fragment implements CustomSpinner.OnSpinne
 
                             String item = userSpinner.getSelectedItem().toString();
                             if (item.equals("Parent")) {
-                                Intent intent = new Intent(getActivity(), SendMoneyScreen.class);
+                                Intent intent = new Intent(getActivity(), ParentBalanceScreen.class);
                                 startActivity(intent);
                             } else if (item.equals("Child")) {
-                                Intent intent = new Intent(getActivity(), BalanceScreen.class);
+                                Intent intent = new Intent(getActivity(), ChildBalanceScreen.class);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();

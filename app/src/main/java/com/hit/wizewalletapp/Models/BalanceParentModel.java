@@ -1,10 +1,10 @@
 package com.hit.wizewalletapp.Models;
 
-public class BalanceModel {
+public class BalanceParentModel {
     int photo;
     String date, topic, balance, description;
 
-    public BalanceModel(int photo, String date, String topic, String balance, String description) {
+    public BalanceParentModel(int photo, String date, String topic, String balance, String description) {
         this.photo = photo;
         this.date = date;
         this.topic = topic;
