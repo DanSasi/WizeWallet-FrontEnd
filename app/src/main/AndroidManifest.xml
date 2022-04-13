@@ -15,38 +15,47 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:replace="android:label">
         <activity
-            android:name=".Activities.LoginActivity"
+            android:name=".Activities.General_Activites.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".Activities.MainActivity"
+            android:name=".Activities.Child_Activities.ChildTransactionHistoryActivity"
             android:exported="true" />
         <activity
-            android:name=".Activities.TransactionHistoryActivity"
+            android:name=".Activities.Child_Activities.ChildBalanceScreen"
             android:exported="true" />
         <activity
-            android:name=".Activities.ChildBalanceScreen"
+            android:name=".Activities.Parent_Activities.ParentBalanceScreen"
             android:exported="true" />
         <activity
-            android:name=".Activities.ParentFolder.ParentBalanceScreen"
+            android:name=".Activities.Parent_Activities.SendMoneyScreen"
             android:exported="true" />
         <activity
-            android:name=".Activities.SendMoneyScreen"
+            android:name=".Activities.Child_Activities.ChildMenuScreen"
             android:exported="true" />
         <activity
-            android:name=".Activities.MenuScreen"
+            android:name=".Activities.Child_Activities.ChildTipsScreen"
             android:exported="true" />
         <activity
-            android:name=".Activities.TipsScreen"
+            android:name=".Activities.Parent_Activities.ParentTipsScreen"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.Parent_Activities.ParentMenuScreen"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.Parent_Activities.ParentTransactionHistoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.Parent_Activities.ParentTasksScreen"
             android:exported="true" />
 
         <activity
-            android:name=".Activities.ContactListScreen"
+            android:name=".Activities.Parent_Activities.ChildListScreen"
             android:exported="true" />
         <activity
-            android:name=".Activities.TasksScreen"
+            android:name=".Activities.Child_Activities.ChildTasksScreen"
             android:exported="true" />
         <activity
-            android:name=".Activities.SplashScreen"
+            android:name=".Activities.General_Activites.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
