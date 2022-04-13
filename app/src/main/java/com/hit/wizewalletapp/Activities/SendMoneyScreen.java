@@ -31,6 +31,7 @@ public class SendMoneyScreen extends AppCompatActivity implements CustomSpinner.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_money_screen);
 
+        String refreshToken = getIntent().getStringExtra("refresh");
 
 //        String name = getIntent().getExtras().getString("arraylist","no");
 
@@ -56,6 +57,7 @@ public class SendMoneyScreen extends AppCompatActivity implements CustomSpinner.
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SendMoneyScreen.this, ContactListScreen.class);
+                intent.putExtra("refresh",refreshToken);
                 startActivity(intent);
             }
         });
