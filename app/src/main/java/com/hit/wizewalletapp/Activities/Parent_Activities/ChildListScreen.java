@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 import com.hit.wizewalletapp.Activities.Child_Activities.ChildBalanceScreen;
 import com.hit.wizewalletapp.Adapters.Parent_Adapters.ChildListAdapter;
-import com.hit.wizewalletapp.Adapters.Parent_Adapters.Childs;
+import com.hit.wizewalletapp.Adapters.Parent_Adapters.ChildsModel;
 import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class ChildListScreen extends AppCompatActivity implements ChildListAdapter.RecyclerViewClickListener{
 
     RecyclerView recyclerView;
-    ArrayList<Childs> newUserArrayList;
+    ArrayList<ChildsModel> newUserArrayList;
     ChildListAdapter contactListAdapter;
     String[] userName;
     String[] accNo;
@@ -46,7 +46,7 @@ public class ChildListScreen extends AppCompatActivity implements ChildListAdapt
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        newUserArrayList = new ArrayList<Childs>();
+        newUserArrayList = new ArrayList<ChildsModel>();
 
         contactListAdapter = new ChildListAdapter(this,newUserArrayList,this::onClick);
         recyclerView.setAdapter(contactListAdapter);
@@ -62,12 +62,12 @@ public class ChildListScreen extends AppCompatActivity implements ChildListAdapt
         };
 
         accNo = new String[]{
-                "Bank - 1234",
-                "Bank - 1234",
-                "Bank - 1234",
-                "Bank - 1234",
-                "Bank - 1234",
-                "Bank - 1234",
+                "Bank - 1",
+                "Bank - 2",
+                "Bank - 3",
+                "Bank - 4",
+                "Bank - 5",
+                "Bank - 6",
 
         };
 
@@ -85,7 +85,7 @@ public class ChildListScreen extends AppCompatActivity implements ChildListAdapt
 
     private void getData() {
         for(int i=0; i<userName.length; i++){
-            Childs contacts = new Childs(userName[i],accNo[i],userImg[i]);
+            ChildsModel contacts = new ChildsModel(userName[i],accNo[i],userImg[i]);
             newUserArrayList.add(contacts);
         }
 

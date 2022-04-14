@@ -1,16 +1,10 @@
 package com.hit.wizewalletapp.Adapters.General_Adapters;
 
-import android.content.Context;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-
-import com.hit.wizewalletapp.Fragments.LoginTabFragment;
-import com.hit.wizewalletapp.Fragments.SignupTabFragment;
 
 import java.util.ArrayList;
 

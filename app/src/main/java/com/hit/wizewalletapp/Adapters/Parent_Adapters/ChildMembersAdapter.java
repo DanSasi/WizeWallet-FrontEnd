@@ -33,7 +33,8 @@ public class ChildMembersAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int i) {
-        return i;
+
+        return MembersList.get(i).getName();
     }
 
     @Override

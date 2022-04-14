@@ -40,7 +40,7 @@ public class ParentMenuScreen extends AppCompatActivity implements ChildMenuAdap
         arr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ParentMenuScreen.this, ChildBalanceScreen.class);
+                Intent intent = new Intent(ParentMenuScreen.this, ParentBalanceScreen.class);
                 startActivity(intent);
             }
         });

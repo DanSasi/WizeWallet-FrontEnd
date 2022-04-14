@@ -17,10 +17,10 @@ import java.util.ArrayList;
 public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyViewHolder> {
 
     Context context;
-    ArrayList<Childs> newUserArrayList;
+    ArrayList<ChildsModel> newUserArrayList;
     private  RecyclerViewClickListener clicklistener;
 
-    public ChildListAdapter(Context context, ArrayList<Childs> newUserArrayList, RecyclerViewClickListener listener) {
+    public ChildListAdapter(Context context, ArrayList<ChildsModel> newUserArrayList, RecyclerViewClickListener listener) {
         this.context = context;
         this.newUserArrayList = newUserArrayList;
         this.clicklistener =listener;
@@ -31,7 +31,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyVi
     @Override
     public ChildListAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(context).inflate(R.layout.contact_list_item, parent, false);
+        View v = LayoutInflater.from(context).inflate(R.layout.child_list_item, parent, false);
 
         return new MyViewHolder(v,clicklistener);
     }
@@ -39,7 +39,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull ChildListAdapter.MyViewHolder holder, int position) {
 
-        Childs contactList = newUserArrayList.get(position);
+        ChildsModel contactList = newUserArrayList.get(position);
         holder.img_user.setImageResource(contactList.userImage);
         holder.tv_user_name.setText(contactList.userName);
         holder.tv_acc_no.setText(contactList.accNo);
@@ -52,6 +52,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyVi
         return newUserArrayList.size();
     }
 
+    @SuppressWarnings("deprecation")
     public  static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView tv_user_name;

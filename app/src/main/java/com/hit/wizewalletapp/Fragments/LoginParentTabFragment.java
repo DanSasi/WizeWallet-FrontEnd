@@ -30,13 +30,12 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class LoginTabFragment extends Fragment implements CustomSpinner.OnSpinnerEventsListener {
+public class LoginParentTabFragment extends Fragment  {
 
     TextView email;
     TextView password;
     TextView logAs;
     Spinner userSpinner;
-    UserMembersAdapter adapter;
     TextView forgetPass;
     Button login;
 
@@ -49,7 +48,7 @@ public class LoginTabFragment extends Fragment implements CustomSpinner.OnSpinne
     float v = 0;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savadInstanceState) {
-        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.login_tab_fragment, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.login_tab_parent_fragment, container, false);
 
         //Retrofit instance
         retrofit = new Retrofit.Builder()
@@ -58,15 +57,13 @@ public class LoginTabFragment extends Fragment implements CustomSpinner.OnSpinne
                 .build();
         retrofitInterface = retrofit.create(RetrofitInterface.class);
 
-        email = root.findViewById(R.id.email);
+        email = root.findViewById(R.id.child_username);
         password = root.findViewById(R.id.password);
         forgetPass = root.findViewById(R.id.forgetPass);
         login = root.findViewById(R.id.login);
-        userSpinner = (Spinner) root.findViewById(R.id.logfrag_userSpinner);
-        logAs = root.findViewById(R.id.text_changeUser);
 
-        adapter = new UserMembersAdapter(getActivity(), UserData.getUsersDataList());
-        userSpinner.setAdapter(adapter);
+
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,17 +90,13 @@ public class LoginTabFragment extends Fragment implements CustomSpinner.OnSpinne
 
                             Log.d("TAG",accessToken);
                             Log.d("TAG",refreshToken);
-
-                            String item = userSpinner.getSelectedItem().toString();
-                            if (item.equals("Parent")) {
-                                Intent intent = new Intent(getActivity(), ParentBalanceScreen.class);
-                                startActivity(intent);
-                            } else if (item.equals("Child")) {
-                                Intent intent = new Intent(getActivity(), ChildBalanceScreen.class);
-                                startActivity(intent);
-                            } else {
-                                Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
-                            }
+                            login.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent intent = new Intent(getActivity(),ParentBalanceScreen.class);
+                                    startActivity(intent);
+                                }
+                            });
 
                             Toast.makeText(v.getContext(), "Login OK", Toast.LENGTH_LONG).show();
                         } else if (response.code() == 400) {
@@ -144,23 +137,19 @@ public class LoginTabFragment extends Fragment implements CustomSpinner.OnSpinne
         password.setTranslationX(800);
         forgetPass.setTranslationX(800);
         login.setTranslationX(800);
-        userSpinner.setTranslationX(800);
-        logAs.setTranslationX(800);
+
 
 
         email.setAlpha(v);
         password.setAlpha(v);
         forgetPass.setAlpha(v);
         login.setAlpha(v);
-        userSpinner.setAlpha(v);
-        logAs.setAlpha(v);
+
 
         email.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
         password.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
         forgetPass.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
         login.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(700).start();
-        logAs.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(700).start();
-        userSpinner.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
 
 
         return root;
@@ -168,13 +157,5 @@ public class LoginTabFragment extends Fragment implements CustomSpinner.OnSpinne
 
     }
 
-    @Override
-    public void onPopupWindowOpened(Spinner spinner) {
 
-    }
-
-    @Override
-    public void onPopupWindowClosed(Spinner spinner) {
-
-    }
 }

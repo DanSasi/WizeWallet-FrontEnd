@@ -10,7 +10,8 @@ import android.widget.AdapterView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.hit.wizewalletapp.Adapters.General_Adapters.LoginAdapter;
-import com.hit.wizewalletapp.Fragments.LoginTabFragment;
+import com.hit.wizewalletapp.Fragments.LoginChildFragment;
+import com.hit.wizewalletapp.Fragments.LoginParentTabFragment;
 import com.hit.wizewalletapp.Fragments.SignupTabFragment;
 import com.hit.wizewalletapp.R;
 
@@ -43,7 +44,8 @@ public class LoginActivity extends AppCompatActivity  {
 
         LoginAdapter loginAdapter = new LoginAdapter(getSupportFragmentManager(),
                 FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        loginAdapter.addFragment(new LoginTabFragment(),"LOG IN");
+        loginAdapter.addFragment(new LoginParentTabFragment(),"Parent LOG IN");
+        loginAdapter.addFragment(new LoginChildFragment(),"CHILD LOG IN");
         loginAdapter.addFragment(new SignupTabFragment(),"SIGN UP");
         viewPager.setAdapter(loginAdapter);
 

@@ -19,7 +19,7 @@ import com.hit.wizewalletapp.R;
 public class SendMoneyScreen extends AppCompatActivity implements CustomSpinner.OnSpinnerEventsListener {
 
 
-    private CustomSpinner spinner_members;
+    private Spinner spinner_members;
 //    ArrayList<Contacts> newUserArrayList;
 
 
@@ -36,19 +36,14 @@ public class SendMoneyScreen extends AppCompatActivity implements CustomSpinner.
 
 
         spinner_members = findViewById(R.id.spinner_mambers);
-        spinner_members.setSpinnerEventsListener(this);
         adapter = new ChildMembersAdapter(SendMoneyScreen.this, Data.getMembersList());
         spinner_members.setAdapter(adapter);
 
 
         SwipeButton swipeButton =findViewById(R.id.swipeId);
 //
-//        swipeButton.setOnStateChangeListener(new OnStateChangeListener() {
-//            @Override
-//            public void onStateChange(boolean active) {
-//                startActivity(new Intent(SendMoneyScreen.this, PaymentSummaryScreen.class ));
-//            }
-//        });
+        String item = spinner_members.getSelectedItem().toString();
+
 
         arr = findViewById(R.id.IV01);
 

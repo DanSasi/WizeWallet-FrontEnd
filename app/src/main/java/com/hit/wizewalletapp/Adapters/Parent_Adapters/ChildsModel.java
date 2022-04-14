@@ -1,10 +1,10 @@
 package com.hit.wizewalletapp.Adapters.Parent_Adapters;
 
-public class Childs {
+public class ChildsModel {
     String userName, accNo;
     int userImage;
 
-    public Childs(String userName, String accNo, int userImage) {
+    public ChildsModel(String userName, String accNo, int userImage) {
         this.userName = userName;
         this.accNo = accNo;
         this.userImage = userImage;
