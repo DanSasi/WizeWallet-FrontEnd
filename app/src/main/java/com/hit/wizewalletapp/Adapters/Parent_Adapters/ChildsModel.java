@@ -1,21 +1,21 @@
 package com.hit.wizewalletapp.Adapters.Parent_Adapters;
 
 public class ChildsModel {
-    String userName, accNo;
-    int userImage;
+    String childName, accNo;
+    int childImage;
 
     public ChildsModel(String userName, String accNo, int userImage) {
-        this.userName = userName;
+        this.childName = userName;
         this.accNo = accNo;
-        this.userImage = userImage;
+        this.childImage = userImage;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getChildName() {
+        return childName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setChildName(String childName) {
+        this.childName = childName;
     }
 
     public String getAccNo() {
@@ -26,11 +26,11 @@ public class ChildsModel {
         this.accNo = accNo;
     }
 
-    public int getUserImage() {
-        return userImage;
+    public int getChildImage() {
+        return childImage;
     }
 
-    public void setUserImage(int userImage) {
-        this.userImage = userImage;
+    public void setChildImage(int childImage) {
+        this.childImage = childImage;
     }
 }

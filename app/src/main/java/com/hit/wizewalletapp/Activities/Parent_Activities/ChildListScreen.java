@@ -7,11 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.hit.wizewalletapp.Activities.Child_Activities.ChildBalanceScreen;
 import com.hit.wizewalletapp.Adapters.Parent_Adapters.ChildListAdapter;
 import com.hit.wizewalletapp.Adapters.Parent_Adapters.ChildsModel;
+import com.hit.wizewalletapp.Fragments.AddChildFragment;
 import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
@@ -20,24 +22,26 @@ public class ChildListScreen extends AppCompatActivity implements ChildListAdapt
 
     RecyclerView recyclerView;
     ArrayList<ChildsModel> newUserArrayList;
+    Button addChildBtn ;
     ChildListAdapter contactListAdapter;
-    String[] userName;
+    String[] childName;
     String[] accNo;
-    int[] userImg;
+    int[] childImg;
     private ChildListAdapter.RecyclerViewClickListener listener;
     ImageButton backArrow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_list_screen);
+        setContentView(R.layout.activity_child_list_screen);
 
+        addChildBtn = findViewById(R.id.add_child_Btn);
         //backArrow
         backArrow = findViewById(R.id.img_back_arrow_contact);
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChildListScreen.this, ChildBalanceScreen.class);
+                Intent intent = new Intent(ChildListScreen.this, ParentBalanceScreen.class);
                 startActivity(intent);
             }
         });
@@ -51,7 +55,15 @@ public class ChildListScreen extends AppCompatActivity implements ChildListAdapt
         contactListAdapter = new ChildListAdapter(this,newUserArrayList,this::onClick);
         recyclerView.setAdapter(contactListAdapter);
 
-        userName = new String[]{
+        addChildBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChildListScreen.this , AddChildFragment.class);
+                startActivity(intent);
+            }
+        });
+
+        childName = new String[]{
                 "Dan",
                 "Michael",
                 "Yarden",
@@ -71,7 +83,7 @@ public class ChildListScreen extends AppCompatActivity implements ChildListAdapt
 
         };
 
-        userImg = new int[]{
+        childImg = new int[]{
                 R.drawable.imageprofile,
                 R.drawable.imageprofile,
                 R.drawable.imageprofile,
@@ -84,8 +96,8 @@ public class ChildListScreen extends AppCompatActivity implements ChildListAdapt
     }
 
     private void getData() {
-        for(int i=0; i<userName.length; i++){
-            ChildsModel contacts = new ChildsModel(userName[i],accNo[i],userImg[i]);
+        for(int i=0; i<childName.length; i++){
+            ChildsModel contacts = new ChildsModel(childName[i],accNo[i],childImg[i]);
             newUserArrayList.add(contacts);
         }
 

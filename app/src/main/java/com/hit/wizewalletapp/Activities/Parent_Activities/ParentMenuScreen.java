@@ -78,7 +78,7 @@ public class ParentMenuScreen extends AppCompatActivity implements ChildMenuAdap
 
 
             case 3:
-                Intent intent2 = new Intent(ParentMenuScreen.this, ChildTransactionHistoryActivity.class);
+                Intent intent2 = new Intent(ParentMenuScreen.this, ParentTransactionHistoryActivity.class);
                 startActivity(intent2);
                 break;
                 

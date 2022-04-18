@@ -23,16 +23,16 @@
         >
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/hello_parent_balance"
             style="@style/balance_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:lineHeight="45px"
-            android:text="Your Balance"
+            android:text="Hellow : "
             android:textAlignment="center"
-            android:textSize="19dp"
             android:textColor="#818197"
+            android:textSize="19dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

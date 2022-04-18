@@ -26,8 +26,8 @@ public class ParentBalanceScreen extends AppCompatActivity implements BalanceLis
     RecyclerView recyclerView;
     private BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener clickListener;
 
-    ImageView transfer, topup, more , tips;
-    TextView transferText, topupText, moreText , tipText;
+    ImageView transfer, task, more , tips;
+    TextView transferText, taskText, moreText , tipText , hellowText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +43,11 @@ public class ParentBalanceScreen extends AppCompatActivity implements BalanceLis
             }
         });
 
-        topup = findViewById(R.id.imageView5);
-        topup.setOnClickListener(new View.OnClickListener() {
+        task = findViewById(R.id.imageView5);
+        task.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTopup = new Intent(ParentBalanceScreen.this, ChildTasksScreen.class);
+                Intent gotoTopup = new Intent(ParentBalanceScreen.this, ParentTasksScreen.class);
                 startActivity(gotoTopup);
             }
         });
@@ -55,7 +55,7 @@ public class ParentBalanceScreen extends AppCompatActivity implements BalanceLis
         tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTips = new Intent(ParentBalanceScreen.this, ChildTipsScreen.class);
+                Intent gotoTips = new Intent(ParentBalanceScreen.this, ParentTipsScreen.class);
                 startActivity(gotoTips);
 
             }
@@ -65,7 +65,7 @@ public class ParentBalanceScreen extends AppCompatActivity implements BalanceLis
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoMore = new Intent(ParentBalanceScreen.this, ChildMenuScreen.class);
+                Intent gotoMore = new Intent(ParentBalanceScreen.this, ParentMenuScreen.class);
                 startActivity(gotoMore);
             }
         });
@@ -74,16 +74,16 @@ public class ParentBalanceScreen extends AppCompatActivity implements BalanceLis
         transferText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTransferText = new Intent(ParentBalanceScreen.this, ParentBalanceScreen.class);
+                Intent gotoTransferText = new Intent(ParentBalanceScreen.this, ChildListScreen.class);
                 startActivity(gotoTransferText);
             }
         });
 
-        topupText = findViewById(R.id.textView7);
-        topupText.setOnClickListener(new View.OnClickListener() {
+        taskText = findViewById(R.id.textView7);
+        taskText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTopupText = new Intent(ParentBalanceScreen.this, ChildTasksScreen.class);
+                Intent gotoTopupText = new Intent(ParentBalanceScreen.this, ParentTasksScreen.class);
                 startActivity(gotoTopupText);
             }
         });
@@ -92,7 +92,7 @@ public class ParentBalanceScreen extends AppCompatActivity implements BalanceLis
         tipText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTipText = new Intent(ParentBalanceScreen.this, ChildTipsScreen.class);
+                Intent gotoTipText = new Intent(ParentBalanceScreen.this, ParentTipsScreen.class);
                 startActivity(gotoTipText);
             }
         });
@@ -101,10 +101,13 @@ public class ParentBalanceScreen extends AppCompatActivity implements BalanceLis
         moreText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoMore = new Intent(ParentBalanceScreen.this, ChildMenuScreen.class);
+                Intent gotoMore = new Intent(ParentBalanceScreen.this, ParentMenuScreen.class);
                 startActivity(gotoMore);
             }
         });
+
+        hellowText = findViewById(R.id.hello_parent_balance);
+
 
         recyclerView = findViewById(R.id.rv_balance);
         getData();

@@ -36,7 +36,7 @@ public class ParentTipsScreen extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent( ParentTipsScreen.this, ChildBalanceScreen.class);
+                Intent intent =new Intent( ParentTipsScreen.this, ParentBalanceScreen.class);
                 startActivity(intent);
             }
         });

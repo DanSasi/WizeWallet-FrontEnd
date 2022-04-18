@@ -27,6 +27,9 @@
             android:name=".Activities.Parent_Activities.ParentBalanceScreen"
             android:exported="true" />
         <activity
+            android:name=".Fragments.AddChildFragment"
+            android:exported="true" />
+        <activity
             android:name=".Activities.Parent_Activities.SendMoneyScreen"
             android:exported="true" />
         <activity

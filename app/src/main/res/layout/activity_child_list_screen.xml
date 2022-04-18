@@ -90,5 +90,18 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_all_childs"
         app:layout_constraintVertical_bias="0.081" />
 
+    <Button
+        android:id="@+id/add_child_Btn"
+        android:layout_width="209dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/backgroundimg"
+        android:text="Add A NEW CHILD"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/contact_recyclerview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_childs" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

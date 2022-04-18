@@ -66,7 +66,7 @@ public class ParentMenuAdapterClass extends RecyclerView.Adapter<ParentMenuAdapt
 
         public ListViewHolder(@NonNull View itemView, Context context, List<MenuModelClass> menu_items, RecycleViewClickListener clickListener) {
             super(itemView);
-            menu_item = itemView.findViewById(R.id.textView);
+            menu_item = itemView.findViewById(R.id.hello_parent_balance);
             icon = itemView.findViewById(R.id.img);
 //            arrow = itemView.findViewById(R.id.img1);
             this.recycleViewClickListener = clickListener;

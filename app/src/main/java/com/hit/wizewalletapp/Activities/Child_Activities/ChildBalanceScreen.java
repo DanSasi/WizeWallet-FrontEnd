@@ -22,8 +22,8 @@ public class ChildBalanceScreen extends AppCompatActivity implements BalanceList
     RecyclerView recyclerView;
     private BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener clickListener;
 
-    ImageView transfer, topup, more , tips;
-    TextView transferText, topupText, moreText , tipText;
+    ImageView  tasks, more , tips;
+    TextView  tasksText, moreText , tipText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +39,8 @@ public class ChildBalanceScreen extends AppCompatActivity implements BalanceList
 //            }
 //        });
 
-        topup = findViewById(R.id.imageView5);
-        topup.setOnClickListener(new View.OnClickListener() {
+        tasks = findViewById(R.id.imageView5);
+        tasks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent gotoTopup = new Intent(ChildBalanceScreen.this, ChildTasksScreen.class);
@@ -66,17 +66,10 @@ public class ChildBalanceScreen extends AppCompatActivity implements BalanceList
             }
         });
 
-//        transferText = findViewById(R.id.textView6);
-//        transferText.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent gotoTransferText = new Intent(ChildBalanceScreen.this, ChildBalanceScreen.class);
-//                startActivity(gotoTransferText);
-//            }
-//        });
+//
 
-        topupText = findViewById(R.id.textView7);
-        topupText.setOnClickListener(new View.OnClickListener() {
+        tasksText = findViewById(R.id.textView7);
+        tasksText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent gotoTopupText = new Intent(ChildBalanceScreen.this, ChildTasksScreen.class);

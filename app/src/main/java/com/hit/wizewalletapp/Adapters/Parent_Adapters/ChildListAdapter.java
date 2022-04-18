@@ -40,8 +40,8 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyVi
     public void onBindViewHolder(@NonNull ChildListAdapter.MyViewHolder holder, int position) {
 
         ChildsModel contactList = newUserArrayList.get(position);
-        holder.img_user.setImageResource(contactList.userImage);
-        holder.tv_user_name.setText(contactList.userName);
+        holder.img_user.setImageResource(contactList.childImage);
+        holder.tv_user_name.setText(contactList.childName);
         holder.tv_acc_no.setText(contactList.accNo);
 
 

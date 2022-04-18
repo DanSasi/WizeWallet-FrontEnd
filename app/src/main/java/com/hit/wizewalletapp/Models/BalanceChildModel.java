@@ -2,19 +2,33 @@ package com.hit.wizewalletapp.Models;
 
 public class BalanceChildModel {
     int photo;
-    String date, topic, balance, description;
+    String date, topic, balance, description, name;
 
-    public BalanceChildModel(int photo, String date, String topic, String balance, String description) {
+
+
+    public BalanceChildModel(int photo, String name, String date, String topic, String balance, String description) {
         this.photo = photo;
         this.date = date;
         this.topic = topic;
         this.balance = balance;
         this.description = description;
+        this.name = name ;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+
 
     public int getPhoto() {
         return photo;
     }
+
 
     public void setPhoto(int photo) {
         this.photo = photo;
