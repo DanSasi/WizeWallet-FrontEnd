@@ -14,7 +14,6 @@ import com.hit.wizewalletapp.R;
 public class AddChildFragment extends AppCompatActivity {
 
 
-    ImageView childImageView ;
     EditText childNameEt;
     EditText childPassword;
     Button addChild;

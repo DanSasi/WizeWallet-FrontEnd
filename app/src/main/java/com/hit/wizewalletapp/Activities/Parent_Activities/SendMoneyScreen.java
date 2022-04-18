@@ -9,7 +9,9 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 
 
+import com.ebanx.swipebtn.OnStateChangeListener;
 import com.ebanx.swipebtn.SwipeButton;
+import com.hit.wizewalletapp.Activities.General_Activites.PaymentSplashScreen;
 import com.hit.wizewalletapp.Adapters.Parent_Adapters.ChildMembersAdapter;
 import com.hit.wizewalletapp.Data.ChildsData.Data;
 import com.hit.wizewalletapp.Models.CustomSpinner;
@@ -43,6 +45,14 @@ public class SendMoneyScreen extends AppCompatActivity implements CustomSpinner.
         SwipeButton swipeButton =findViewById(R.id.swipeId);
 //
         String item = spinner_members.getSelectedItem().toString();
+
+
+        swipeButton.setOnStateChangeListener(new OnStateChangeListener() {
+            @Override
+            public void onStateChange(boolean active) {
+                startActivity(new Intent(SendMoneyScreen.this, PaymentSplashScreen.class ));
+            }
+        });
 
 
         arr = findViewById(R.id.IV01);
