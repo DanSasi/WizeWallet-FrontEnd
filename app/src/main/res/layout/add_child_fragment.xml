@@ -21,12 +21,12 @@
         app:layout_constraintVertical_bias="0.263" />
 
     <EditText
-        android:id="@+id/add_child_name"
+        android:id="@+id/add_child_username"
         android:layout_width="210dp"
         android:layout_height="45dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="280dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="Child User Name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.407"
@@ -37,7 +37,7 @@
         android:id="@+id/add_child_password"
         android:layout_width="210dp"
         android:layout_height="45dp"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="340dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName"
@@ -46,5 +46,32 @@
         app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_child_balance"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="187dp"
+        android:layout_marginEnd="119dp"
+        android:ems="10"
+        android:hint="Child Balance"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_child_id"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="120dp"
+        android:ems="10"
+        android:hint="Child Id"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_child_balance" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
