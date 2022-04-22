@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/bgRound"
+    android:background="@drawable/backgroundimg"
+    tools:context=".Folders.Parent_Folder.Fragments.ChildListScreenFragment">
+
+    <TextView
+        android:id="@+id/tv_childs"
+        style="@style/contactFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="Childs"
+        android:textColor="#082431"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/img_back_arrow_contact"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="88dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/backgroundimg"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintEnd_toStartOf="@+id/tv_childs"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/et_search"
+        style="@style/contactFont"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="648dp"
+        android:layout_marginEnd="48dp"
+        android:autofillHints="name"
+        android:background="@drawable/search_bar"
+        android:drawableEnd="@drawable/ic_search"
+        android:hint="Search"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:textColor="#000"
+        android:textColorHint="#2C3A4B"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_all_childs"
+        style="@style/contactFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="212dp"
+        android:text="All Childs"
+        android:textColor="#082431"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/et_search"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contact_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="25dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_all_childs"
+        app:layout_constraintTop_toBottomOf="@+id/tv_all_childs"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <Button
+        android:id="@+id/add_child_Btn"
+        android:layout_width="209dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/backgroundimg"
+        android:text="Add A NEW CHILD"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/contact_recyclerview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_childs" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

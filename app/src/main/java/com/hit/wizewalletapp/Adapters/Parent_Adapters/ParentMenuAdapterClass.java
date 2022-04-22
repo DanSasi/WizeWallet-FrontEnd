@@ -37,7 +37,7 @@ public class ParentMenuAdapterClass extends RecyclerView.Adapter<ParentMenuAdapt
     @Override
     public ListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View layout;
-        layout = LayoutInflater.from(context).inflate(R.layout.activity_menu_screen_parent_list1,parent,false);
+        layout = LayoutInflater.from(context).inflate(R.layout.fragment_menu_screen_parent_list1,parent,false);
         return new ListViewHolder(layout,context,menu_items,clickListener);
     }
 

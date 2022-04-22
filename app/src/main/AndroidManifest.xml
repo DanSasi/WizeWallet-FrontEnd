@@ -15,31 +15,21 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:label">
         <activity
-            android:name=".Activities.Parent_Folder.Activities.MainActivity"
+            android:name=".Folders.Parent_Folder.Activities.ParentBalanceActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.General_Activites.PaymentSplashScreen"
+            android:name=".General_Activites.PaymentSplashScreen"
             android:exported="false" />
         <activity
-            android:name=".Activities.General_Activites.LoginActivity"
+            android:name=".General_Activites.LoginActivity"
             android:exported="true" />
+
         <activity
-            android:name=".Activities.Child_Activities.ChildTransactionHistoryActivity"
+            android:name=".Folders.Child_Folder.Activites.ChildBalanceActivity"
             android:exported="true" />
+
         <activity
-            android:name=".Activities.Child_Activities.ChildBalanceScreen"
-            android:exported="true" />
-        <activity
-            android:name=".Activities.Child_Activities.ChildMenuScreen"
-            android:exported="true" />
-        <activity
-            android:name=".Activities.Child_Activities.ChildTipsScreen"
-            android:exported="true" />
-        <activity
-            android:name=".Activities.Child_Activities.ChildTasksScreen"
-            android:exported="true" />
-        <activity
-            android:name=".Activities.General_Activites.SplashScreen"
+            android:name=".General_Activites.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

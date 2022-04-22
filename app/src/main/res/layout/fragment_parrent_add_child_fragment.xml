@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimg"
+    tools:context=".Folders.Parent_Folder.Fragments.AddChildFragment">
+
+    <ImageView
+        android:id="@+id/add_child_image"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/childface"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097" />
+
+    <Button
+        android:id="@+id/addChild_btn"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:background="@drawable/backgroundimg"
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_child_password"
+        app:layout_constraintVertical_bias="0.368" />
+
+    <EditText
+        android:id="@+id/add_child_username"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="372dp"
+        android:ems="10"
+        android:hint="Child User Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_child_password"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="500dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:password="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_child_balance"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="312dp"
+        android:layout_marginEnd="119dp"
+        android:ems="10"
+        android:hint="Child Balance"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_child_id"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Child Id"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:id="@+id/add_child_imageBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_balance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/equipment_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

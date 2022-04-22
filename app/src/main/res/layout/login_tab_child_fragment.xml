@@ -9,7 +9,7 @@
         android:id="@+id/child_username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="username"
+        android:hint="Email"
         android:minHeight="48dp"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"

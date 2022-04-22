@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_child"
+    app:startDestination="@id/childBalanceHomeFragment">
+
+    <fragment
+        android:id="@+id/childBalanceHomeFragment"
+        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildBalanceHomeFragment"
+        android:label="fragment_child_balance_home"
+        tools:layout="@layout/fragment_child_balance_home" >
+        <action
+            android:id="@+id/action_childBalanceHomeFragment_to_childMenuFragment"
+            app:destination="@id/childMenuFragment" />
+        <action
+            android:id="@+id/action_childBalanceHomeFragment_to_childTasksFragment"
+            app:destination="@id/childTasksFragment" />
+        <action
+            android:id="@+id/action_childBalanceHomeFragment_to_childTransactionHistoryFragment"
+            app:destination="@id/childTransactionHistoryFragment" />
+        <action
+            android:id="@+id/action_childBalanceHomeFragment_to_childTipsFragment"
+            app:destination="@id/childTipsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/childTasksFragment"
+        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildTasksFragment"
+        android:label="ChildTasksFragment" >
+        <action
+            android:id="@+id/action_childTasksFragment_to_childBalanceHomeFragment"
+            app:destination="@id/childBalanceHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/childMenuFragment"
+        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildMenuFragment"
+        android:label="fragment_menu_child_screen"
+        tools:layout="@layout/fragment_menu_child_screen" >
+        <action
+            android:id="@+id/action_childMenuFragment_to_childBalanceHomeFragment"
+            app:destination="@id/childBalanceHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/childTransactionHistoryFragment"
+        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildTransactionHistoryFragment"
+        android:label="fragment_transaction_child_history"
+        tools:layout="@layout/fragment_transaction_child_history" >
+        <action
+            android:id="@+id/action_childTransactionHistoryFragment_to_childBalanceHomeFragment"
+            app:destination="@id/childBalanceHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/childTipsFragment"
+        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildTipsFragment"
+        android:label="fragment_tips_child_screen"
+        tools:layout="@layout/fragment_tips_child_screen" >
+        <action
+            android:id="@+id/action_childTipsFragment_to_childBalanceHomeFragment"
+            app:destination="@id/childBalanceHomeFragment" />
+    </fragment>
+</navigation>
