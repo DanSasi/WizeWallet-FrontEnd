@@ -13,7 +13,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.hit.wizewalletapp.Activities.General_Activites.RetrofitInterface;
-import com.hit.wizewalletapp.Activities.Parent_Activities.ParentBalanceScreen;
+import com.hit.wizewalletapp.Activities.Parent_Folder.Activities.ParentBalanceScreen;
 import com.hit.wizewalletapp.R;
 
 import java.util.HashMap;

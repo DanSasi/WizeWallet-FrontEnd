@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     style="@style/bgRound"
     android:background="@drawable/backgroundimg"
-    tools:context=".Activities.Parent_Activities.ChildListScreen">
+    tools:context=".Activities.Parent_Folder.Fragments.ChildListScreen">
 
     <TextView
         android:id="@+id/tv_childs"

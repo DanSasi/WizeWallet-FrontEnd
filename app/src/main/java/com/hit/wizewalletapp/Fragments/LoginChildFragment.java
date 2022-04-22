@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,9 +15,6 @@ import androidx.fragment.app.Fragment;
 import com.hit.wizewalletapp.Activities.Child_Activities.ChildBalanceScreen;
 import com.hit.wizewalletapp.Activities.General_Activites.LoginResult;
 import com.hit.wizewalletapp.Activities.General_Activites.RetrofitInterface;
-import com.hit.wizewalletapp.Activities.Parent_Activities.ParentBalanceScreen;
-import com.hit.wizewalletapp.Adapters.General_Adapters.UserMembersAdapter;
-import com.hit.wizewalletapp.Models.CustomSpinner;
 import com.hit.wizewalletapp.R;
 
 import java.util.HashMap;

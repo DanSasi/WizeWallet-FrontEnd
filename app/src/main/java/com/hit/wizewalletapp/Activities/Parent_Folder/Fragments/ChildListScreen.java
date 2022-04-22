@@ -1,24 +1,25 @@
-package com.hit.wizewalletapp.Activities.Parent_Activities;
+package com.hit.wizewalletapp.Activities.Parent_Folder.Fragments;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.hit.wizewalletapp.Activities.Child_Activities.ChildBalanceScreen;
 import com.hit.wizewalletapp.Adapters.Parent_Adapters.ChildListAdapter;
 import com.hit.wizewalletapp.Adapters.Parent_Adapters.ChildsModel;
-import com.hit.wizewalletapp.Fragments.AddChildFragment;
 import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
 
-public class ChildListScreen extends AppCompatActivity implements ChildListAdapter.RecyclerViewClickListener{
+public class ChildListScreen extends Fragment implements ChildListAdapter.RecyclerViewClickListener{
 
     RecyclerView recyclerView;
     ArrayList<ChildsModel> newUserArrayList;
@@ -29,37 +30,36 @@ public class ChildListScreen extends AppCompatActivity implements ChildListAdapt
     int[] childImg;
     private ChildListAdapter.RecyclerViewClickListener listener;
     ImageButton backArrow;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_child_list_screen);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.activity_child_list_screen, container, false);
 
-        addChildBtn = findViewById(R.id.add_child_Btn);
         //backArrow
-        backArrow = findViewById(R.id.img_back_arrow_contact);
+        backArrow = view.findViewById(R.id.img_back_arrow_contact);
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChildListScreen.this, ParentBalanceScreen.class);
-                startActivity(intent);
+            Navigation.findNavController(view).navigate(R.id.action_childListScreen_to_homeParentFragment);
             }
         });
 
-        recyclerView = findViewById(R.id.contact_recyclerview);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView = view.findViewById(R.id.contact_recyclerview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setHasFixedSize(true);
 
         newUserArrayList = new ArrayList<ChildsModel>();
 
-        contactListAdapter = new ChildListAdapter(this,newUserArrayList,this::onClick);
+        contactListAdapter = new ChildListAdapter(getContext(),newUserArrayList,this::onClick);
         recyclerView.setAdapter(contactListAdapter);
 
+        addChildBtn = view.findViewById(R.id.add_child_Btn);
         addChildBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ChildListScreen.this , AddChildFragment.class);
-                startActivity(intent);
+            public void onClick(View v)
+            {
+                Navigation.findNavController(v).navigate(R.id.action_childListScreen_to_addChildFragment);
             }
         });
 
@@ -93,6 +93,7 @@ public class ChildListScreen extends AppCompatActivity implements ChildListAdapt
         };
 
         getData();
+        return view;
     }
 
     private void getData() {
@@ -107,7 +108,7 @@ public class ChildListScreen extends AppCompatActivity implements ChildListAdapt
 
     @Override
     public void onClick(int position) {
-        Intent intent = new Intent(ChildListScreen.this, SendMoneyScreen.class);
+        Intent intent = new Intent(getActivity(), SendMoneyScreen.class);
         startActivity(intent);
     }
 }

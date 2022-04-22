@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.hit.wizewalletapp.Activities.General_Activites.LoginActivity;
-import com.hit.wizewalletapp.Activities.Parent_Activities.SendMoneyScreen;
+import com.hit.wizewalletapp.Activities.Parent_Folder.Fragments.SendMoneyScreen;
 import com.hit.wizewalletapp.Adapters.Child_Adapters.ChildMenuAdapterClass;
 import com.hit.wizewalletapp.Models.MenuModelClass;
 import com.hit.wizewalletapp.R;
