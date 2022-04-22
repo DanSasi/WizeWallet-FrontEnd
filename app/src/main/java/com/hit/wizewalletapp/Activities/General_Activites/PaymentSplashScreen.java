@@ -11,8 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Activities.Parent_Folder.Activities.ParentBalanceScreen;
-import com.hit.wizewalletapp.Activities.Parent_Folder.Fragments.ChildListScreen;
+import com.hit.wizewalletapp.Activities.Parent_Folder.Activities.MainActivity;
 import com.hit.wizewalletapp.R;
 
 public class PaymentSplashScreen extends AppCompatActivity {
@@ -41,7 +40,7 @@ public class PaymentSplashScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent i = new Intent(PaymentSplashScreen.this, ParentBalanceScreen.class);
+                Intent i = new Intent(PaymentSplashScreen.this, MainActivity.class);
                 startActivity(i);
 
                 finish();

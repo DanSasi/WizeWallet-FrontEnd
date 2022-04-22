@@ -14,8 +14,8 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.hit.wizewalletapp.Activities.General_Activites.LoginResult;
-import com.hit.wizewalletapp.Activities.Parent_Folder.Activities.ParentBalanceScreen;
 import com.hit.wizewalletapp.Activities.General_Activites.RetrofitInterface;
+import com.hit.wizewalletapp.Activities.Parent_Folder.Activities.MainActivity;
 import com.hit.wizewalletapp.R;
 
 import java.util.HashMap;
@@ -89,7 +89,7 @@ public class LoginParentTabFragment extends Fragment  {
                             login.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    Intent intent = new Intent(getActivity(),ParentBalanceScreen.class);
+                                    Intent intent = new Intent(getActivity(), MainActivity.class);
                                     startActivity(intent);
                                 }
                             });

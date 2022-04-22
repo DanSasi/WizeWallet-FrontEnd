@@ -16,8 +16,7 @@
         app:layout_constraintBottom_toTopOf="@+id/rv_balance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/hello_parent_balance"
@@ -81,9 +80,9 @@
                 android:layout_marginStart="33dp"
                 android:layout_marginTop="24dp"
                 android:layout_weight="1"
-                android:src="@drawable/tipsimage"
                 android:clickable="true"
                 android:focusable="true"
+                android:src="@drawable/tipsimage"
                 app:layout_constraintStart_toEndOf="@+id/imageView5"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -94,9 +93,9 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="28dp"
                 android:layout_weight="1"
-                android:src="@drawable/more"
                 android:clickable="true"
                 android:focusable="true"
+                android:src="@drawable/more"
                 app:layout_constraintEnd_toEndOf="parent" />
 
 
@@ -127,9 +126,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
                 android:clickable="true"
                 android:focusable="true"
+                android:gravity="center_horizontal"
                 android:text="Tasks"
                 android:textAlignment="center" />
 
@@ -140,9 +139,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
                 android:clickable="true"
                 android:focusable="true"
+                android:gravity="center_horizontal"
                 android:text="Tips"
                 android:textAlignment="center" />
 
@@ -153,9 +152,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
                 android:clickable="true"
                 android:focusable="true"
+                android:gravity="center_horizontal"
                 android:text="More"
                 android:textAlignment="center" />
 

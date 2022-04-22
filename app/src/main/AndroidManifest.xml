@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hit.wizewalletapp" >
+    package="com.hit.wizewalletapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true"
-        tools:replace="android:label" >
+        tools:replace="android:label">
+        <activity
+            android:name=".Activities.Parent_Folder.Activities.MainActivity"
+            android:exported="false" />
         <activity
             android:name=".Activities.General_Activites.PaymentSplashScreen"
             android:exported="false" />
@@ -27,22 +30,17 @@
             android:name=".Activities.Child_Activities.ChildBalanceScreen"
             android:exported="true" />
         <activity
-            android:name=".Activities.Parent_Folder.Activities.ParentBalanceScreen"
-            android:exported="true" />
-
-        <activity
             android:name=".Activities.Child_Activities.ChildMenuScreen"
             android:exported="true" />
         <activity
             android:name=".Activities.Child_Activities.ChildTipsScreen"
             android:exported="true" />
-\
         <activity
             android:name=".Activities.Child_Activities.ChildTasksScreen"
             android:exported="true" />
         <activity
             android:name=".Activities.General_Activites.SplashScreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

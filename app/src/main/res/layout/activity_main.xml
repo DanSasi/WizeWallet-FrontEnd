@@ -5,22 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundimg"
-    android:orientation="vertical"
-    android:padding="40dp"
-    tools:context=".Activities.Child_Activities.ChildBalanceScreen">
+    tools:context=".Activities.Parent_Folder.Activities.MainActivity">
+
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_parent"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="268dp"
-        android:layout_height="607dp"
-        android:layout_marginStart="-5dp"
-        android:layout_marginEnd="-30dp"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_graph" />
+        app:navGraph="@navigation/nav_graph">
+
+    </androidx.fragment.app.FragmentContainerView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
