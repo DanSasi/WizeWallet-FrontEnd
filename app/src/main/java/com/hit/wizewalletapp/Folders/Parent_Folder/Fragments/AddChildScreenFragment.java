@@ -13,7 +13,7 @@ import android.widget.EditText;
 import com.hit.wizewalletapp.R;
 
 
-public class AddChildFragment extends Fragment {
+public class AddChildScreenFragment extends Fragment {
 
 
     EditText childNameEt;
@@ -26,8 +26,8 @@ public class AddChildFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_parrent_add_child_fragment, container, false);
 
-        childPassword = view.findViewById(R.id.add_child_password);
-        childNameEt = view.findViewById(R.id.add_child_username);
+        childPassword = view.findViewById(R.id.details_chaild_password);
+        childNameEt = view.findViewById(R.id.details_chaild_username);
         addChild = view.findViewById(R.id.add_child_Btn);
         return view;
     }

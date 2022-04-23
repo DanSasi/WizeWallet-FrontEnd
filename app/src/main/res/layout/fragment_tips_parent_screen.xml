@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundimg"
-    tools:context=".Folders.Child_Folder.Fragments.ChildTipsFragment">
+    tools:context=".Folders.Child_Folder.Fragments.ChildTipsScreenFragment">
 
 
     <TextView
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/backArrow"
+        android:id="@+id/details_arrow_back"
         android:layout_width="26.5dp"
         android:layout_height="26.5dp"
         android:layout_marginLeft="10dp"

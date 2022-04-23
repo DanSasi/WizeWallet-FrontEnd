@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundimg"
-    tools:context=".Folders.Child_Folder.Fragments.ChildMenuFragment"
+    tools:context=".Folders.Child_Folder.Fragments.ChildMenuScreenFragment"
     android:orientation="vertical">
 
 

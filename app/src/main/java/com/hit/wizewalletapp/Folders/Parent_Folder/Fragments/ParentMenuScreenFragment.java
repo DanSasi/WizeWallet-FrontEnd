@@ -1,9 +1,4 @@
-package com.hit.wizewalletapp.Folders.Child_Folder.Fragments;
-
-import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.hit.wizewalletapp.Folders.Parent_Folder.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,13 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.hit.wizewalletapp.Adapters.Child_Adapters.ChildMenuAdapterClass;
 import com.hit.wizewalletapp.Models.MenuModelClass;
 import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
 
-public class ChildMenuFragment extends Fragment implements ChildMenuAdapterClass.ListViewHolder.RecycleViewClickListener {
+public class ParentMenuScreenFragment extends Fragment implements ChildMenuAdapterClass.ListViewHolder.RecycleViewClickListener {
     ChildMenuAdapterClass menuAdapterClass;
     ArrayList<MenuModelClass> menu_items;
     RecyclerView recyclerView;
@@ -28,25 +28,26 @@ public class ChildMenuFragment extends Fragment implements ChildMenuAdapterClass
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_menu_child_screen, container, false);
+        View view = inflater.inflate(R.layout.fragment_menu_parent_screen, container, false);
+
 
         recyclerView = view.findViewById(R.id.recyclerView);
         getData();
         setAdapter();
 
         arr = view.findViewById(R.id.arrow);
-
         arr.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_childMenuFragment_to_childBalanceHomeFragment);
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_homeParentFragment);
             }
         });
+
         return view;
     }
 
     private void setAdapter() {
-        menuAdapterClass = new ChildMenuAdapterClass(getActivity(), menu_items,this::onClicklistener);
+        menuAdapterClass = new ChildMenuAdapterClass(getActivity(), menu_items, this::onClicklistener);
         recyclerView.setAdapter(menuAdapterClass);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
     }
@@ -68,26 +69,27 @@ public class ChildMenuFragment extends Fragment implements ChildMenuAdapterClass
 
         int id = menu_items.get(position).getId();
 
-       switch (id) {
+        switch (id) {
 //
 //            case 1:
-//                Intent intent = new Intent(ChildMenuScreen.this, SendMoneyScreenFragment.class);
-//                startActivity(intent);
+//                View view;
+//                Navigation.findNavController(view).navigate(R.id.action_parentMenuScreen_to_sendMoneyScreen);
 //                break;
 //
 //
 //            case 3:
-//                Intent intent2 = new Intent(ChildMenuScreen.this, ChildTransactionHistoryActivity.class);
+//                Intent intent2 = new Intent(ParentMenuScreen.this, ParentTransactionHistoryActivity.class);
 //                startActivity(intent2);
 //                break;
 //
 //
 //            case 6:
-//                Intent intent4 = new Intent(ChildMenuScreen.this, LoginActivity.class);
+//                Intent intent4 = new Intent(ParentMenuScreen.this, LoginActivity.class);
 //                startActivity(intent4);
-//               break;
-        }
+//                break;
+//        }
 
         }
 
     }
+}

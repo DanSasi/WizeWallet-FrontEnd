@@ -12,7 +12,7 @@ import androidx.navigation.Navigation;
 
 import com.hit.wizewalletapp.R;
 
-public class ParentTipsFragment extends Fragment {
+public class ParentTipsScreenFragment extends Fragment {
 
         ImageView backArrow;
         private Button button;
@@ -24,7 +24,7 @@ public class ParentTipsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tips_parent_screen, container, false);
 
 
-        backArrow = view.findViewById(R.id.backArrow);
+        backArrow = view.findViewById(R.id.details_arrow_back);
         button = view.findViewById( R.id.con_btn);
 
 //        button.setOnClickListener(new View.OnClickListener() {

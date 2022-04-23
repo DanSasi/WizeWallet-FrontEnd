@@ -1,13 +1,13 @@
-package com.hit.wizewalletapp.Folders.Child_Folder.Fragments;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.hit.wizewalletapp.Folders.Parent_Folder.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.hit.wizewalletapp.Adapters.Parent_Adapters.BalanceListParentAdapter;
 import com.hit.wizewalletapp.Models.BalanceParentModel;
@@ -15,7 +15,7 @@ import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
 
-public class ChildTransactionHistoryFragment extends Fragment {
+public class ParentTransactionHistoryScreenFragment extends Fragment {
 
     BalanceListParentAdapter balanceListAdapter;
     ArrayList<BalanceParentModel> bData;
@@ -25,13 +25,12 @@ public class ChildTransactionHistoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_transaction_child_history, container, false);
+        View view = inflater.inflate(R.layout.fragment_transaction_parent_history, container, false);
 
         recyclerView = view.findViewById(R.id.rv_transactionHistory);
         getData();
         setDataAdapter();
         return view;
-
     }
     private void setDataAdapter() {
         balanceListAdapter = new BalanceListParentAdapter(getActivity(), bData);

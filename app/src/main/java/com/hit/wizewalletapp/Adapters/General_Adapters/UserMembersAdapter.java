@@ -8,7 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Data.UsersMembersData.UserData;
 import com.hit.wizewalletapp.Data.UsersMembersData.UserMembers;
 import com.hit.wizewalletapp.R;
 
@@ -48,8 +47,8 @@ public class UserMembersAdapter extends BaseAdapter {
         View rootView = LayoutInflater.from(context)
                 .inflate(R.layout.item_user_members, viewGroup, false);
 
-         txtName = rootView.findViewById(R.id.user_name_tv);
-         image = rootView.findViewById(R.id.image);
+         txtName = rootView.findViewById(R.id.child_name_item);
+         image = rootView.findViewById(R.id.child_image);
 
 
         txtName.setText(UserMemberList.get(i).getName());

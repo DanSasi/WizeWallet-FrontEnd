@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Folders.Parent_Folder.Fragments;
+package com.hit.wizewalletapp.Folders.Child_Folder.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildTransactionHistoryFragment;
 import com.hit.wizewalletapp.Adapters.Parent_Adapters.BalanceListParentAdapter;
 import com.hit.wizewalletapp.Models.BalanceParentModel;
 import com.hit.wizewalletapp.R;
@@ -22,7 +21,8 @@ import com.hit.wizewalletapp.R;
 import java.util.ArrayList;
 
 
-public class ParentBalanceHomeFragment extends Fragment implements BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener {
+public class ChildBalanceHomeScreenFragment extends Fragment implements  BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener {
+
 
     BalanceListParentAdapter balanceListAdapter;
     ArrayList<BalanceParentModel> bData;
@@ -36,24 +36,9 @@ public class ParentBalanceHomeFragment extends Fragment implements BalanceListPa
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_parent_balance_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_child_balance_home, container, false);
 
-        /////////////////////////////////////////////////////////////Transfer/////////////////////////////////////////////////////////////
 
-        transfer = view.findViewById(R.id.imageView4);
-        transfer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_childListScreen);
-            }
-        });
-        transferText = view.findViewById(R.id.textView6);
-        transferText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_childListScreen);
-            }
-        });
 
 
         ////////////////////////////////////////////////////////////Tasks///////////////////////////////////////////////////////////////
@@ -62,14 +47,14 @@ public class ParentBalanceHomeFragment extends Fragment implements BalanceListPa
         task.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentTasksScreen);
+              Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childTasksFragment);
             }
         });
         taskText = view.findViewById(R.id.textView7);
         taskText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentTasksScreen);
+                Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childTasksFragment);
             }
         });
 
@@ -80,7 +65,7 @@ public class ParentBalanceHomeFragment extends Fragment implements BalanceListPa
         tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentTipsScreen);
+                Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childTipsFragment);
             }
         });
 
@@ -88,7 +73,7 @@ public class ParentBalanceHomeFragment extends Fragment implements BalanceListPa
         tipText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentTipsScreen);
+              Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childTipsFragment);
             }
         });
 
@@ -99,7 +84,7 @@ public class ParentBalanceHomeFragment extends Fragment implements BalanceListPa
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentMenuScreen);
+                Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childMenuFragment);
             }
         });
 
@@ -109,7 +94,7 @@ public class ParentBalanceHomeFragment extends Fragment implements BalanceListPa
         moreText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentMenuScreen);
+               Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childMenuFragment);
             }
         });
 
@@ -138,7 +123,7 @@ public class ParentBalanceHomeFragment extends Fragment implements BalanceListPa
 
     @Override
     public void recycleViewClick(int position) {
-        Intent intent = new Intent(getActivity(), ChildTransactionHistoryFragment.class);
+        Intent intent = new Intent(getActivity(), ChildTransactionHistoryScreenFragment.class);
         startActivity(intent);
     }
 }

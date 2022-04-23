@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundimg"
-    tools:context=".Folders.Parent_Folder.Fragments.AddChildScreenFragment">
+    tools:context=".Folders.Parent_Folder.Fragments.ChildDetailsScreenFragment">
 
     <ImageView
         android:id="@+id/details_chaild_image"
@@ -18,79 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.097" />
-
-    <Button
-        android:id="@+id/addChild_btn"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:background="@drawable/backgroundimg"
-        android:text="ADD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_chaild_password"
-        app:layout_constraintVertical_bias="0.368" />
-
-    <EditText
-        android:id="@+id/details_chaild_username"
-        android:layout_width="210dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="404dp"
-        android:ems="10"
-        android:hint="Child User Name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.406"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/details_chaild_password"
-        android:layout_width="210dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="532dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        android:password="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.406"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/child_details_balance"
-        android:layout_width="210dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="348dp"
-        android:layout_marginEnd="119dp"
-        android:ems="10"
-        android:hint="Child Balance"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.403"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/details_chaild_id"
-        android:layout_width="210dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:hint="Child Id"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/details_chaild_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ImageView
-        android:id="@+id/add_child_backArrow"
+        android:id="@+id/details_arrow_back"
         android:layout_width="26.5dp"
         android:layout_height="26.5dp"
         android:layout_marginLeft="10dp"
@@ -101,15 +30,88 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.utils.widget.ImageFilterButton
-        android:id="@+id/details_chaild_imageBtn"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/child_details_balance"
+    <Button
+        android:id="@+id/details_chaild_edit_btn"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:background="@drawable/backgroundimg"
+        android:text="EDIT"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/equipment_icon" />
+        app:layout_constraintTop_toBottomOf="@+id/details_chaild_password"
+        app:layout_constraintVertical_bias="0.42" />
+
+    <Button
+        android:id="@+id/details_chaild_delete_btn"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:background="@drawable/backgroundimg"
+        android:text="DELETE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.665"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_chaild_password"
+        app:layout_constraintVertical_bias="0.42" />
+
+    <EditText
+        android:id="@+id/details_chaild_username"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="372dp"
+        android:ems="10"
+        android:hint="Child User Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/details_chaild_password"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="500dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:password="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/child_details_balance"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="312dp"
+        android:layout_marginEnd="119dp"
+        android:ems="10"
+        android:hint="Child Balance"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/details_chaild_id"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Child Id"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/details_chaild_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

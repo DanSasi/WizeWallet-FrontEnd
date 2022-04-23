@@ -45,12 +45,12 @@ public class ChildMembersAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View rootView = LayoutInflater.from(context)
-                .inflate(R.layout.item_members, viewGroup, false);
+                .inflate(R.layout.item_childs, viewGroup, false);
 
 
-        TextView txtName = rootView.findViewById(R.id.user_name_tv);
-        ImageView image = rootView.findViewById(R.id.image);
-        TextView txtBank = rootView.findViewById(R.id.Bank);
+        TextView txtName = rootView.findViewById(R.id.child_name_item);
+        ImageView image = rootView.findViewById(R.id.child_image);
+        TextView txtBank = rootView.findViewById(R.id.child_bank_item);
 
 
         txtName.setText(MembersList.get(i).getName());
