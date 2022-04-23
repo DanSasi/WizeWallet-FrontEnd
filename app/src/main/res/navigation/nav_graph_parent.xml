@@ -102,8 +102,5 @@
         <argument
             android:name="childId"
             app:argType="string" />
-        <action
-            android:id="@+id/action_childDetailsScreenFragment_to_childListScreen"
-            app:destination="@id/childListScreen" />
     </fragment>
 </navigation>

@@ -39,17 +39,21 @@ public class ChildDetailsScreenFragment extends Fragment {
         childIdTv = view.findViewById(R.id.details_chaild_id);
         childPasswordTv =view.findViewById(R.id.details_chaild_password);
 
+
+
         childIdTv.setText(childModel.getId());
         childUsernameTv.setText(childModel.getName());
         childBalanceTv.setText(childModel.getBalance());
         childPasswordTv.setText(childModel.getPassword());
         childImageView.setImageResource(childModel.getPhoto());
 
+
+
 //        arrowBack = view.findViewById(R.id.details_arrow_back);
 //        arrowBack.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Navigation.findNavController(v).navigate(R.id.action_childDetailsScreenFragment_to_childListScreen);
+//                Navigation.findNavController(v).navigateUp();
 //            }
 //        });
 

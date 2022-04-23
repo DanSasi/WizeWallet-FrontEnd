@@ -16,9 +16,8 @@ import com.hit.wizewalletapp.R;
 public class AddChildScreenFragment extends Fragment {
 
 
-    EditText childNameEt;
-    EditText childPassword;
-    Button addChild;
+    EditText childNameEt ,childPassword ;
+    Button addChild ;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,6 +28,7 @@ public class AddChildScreenFragment extends Fragment {
         childPassword = view.findViewById(R.id.details_chaild_password);
         childNameEt = view.findViewById(R.id.details_chaild_username);
         addChild = view.findViewById(R.id.add_child_Btn);
+
         return view;
     }
 }
