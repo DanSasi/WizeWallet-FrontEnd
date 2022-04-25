@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Models.ParentModels.MenuParentModelClass;
+import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.MenuParentModel;
 import com.hit.wizewalletapp.R;
 
 import java.util.List;
@@ -18,10 +18,10 @@ import java.util.List;
 public class ChildMenuAdapterClass extends RecyclerView.Adapter<ChildMenuAdapterClass.ListViewHolder>{
 
     Context context;
-    List<MenuParentModelClass> menu_items;
+    List<MenuParentModel> menu_items;
     private ListViewHolder.RecycleViewClickListener clickListener;
 
-    public ChildMenuAdapterClass(Context context, List<MenuParentModelClass> menu_items, ChildMenuAdapterClass.ListViewHolder.RecycleViewClickListener listener) {
+    public ChildMenuAdapterClass(Context context, List<MenuParentModel> menu_items, ChildMenuAdapterClass.ListViewHolder.RecycleViewClickListener listener) {
         this.context = context;
         this.menu_items = menu_items;
         this.clickListener = listener;
@@ -64,7 +64,7 @@ public class ChildMenuAdapterClass extends RecyclerView.Adapter<ChildMenuAdapter
 //        ImageView arrow;
         ChildMenuAdapterClass.ListViewHolder.RecycleViewClickListener recycleViewClickListener;
 
-        public ListViewHolder(@NonNull View itemView, Context context, List<MenuParentModelClass> menu_items, RecycleViewClickListener clickListener) {
+        public ListViewHolder(@NonNull View itemView, Context context, List<MenuParentModel> menu_items, RecycleViewClickListener clickListener) {
             super(itemView);
             menu_item = itemView.findViewById(R.id.menu_parent_text);
             icon = itemView.findViewById(R.id.menu_parent_img);

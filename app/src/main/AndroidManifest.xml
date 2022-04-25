@@ -15,21 +15,21 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:label">
         <activity
-            android:name=".Folders.Parent_Folder.Activities.ParentBalanceActivity"
+            android:name=".Main.Parent_Folder.Activities.ParentBalanceActivity"
             android:exported="true" />
         <activity
-            android:name=".General_Activites.PaymentSplashScreen"
+            android:name=".Main.General_Folder.GeneralActivites.PaymentSplashScreen"
             android:exported="true" />
         <activity
-            android:name=".General_Activites.LoginActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".Folders.Child_Folder.Activites.ChildBalanceActivity"
+            android:name=".Main.General_Folder.GeneralActivites.LoginActivity"
             android:exported="true" />
 
         <activity
-            android:name=".General_Activites.SplashScreen"
+            android:name=".Main.Child_Folder.Activites.ChildBalanceActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".Main.General_Folder.GeneralActivites.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

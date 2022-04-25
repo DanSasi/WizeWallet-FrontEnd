@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/childBalanceHomeFragment"
-        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildBalanceHomeScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildBalanceHomeScreenFragment"
         android:label="fragment_child_balance_home"
         tools:layout="@layout/fragment_child_balance_home" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/childTasksFragment"
-        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildTasksScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTasksScreenFragment"
         android:label="ChildTasksFragment" >
         <action
             android:id="@+id/action_childTasksFragment_to_childBalanceHomeFragment"
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/childMenuFragment"
-        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildMenuScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildMenuScreenFragment"
         android:label="fragment_menu_child_screen"
         tools:layout="@layout/fragment_menu_child_screen" >
         <action
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/childTransactionHistoryFragment"
-        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment"
         android:label="fragment_transaction_child_history"
         tools:layout="@layout/fragment_transaction_child_history" >
         <action
@@ -51,7 +51,7 @@
     </fragment>
     <fragment
         android:id="@+id/childTipsFragment"
-        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildTipsScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTipsScreenFragment"
         android:label="fragment_tips_child_screen"
         tools:layout="@layout/fragment_tips_child_screen" >
         <action

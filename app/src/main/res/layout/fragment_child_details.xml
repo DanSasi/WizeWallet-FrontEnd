@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_svetaphoto"
-    tools:context=".Folders.Parent_Folder.Fragments.ChildDetailsScreenFragment">
+    tools:context=".Main.Parent_Folder.Fragments.ChildDetailsScreenFragment">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -27,15 +27,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.097" />
+
     <ImageView
         android:id="@+id/details_arrow_back"
         android:layout_width="26.5dp"
         android:layout_height="26.5dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="76dp"
         android:layout_marginRight="316.5dp"
         android:src="@drawable/ic_arrow___left"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.382"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,12 +71,12 @@
         android:id="@+id/add_child_username_et"
         android:layout_width="210dp"
         android:layout_height="45dp"
-        android:layout_marginTop="368dp"
+        android:layout_marginTop="372dp"
         android:ems="10"
         android:hint="Child User Name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,13 +84,13 @@
         android:id="@+id/add_child_password_et"
         android:layout_width="210dp"
         android:layout_height="45dp"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="524dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName"
         android:password="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toEndOf="@+id/textView15"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,7 +103,7 @@
         android:hint="Child Balance"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -114,7 +116,7 @@
         android:hint="Child Id"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -122,11 +124,11 @@
         android:id="@+id/textView3"
         android:layout_width="100dp"
         android:layout_height="38dp"
-        android:layout_marginTop="448dp"
+        android:layout_marginTop="452dp"
         android:text="Id"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.234"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -134,11 +136,11 @@
         android:id="@+id/textView15"
         android:layout_width="100dp"
         android:layout_height="38dp"
-        android:layout_marginTop="524dp"
+        android:layout_marginTop="528dp"
         android:text="Password"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintHorizontal_bias="0.234"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -146,11 +148,11 @@
         android:id="@+id/textView12"
         android:layout_width="100dp"
         android:layout_height="38dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="300dp"
         android:text="Balance:"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintHorizontal_bias="0.234"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -158,11 +160,11 @@
         android:id="@+id/textView14"
         android:layout_width="100dp"
         android:layout_height="38dp"
-        android:layout_marginTop="368dp"
+        android:layout_marginTop="376dp"
         android:text="UserName: "
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintHorizontal_bias="0.234"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

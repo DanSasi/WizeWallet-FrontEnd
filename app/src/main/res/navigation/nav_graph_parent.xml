@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeParentFragment"
-        android:name="com.hit.wizewalletapp.Folders.Parent_Folder.Fragments.ParentBalanceHomeScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentBalanceHomeScreenFragment"
         android:label="fragment_home_parent"
         tools:layout="@layout/fragment_parent_balance_home" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/parentTasksScreen"
-        android:name="com.hit.wizewalletapp.Folders.Parent_Folder.Fragments.ParentTasksScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentTasksScreenFragment"
         android:label="ParentTasksScreen" >
         <action
             android:id="@+id/action_parentTasksScreen_to_homeParentFragment"
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/parentTipsScreen"
-        android:name="com.hit.wizewalletapp.Folders.Parent_Folder.Fragments.ParentTipsScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentTipsScreenFragment"
         android:label="ParentTipsScreen" >
         <action
             android:id="@+id/action_parentTipsScreen_to_homeParentFragment"
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/parentTransactionHistoryActivity"
-        android:name="com.hit.wizewalletapp.Folders.Parent_Folder.Fragments.ParentTransactionHistoryScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentTransactionHistoryScreenFragment"
         android:label="ParentTransactionHistoryActivity" >
         <action
             android:id="@+id/action_parentTransactionHistoryActivity_to_homeParentFragment"
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/parentMenuScreen"
-        android:name="com.hit.wizewalletapp.Folders.Parent_Folder.Fragments.ParentMenuScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentMenuScreenFragment"
         android:label="ParentMenuScreen" >
         <action
             android:id="@+id/action_parentMenuScreen_to_homeParentFragment"
@@ -66,7 +66,7 @@
     </fragment>
     <fragment
         android:id="@+id/sendMoneyScreen"
-        android:name="com.hit.wizewalletapp.Folders.Parent_Folder.Fragments.SendMoneyScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.SendMoneyScreenFragment"
         android:label="activity_send_money_screen"
         tools:layout="@layout/fragment_send_money_screen" >
         <action
@@ -75,7 +75,7 @@
     </fragment>
     <fragment
         android:id="@+id/childListScreen"
-        android:name="com.hit.wizewalletapp.Folders.Parent_Folder.Fragments.ChildListScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ChildListScreenFragment"
         android:label="activity_child_list_screen"
         tools:layout="@layout/fragment_child_list_screen" >
         <action
@@ -90,7 +90,7 @@
     </fragment>
     <fragment
         android:id="@+id/addChildFragment"
-        android:name="com.hit.wizewalletapp.Folders.Parent_Folder.Fragments.AddChildScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.AddChildScreenFragment"
         android:label="add_child_fragment"
         tools:layout="@layout/fragment_parrent_add_child_fragment" >
         <action
@@ -99,7 +99,7 @@
     </fragment>
     <fragment
         android:id="@+id/childDetailsScreenFragment"
-        android:name="com.hit.wizewalletapp.Folders.Parent_Folder.Fragments.ChildDetailsScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ChildDetailsScreenFragment"
         android:label="fragment_child_details"
         tools:layout="@layout/fragment_child_details" >
         <argument
@@ -108,7 +108,7 @@
     </fragment>
     <fragment
         android:id="@+id/childTransactionHistoryScreenFragment"
-        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment"
         android:label="fragment_transaction_parent_history"
         tools:layout="@layout/fragment_transaction_parent_history" >
         <action

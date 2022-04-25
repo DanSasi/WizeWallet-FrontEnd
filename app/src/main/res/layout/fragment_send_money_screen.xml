@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_svetaphoto"
-    tools:context=".Folders.Parent_Folder.Fragments.SendMoneyScreenFragment">
+    tools:context=".Main.Parent_Folder.Fragments.SendMoneyScreenFragment">
 
 
     <!--changes-->
