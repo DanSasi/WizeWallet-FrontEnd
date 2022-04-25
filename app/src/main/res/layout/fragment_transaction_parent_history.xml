@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Folders.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment"
-    android:background="@drawable/backgroundimg">
+    android:background="@drawable/home_svetaphoto">
     >
 
     <TextView

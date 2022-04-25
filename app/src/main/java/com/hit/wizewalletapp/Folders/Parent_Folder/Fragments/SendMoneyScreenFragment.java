@@ -109,12 +109,9 @@ public class SendMoneyScreenFragment extends Fragment {
 
             nameTxt = rootView.findViewById(R.id.child_name_item);
             photo = rootView.findViewById(R.id.child_image);
-            bankTxt = rootView.findViewById(R.id.child_bank_item);
-
-
             nameTxt.setText(childList.get(i).getName());
             photo.setImageResource(childList.get(i).getPhoto());
-            bankTxt.setText(childList.get(i).getBalance());
+
 
             return rootView;
         }

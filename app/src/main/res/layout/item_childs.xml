@@ -7,39 +7,27 @@
 
     <ImageView
         android:id="@+id/child_image"
-        android:layout_width="40dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="54dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="4dp"
         android:src="@drawable/imageprofile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428" />
+        app:layout_constraintVertical_bias="0.47" />
 
     <TextView
         android:id="@+id/child_name_item"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="335dp"
+        android:layout_height="38dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
         android:layout_toEndOf="@+id/child_image"
         android:text="Name"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/child_image"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/child_bank_item"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/child_name_item"
-        android:layout_marginStart="8dp"
-        android:layout_toEndOf="@+id/child_image"
-        android:text="Bank"
-        android:textColor="@color/gray"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/child_image"
-        app:layout_constraintTop_toBottomOf="@+id/child_name_item" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

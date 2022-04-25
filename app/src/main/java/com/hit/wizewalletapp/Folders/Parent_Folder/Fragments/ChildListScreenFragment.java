@@ -82,7 +82,6 @@ public class ChildListScreenFragment extends Fragment {
             super(itemView);
             nameTxt = itemView.findViewById(R.id.child_name_item);
             photo = itemView.findViewById(R.id.child_image);
-            bankTxt = itemView.findViewById(R.id.child_bank_item);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -118,10 +117,8 @@ public class ChildListScreenFragment extends Fragment {
         public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
             String name = childList.get(position).getName();
             int photo = childList.get(position).getPhoto();
-            String bank = childList.get(position).getBalance();
             holder.nameTxt.setText(name);
             holder.photo.setImageResource(photo);
-            holder.bankTxt.setText(bank);
         }
 
         @Override

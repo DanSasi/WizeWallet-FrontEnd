@@ -4,33 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundimg"
+    android:background="@drawable/home_svetaphoto"
     tools:context=".Folders.Parent_Folder.Fragments.SendMoneyScreenFragment">
 
 
     <!--changes-->
 
-    <Spinner
-        android:id="@+id/spinner_mambers"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="45dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="30dp"
-
-        android:dropDownVerticalOffset="55dp"
-
-        android:layout_marginRight="35dp"
-        android:layout_marginBottom="30dp"
-        android:popupBackground="@color/white"
-        android:background="@drawable/bg_spinner_members"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.64"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-<!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
 <!--        android:id="@+id/spinner_mambers"-->
 <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"-->
 <!--        android:layout_width="match_parent"-->
@@ -53,6 +33,22 @@
 <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
 
+    <Spinner
+        android:id="@+id/spinner_mambers"
+        android:layout_width="371dp"
+        android:layout_height="114dp"
+        android:layout_margin="45dp"
+        android:layout_marginTop="30dp"
+
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_spinner_members"
+        android:dropDownVerticalOffset="55dp"
+        android:popupBackground="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
         android:id="@+id/editText"

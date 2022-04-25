@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".General_Activites.PaymentSplashScreen"
-    android:background="@drawable/backgroundimg">
+    android:background="@drawable/home_svetaphoto">
 
     <ImageView
         android:id="@+id/imageView"
