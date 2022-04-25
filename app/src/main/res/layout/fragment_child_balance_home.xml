@@ -87,8 +87,6 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:src="@drawable/more"
-                android:elevation="2dp"
-                android:background="@drawable/my_rect"
                 app:layout_constraintEnd_toEndOf="parent" />
 
 

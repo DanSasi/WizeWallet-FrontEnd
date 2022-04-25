@@ -26,7 +26,7 @@
         style="@style/balance_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="40dp"
         android:text="Transactions"
         android:textColor="#818197"
         android:textSize="19dp"
@@ -176,11 +176,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_balance"
-        android:layout_width="410dp"
-        android:layout_height="327dp"
+        android:layout_width="360dp"
+        android:layout_height="302dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="23dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 
