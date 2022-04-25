@@ -7,6 +7,16 @@
     tools:context=".Folders.Child_Folder.Fragments.ChildTipsScreenFragment"
     android:background="@drawable/home_svetaphoto">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="111dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/walleticon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/menu_parent_text"
         android:layout_width="wrap_content"

@@ -8,6 +8,15 @@
     android:background="@drawable/home_svetaphoto"
     tools:context=".Folders.Parent_Folder.Fragments.ChildListScreenFragment">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="125dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/walleticon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_childs"
         style="@style/contactFont"

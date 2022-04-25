@@ -8,22 +8,31 @@
     tools:context=".Folders.Parent_Folder.Fragments.AddChildScreenFragment">
 
     <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="134dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/walleticon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/add_child_imgv"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:src="@drawable/childface"
         app:layout_constraintBottom_toTopOf="@+id/add_child_id_et"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintHorizontal_bias="0.398"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.097" />
+        app:layout_constraintVertical_bias="0.101" />
 
     <Button
         android:id="@+id/add_child_btn"
         android:layout_width="88dp"
         android:layout_height="48dp"
-        android:background="@drawable/backgroundimg"
+        android:background="@drawable/home_svetaphoto"
         android:text="ADD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,7 +114,7 @@
         android:id="@+id/add_child_img_filter_btn"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/add_child_balance_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.459"

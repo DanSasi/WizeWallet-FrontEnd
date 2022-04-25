@@ -17,6 +17,14 @@
 <!--        tools:layout_editor_absoluteX="186dp"-->
 <!--        tools:layout_editor_absoluteY="52dp">-->
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="106dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/walleticon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/arrow"

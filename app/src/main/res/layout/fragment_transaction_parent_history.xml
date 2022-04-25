@@ -6,22 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".Folders.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment"
     android:background="@drawable/home_svetaphoto">
-    >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="95dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/walleticon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/tv_textTransaction"
+        style="@style/contactFont"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        style="@style/contactFont"
+        android:layout_marginTop="68dp"
         android:text="Transaction History"
+        android:textAlignment="center"
         android:textColor="#082431"
         android:textSize="18sp"
-        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageButton
         android:id="@+id/img_back_arrow_transactionHistory"
