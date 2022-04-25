@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="25dp"
+    android:background="@drawable/backgroundimg">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="414dp"
+        android:layout_height="168dp"
+        android:background="@drawable/sveta_another_photo">
+
+        <TextView
+            android:id="@+id/tv_acc_no"
+            style="@style/contactFont"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="120dp"
+            android:text="Bank_Acc_No"
+            android:textColor="#273240"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            style="@style/contactFont"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="120dp"
+            android:text="User Name"
+            android:textColor="#273240"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_user"
+            android:layout_width="199dp"
+            android:layout_height="107dp"
+            android:layout_marginLeft="90dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+
+    <!--app:shapeAppearanceOverlay="@style/roundedImageViewRounded"--><![CDATA[
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/samantha"
+        />
+
+
+
+
+]]>
+</LinearLayout>

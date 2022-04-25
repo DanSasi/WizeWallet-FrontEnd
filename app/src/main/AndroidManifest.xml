@@ -3,47 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.hit.wizewalletapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
         tools:replace="android:label">
         <activity
-            android:name=".Activities.LoginActivity"
+            android:name=".Main.Parent_Folder.Activities.ParentBalanceActivity"
             android:exported="true" />
         <activity
-            android:name=".Activities.MainActivity"
+            android:name=".Main.General_Folder.GeneralActivites.PaymentSplashScreen"
             android:exported="true" />
         <activity
-            android:name=".Activities.TransactionHistoryActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Activities.BalanceScreen"
-            android:exported="true" />
-        <activity
-            android:name=".Activities.SendMoneyScreen"
-            android:exported="true" />
-        <activity
-            android:name=".Activities.MenuScreen"
-            android:exported="true" />
-        <activity
-            android:name=".Activities.TipsScreen"
+            android:name=".Main.General_Folder.GeneralActivites.LoginActivity"
             android:exported="true" />
 
         <activity
-            android:name=".Activities.ContactListScreen"
+            android:name=".Main.Child_Folder.Activites.ChildBalanceActivity"
             android:exported="true" />
+
         <activity
-            android:name=".Activities.TasksScreen"
-            android:exported="true" />
-        <activity
-            android:name=".Activities.SplashScreen"
+            android:name=".Main.General_Folder.GeneralActivites.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

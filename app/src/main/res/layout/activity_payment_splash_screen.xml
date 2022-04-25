@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main.General_Folder.GeneralActivites.SplashScreen"
+    tools:context=".Main.General_Folder.GeneralActivites.PaymentSplashScreen"
     android:background="@drawable/home_svetaphoto">
 
     <ImageView
@@ -12,29 +12,30 @@
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:src="@drawable/walleticon"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintBottom_toTopOf="@+id/payment_text3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31" />
+        app:layout_constraintVertical_bias="0.31"
+         />
 
     <LinearLayout
-        android:id="@+id/lin1"
+        android:id="@+id/lin2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:textAlignment="center"
         app:flow_horizontalAlign="center"
         app:flow_verticalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintBottom_toTopOf="@+id/payment_text3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.767">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/payment_text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20sp"
@@ -51,7 +52,7 @@
             app:layout_constraintVertical_bias="0.291" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/payment_text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10sp"
@@ -69,19 +70,20 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/payment_text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="184dp"
         android:fontFamily="@font/poppins"
-        android:text="Time is Money"
+        android:text="Transfter Complete"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

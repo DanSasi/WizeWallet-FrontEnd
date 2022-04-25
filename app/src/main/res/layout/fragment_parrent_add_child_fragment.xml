@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_svetaphoto"
+    tools:context=".Main.Parent_Folder.Fragments.AddChildScreenFragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="134dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/walleticon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/add_child_imgv"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/childface"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_id_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.398"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.101" />
+
+    <Button
+        android:id="@+id/add_child_btn"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:background="@drawable/home_svetaphoto"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_child_password_et"
+        app:layout_constraintVertical_bias="0.368" />
+
+    <EditText
+        android:id="@+id/add_child_username_et"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="404dp"
+        android:ems="10"
+        android:hint="Child User Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_child_password_et"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="532dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:password="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_child_balance_et"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="348dp"
+        android:layout_marginEnd="119dp"
+        android:ems="10"
+        android:hint="Child Balance"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_child_id_et"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Child Id"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_password_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/add_child_backArrow"
+        android:layout_width="26.5dp"
+        android:layout_height="26.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="316.5dp"
+        android:src="@drawable/ic_arrow___left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:id="@+id/add_child_img_filter_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_balance_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/equipment_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

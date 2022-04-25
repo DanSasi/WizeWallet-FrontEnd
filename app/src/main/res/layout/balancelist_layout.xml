@@ -12,100 +12,120 @@
     tools:layout_editor_absoluteX="96dp"
     android:fillViewport="true">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:scrollbarDefaultDelayBeforeFade="400">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textTopic"
+            style="@style/balance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            android:paddingBottom="2sp"
+            android:text="Grocery"
+            android:textColor="#273240"
+            android:textSize="17dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/balanceImage"
+            app:layout_constraintEnd_toStartOf="@+id/textBalance"
+            app:layout_constraintHorizontal_bias="0.034"
+            app:layout_constraintStart_toEndOf="@+id/balanceImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/balanceImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="14dp"
+            android:padding="40dp"
+            android:rotation="180"
+            android:scaleType="centerCrop"
+            android:src="@drawable/grocery_icon"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins"
+            android:paddingBottom="0dp"
+            android:text="Nov 17"
+            android:textColor="#818197"
+            android:textSize="15dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/textDescription"
+            app:layout_constraintHorizontal_bias="0.723"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="@+id/textTopic"
+            app:layout_constraintTop_toBottomOf="@+id/textTopic" />
+
+        <TextView
+            android:id="@+id/textBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            android:paddingBottom="3dp"
+            android:text="326.800"
+            android:textColor="#273240"
+            android:textSize="17dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/textTopic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textTopic"
+            app:layout_constraintVertical_bias="0.937" />
+
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Minimarket Anugrah"
+            android:textColor="#818197"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textDate"
+            app:layout_constraintEnd_toEndOf="@+id/textBalance"
+            app:layout_constraintTop_toBottomOf="@+id/textBalance"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tran_child_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="91dp"
+            android:layout_marginBottom="4dp"
+            android:scrollbarSize="3dp"
+            android:text="Dan"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textDate"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/balanceImage"
+            app:layout_constraintTop_toBottomOf="@+id/textTopic"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textTopic"
-        style="@style/balance_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/poppins"
-        android:paddingBottom="2sp"
-        android:text="Grocery"
-        android:textColor="#273240"
-        android:textSize="17dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/balanceImage"
-        app:layout_constraintEnd_toStartOf="@+id/textBalance"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toEndOf="@+id/balanceImage"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/balanceImage"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:rotation="180"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="14dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintHorizontal_weight="1"
-        android:src="@drawable/grocery_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:padding="40dp"/>
-
-    <TextView
-        android:id="@+id/textDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:paddingBottom="0dp"
-        android:text="Nov 17"
-        android:textSize="15dp"
-        android:textStyle="normal"
-        android:textColor="#818197"
-        app:layout_constraintEnd_toStartOf="@+id/textDescription"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toStartOf="@+id/textTopic"
-        app:layout_constraintTop_toBottomOf="@+id/textTopic" />
-
-    <TextView
-        android:id="@+id/textBalance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/poppins"
-        android:paddingBottom="3dp"
-        android:text="326.800"
-        android:textColor="#273240"
-        android:textSize="17dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/textTopic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textTopic"
-        app:layout_constraintVertical_bias="0.937" />
-
-    <TextView
-        android:id="@+id/textDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:text="Minimarket Anugrah"
-        android:textSize="15dp"
-        android:textColor="#818197"
-        app:layout_constraintBottom_toBottomOf="@+id/textDate"
-        app:layout_constraintEnd_toEndOf="@+id/textBalance"
-        app:layout_constraintTop_toBottomOf="@+id/textBalance"
-        app:layout_constraintVertical_bias="1.0" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

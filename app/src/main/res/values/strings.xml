@@ -1,23 +1,5 @@
 <resources>
     <string name="app_name">WizeWallet</string>
-    
-
-    <string-array name="account_types">
-        <item>Personal Account</item>
-        <item>Business Account</item>
-        <item>Family Account</item>
-
-    </string-array>
-    <string-array name="account_number">
-        <item>****-****-9876</item>
-        <item>****-****-9876</item>
-        <item>****-****-9876</item>
-    </string-array>
-    <string name="main_topic">Withdraw</string>
-    <string name="amount">620.000</string>
-    <string name="accBalance">Your Balance Rp 8.500.000</string>
-    <string name="chooseBank">Choose Bank Account</string>
-    <!--    <string name="Main_topic">Withdraw</string>-->
-    
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
