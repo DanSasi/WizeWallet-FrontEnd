@@ -5,7 +5,7 @@ public class MenuParentModelClass {
     int img;
     String item_name;
 
-    public MenuParentModelClass(String id, int img, String item_name) {
+    public MenuParentModelClass(String id, int img, String item_name ) {
         this.id = id;
         this.img = img;
         this.item_name = item_name;
