@@ -4,33 +4,29 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Models.ChildModel;
-import com.hit.wizewalletapp.Models.Model;
+import com.hit.wizewalletapp.Models.ParentModels.BalanceParentModel;
+import com.hit.wizewalletapp.Models.ParentModels.ChildListModel;
+import com.hit.wizewalletapp.Models.ParentModels.ChildModel;
 import com.hit.wizewalletapp.R;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 @SuppressWarnings("ALL")
 public class ChildListScreenFragment extends Fragment {
 
-    List<ChildModel> childList;
+    static List<ChildModel> childList;
     RecyclerView recyclerView;
     Button addChildBtn ;
 
@@ -43,12 +39,12 @@ public class ChildListScreenFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_child_list_screen, container, false);
-        childList = Model.instance.getAllData();
+        childList = ChildListModel.instance.getAllData();
         recyclerView = view.findViewById(R.id.child_recycler_view);
         recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        MyAdapter adapter = new MyAdapter();
+        MyChildAdapter adapter = new MyChildAdapter();
         recyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener(new OnItemClickListener() {
@@ -68,16 +64,8 @@ public class ChildListScreenFragment extends Fragment {
         });
 
 
-
-
         addChildBtn = view.findViewById(R.id.add_child_Btn);
-        addChildBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                Navigation.findNavController(v).navigate(R.id.action_childListScreen_to_addChildFragment);
-            }
-        });
+        addChildBtn.setOnClickListener(Navigation.createNavigateOnClickListener(ChildListScreenFragmentDirections.actionChildListScreenToAddChildFragment()));
 
         return view;
 
@@ -85,7 +73,7 @@ public class ChildListScreenFragment extends Fragment {
 
 
 
-    class MyViewHolder extends RecyclerView.ViewHolder{
+    static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView nameTxt;
         ImageView photo;
         TextView bankTxt;
@@ -95,6 +83,7 @@ public class ChildListScreenFragment extends Fragment {
             nameTxt = itemView.findViewById(R.id.child_name_item);
             photo = itemView.findViewById(R.id.child_image);
             bankTxt = itemView.findViewById(R.id.child_bank_item);
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -109,7 +98,8 @@ public class ChildListScreenFragment extends Fragment {
     interface OnItemClickListener{
         void onItemClick(View v,int position);
     }
-    class MyAdapter extends RecyclerView.Adapter<MyViewHolder>{
+
+    static class MyChildAdapter extends RecyclerView.Adapter<MyViewHolder>{
 
         OnItemClickListener listener;
         public void setOnItemClickListener(OnItemClickListener listener){
@@ -139,6 +129,8 @@ public class ChildListScreenFragment extends Fragment {
             return childList.size();
         }
     }
+
+
 
 
 

@@ -1,27 +1,46 @@
 package com.hit.wizewalletapp.Folders.Parent_Folder.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Adapters.Child_Adapters.ChildMenuAdapterClass;
-import com.hit.wizewalletapp.Models.MenuModelClass;
+import com.hit.wizewalletapp.Folders.Parent_Folder.Activities.ParentBalanceActivity;
+import com.hit.wizewalletapp.General_Activites.LoginActivity;
+import com.hit.wizewalletapp.General_Activites.RetrofitInterface;
+import com.hit.wizewalletapp.Models.ParentModels.MenuParentListModel;
+import com.hit.wizewalletapp.Models.ParentModels.MenuParentModelClass;
 import com.hit.wizewalletapp.R;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
-public class ParentMenuScreenFragment extends Fragment implements ChildMenuAdapterClass.ListViewHolder.RecycleViewClickListener {
-    ChildMenuAdapterClass menuAdapterClass;
-    ArrayList<MenuModelClass> menu_items;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+@SuppressWarnings("ALL")
+public class ParentMenuScreenFragment extends Fragment {
+    static List<MenuParentModelClass> menu_items;
     RecyclerView recyclerView;
     ImageView arr;
+
+    private Retrofit retrofit;
+    private RetrofitInterface retrofitInterface;
+    private String BASE_URL = "http://10.0.2.2:3000";
 
 
     @Override
@@ -30,11 +49,21 @@ public class ParentMenuScreenFragment extends Fragment implements ChildMenuAdapt
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu_parent_screen, container, false);
 
-
+        menu_items = MenuParentListModel.instance.getAllData();
         recyclerView = view.findViewById(R.id.recyclerView);
-        getData();
-        setAdapter();
+        recyclerView.setHasFixedSize(true);
 
+        //Retrofit instance
+        retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        retrofitInterface = retrofit.create(RetrofitInterface.class);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        MyMenuAdapter myMenuAdapter = new MyMenuAdapter();
+        recyclerView.setAdapter(myMenuAdapter);
         arr = view.findViewById(R.id.arrow);
         arr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,53 +72,128 @@ public class ParentMenuScreenFragment extends Fragment implements ChildMenuAdapt
             }
         });
 
+        myMenuAdapter.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                String id = menu_items.get(position).getId();
+                switch (id){
+                    case "1":
+                       Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_childTransactionHistoryScreenFragment);
+                        break;
+                    case "2":
+                        Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_sendMoneyScreen);
+                        break;
+                    case "3":
+
+                        break;
+                    case "4":
+
+                        break;
+                    case "5":
+
+                        break;
+                    case "6":
+//                        HashMap<String,String> map = new HashMap<>();
+//                        String refreshToken = getIntent().getExtraString("refresh");
+//                        String tokenToSend = "authorization " + refreshToken;
+//                        map.put("authorization",tokenToSend);
+//                        Call<Void> call = retrofitInterface.executeLogout(map);
+//
+//                        call.enqueue(new Callback<Void>() {
+//                            @Override
+//                            public void onResponse(Call<Void> call, Response<Void> response) {
+//                                if (response.code() == 200){
+//                                    Log.d("TAG","logout user");
+//                                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+//                                    startActivity(intent);
+//                                }
+//                            }
+//
+//                            @Override
+//                            public void onFailure(Call<Void> call, Throwable t) {
+//
+//                            }
+//                        });
+
+                        break;
+                }
+
+            }
+        });
+
+
         return view;
     }
 
-    private void setAdapter() {
-        menuAdapterClass = new ChildMenuAdapterClass(getActivity(), menu_items, this::onClicklistener);
-        recyclerView.setAdapter(menuAdapterClass);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-    }
+    static class MyMenuViewHolder extends RecyclerView.ViewHolder {
+
+        TextView menuTextItem;
+        ImageView menuPothoItem;
 
 
-    private void getData() {
-        menu_items = new ArrayList<>();
-//        menu_items.add(new MenuModelClass(1, R.drawable.icon, "Send Money"));
-        menu_items.add(new MenuModelClass(3, R.drawable.icon5, "History Transaction"));
-        menu_items.add(new MenuModelClass(4, R.drawable.icon6, "Request Payment"));
-        menu_items.add(new MenuModelClass(5, R.drawable.icon7, "Settings"));
-        menu_items.add(new MenuModelClass(6, R.drawable.icon_logout, "Logout"));
-    }
+        public MyMenuViewHolder(@NonNull View itemView, OnItemClickListener listener) {
+            super(itemView);
+            menuPothoItem = itemView.findViewById(R.id.menu_parent_img);
+            menuTextItem = itemView.findViewById(R.id.menu_parent_text);
 
-
-    @Override
-    public void onClicklistener(int position) {
-
-
-        int id = menu_items.get(position).getId();
-
-        switch (id) {
-//
-//            case 1:
-//                View view;
-//                Navigation.findNavController(view).navigate(R.id.action_parentMenuScreen_to_sendMoneyScreen);
-//                break;
-//
-//
-//            case 3:
-//                Intent intent2 = new Intent(ParentMenuScreen.this, ParentTransactionHistoryActivity.class);
-//                startActivity(intent2);
-//                break;
-//
-//
-//            case 6:
-//                Intent intent4 = new Intent(ParentMenuScreen.this, LoginActivity.class);
-//                startActivity(intent4);
-//                break;
-//        }
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition();
+                    listener.onItemClick(v, pos);
+                }
+            });
 
         }
+    }
+
+    interface OnItemClickListener {
+        void onItemClick(View v, int position);
+    }
+
+    static class MyMenuAdapter extends RecyclerView.Adapter<MyMenuViewHolder> {
+
+        OnItemClickListener listener;
+
+        public void setOnItemClickListener( OnItemClickListener listener) {
+            this.listener = listener;
+        }
+
+
+        @NonNull
+        @Override
+        public MyMenuViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_menu_screen_parent_list1,parent,false);
+            MyMenuViewHolder holder = new MyMenuViewHolder(view,listener);
+            return holder;
+        }
+
+
+        @Override
+        public void onBindViewHolder(@NonNull MyMenuViewHolder holder, int position) {
+            String name = menu_items.get(position).getItem_name();
+            int photo = menu_items.get(position).getImg();
+            holder.menuTextItem.setText(name);
+            holder.menuPothoItem.setImageResource(photo);
+        }
+
+        @Override
+        public int getItemCount() {
+            return menu_items.size();
+        }
+
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

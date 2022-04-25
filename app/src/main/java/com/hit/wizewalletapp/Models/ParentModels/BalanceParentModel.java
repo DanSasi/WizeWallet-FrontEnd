@@ -1,4 +1,9 @@
-package com.hit.wizewalletapp.Models;
+package com.hit.wizewalletapp.Models.ParentModels;
+
+import com.hit.wizewalletapp.R;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class BalanceParentModel {
     int photo;
@@ -51,4 +56,6 @@ public class BalanceParentModel {
     public void setDescription(String description) {
         this.description = description;
     }
+
+
 }

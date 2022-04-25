@@ -8,11 +8,11 @@
     tools:context=".Folders.Parent_Folder.Fragments.AddChildScreenFragment">
 
     <ImageView
-        android:id="@+id/details_chaild_image"
+        android:id="@+id/add_child_imgv"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:src="@drawable/childface"
-        app:layout_constraintBottom_toTopOf="@+id/details_chaild_id"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_id_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.097" />
 
     <Button
-        android:id="@+id/addChild_btn"
+        android:id="@+id/add_child_btn"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:background="@drawable/backgroundimg"
@@ -29,11 +29,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_chaild_password"
+        app:layout_constraintTop_toBottomOf="@+id/add_child_password_et"
         app:layout_constraintVertical_bias="0.368" />
 
     <EditText
-        android:id="@+id/details_chaild_username"
+        android:id="@+id/add_child_username_et"
         android:layout_width="210dp"
         android:layout_height="45dp"
         android:layout_marginTop="404dp"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/details_chaild_password"
+        android:id="@+id/add_child_password_et"
         android:layout_width="210dp"
         android:layout_height="45dp"
         android:layout_marginTop="532dp"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/child_details_balance"
+        android:id="@+id/add_child_balance_et"
         android:layout_width="210dp"
         android:layout_height="45dp"
         android:layout_marginStart="82dp"
@@ -75,7 +75,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/details_chaild_id"
+        android:id="@+id/add_child_id_et"
         android:layout_width="210dp"
         android:layout_height="45dp"
         android:layout_marginStart="80dp"
@@ -84,7 +84,7 @@
         android:ems="10"
         android:hint="Child Id"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/details_chaild_password"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_password_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent" />
@@ -102,11 +102,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterButton
-        android:id="@+id/details_chaild_imageBtn"
+        android:id="@+id/add_child_img_filter_btn"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/child_details_balance"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_balance_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"

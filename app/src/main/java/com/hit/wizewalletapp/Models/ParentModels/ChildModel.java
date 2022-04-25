@@ -1,14 +1,16 @@
-package com.hit.wizewalletapp.Models;
+package com.hit.wizewalletapp.Models.ParentModels;
+
+import android.graphics.Bitmap;
 
 public class ChildModel {
-    int photo ;
+     int photo ;
     String  balance ="", username =""
             , id = "",password = "";
 
 
 
 
-    public ChildModel(int photo,String balance,String username, String id, String password) {
+    public ChildModel(Integer photo, String balance, String username, String id, String password) {
         this.photo = photo;
         this.balance = balance;
         this.username = username ;
@@ -40,13 +42,13 @@ public class ChildModel {
         return password;
     }
 
-    public void setPhoto(int photo) {
+    public Integer getPhoto(){
+        return photo;
+    }
+    public void setPhoto(Integer photo){
         this.photo = photo;
     }
 
-    public int getPhoto() {
-        return photo;
-    }
 
     public String getBalance() {
         return balance;

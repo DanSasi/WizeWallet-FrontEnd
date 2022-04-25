@@ -1,20 +1,21 @@
-package com.hit.wizewalletapp.Models;
+package com.hit.wizewalletapp.Models.ParentModels;
 
-public class MenuModelClass {
-    int id,img;
+public class MenuParentModelClass {
+    String id;
+    int img;
     String item_name;
 
-    public MenuModelClass(int id, int img, String item_name) {
+    public MenuParentModelClass(String id, int img, String item_name) {
         this.id = id;
         this.img = img;
         this.item_name = item_name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -35,9 +36,5 @@ public class MenuModelClass {
         this.item_name = item_name;
     }
 
-//    public MenuModelClass(int id, int img, String item_name) {
-//        this.id = id;
-//        this.img = img;
-//        this.item_name = item_name;
-//    }
+
 }

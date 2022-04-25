@@ -3,18 +3,17 @@ package com.hit.wizewalletapp.Folders.Parent_Folder.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Models.ChildModel;
-import com.hit.wizewalletapp.Models.Model;
+import com.hit.wizewalletapp.Models.ParentModels.BalanceParentModel;
+import com.hit.wizewalletapp.Models.ParentModels.ChildModel;
+import com.hit.wizewalletapp.Models.ParentModels.ChildListModel;
 import com.hit.wizewalletapp.R;
 
 
@@ -32,12 +31,12 @@ public class ChildDetailsScreenFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_child_details, container, false);
         String childId = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildId();
-        ChildModel childModel = Model.instance.getChildById(childId);
-        childBalanceTv= view.findViewById(R.id.child_details_balance);
-        childUsernameTv = view.findViewById(R.id.details_chaild_username);
-        childImageView = view.findViewById(R.id.details_chaild_image);
-        childIdTv = view.findViewById(R.id.details_chaild_id);
-        childPasswordTv =view.findViewById(R.id.details_chaild_password);
+        ChildModel childModel = ChildListModel.instance.getChildById(childId);
+        childBalanceTv= view.findViewById(R.id.add_child_balance_et);
+        childUsernameTv = view.findViewById(R.id.add_child_username_et);
+        childImageView = view.findViewById(R.id.add_child_imgv);
+        childIdTv = view.findViewById(R.id.add_child_id_et);
+        childPasswordTv =view.findViewById(R.id.add_child_password_et);
 
 
 

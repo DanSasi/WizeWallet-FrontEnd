@@ -60,6 +60,9 @@
         <action
             android:id="@+id/action_parentMenuScreen_to_sendMoneyScreen"
             app:destination="@id/sendMoneyScreen" />
+        <action
+            android:id="@+id/action_parentMenuScreen_to_childTransactionHistoryScreenFragment"
+            app:destination="@id/childTransactionHistoryScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/sendMoneyScreen"
@@ -102,5 +105,14 @@
         <argument
             android:name="childId"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/childTransactionHistoryScreenFragment"
+        android:name="com.hit.wizewalletapp.Folders.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment"
+        android:label="fragment_transaction_parent_history"
+        tools:layout="@layout/fragment_transaction_parent_history" >
+        <action
+            android:id="@+id/action_childTransactionHistoryScreenFragment_to_parentMenuScreen"
+            app:destination="@id/parentMenuScreen" />
     </fragment>
 </navigation>

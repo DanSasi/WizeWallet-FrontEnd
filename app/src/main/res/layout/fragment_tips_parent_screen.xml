@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/hello_parent_balance"
+        android:id="@+id/menu_parent_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -29,7 +29,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginRight="316.5dp"
         android:src="@drawable/ic_arrow___left"
-        app:layout_constraintBottom_toBottomOf="@+id/hello_parent_balance"
+        app:layout_constraintBottom_toBottomOf="@+id/menu_parent_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hello_parent_balance"
+        app:layout_constraintTop_toBottomOf="@+id/menu_parent_text"
         app:layout_constraintVertical_bias="0.19999999" />
 
     <TextView

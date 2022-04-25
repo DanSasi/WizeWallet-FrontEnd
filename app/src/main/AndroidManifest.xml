@@ -16,10 +16,10 @@
         tools:replace="android:label">
         <activity
             android:name=".Folders.Parent_Folder.Activities.ParentBalanceActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".General_Activites.PaymentSplashScreen"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".General_Activites.LoginActivity"
             android:exported="true" />

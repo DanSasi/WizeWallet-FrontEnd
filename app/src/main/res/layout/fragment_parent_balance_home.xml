@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/hello_parent_balance"
+            android:id="@+id/menu_parent_text"
             style="@style/balance_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

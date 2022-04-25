@@ -10,13 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 
 
 import com.ebanx.swipebtn.OnStateChangeListener;
 import com.ebanx.swipebtn.SwipeButton;
 import com.hit.wizewalletapp.General_Activites.PaymentSplashScreen;
-import com.hit.wizewalletapp.Adapters.Parent_Adapters.ChildMembersAdapter;
-import com.hit.wizewalletapp.Data.ChildsData.Data;
 import com.hit.wizewalletapp.R;
 
 
@@ -24,12 +23,10 @@ public class SendMoneyScreenFragment extends Fragment {
 
 
     private Spinner spinner_members;
-//    ArrayList<Contacts> newUserArrayList;
-
-
+    private static ChildListScreenFragment.MyChildAdapter adapter;
     ImageView arr;
 
-    private ChildMembersAdapter adapter;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,14 +37,12 @@ public class SendMoneyScreenFragment extends Fragment {
 //        String name = getIntent().getExtras().getString("arraylist","no");
 
 
-        spinner_members = view.findViewById(R.id.spinner_mambers);
-        adapter = new ChildMembersAdapter(getActivity(), Data.getMembersList());
-        spinner_members.setAdapter(adapter);
 
 
         SwipeButton swipeButton = view.findViewById(R.id.swipeId);
-//
-        String item = spinner_members.getSelectedItem().toString();
+        spinner_members = view.findViewById(R.id.spinner_mambers);
+        adapter = new ChildListScreenFragment.MyChildAdapter();
+        spinner_members.setAdapter((SpinnerAdapter) adapter);
 
 
         swipeButton.setOnStateChangeListener(new OnStateChangeListener() {

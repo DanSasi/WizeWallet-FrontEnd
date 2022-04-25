@@ -20,7 +20,7 @@
 
 
         <ImageView
-            android:id="@+id/img"
+            android:id="@+id/menu_parent_img"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
@@ -35,7 +35,7 @@
             android:contentDescription="TODO" />
 
         <TextView
-            android:id="@+id/hello_parent_balance"
+            android:id="@+id/menu_parent_text"
             style="@style/menu_list_items"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,11 +44,11 @@
             android:paddingStart="0sp"
             android:text="Send Money"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/img"
+            app:layout_constraintBottom_toBottomOf="@+id/menu_parent_img"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.036"
-            app:layout_constraintStart_toEndOf="@+id/img"
-            app:layout_constraintTop_toTopOf="@+id/img"
+            app:layout_constraintStart_toEndOf="@+id/menu_parent_img"
+            app:layout_constraintTop_toTopOf="@+id/menu_parent_img"
             app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

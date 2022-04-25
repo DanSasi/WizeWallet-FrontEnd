@@ -10,7 +10,7 @@
 
     <!--changes-->
 
-    <com.hit.wizewalletapp.Models.CustomSpinner
+    <Spinner
         android:id="@+id/spinner_mambers"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -99,7 +99,7 @@
             app:srcCompat="@drawable/ic_arrow___left" />
 
         <TextView
-            android:id="@+id/hello_parent_balance"
+            android:id="@+id/menu_parent_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
