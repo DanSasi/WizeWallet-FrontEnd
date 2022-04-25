@@ -116,7 +116,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center_horizontal"
-                android:text="Transfer"
+                android:text="Childs"
                 android:textAlignment="center" />
 
             <TextView

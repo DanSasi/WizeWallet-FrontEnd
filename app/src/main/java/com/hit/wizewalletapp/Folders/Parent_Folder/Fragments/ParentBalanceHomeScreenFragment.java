@@ -29,8 +29,8 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
     RecyclerView recyclerView;
     private BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener clickListener;
 
-    ImageView transfer, task, more, tips;
-    TextView transferText, taskText, moreText, tipText, hellowText;
+    ImageView childs, task, more, tips;
+    TextView childText, taskText, moreText, tipText, hellowText;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,17 +38,17 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_parent_balance_home, container, false);
 
-        /////////////////////////////////////////////////////////////Transfer/////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////Childs/////////////////////////////////////////////////////////////
 
-        transfer = view.findViewById(R.id.imageView4);
-        transfer.setOnClickListener(new View.OnClickListener() {
+        childs = view.findViewById(R.id.imageView4);
+        childs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_childListScreen);
             }
         });
-        transferText = view.findViewById(R.id.textView6);
-        transferText.setOnClickListener(new View.OnClickListener() {
+        childText = view.findViewById(R.id.textView6);
+        childText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_childListScreen);
