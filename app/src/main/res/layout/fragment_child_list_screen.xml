@@ -106,7 +106,7 @@
         android:layout_height="77dp"
         android:layout_marginBottom="250dp"
         android:background="@drawable/home_svetaphoto"
-        android:text="Add A NEW CHILD"
+        android:text="Register a new Child"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/child_recycler_view"
         app:layout_constraintEnd_toEndOf="parent"

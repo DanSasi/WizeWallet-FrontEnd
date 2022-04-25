@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.hit.wizewalletapp.Main.General_Folder.GeneralActivites.LoginActivity;
 import com.hit.wizewalletapp.Main.General_Folder.GeneralActivites.RetrofitInterface;
 import com.hit.wizewalletapp.Main.Parent_Folder.Activities.ParentBalanceActivity;
 import com.hit.wizewalletapp.R;
@@ -71,10 +72,10 @@ public class SignupTabFragment extends Fragment {
                         //code 200 is OK , 400 not
                         if (response.code() == 200) {
                             Toast.makeText(v.getContext(), "register OK", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(getActivity(), ParentBalanceActivity.class);
+                            Intent intent = new Intent(getActivity(), LoginActivity.class);
                             startActivity(intent);
                         } else if (response.code() == 400) {
-                            Toast.makeText(v.getContext(), "wrong email or password/already have user", Toast.LENGTH_LONG).show();
+                            Toast.makeText(v.getContext(), "wrong email or password/alre have user", Toast.LENGTH_LONG).show();
                         }
                     }
 

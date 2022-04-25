@@ -33,7 +33,7 @@
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:background="@drawable/home_svetaphoto"
-        android:text="ADD"
+        android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.445"
