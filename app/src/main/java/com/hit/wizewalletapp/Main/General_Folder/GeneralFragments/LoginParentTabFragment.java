@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.hit.wizewalletapp.Main.General_Folder.GeneralActivites.LoginResult;
 import com.hit.wizewalletapp.Main.General_Folder.GeneralActivites.RetrofitInterface;
@@ -26,7 +27,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class LoginParentTabFragment extends Fragment  {
+public class LoginParentTabFragment extends Fragment {
 
     TextView email;
     TextView password;
@@ -59,8 +60,6 @@ public class LoginParentTabFragment extends Fragment  {
         login = root.findViewById(R.id.login);
 
 
-
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,17 +83,16 @@ public class LoginParentTabFragment extends Fragment  {
                             String accessToken = loginResult.getAccessToken();
                             String refreshToken = loginResult.getRefreshToken();
 
-                            Log.d("TAG",accessToken);
-                            Log.d("TAG",refreshToken);
-                            login.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    Intent intent = new Intent(getActivity(), ParentBalanceActivity.class);
-                                    startActivity(intent);
-                                }
-                            });
+                            Log.d("TAG", accessToken);
+                            Log.d("TAG", refreshToken);
 
                             Toast.makeText(v.getContext(), "Login OK", Toast.LENGTH_LONG).show();
+
+                            //navigation currently on activity here, going to parent balance page
+                            Intent intent = new Intent(getActivity(), ParentBalanceActivity.class);
+                            startActivity(intent);
+                            //Navigation.findNavController(v).navigate(LoginParentTabFragmentDirections.actionLoginParentTabFragmentToHomeParentFragment());
+
                         } else if (response.code() == 400) {
                             Toast.makeText(v.getContext(), "wrong email or password/already have user", Toast.LENGTH_LONG).show();
                         }
@@ -133,7 +131,6 @@ public class LoginParentTabFragment extends Fragment  {
         password.setTranslationX(800);
         forgetPass.setTranslationX(800);
         login.setTranslationX(800);
-
 
 
         email.setAlpha(v);

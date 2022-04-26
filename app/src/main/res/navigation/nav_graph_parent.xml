@@ -115,4 +115,12 @@
             android:id="@+id/action_childTransactionHistoryScreenFragment_to_parentMenuScreen"
             app:destination="@id/parentMenuScreen" />
     </fragment>
+    <fragment
+        android:id="@+id/loginParentTabFragment"
+        android:name="com.hit.wizewalletapp.Main.General_Folder.GeneralFragments.LoginParentTabFragment"
+        android:label="LoginParentTabFragment" >
+        <action
+            android:id="@+id/action_loginParentTabFragment_to_homeParentFragment"
+            app:destination="@id/homeParentFragment" />
+    </fragment>
 </navigation>
