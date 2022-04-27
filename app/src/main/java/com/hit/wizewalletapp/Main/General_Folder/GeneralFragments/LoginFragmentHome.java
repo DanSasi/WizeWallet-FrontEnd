@@ -116,6 +116,7 @@ public class LoginFragmentHome extends Fragment {
 
                             String item = userSpinner.getSelectedItem().toString();
                             if (item.equals("Parent")) {
+                                //how to pass data to fragment in the nav grahf
                                 Navigation.findNavController(v).navigate(LoginFragmentHomeDirections.actionLoginFragmentHomeToHomeParentFragment(refreshToken));
 
                             } else if (item.equals("Child")) {

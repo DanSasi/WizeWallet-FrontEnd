@@ -44,6 +44,7 @@ public class ParentMenuScreenFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu_parent_screen, container, false);
+        //how to get data from fragment in the nav grahf, need to add the args in the nev grahf first
         String refreshToken = ParentMenuScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
 
         menu_items = MenuParentListModel.instance.getAllData();
