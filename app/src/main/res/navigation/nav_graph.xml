@@ -146,9 +146,6 @@
         <action
             android:id="@+id/action_childBalanceHomeScreenFragment2_to_childTasksScreenFragment"
             app:destination="@id/childTasksScreenFragment" />
-        <action
-            android:id="@+id/action_childBalanceHomeScreenFragment2_to_childTransactionHistoryFragment"
-            app:destination="@id/childTransactionHistoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragmentHome"
@@ -173,6 +170,9 @@
         <action
             android:id="@+id/action_childMenuFragment_to_childBalanceHomeScreenFragment2"
             app:destination="@id/childBalanceHomeScreenFragment" />
+        <action
+            android:id="@+id/action_childMenuFragment_to_childTransactionHistoryFragment"
+            app:destination="@id/childTransactionHistoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/childTransactionHistoryFragment"
@@ -180,8 +180,8 @@
         android:label="fragment_transaction_child_history"
         tools:layout="@layout/fragment_transaction_child_history">
         <action
-            android:id="@+id/action_childTransactionHistoryFragment_to_childBalanceHomeScreenFragment2"
-            app:destination="@id/childBalanceHomeScreenFragment" />
+            android:id="@+id/action_childTransactionHistoryFragment_to_childMenuFragment"
+            app:destination="@id/childMenuFragment" />
     </fragment>
 
     <fragment

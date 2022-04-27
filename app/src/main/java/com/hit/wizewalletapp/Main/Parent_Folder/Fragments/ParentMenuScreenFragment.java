@@ -121,13 +121,13 @@ public class ParentMenuScreenFragment extends Fragment {
         return view;
     }
 
-    static class MyMenuViewHolder extends RecyclerView.ViewHolder {
+    static class MyParentMenuViewHolder extends RecyclerView.ViewHolder {
 
         TextView menuTextItem;
         ImageView menuPothoItem;
 
 
-        public MyMenuViewHolder(@NonNull View itemView, OnItemClickListener listener) {
+        public MyParentMenuViewHolder(@NonNull View itemView, OnItemClickListener listener) {
             super(itemView);
             menuPothoItem = itemView.findViewById(R.id.menu_parent_img);
             menuTextItem = itemView.findViewById(R.id.menu_parent_text);
@@ -147,7 +147,7 @@ public class ParentMenuScreenFragment extends Fragment {
         void onItemClick(View v, int position);
     }
 
-    static class MyMenuAdapter extends RecyclerView.Adapter<MyMenuViewHolder> {
+    static class MyMenuAdapter extends RecyclerView.Adapter<MyParentMenuViewHolder> {
 
         OnItemClickListener listener;
 
@@ -158,15 +158,15 @@ public class ParentMenuScreenFragment extends Fragment {
 
         @NonNull
         @Override
-        public MyMenuViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        public MyParentMenuViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_menu_screen_parent_list1,parent,false);
-            MyMenuViewHolder holder = new MyMenuViewHolder(view,listener);
+            MyParentMenuViewHolder holder = new MyParentMenuViewHolder(view,listener);
             return holder;
         }
 
 
         @Override
-        public void onBindViewHolder(@NonNull MyMenuViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull MyParentMenuViewHolder holder, int position) {
             String name = menu_items.get(position).getItem_name();
             int photo = menu_items.get(position).getImg();
             holder.menuTextItem.setText(name);
