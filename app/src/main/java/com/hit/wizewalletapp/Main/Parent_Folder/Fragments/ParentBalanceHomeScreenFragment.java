@@ -8,6 +8,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,8 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_parent_balance_home, container, false);
+        String refreshToken = ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
+        Log.d("Tag",refreshToken);
 
         /////////////////////////////////////////////////////////////Childs/////////////////////////////////////////////////////////////
 
@@ -99,7 +102,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentMenuScreen);
+                Navigation.findNavController(v).navigate(ParentBalanceHomeScreenFragmentDirections.actionHomeParentFragmentToParentMenuScreen(refreshToken));
             }
         });
 

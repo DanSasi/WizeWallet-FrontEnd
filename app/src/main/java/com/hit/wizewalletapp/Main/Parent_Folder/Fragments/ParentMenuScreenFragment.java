@@ -1,6 +1,7 @@
 package com.hit.wizewalletapp.Main.Parent_Folder.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +19,12 @@ import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.MenuParentList
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.MenuParentModel;
 import com.hit.wizewalletapp.R;
 
+import java.util.HashMap;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -39,6 +44,7 @@ public class ParentMenuScreenFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu_parent_screen, container, false);
+        String refreshToken = ParentMenuScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
 
         menu_items = MenuParentListModel.instance.getAllData();
         recyclerView = view.findViewById(R.id.recyclerView);
@@ -81,30 +87,29 @@ public class ParentMenuScreenFragment extends Fragment {
 
                         break;
                     case "5":
+                        HashMap<String,String> map = new HashMap<>();
 
+                        String tokenToSend = "authorization " + refreshToken;
+                        map.put("authorization",tokenToSend);
+                        Call<Void> call = retrofitInterface.executeLogout(map);
+
+                        call.enqueue(new Callback<Void>() {
+                            @Override
+                            public void onResponse(Call<Void> call, Response<Void> response) {
+                                if (response.code() == 200){
+                                    Log.d("TAG","logout user");
+                                    Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_loginFragmentHome);
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<Void> call, Throwable t) {
+
+                            }
+                        });
                         break;
                     case "6":
-//                        HashMap<String,String> map = new HashMap<>();
-//                        String refreshToken = getIntent().getExtraString("refresh");
-//                        String tokenToSend = "authorization " + refreshToken;
-//                        map.put("authorization",tokenToSend);
-//                        Call<Void> call = retrofitInterface.executeLogout(map);
-//
-//                        call.enqueue(new Callback<Void>() {
-//                            @Override
-//                            public void onResponse(Call<Void> call, Response<Void> response) {
-//                                if (response.code() == 200){
-//                                    Log.d("TAG","logout user");
-//                                    Intent intent = new Intent(getActivity(), LoginActivity.class);
-//                                    startActivity(intent);
-//                                }
-//                            }
-//
-//                            @Override
-//                            public void onFailure(Call<Void> call, Throwable t) {
-//
-//                            }
-//                        });
+                       
 
                         break;
                 }

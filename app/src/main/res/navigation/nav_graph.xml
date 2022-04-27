@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_homeParentFragment_to_childListScreen"
             app:destination="@id/childListScreen" />
+        <argument
+            android:name="refresh_token"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/parentTasksScreen"
@@ -63,6 +66,12 @@
         <action
             android:id="@+id/action_parentMenuScreen_to_childTransactionHistoryScreenFragment"
             app:destination="@id/childTransactionHistoryScreenFragment" />
+        <action
+            android:id="@+id/action_parentMenuScreen_to_loginFragmentHome"
+            app:destination="@id/loginFragmentHome" />
+        <argument
+            android:name="refresh_Token"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/sendMoneyScreen"

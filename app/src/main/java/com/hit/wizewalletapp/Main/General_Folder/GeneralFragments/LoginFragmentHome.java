@@ -116,10 +116,10 @@ public class LoginFragmentHome extends Fragment {
 
                             String item = userSpinner.getSelectedItem().toString();
                             if (item.equals("Parent")) {
-                                Navigation.findNavController(v).navigate(R.id.action_loginFragmentHome_to_homeParentFragment);
+                                Navigation.findNavController(v).navigate(LoginFragmentHomeDirections.actionLoginFragmentHomeToHomeParentFragment(refreshToken));
 
                             } else if (item.equals("Child")) {
-                              Navigation.findNavController(v).navigate(R.id.action_loginFragmentHome_to_childBalanceHomeScreenFragment);
+                                Navigation.findNavController(v).navigate(R.id.action_loginFragmentHome_to_childBalanceHomeScreenFragment);
                             } else {
                                 Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
                             }

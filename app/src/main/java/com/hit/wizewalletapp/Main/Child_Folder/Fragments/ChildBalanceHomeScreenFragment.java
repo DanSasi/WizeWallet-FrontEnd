@@ -47,14 +47,14 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  Balance
         task.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-           //   Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childTasksFragment);
+             Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childTasksScreenFragment);
             }
         });
         taskText = view.findViewById(R.id.textView7);
         taskText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             //   Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childTasksFragment);
+               Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childTasksScreenFragment);
             }
         });
 
@@ -65,7 +65,7 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  Balance
         tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childTipsFragment);
+               Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childTipsFragment);
             }
         });
 
@@ -73,7 +73,7 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  Balance
         tipText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            //  Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childTipsFragment);
+              Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childTipsFragment);
             }
         });
 
@@ -84,7 +84,7 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  Balance
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childMenuFragment);
+                Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childMenuFragment);
             }
         });
 
@@ -94,7 +94,7 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  Balance
         moreText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             //  Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeFragment_to_childMenuFragment);
+               Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childMenuFragment);
             }
         });
 
