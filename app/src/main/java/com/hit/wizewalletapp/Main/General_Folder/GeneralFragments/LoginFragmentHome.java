@@ -120,7 +120,7 @@ public class LoginFragmentHome extends Fragment {
                                 Navigation.findNavController(v).navigate(LoginFragmentHomeDirections.actionLoginFragmentHomeToHomeParentFragment(refreshToken));
 
                             } else if (item.equals("Child")) {
-                                Navigation.findNavController(v).navigate(R.id.action_loginFragmentHome_to_childBalanceHomeScreenFragment);
+                                Navigation.findNavController(v).navigate(LoginFragmentHomeDirections.actionLoginFragmentHomeToChildBalanceHomeScreenFragment(refreshToken));
                             } else {
                                 Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
                             }

@@ -52,7 +52,8 @@ public class ChildMenuScreenFragment extends Fragment  {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu_child_screen, container, false);
-//        String refreshToken = ParentMenuScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
+        //get refreshToken
+        String refreshToken = ChildMenuScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
 
         menu_items = MenuChildListModel.instance.getAllData();
         recyclerView = view.findViewById(R.id.recyclerView);
@@ -96,9 +97,8 @@ public class ChildMenuScreenFragment extends Fragment  {
                         break;
                     case "5":
                         HashMap<String,String> map = new HashMap<>();
-
-                      //  String tokenToSend = "authorization " + refreshToken;
-                        //map.put("authorization",tokenToSend);
+                        String tokenToSend = "authorization " + refreshToken;
+                        map.put("authorization",tokenToSend);
                         Call<Void> call = retrofitInterface.executeLogout(map);
 
                         call.enqueue(new Callback<Void>() {
@@ -106,7 +106,7 @@ public class ChildMenuScreenFragment extends Fragment  {
                             public void onResponse(Call<Void> call, Response<Void> response) {
                                 if (response.code() == 200){
                                     Log.d("TAG","logout user");
-                                   // Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_loginFragmentHome);
+                                    Navigation.findNavController(v).navigate(ChildMenuScreenFragmentDirections.actionChildMenuFragmentToLoginFragmentHome());
                                 }
                             }
 

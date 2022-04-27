@@ -38,7 +38,8 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  Balance
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_child_balance_home, container, false);
 
-
+        //get the refresh token
+        String refreshToken = ChildBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
 
 
         ////////////////////////////////////////////////////////////Tasks///////////////////////////////////////////////////////////////
@@ -84,7 +85,8 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  Balance
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childMenuFragment);
+                Navigation.findNavController(v).navigate(ChildBalanceHomeScreenFragmentDirections.actionChildBalanceHomeScreenFragment2ToChildMenuFragment(refreshToken));
+
             }
         });
 

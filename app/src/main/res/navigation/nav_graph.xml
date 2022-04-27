@@ -146,6 +146,12 @@
         <action
             android:id="@+id/action_childBalanceHomeScreenFragment2_to_childTasksScreenFragment"
             app:destination="@id/childTasksScreenFragment" />
+        <argument
+            android:name="refreshToken"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_childBalanceHomeScreenFragment_to_childMenuFragment"
+            app:destination="@id/childMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragmentHome"
@@ -173,6 +179,12 @@
         <action
             android:id="@+id/action_childMenuFragment_to_childTransactionHistoryFragment"
             app:destination="@id/childTransactionHistoryFragment" />
+        <argument
+            android:name="refreshToken"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_childMenuFragment_to_loginFragmentHome"
+            app:destination="@id/loginFragmentHome" />
     </fragment>
     <fragment
         android:id="@+id/childTransactionHistoryFragment"
