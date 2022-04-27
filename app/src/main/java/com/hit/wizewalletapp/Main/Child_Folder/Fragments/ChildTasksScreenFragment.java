@@ -26,7 +26,7 @@ public class ChildTasksScreenFragment extends Fragment {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_childTasksFragment_to_childBalanceHomeFragment);
+             //   Navigation.findNavController(view).navigate(R.id.action_childTasksFragment_to_childBalanceHomeFragment);
             }
         });
         return view;

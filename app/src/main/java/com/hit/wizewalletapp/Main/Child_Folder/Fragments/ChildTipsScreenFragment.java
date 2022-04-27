@@ -39,7 +39,7 @@ public class ChildTipsScreenFragment extends Fragment {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_childTipsFragment_to_childBalanceHomeFragment);
+//                Navigation.findNavController(view).navigate(R.id.action_childTipsFragment_to_childBalanceHomeFragment);
             }
         });
 

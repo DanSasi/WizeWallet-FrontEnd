@@ -28,7 +28,7 @@ public class ChildDetailsScreenFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_child_details, container, false);
+        View view =  inflater.inflate(R.layout.fragment_children_details, container, false);
         String childId = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildId();
         ChildModel childModel = BalanceParentModel.ChildListModel.instance.getChildById(childId);
         childBalanceTv= view.findViewById(R.id.add_child_balance_et);

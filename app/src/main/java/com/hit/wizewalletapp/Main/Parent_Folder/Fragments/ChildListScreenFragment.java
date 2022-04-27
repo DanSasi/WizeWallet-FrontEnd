@@ -79,8 +79,8 @@ public class ChildListScreenFragment extends Fragment {
 
         public MyViewHolder(@NonNull View itemView, OnItemClickListener listener) {
             super(itemView);
-            nameTxt = itemView.findViewById(R.id.child_name_item);
-            photo = itemView.findViewById(R.id.child_image);
+            nameTxt = itemView.findViewById(R.id.spinner_name_tv);
+            photo = itemView.findViewById(R.id.spinner_photo_item);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

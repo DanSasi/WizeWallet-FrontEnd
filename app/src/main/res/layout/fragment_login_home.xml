@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.General_Folder.GeneralFragments.LoginFragmentHome"
+    android:background="@drawable/home_svetaphoto">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="156dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/walleticon"
+        app:layout_constraintBottom_toTopOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="199dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/poppins"
+        android:text="Welcome to  WizeWallet!"
+        android:textColor="@color/purple_700"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <EditText
+        android:id="@+id/fragment_home_email_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.389"
+        app:layout_constraintWidth_percent=".8" />
+
+    <EditText
+        android:id="@+id/fragment_home_password_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Password"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:password="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_home_email_et"
+        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintWidth_percent=".8" />
+
+    <Button
+        android:id="@+id/fragment_home_login_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_main"
+        android:text="Login"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_home_password_et"
+        app:layout_constraintVertical_bias="0.541"
+        app:layout_constraintWidth_percent=".8" />
+
+    <TextView
+        android:id="@+id/fragment_home_forgetpass_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:clickable="true"
+        android:fontFamily="@font/poppins"
+        android:text="Forget Password? Click here"
+        android:textColor="@color/icon_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_home_login_btn"
+        app:layout_constraintEnd_toEndOf="@id/fragment_home_password_et"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_home_password_et"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <TextView
+        android:id="@+id/fragment_home_register_tv"
+        android:layout_width="191dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:clickable="true"
+        android:fontFamily="@font/poppins"
+        android:text="Not Registerd? Click here"
+        android:textColor="@color/icon_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_home_login_btn"
+        app:layout_constraintEnd_toEndOf="@id/fragment_home_password_et"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_home_password_et"
+        app:layout_constraintVertical_bias="0.791" />
+
+    <TextView
+        android:id="@+id/forgetPass3"
+        android:layout_width="102dp"
+        android:layout_height="39dp"
+        android:fontFamily="@font/poppins"
+        android:text="Log As: "
+        android:textColor="@color/icon_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_home_email_et"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_home_spinner"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.606" />
+
+    <Spinner
+        android:id="@+id/fragment_home_spinner"
+        android:layout_width="238dp"
+        android:layout_height="69dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_home_email_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.706"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintVertical_bias="0.56" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,6 +46,7 @@ dependencies {
     implementation'com.ebanx:swipe-button:0.4.0'
     implementation 'com.stripe:stripe-android:19.3.0'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation "androidx.fragment:fragment:1.2.5"
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     def nav_version = "2.4.2"
 

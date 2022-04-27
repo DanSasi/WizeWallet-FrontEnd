@@ -41,7 +41,7 @@ public class ChildMenuScreenFragment extends Fragment implements ChildMenuAdapte
         arr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_childMenuFragment_to_childBalanceHomeFragment);
+               // Navigation.findNavController(view).navigate(R.id.action_childMenuFragment_to_childBalanceHomeFragment);
             }
         });
         return view;

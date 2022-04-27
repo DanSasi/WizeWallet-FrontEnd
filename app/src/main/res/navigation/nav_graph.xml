@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeParentFragment">
+    app:startDestination="@id/loginFragmentHome">
 
     <fragment
         android:id="@+id/homeParentFragment"
@@ -101,7 +101,7 @@
         android:id="@+id/childDetailsScreenFragment"
         android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ChildDetailsScreenFragment"
         android:label="fragment_child_details"
-        tools:layout="@layout/fragment_child_details" >
+        tools:layout="@layout/fragment_children_details" >
         <argument
             android:name="childId"
             app:argType="string" />
@@ -115,4 +115,82 @@
             android:id="@+id/action_childTransactionHistoryScreenFragment_to_parentMenuScreen"
             app:destination="@id/parentMenuScreen" />
     </fragment>
+    <fragment
+        android:id="@+id/childTasksScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTasksScreenFragment"
+        android:label="ChildTasksScreenFragment" >
+        <action
+            android:id="@+id/action_childTasksScreenFragment_to_childBalanceHomeScreenFragment"
+            app:destination="@id/childBalanceHomeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/childBalanceHomeScreenFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildBalanceHomeScreenFragment"
+        android:label="fragment_child_balance_home"
+        tools:layout="@layout/fragment_child_balance_home" >
+        <action
+            android:id="@+id/action_childBalanceHomeScreenFragment2_to_childMenuFragment"
+            app:destination="@id/childMenuFragment" />
+        <action
+            android:id="@+id/action_childBalanceHomeScreenFragment2_to_childTipsFragment"
+            app:destination="@id/childTipsFragment" />
+        <action
+            android:id="@+id/action_childBalanceHomeScreenFragment2_to_childTasksScreenFragment"
+            app:destination="@id/childTasksScreenFragment" />
+        <action
+            android:id="@+id/action_childBalanceHomeScreenFragment2_to_childTransactionHistoryFragment"
+            app:destination="@id/childTransactionHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragmentHome"
+        android:name="com.hit.wizewalletapp.Main.General_Folder.GeneralFragments.LoginFragmentHome"
+        android:label="fragment_login_home"
+        tools:layout="@layout/fragment_login_home" >
+        <action
+            android:id="@+id/action_loginFragmentHome_to_signupTabFragment"
+            app:destination="@id/signupTabFragment" />
+        <action
+            android:id="@+id/action_loginFragmentHome_to_childBalanceHomeScreenFragment"
+            app:destination="@id/childBalanceHomeScreenFragment" />
+        <action
+            android:id="@+id/action_loginFragmentHome_to_homeParentFragment"
+            app:destination="@id/homeParentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/childMenuFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildMenuScreenFragment"
+        android:label="fragment_menu_child_screen">
+        <action
+            android:id="@+id/action_childMenuFragment_to_childBalanceHomeScreenFragment2"
+            app:destination="@id/childBalanceHomeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/childTransactionHistoryFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment"
+        android:label="fragment_transaction_child_history"
+        tools:layout="@layout/fragment_transaction_child_history">
+        <action
+            android:id="@+id/action_childTransactionHistoryFragment_to_childBalanceHomeScreenFragment2"
+            app:destination="@id/childBalanceHomeScreenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/childTipsFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTipsScreenFragment"
+        android:label="fragment_tips_child_screen"
+        tools:layout="@layout/fragment_tips_child_screen" >
+        <action
+            android:id="@+id/action_childTipsFragment_to_childBalanceHomeScreenFragment2"
+            app:destination="@id/childBalanceHomeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupTabFragment"
+        android:name="com.hit.wizewalletapp.Main.General_Folder.GeneralFragments.SignupTabFragment"
+        android:label="SignupTabFragment" >
+        <action
+            android:id="@+id/action_signupTabFragment_to_loginFragmentHome"
+            app:destination="@id/loginFragmentHome" />
+    </fragment>
+
 </navigation>
