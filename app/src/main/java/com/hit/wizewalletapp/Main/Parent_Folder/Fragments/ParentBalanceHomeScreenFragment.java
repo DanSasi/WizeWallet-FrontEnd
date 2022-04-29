@@ -13,10 +13,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.hit.wizewalletapp.Adapters.General_Adapters.SpinnerUserAdater;
 import com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment;
 import com.hit.wizewalletapp.Adapters.Parent_Adapters.BalanceListParentAdapter;
+import com.hit.wizewalletapp.Main.General_Folder.Models.SpinnerData;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.R;
 
@@ -28,10 +31,15 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
     BalanceListParentAdapter balanceListAdapter;
     ArrayList<BalanceParentModel> bData;
     RecyclerView recyclerView;
+
     private BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener clickListener;
 
     ImageView childs, task, more, tips;
-    TextView childText, taskText, moreText, tipText, hellowText;
+    TextView childText, taskText, moreText, tipText, helloText;
+    Spinner spinner;
+    SpinnerUserAdater adapter;
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -116,6 +124,12 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
             }
         });
 
+        spinner = view.findViewById(R.id.fragment_Parent_spinner);
+        adapter = new SpinnerUserAdater(getContext(), SpinnerData.getSpinnerListKids());
+        spinner.setAdapter(adapter);
+
+
+
         /////////////////////////////////////////////////////////////Done/////////////////////////////////////////////////////////////
         bData = new ArrayList<BalanceParentModel>();
         recyclerView = view.findViewById(R.id.rv_balance);
@@ -124,6 +138,8 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
 
         return view;
     }
+
+
 
     private void getData() {
         bData = new ArrayList<>();

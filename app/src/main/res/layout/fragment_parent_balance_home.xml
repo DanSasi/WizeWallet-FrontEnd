@@ -190,31 +190,14 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="92dp"
-        android:layout_height="19dp"
+        android:layout_width="129dp"
+        android:layout_height="25dp"
         android:layout_marginStart="20dp"
-        android:text="Your Balance : "
+        android:text="Check your child's"
         app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toStartOf="@+id/balance_parent_home"
-        app:layout_constraintHorizontal_bias="0.346"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:layout_constraintVertical_bias="0.507" />
-
-    <EditText
-        android:id="@+id/balance_parent_home"
-        android:layout_width="212dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
-        android:text="10,000 Nis"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/rv_balance"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView13"
@@ -239,5 +222,18 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/fragment_Parent_spinner"
+        android:layout_width="198dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/rv_balance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/text_more" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
