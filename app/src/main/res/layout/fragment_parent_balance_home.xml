@@ -8,7 +8,7 @@
     tools:context=".Main.Parent_Folder.Fragments.ParentBalanceHomeScreenFragment">
 
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView3"
         android:layout_width="90dp"
         android:layout_height="82dp"

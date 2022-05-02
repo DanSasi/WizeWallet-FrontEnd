@@ -16,12 +16,14 @@ public class MenuParentListModel {
         MenuParentModel send_Money = new MenuParentModel("2", R.drawable.icon, "Send Money");
         MenuParentModel request_Payment = new MenuParentModel("3" , R.drawable.icon6, "Request Payment");
         MenuParentModel settings = new MenuParentModel("4", R.drawable.icon7, "Settings");
-        MenuParentModel logout = new MenuParentModel("5",R.drawable.icon_logout,"Logout");
+        MenuParentModel child_link = new MenuParentModel("5", R.drawable.link_icon_parent, "Child Link");
+        MenuParentModel logout = new MenuParentModel("6",R.drawable.icon_logout,"Logout");
 
         menuParentModelData.add(history_Transaction);
         menuParentModelData.add(send_Money);
         menuParentModelData.add(request_Payment);
         menuParentModelData.add(settings);
+        menuParentModelData.add(child_link);
         menuParentModelData.add(logout);
     }
     List<MenuParentModel> menuParentModelData = new LinkedList<MenuParentModel>();

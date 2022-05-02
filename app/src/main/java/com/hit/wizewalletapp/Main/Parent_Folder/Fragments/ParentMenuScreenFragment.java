@@ -85,9 +85,13 @@ public class ParentMenuScreenFragment extends Fragment {
 
                         break;
                     case "4":
-
+                        Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_parentSettingsFragmentScreen);
                         break;
                     case "5":
+                        Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_childLinkFragmentScreen);
+
+                        break;
+                    case "6":
                         HashMap<String,String> map = new HashMap<>();
 
                         String tokenToSend = "authorization " + refreshToken;
@@ -108,8 +112,6 @@ public class ParentMenuScreenFragment extends Fragment {
 
                             }
                         });
-                        break;
-                    case "6":
                        
 
                         break;

@@ -44,6 +44,7 @@
             android:paddingStart="0sp"
             android:text="Send Money"
             android:textColor="@color/black"
+            android:textAppearance="@style/balance_text"
             app:layout_constraintBottom_toBottomOf="@+id/menu_parent_img"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.036"

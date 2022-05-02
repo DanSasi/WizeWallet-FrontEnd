@@ -72,6 +72,12 @@
         <argument
             android:name="refresh_Token"
             app:argType="string" />
+        <action
+            android:id="@+id/action_parentMenuScreen_to_parentSettingsFragmentScreen"
+            app:destination="@id/parentSettingsFragmentScreen" />
+        <action
+            android:id="@+id/action_parentMenuScreen_to_childLinkFragmentScreen"
+            app:destination="@id/childLinkFragmentScreen" />
     </fragment>
     <fragment
         android:id="@+id/sendMoneyScreen"
@@ -212,6 +218,24 @@
         <action
             android:id="@+id/action_signupTabFragment_to_loginFragmentHome"
             app:destination="@id/loginFragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentSettingsFragmentScreen"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentSettingsFragmentScreen"
+        android:label="fragment_parent_settings_screen"
+        tools:layout="@layout/fragment_parent_settings_screen" >
+        <action
+            android:id="@+id/action_parentSettingsFragmentScreen_to_parentMenuScreen"
+            app:destination="@id/parentMenuScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/childLinkFragmentScreen"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ChildLinkFragmentScreen"
+        android:label="fragment_child_link"
+        tools:layout="@layout/fragment_child_link" >
+        <action
+            android:id="@+id/action_childLinkFragmentScreen_to_parentMenuScreen"
+            app:destination="@id/parentMenuScreen" />
     </fragment>
 
 </navigation>

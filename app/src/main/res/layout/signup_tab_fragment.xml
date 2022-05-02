@@ -37,6 +37,8 @@
         android:id="@+id/fullname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/name_icon"
+        android:drawablePadding="5dp"
         android:hint="Enter your Full Name"
         android:minHeight="48dp"
         android:paddingLeft="10dp"
@@ -54,10 +56,12 @@
         android:id="@+id/etrEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="428dp"
+        android:layout_marginBottom="388dp"
+        android:drawableLeft="@drawable/email_icon"
+        android:drawablePadding="5dp"
         android:hint="Enter Your Email"
         android:minHeight="48dp"
-        android:paddingLeft="20dp"
+        android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,9 +75,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/password_icon_4"
+        android:drawablePadding="5dp"
         android:hint="Enter Your Password"
         android:minHeight="48dp"
-        android:paddingLeft="20dp"
+        android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:password="true"
@@ -83,7 +89,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etrEmail"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.037"
         app:layout_constraintWidth_percent=".8" />
 
     <Button
@@ -100,7 +106,7 @@
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622"
+        app:layout_constraintVertical_bias="0.714"
         app:layout_constraintWidth_percent=".8" />
 
 
