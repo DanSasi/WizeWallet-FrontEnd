@@ -71,7 +71,7 @@ public class SignupTabFragment extends Fragment {
                         //code 200 is OK , 400 not
                         if (response.code() == 200) {
                             Toast.makeText(v.getContext(), "register OK", Toast.LENGTH_LONG).show();
-                            Navigation.findNavController(v).navigate(R.id.action_signupTabFragment_to_loginFragmentHome);
+                            Navigation.findNavController(v).navigate(SignupTabFragmentDirections.actionSignupTabFragmentToLoginFragmentHome());
                         } else if (response.code() == 400) {
                             Toast.makeText(v.getContext(), "wrong email or password/alre have user", Toast.LENGTH_LONG).show();
                         }
