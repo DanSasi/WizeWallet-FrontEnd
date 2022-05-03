@@ -38,6 +38,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
     TextView childText, taskText, moreText, tipText, helloText;
     Spinner spinner;
     SpinnerUserAdater adapter;
+    String refreshToken ="";
 
 
 
@@ -46,8 +47,16 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_parent_balance_home, container, false);
-        String refreshToken = ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
+//        if(ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken()!=null){
+//            refreshToken = ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
+//            Log.d("Tag",refreshToken);
+//        }
+
+        refreshToken = ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
         Log.d("Tag",refreshToken);
+
+//        String refreshToken = ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
+//        Log.d("Tag",refreshToken);
 
         /////////////////////////////////////////////////////////////Childs/////////////////////////////////////////////////////////////
 

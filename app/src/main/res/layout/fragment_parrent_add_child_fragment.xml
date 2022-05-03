@@ -47,7 +47,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="404dp"
         android:ems="10"
-        android:hint="Child User Name"
+        android:hint="Child Email"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.406"

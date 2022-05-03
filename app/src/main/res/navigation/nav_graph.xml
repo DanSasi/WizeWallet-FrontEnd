@@ -26,7 +26,7 @@
             android:id="@+id/action_homeParentFragment_to_childListScreen"
             app:destination="@id/childListScreen" />
         <argument
-            android:name="refresh_token"
+            android:name="refreshToken"
             app:argType="string" />
     </fragment>
     <fragment
@@ -70,7 +70,7 @@
             android:id="@+id/action_parentMenuScreen_to_loginFragmentHome"
             app:destination="@id/loginFragmentHome" />
         <argument
-            android:name="refresh_Token"
+            android:name="refreshToken"
             app:argType="string" />
         <action
             android:id="@+id/action_parentMenuScreen_to_parentSettingsFragmentScreen"
