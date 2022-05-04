@@ -136,12 +136,20 @@ public class AddChildScreenFragment extends Fragment {
         String balance = addChildBalanceEt.getText().toString();
         //int photo,String balance,String username, String id, String password
 
+        //Retrofit instance
+        retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        retrofitInterface = retrofit.create(RetrofitInterface.class);
+
         //get the user mail and password put in map and send to server
         HashMap<String, String> userRegisterMap = new HashMap<>();
         userRegisterMap.put("email", userEmail);
         userRegisterMap.put("password", password);
         userRegisterMap.put("_id", id);
         userRegisterMap.put("balance", balance);
+
 
         //send the request to the server side
         Call<Void> call = retrofitInterface.executeRegister(userRegisterMap);
@@ -152,21 +160,22 @@ public class AddChildScreenFragment extends Fragment {
             public void onResponse(Call<Void> call, Response<Void> response) {
                 //code 200 is OK , 400 not
                 if (response.code() == 200) {
-                    Toast.makeText(getContext(), "register OK", Toast.LENGTH_LONG).show();
+                    // Toast.makeText(getContext(), "register OK", Toast.LENGTH_LONG).show();
                     //Navigation.findNavController(v).navigate(SignupTabFragmentDirections.actionSignupTabFragmentToLoginFragmentHome());
                 } else if (response.code() == 400) {
-                    Toast.makeText(getContext(), "wrong email or password/alre have user", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getContext(), "wrong email or password/alre have user", Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<Void> call, Throwable t) {
-                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+                //  Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
 
+
         ChildModel childModel = new ChildModel(imageView, balance, userEmail, id, password);
-        //BalanceParentModel.ChildListModel.instance.addChild(childModel);
+        BalanceParentModel.ChildListModel.instance.addChild(childModel);
         //Navigation.findNavController(addChildEmailEt).navigateUp();
         Navigation.findNavController(addChildEmailEt).navigate(AddChildScreenFragmentDirections.actionAddChildFragmentToChildListScreen());
 
