@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/home_svetaphoto"
-    tools:context=".Main.Parent_Folder.Fragments.ChildLinkFragmentScreen">
+    tools:context=".views.fragments.parent.ChildLinkFragmentScreen">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/sendLink"
         android:layout_width="136dp"
         android:layout_height="71dp"
         android:background="@drawable/home_svetaphoto"

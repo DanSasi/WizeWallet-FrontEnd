@@ -20,6 +20,7 @@ import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.api.responses.LoginResponse;
+import com.hit.wizewalletapp.utilities.CacheUtilities;
 import com.hit.wizewalletapp.utilities.Utilities;
 
 @SuppressWarnings("ALL")
@@ -49,6 +50,7 @@ public class LoginFragment extends Fragment {
             ApiCallsHelper.performLogin(email, password, new CustomCallBack<LoginResponse>() {
                 @Override
                 public void onSuccesses(LoginResponse response) {
+                    CacheUtilities.saveToken(getContext(),"authorization "+response.getRefreshToken(),"authorization "+response.getAccessToken());
                     String item = userSpinner.getSelectedItem().toString();
                     if (item.equals("Parent")) {
                         Navigation.findNavController(getActivity(), R.id.nav_host).navigate(LoginFragmentDirections.actionLoginFragmentHomeToHomeParentFragment(response.getRefreshToken()));

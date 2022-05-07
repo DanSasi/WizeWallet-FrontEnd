@@ -1,6 +1,7 @@
 package com.hit.wizewalletapp.api;
 
 import com.hit.wizewalletapp.api.responses.LoginResponse;
+import com.hit.wizewalletapp.api.responses.ServerResponse;
 
 import java.util.HashMap;
 
@@ -81,5 +82,29 @@ public class ApiCallsHelper {
 
             }
         });
+    }
+
+    public static void preformLinkChildToParent(String token, Integer kidId, CustomCallBack<ServerResponse> callBack) {
+        HashMap<String,String> headerMap = new HashMap<>();
+        headerMap.put("authorization",token);
+        HashMap<String,Object> bodyMap = new HashMap<>();
+        bodyMap.put("id",kidId);
+        Call<ServerResponse> call = RetrofitInstance.retrofitInterface.executeLinkChildToParent(headerMap,bodyMap);
+        call.enqueue(new Callback<ServerResponse>() {
+            @Override
+            public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+                if (response.isSuccessful() && response.code() == 200) {
+                    callBack.onSuccesses(response.body());
+                } else if (response.code() == 400) {
+                    callBack.onFailure("");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ServerResponse> call, Throwable t) {
+                callBack.onFailure(t.getLocalizedMessage());
+            }
+        });
+
     }
 }

@@ -230,7 +230,7 @@
     </fragment>
     <fragment
         android:id="@+id/childLinkFragmentScreen"
-        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ChildLinkFragmentScreen"
+        android:name="com.hit.wizewalletapp.views.fragments.parent.ChildLinkFragmentScreen"
         android:label="fragment_child_link"
         tools:layout="@layout/fragment_child_link" >
         <action
