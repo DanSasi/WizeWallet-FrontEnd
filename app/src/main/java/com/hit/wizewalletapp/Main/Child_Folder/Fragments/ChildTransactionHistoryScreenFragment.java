@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hit.wizewalletapp.Adapters.Parent_Adapters.BalanceListParentAdapter;
+import com.hit.wizewalletapp.adapters.Parent_Adapters.BalanceListParentAdapter;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.R;
 

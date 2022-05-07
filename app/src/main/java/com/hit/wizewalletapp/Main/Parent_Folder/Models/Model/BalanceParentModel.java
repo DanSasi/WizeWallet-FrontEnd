@@ -1,20 +1,12 @@
 package com.hit.wizewalletapp.Main.Parent_Folder.Models.Model;
 
-import android.widget.Toast;
-
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.General_Folder.GeneralActivites.RetrofitInterface;
-import com.hit.wizewalletapp.R;
+import com.hit.wizewalletapp.api.RetrofitInterface;
 
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class BalanceParentModel {
     int photo;

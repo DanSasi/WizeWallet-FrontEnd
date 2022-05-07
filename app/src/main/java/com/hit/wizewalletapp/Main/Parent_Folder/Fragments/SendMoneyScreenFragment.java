@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import com.ebanx.swipebtn.OnStateChangeListener;
 import com.ebanx.swipebtn.SwipeButton;
-import com.hit.wizewalletapp.Main.General_Folder.GeneralActivites.PaymentSplashScreen;
+import com.hit.wizewalletapp.views.activity.PaymentSplashScreen;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.R;

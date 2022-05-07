@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Adapters.Child_Adapters;
+package com.hit.wizewalletapp.adapters.Child_Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

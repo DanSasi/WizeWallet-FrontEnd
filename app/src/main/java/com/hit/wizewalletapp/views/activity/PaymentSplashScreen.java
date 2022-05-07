@@ -1,10 +1,8 @@
-package com.hit.wizewalletapp.Main.General_Folder.GeneralActivites;
+package com.hit.wizewalletapp.views.activity;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
@@ -13,32 +11,26 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.hit.wizewalletapp.views.fragments.LoginFragment;
 import com.hit.wizewalletapp.R;
 
-public class SplashScreen extends AppCompatActivity {
+public class PaymentSplashScreen extends AppCompatActivity {
 
-
-    //variables
     Animation topAnim, bottomAnim;
     ImageView image;
     TextView power;
     LinearLayout name;
-
-    @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_payment_splash_screen);
 
-        //Animation
         topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
         bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
-        //Hooks
         image = findViewById(R.id.imageView);
-        name = findViewById(R.id.lin1);
-        power = findViewById(R.id.textView9);
-
+        name = findViewById(R.id.lin2);
+        power = findViewById(R.id.payment_text3);
 
         image.setAnimation(topAnim);
         name.setAnimation(bottomAnim);
@@ -48,7 +40,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent i = new Intent(SplashScreen.this, LoginActivity.class);
+                Intent i = new Intent(PaymentSplashScreen.this, LoginFragment.class);
                 startActivity(i);
 
                 finish();

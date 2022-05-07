@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Main.Child_Folder.Fragments;
+package com.hit.wizewalletapp.views.fragments.child;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -8,10 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.hit.wizewalletapp.Main.Child_Folder.Models.ListModels.MenuChildListModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildMenuModel;
-import com.hit.wizewalletapp.Main.General_Folder.GeneralActivites.RetrofitInterface;
-import com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentMenuScreenFragment;
-import com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentMenuScreenFragmentArgs;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.MenuParentListModel;
+import com.hit.wizewalletapp.api.ApiCallsHelper;
+import com.hit.wizewalletapp.api.CustomCallBack;
+import com.hit.wizewalletapp.api.RetrofitInterface;
 import com.hit.wizewalletapp.R;
 
 
@@ -24,10 +23,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Adapters.Child_Adapters.ChildMenuAdapterClass;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.MenuParentModel;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -43,10 +38,6 @@ public class ChildMenuScreenFragment extends Fragment  {
     RecyclerView recyclerView;
     ImageView arr;
 
-    private Retrofit retrofit;
-    private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://10.0.2.2:3000";
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -58,14 +49,6 @@ public class ChildMenuScreenFragment extends Fragment  {
         menu_items = MenuChildListModel.instance.getAllData();
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-
-        //Retrofit instance
-        retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        retrofitInterface = retrofit.create(RetrofitInterface.class);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         MyChildMenuAdapter myChildMenuAdapter = new MyChildMenuAdapter();
@@ -96,22 +79,14 @@ public class ChildMenuScreenFragment extends Fragment  {
 
                         break;
                     case "5":
-                        HashMap<String,String> map = new HashMap<>();
                         String tokenToSend = "authorization " + refreshToken;
-                        map.put("authorization",tokenToSend);
-                        Call<Void> call = retrofitInterface.executeLogout(map);
-
-                        call.enqueue(new Callback<Void>() {
+                        ApiCallsHelper.performLogout(tokenToSend, new CustomCallBack<Void>() {
                             @Override
-                            public void onResponse(Call<Void> call, Response<Void> response) {
-                                if (response.code() == 200){
-                                    Log.d("TAG","logout user");
-                                    Navigation.findNavController(v).navigate(ChildMenuScreenFragmentDirections.actionChildMenuFragmentToLoginFragmentHome());
-                                }
+                            public void onSuccesses(Void response) {
+                                Navigation.findNavController(getActivity(), R.id.nav_host).navigate(ChildMenuScreenFragmentDirections.actionChildMenuFragmentToLoginFragmentHome());
                             }
-
                             @Override
-                            public void onFailure(Call<Void> call, Throwable t) {
+                            public void onFailure(String msg) {
 
                             }
                         });

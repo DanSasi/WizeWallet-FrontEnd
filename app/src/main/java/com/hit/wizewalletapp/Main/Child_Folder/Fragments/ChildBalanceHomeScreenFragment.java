@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Adapters.Parent_Adapters.BalanceListParentAdapter;
+import com.hit.wizewalletapp.adapters.Parent_Adapters.BalanceListParentAdapter;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.R;
 

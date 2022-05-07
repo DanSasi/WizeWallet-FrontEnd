@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Main.Parent_Folder.Fragments;
+package com.hit.wizewalletapp.views.fragments.parent;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -14,7 +14,9 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Main.General_Folder.GeneralActivites.RetrofitInterface;
+import com.hit.wizewalletapp.api.ApiCallsHelper;
+import com.hit.wizewalletapp.api.CustomCallBack;
+import com.hit.wizewalletapp.api.RetrofitInterface;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.MenuParentListModel;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.MenuParentModel;
 import com.hit.wizewalletapp.R;
@@ -34,10 +36,6 @@ public class ParentMenuScreenFragment extends Fragment {
     RecyclerView recyclerView;
     ImageView arr;
 
-    private Retrofit retrofit;
-    private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://10.0.2.2:3000";
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,19 +43,10 @@ public class ParentMenuScreenFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu_parent_screen, container, false);
         //how to get data from fragment in the nav grahf, need to add the args in the nev grahf first
-        String refreshToken = ParentMenuScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
 
         menu_items = MenuParentListModel.instance.getAllData();
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-
-        //Retrofit instance
-        retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        retrofitInterface = retrofit.create(RetrofitInterface.class);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         MyMenuAdapter myMenuAdapter = new MyMenuAdapter();
@@ -92,28 +81,17 @@ public class ParentMenuScreenFragment extends Fragment {
 
                         break;
                     case "6":
-                        HashMap<String,String> map = new HashMap<>();
-
-                        String tokenToSend = "authorization " + refreshToken;
-                        map.put("authorization",tokenToSend);
-                        Call<Void> call = retrofitInterface.executeLogout(map);
-
-                        call.enqueue(new Callback<Void>() {
+                        String tokenToSend = "authorization " +  ParentMenuScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
+                        ApiCallsHelper.performLogout(tokenToSend, new CustomCallBack<Void>() {
                             @Override
-                            public void onResponse(Call<Void> call, Response<Void> response) {
-                                if (response.code() == 200){
-                                    Log.d("TAG","logout user");
-                                    Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_loginFragmentHome);
-                                }
+                            public void onSuccesses(Void response) {
+                                Navigation.findNavController(getActivity(), R.id.nav_host).navigate(R.id.action_parentMenuScreen_to_loginFragmentHome);
                             }
-
                             @Override
-                            public void onFailure(Call<Void> call, Throwable t) {
+                            public void onFailure(String msg) {
 
                             }
                         });
-                       
-
                         break;
                 }
 

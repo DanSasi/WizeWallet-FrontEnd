@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Adapters.Parent_Adapters;
+package com.hit.wizewalletapp.adapters.Child_Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,12 +15,12 @@ import com.hit.wizewalletapp.R;
 
 import java.util.List;
 
-public class BalanceListParentAdapter extends RecyclerView.Adapter<BalanceListParentAdapter.BalanceViewHolder>{
+public class BalanceChildListAdapter extends RecyclerView.Adapter<BalanceChildListAdapter.BalanceViewHolder>{
     Context context;
     List<BalanceParentModel> bData;
     private BalanceViewHolder.RecycleViewClickListener clickListener;
 
-    public BalanceListParentAdapter(Context context, List<BalanceParentModel> bData) {
+    public BalanceChildListAdapter(Context context, List<BalanceParentModel> bData) {
         this.context = context;
         this.bData = bData;
         this.clickListener = clickListener;

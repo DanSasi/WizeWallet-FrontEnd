@@ -16,9 +16,9 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Adapters.General_Adapters.SpinnerUserAdater;
+import com.hit.wizewalletapp.adapters.General_Adapters.SpinnerUserAdater;
 import com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment;
-import com.hit.wizewalletapp.Adapters.Parent_Adapters.BalanceListParentAdapter;
+import com.hit.wizewalletapp.adapters.Parent_Adapters.BalanceListParentAdapter;
 import com.hit.wizewalletapp.Main.General_Folder.Models.SpinnerData;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.R;

@@ -1,7 +1,7 @@
-package com.hit.wizewalletapp.Main.General_Folder.GeneralActivites;
+package com.hit.wizewalletapp.api.responses;
 
 //for the Retrofit interface
-public class LoginResult {
+public class LoginResponse {
 
     private String email;
 

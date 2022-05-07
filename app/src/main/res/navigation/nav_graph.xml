@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/parentMenuScreen"
-        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentMenuScreenFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.parent.ParentMenuScreenFragment"
         android:label="ParentMenuScreen" >
         <action
             android:id="@+id/action_parentMenuScreen_to_homeParentFragment"
@@ -161,7 +161,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragmentHome"
-        android:name="com.hit.wizewalletapp.Main.General_Folder.GeneralFragments.LoginFragmentHome"
+        android:name="com.hit.wizewalletapp.views.fragments.LoginFragment"
         android:label="fragment_login_home"
         tools:layout="@layout/fragment_login_home" >
         <action
@@ -177,7 +177,7 @@
 
     <fragment
         android:id="@+id/childMenuFragment"
-        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildMenuScreenFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.child.ChildMenuScreenFragment"
         android:label="fragment_menu_child_screen">
         <action
             android:id="@+id/action_childMenuFragment_to_childBalanceHomeScreenFragment2"
@@ -213,7 +213,7 @@
     </fragment>
     <fragment
         android:id="@+id/signupTabFragment"
-        android:name="com.hit.wizewalletapp.Main.General_Folder.GeneralFragments.SignupTabFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.SignupFragment"
         android:label="SignupTabFragment" >
         <action
             android:id="@+id/action_signupTabFragment_to_loginFragmentHome"

@@ -1,4 +1,6 @@
-package com.hit.wizewalletapp.Main.General_Folder.GeneralActivites;
+package com.hit.wizewalletapp.api;
+
+import com.hit.wizewalletapp.api.responses.LoginResponse;
 
 import java.util.HashMap;
 
@@ -8,11 +10,9 @@ import retrofit2.http.HeaderMap;
 import retrofit2.http.POST;
 
 public interface RetrofitInterface {
-    //give here the root in the server side
-    //in the body we give map, is like json object
 
     @POST("/auth/login")
-    Call<LoginResult> executeLogin(@Body HashMap<String,String> map);
+    Call<LoginResponse> executeLogin(@Body HashMap<String,String> map);
 
     @POST("/auth/register")
     Call<Void> executeRegister(@Body HashMap<String,String> map);
@@ -21,4 +21,8 @@ public interface RetrofitInterface {
     Call<Void> executeLogout(@HeaderMap HashMap<String,String>map);
 
 
+
+
+
 }
+

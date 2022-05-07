@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Adapters.General_Adapters;
+package com.hit.wizewalletapp.adapters.General_Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,12 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.hit.wizewalletapp.Main.General_Folder.Models.SpinnerModel;
 
-import java.util.ArrayList;
 import com.hit.wizewalletapp.R;
 import java.util.List;
 

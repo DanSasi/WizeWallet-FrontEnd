@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Adapters.Parent_Adapters.BalanceListParentAdapter;
+import com.hit.wizewalletapp.adapters.Parent_Adapters.BalanceListParentAdapter;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.R;
 

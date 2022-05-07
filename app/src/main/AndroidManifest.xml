@@ -15,13 +15,13 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:label" >
         <activity
-            android:name=".Main.General_Folder.GeneralActivites.LoginActivity"
+            android:name=".views.activity.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".Main.General_Folder.GeneralActivites.PaymentSplashScreen"
+            android:name=".views.activity.PaymentSplashScreen"
             android:exported="true" />
         <activity
-            android:name=".Main.General_Folder.GeneralActivites.SplashScreen"
+            android:name=".views.activity.SplashScreen"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
