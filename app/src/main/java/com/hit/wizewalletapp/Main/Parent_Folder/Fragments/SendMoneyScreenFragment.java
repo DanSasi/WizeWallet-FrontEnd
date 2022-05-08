@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.ebanx.swipebtn.OnStateChangeListener;
 import com.ebanx.swipebtn.SwipeButton;
+import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
 import com.hit.wizewalletapp.views.activity.PaymentSplashScreen;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
@@ -39,7 +40,7 @@ public class SendMoneyScreenFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        childList = BalanceParentModel.ChildListModel.instance.getAllData();
+        childList = ChildListModel.instance.getAllData();
         View view = inflater.inflate(R.layout.fragment_send_money_screen, container, false);
 
 

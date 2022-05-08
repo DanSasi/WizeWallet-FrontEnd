@@ -21,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.api.RetrofitInterface;
@@ -126,7 +127,7 @@ public class AddChildScreenFragment extends Fragment {
                 @Override
                 public void onSuccesses(Void response) {
                     ChildModel childModel = new ChildModel(imageView, balance, userEmail, id, password);
-                    BalanceParentModel.ChildListModel.instance.addChild(childModel);
+                    ChildListModel.instance.addChild(childModel);
                     Navigation.findNavController(getActivity(), R.id.nav_host).navigate(AddChildScreenFragmentDirections.actionAddChildFragmentToChildListScreen());
                 }
                 @Override

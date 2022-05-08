@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
+import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.R;
 
@@ -30,7 +31,7 @@ public class ChildDetailsScreenFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_children_details, container, false);
         String childId = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildId();
-        ChildModel childModel = BalanceParentModel.ChildListModel.instance.getChildById(childId);
+        ChildModel childModel = ChildListModel.instance.getChildById(childId);
         childBalanceTv= view.findViewById(R.id.add_child_balance_et);
         childUsernameTv = view.findViewById(R.id.add_child_username_et);
         childImageView = view.findViewById(R.id.add_child_imgv);

@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.R;
@@ -38,7 +39,7 @@ public class ChildListScreenFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_child_list_screen, container, false);
-        childList = BalanceParentModel.ChildListModel.instance.getAllData();
+        childList = ChildListModel.instance.getAllData();
         recyclerView = view.findViewById(R.id.child_recycler_view);
         recyclerView.setHasFixedSize(true);
 
