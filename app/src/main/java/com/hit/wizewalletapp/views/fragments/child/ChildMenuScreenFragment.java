@@ -70,7 +70,7 @@ public class ChildMenuScreenFragment extends Fragment  {
                         Navigation.findNavController(v).navigate(R.id.action_childMenuFragment_to_childTransactionHistoryFragment);
                         break;
                     case "2":
-
+                        Navigation.findNavController(v).navigate(R.id.action_childMenuFragment_to_childPaymentFragment);
                         break;
                     case "3":
 
