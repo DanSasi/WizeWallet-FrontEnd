@@ -6,31 +6,22 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.ListModels.MenuChildListModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildMenuModel;
+import com.hit.wizewalletapp.main.child.models.listmodels.MenuChildListModel;
+import com.hit.wizewalletapp.main.child.models.model.ChildMenuModel;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
-import com.hit.wizewalletapp.api.RetrofitInterface;
 import com.hit.wizewalletapp.R;
 
 
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.HashMap;
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ChildMenuScreenFragment extends Fragment  {
 

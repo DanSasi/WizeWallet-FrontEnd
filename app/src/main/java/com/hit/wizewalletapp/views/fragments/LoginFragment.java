@@ -14,8 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.hit.wizewalletapp.adapters.General_Adapters.SpinnerUserAdater;
-import com.hit.wizewalletapp.Main.General_Folder.Models.SpinnerData;
+import com.hit.wizewalletapp.adapters.generaladapters.SpinnerUserAdater;
+import com.hit.wizewalletapp.main.General_Folder.models.SpinnerData;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;

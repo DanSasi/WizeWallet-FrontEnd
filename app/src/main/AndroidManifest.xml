@@ -34,7 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main.Child_Folder.Fragments.Capture"
+        <activity android:name=".main.child.fragment.Capture"
                 android:screenOrientation="portrait"
                 android:stateNotNeeded="true"
                 android:theme="@style/zxing_CaptureTheme" >

@@ -24,5 +24,8 @@ public interface RetrofitInterface {
     @POST("/link")
     Call<ServerResponse> executeLinkChildToParent(@HeaderMap HashMap<String, String> map,@Body HashMap<String, Object> map2);
 
+    @POST("/link/getKids")
+    Call<Void> executeGetKids(@Body HashMap<String, Object> map2);
+
 }
 

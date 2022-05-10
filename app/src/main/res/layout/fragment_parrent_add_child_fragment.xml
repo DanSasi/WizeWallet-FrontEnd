@@ -5,21 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_svetaphoto"
-    tools:context=".Main.Parent_Folder.Fragments.AddChildScreenFragment">
+    tools:context=".main.parent.fragment.AddChildScreenFragment">
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="134dp"
-        android:layout_height="107dp"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/walleticon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/add_child_imgv"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
+        android:layout_width="200dp"
+        android:layout_height="189dp"
         android:src="@drawable/childface"
         app:layout_constraintBottom_toTopOf="@+id/add_child_id_et"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,10 +114,10 @@
         android:id="@+id/add_child_img_filter_btn"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/add_child_balance_et"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/equipment_icon" />
 
