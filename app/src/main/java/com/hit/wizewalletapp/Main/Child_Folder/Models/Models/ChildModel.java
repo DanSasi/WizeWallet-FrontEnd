@@ -3,16 +3,18 @@ package com.hit.wizewalletapp.Main.Child_Folder.Models.Models;
 public class ChildModel {
      int photo ;
     String  balance ="", username =""
-            , id = "",password = "";
+            , mId = "",password = "";
 
 
-
+    public ChildModel(Integer id){
+        mId = id.toString();
+    }
 
     public ChildModel(Integer photo, String balance, String username, String id, String password) {
         this.photo = photo;
         this.balance = balance;
         this.username = username ;
-        this.id = id;
+        this.mId = id;
         this.password = password;
     }
 
@@ -24,12 +26,12 @@ public class ChildModel {
         return username;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setmId(String mId) {
+        this.mId = mId;
     }
 
-    public String getId() {
-        return id;
+    public String getmId() {
+        return mId;
     }
 
     public void setPassword(String password) {

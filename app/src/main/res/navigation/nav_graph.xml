@@ -28,6 +28,9 @@
         <argument
             android:name="refreshToken"
             app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/parentTasksScreen"
@@ -90,7 +93,7 @@
     </fragment>
     <fragment
         android:id="@+id/childListScreen"
-        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ChildListScreenFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.parent.ParentChildsFragment"
         android:label="activity_child_list_screen"
         tools:layout="@layout/fragment_child_list_screen" >
         <action

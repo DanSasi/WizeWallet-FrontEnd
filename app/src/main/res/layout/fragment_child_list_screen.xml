@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     style="@style/bgRound"
     android:background="@drawable/home_svetaphoto"
-    tools:context=".Main.Parent_Folder.Fragments.ChildListScreenFragment">
+    tools:context=".views.fragments.parent.ParentChildsFragment">
 
     <ImageView
         android:id="@+id/imageView2"

@@ -1,9 +1,12 @@
 package com.hit.wizewalletapp.api;
 
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.api.responses.LoginResponse;
 import com.hit.wizewalletapp.api.responses.ServerResponse;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -93,6 +96,7 @@ public class ApiCallsHelper {
         call.enqueue(new Callback<ServerResponse>() {
             @Override
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+
                 if (response.isSuccessful() && response.code() == 200) {
                     callBack.onSuccesses(response.body());
                 } else if (response.code() == 400) {
@@ -106,5 +110,43 @@ public class ApiCallsHelper {
             }
         });
 
+    }
+
+    public static void performGetAllChilds(String token, CustomCallBack<List<ChildModel>> callback) {
+        //1.Set headers to hashmap
+        HashMap<String,String> map = new HashMap<>();
+        map.put("authorization",token);
+        //2.preapre retrofit request
+        Call<ServerResponse> call = RetrofitInstance.retrofitInterface.getAllKidsForParent(map);
+
+        //3.execute the request
+        call.enqueue(new Callback<ServerResponse>() {
+            @Override
+            public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+                //4.SUCSSES (HANDLE DATA)
+                if (response.isSuccessful() && response.code() == 200) {
+                    List<Integer> childIdList = response.body().kidID;
+                    final List<ChildModel>childModelToReturn = new ArrayList<>();
+                    if(childIdList != null){
+                        for(Integer ptr : childIdList){
+                            childModelToReturn.add( new ChildModel(ptr));
+                        }
+                    }
+                    //5. Post the data to the caller
+                    callback.onSuccesses(childModelToReturn);
+                } else if (response.code() == 400) {
+                    //5. Post Error the data to the caller
+                    callback.onFailure("wrong email or password/already have user");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ServerResponse> call, Throwable t) {
+                //4.FAILURE
+
+                //5. Post Error the data to the caller
+                callback.onFailure(t.getLocalizedMessage());
+            }
+        });
     }
 }

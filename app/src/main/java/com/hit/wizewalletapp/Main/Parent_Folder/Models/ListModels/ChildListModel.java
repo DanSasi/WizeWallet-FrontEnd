@@ -1,7 +1,6 @@
 package com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels;
 
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.api.RetrofitInterface;
 
 import java.util.LinkedList;
@@ -45,7 +44,7 @@ public class ChildListModel {
 
         public ChildModel getChildById(String childId) {
             for (ChildModel s: childModelsData) {
-                if (s.getId().equals(childId)){
+                if (s.getmId().equals(childId)){
                     return s;
                 }
             }

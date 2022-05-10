@@ -30,7 +30,7 @@ public class SendMoneyScreenFragment extends Fragment {
 
 
     private Spinner spinner_members;
-    private static ChildListScreenFragment.MyChildAdapter adapter;
+    //private static ChildListScreenFragment.MyChildAdapter adapter;
     ImageView arr;
     static List<ChildModel> childList;
     TextView nameTxt;

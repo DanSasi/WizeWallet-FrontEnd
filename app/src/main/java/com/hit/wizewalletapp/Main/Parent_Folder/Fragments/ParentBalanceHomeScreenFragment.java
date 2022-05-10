@@ -1,6 +1,5 @@
 package com.hit.wizewalletapp.Main.Parent_Folder.Fragments;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,23 +8,23 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
-import com.hit.wizewalletapp.adapters.General_Adapters.SpinnerUserAdater;
 import com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment;
 import com.hit.wizewalletapp.adapters.Parent_Adapters.BalanceListParentAdapter;
-import com.hit.wizewalletapp.Main.General_Folder.Models.SpinnerData;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.R;
+import com.hit.wizewalletapp.adapters.child.ChildAdapterSpinner;
+import com.hit.wizewalletapp.api.ApiCallsHelper;
+import com.hit.wizewalletapp.api.CustomCallBack;
+import com.hit.wizewalletapp.utilities.CacheUtilities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,16 +53,11 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_parent_balance_home, container, false);
-//        if(ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken()!=null){
-//            refreshToken = ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
-//            Log.d("Tag",refreshToken);
-//        }
-
+        helloText = view.findViewById(R.id.user_name);
+        helloText.setText(String.format("Hello %s",ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getName()));
         refreshToken = ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
-        Log.d("Tag",refreshToken);
 
-//        String refreshToken = ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
-//        Log.d("Tag",refreshToken);
+        ChildAdapterSpinner childAdapter = new ChildAdapterSpinner(getContext());
 
         /////////////////////////////////////////////////////////////Childs/////////////////////////////////////////////////////////////
 
@@ -141,9 +135,17 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
         });
         childList = ChildListModel.instance.getAllData();
         spinner = view.findViewById(R.id.fragment_Parent_spinner);
-        ChildAdapter childAdapter = new ChildAdapter(getContext(),childList);
-        spinner.setAdapter(childAdapter);
 
+        spinner.setAdapter(childAdapter);
+        ApiCallsHelper.performGetAllChilds( CacheUtilities.getAcssesToken(requireContext()), new CustomCallBack<List<ChildModel>>() {
+            @Override
+            public void onSuccesses(List<ChildModel> response) {
+                childAdapter.updateList(response);
+            }
+            @Override
+            public void onFailure(String msg) {
+            }
+        });
 
 
         /////////////////////////////////////////////////////////////Done/////////////////////////////////////////////////////////////
@@ -175,46 +177,5 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
     public void recycleViewClick(int position) {
         Intent intent = new Intent(getActivity(), ChildTransactionHistoryScreenFragment.class);
         startActivity(intent);
-    }
-    public class ChildAdapter extends BaseAdapter {
-
-
-            private Context context;
-            private List<ChildModel> childModels;
-
-            public ChildAdapter(Context context, List<ChildModel> childModels) {
-                this.context = context;
-                this.childModels = childModels;
-            }
-
-            @Override
-            public int getCount() {
-                return childModels != null ? childModels.size() : 0;
-            }
-
-            @Override
-            public Object getItem(int i) {
-                return i;
-            }
-
-            @Override
-            public long getItemId(int i) {
-                return i;
-            }
-
-            @Override
-            public View getView(int i, View view, ViewGroup viewGroup) {
-                View rootView = LayoutInflater.from(context)
-                        .inflate(R.layout.item_childs, viewGroup, false);
-
-
-                nameTxt = rootView.findViewById(R.id.spinner_name_tv);
-                photo = rootView.findViewById(R.id.spinner_photo_item);
-                nameTxt.setText(childList.get(i).getName());
-                photo.setImageResource(childList.get(i).getPhoto());
-
-
-                return rootView;
-            }
     }
 }

@@ -53,7 +53,7 @@ public class LoginFragment extends Fragment {
                     CacheUtilities.saveToken(getContext(),"authorization "+response.getRefreshToken(),"authorization "+response.getAccessToken());
                     String item = userSpinner.getSelectedItem().toString();
                     if (item.equals("Parent")) {
-                        Navigation.findNavController(getActivity(), R.id.nav_host).navigate(LoginFragmentDirections.actionLoginFragmentHomeToHomeParentFragment(response.getRefreshToken()));
+                        Navigation.findNavController(getActivity(), R.id.nav_host).navigate(LoginFragmentDirections.actionLoginFragmentHomeToHomeParentFragment(response.getRefreshToken(),email));
                     } else if (item.equals("Child")) {
                         Navigation.findNavController(getActivity(), R.id.nav_host).navigate(LoginFragmentDirections.actionLoginFragmentHomeToChildBalanceHomeScreenFragment(response.getRefreshToken()));
                     }
