@@ -48,7 +48,7 @@ public class ChildTasksScreenFragment extends Fragment {
     private void fetchData() {
 
         String token = CacheUtilities.getAcssesToken(requireContext());
-        ApiCallsHelper.performChildGetTaskById(token, new CustomCallBack<List<ChildTaskModel>>() {
+            ApiCallsHelper.performChildGetTaskById(token, new CustomCallBack<List<ChildTaskModel>>() {
             @Override
             public void onSuccesses(List<ChildTaskModel> response) {
                 listAdapter.updateList(response);

@@ -4,6 +4,7 @@ import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTaskModel;
 import com.hit.wizewalletapp.api.responses.LoginResponse;
 import com.hit.wizewalletapp.api.responses.ServerResponse;
+import com.hit.wizewalletapp.utilities.CacheUtilities;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -190,15 +191,17 @@ public class ApiCallsHelper {
         });
     }
 
-    public static void performAddTasks(HashMap<String,String> map,CustomCallBack<Void> callback) {
-        Call<Void> call = RetrofitInstance.retrofitInterface.executeAddTasks(map);
+    public static void performAddTasks(String token,HashMap<String,Object> map,CustomCallBack<Void> callback) {
+        HashMap<String,String> headerMap = new HashMap<>();
+        headerMap.put("authorization",token);
+        Call<Void> call = RetrofitInstance.retrofitInterface.executeAddTasks(headerMap,map);
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful() && response.code() == 200) {
                     callback.onSuccesses(null);
                 } else if (response.code() == 400) {
-                    callback.onFailure("wrong email or password/already have user");
+                    callback.onFailure("wrong");
                 }
             }
 

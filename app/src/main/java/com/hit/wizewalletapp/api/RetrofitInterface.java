@@ -29,7 +29,7 @@ public interface RetrofitInterface {
     Call<ServerResponse> getAllKidsForParent(@HeaderMap HashMap<String, String> map);
 
     @POST("/task")
-    Call<Void> executeAddTasks(@Body HashMap<String, String> map);
+    Call<Void> executeAddTasks(@HeaderMap HashMap<String,String> map1 ,@Body HashMap<String, Object> map2);
 
     @GET("/task/kid")
     Call<ServerResponse> getChildTaskById(@HeaderMap HashMap<String, String> map);
