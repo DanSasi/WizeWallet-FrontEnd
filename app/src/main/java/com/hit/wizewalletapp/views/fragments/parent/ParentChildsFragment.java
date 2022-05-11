@@ -37,7 +37,7 @@ public class ParentChildsFragment extends Fragment implements ChildListAdapter.O
         initViews(view);
         fetchData();
         ImageButton backArrow = view.findViewById(R.id.img_back_arrow_contact);
-        backArrow.setOnClickListener(v ->Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp());
+        backArrow.setOnClickListener(v->Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp());
         Button addChildBtn = view.findViewById(R.id.add_child_Btn);
         addChildBtn.setOnClickListener(Navigation.createNavigateOnClickListener(ParentChildsFragmentDirections.actionChildListScreenToAddChildFragment()));
         return view;
@@ -76,7 +76,9 @@ public class ParentChildsFragment extends Fragment implements ChildListAdapter.O
 
     @Override
     public void onItemClick(ChildModel childModel) {
-        Navigation.findNavController(getActivity(), R.id.nav_host).navigate(ParentChildsFragmentDirections.actionChildListScreenToChildDetailsScreenFragment(childModel.getmId()));
+        Navigation.findNavController(getActivity(), R.id.nav_host).navigate(ParentChildsFragmentDirections.actionChildListScreenToChildDetailsScreenFragment(childModel.getmId()
+                ,childModel.getmPassword(),
+                childModel.getmBalance()));
     }
 }
 

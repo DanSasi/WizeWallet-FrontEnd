@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/add_child_id_et"
+        android:id="@+id/parent_add_task_id_et"
         android:layout_width="355dp"
         android:layout_height="61dp"
         android:layout_marginTop="332dp"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_child_id_et"
+        app:layout_constraintTop_toBottomOf="@+id/parent_add_task_id_et"
         app:layout_constraintVertical_bias="0.168" />
 
     <ImageButton

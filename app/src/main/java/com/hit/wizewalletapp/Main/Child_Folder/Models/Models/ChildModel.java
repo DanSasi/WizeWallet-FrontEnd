@@ -2,20 +2,31 @@ package com.hit.wizewalletapp.Main.Child_Folder.Models.Models;
 
 public class ChildModel {
      int photo ;
-    String  balance ="", username =""
-            , mId = "",password = "";
+    String mBalance ="";
+    String username ="";
+    String mId = "";
+    String mPassword = "";
+    String mAmount = "";
+    String mMessage = "";
+
 
 
     public ChildModel(Integer id){
         mId = id.toString();
     }
 
+    public ChildModel(Integer id , Integer amount , String message ){
+        mId = id.toString();
+        mAmount = amount.toString();
+        mMessage = message;
+    }
+
     public ChildModel(Integer photo, String balance, String username, String id, String password) {
         this.photo = photo;
-        this.balance = balance;
+        this.mBalance = balance;
         this.username = username ;
         this.mId = id;
-        this.password = password;
+        this.mPassword = password;
     }
 
     public void setName(String username) {
@@ -34,12 +45,12 @@ public class ChildModel {
         return mId;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setmPassword(String mPassword) {
+        this.mPassword = mPassword;
     }
 
-    public String getPassword() {
-        return password;
+    public String getmPassword() {
+        return mPassword;
     }
 
     public Integer getPhoto(){
@@ -50,13 +61,20 @@ public class ChildModel {
     }
 
 
-    public String getBalance() {
-        return balance;
+    public String getmBalance() {
+        return mBalance;
     }
 
-    public void setBalance(String balance) {
-        this.balance = balance;
+    public void setmBalance(String mBalance) {
+        this.mBalance = mBalance;
     }
 
+    public String getmAmount() {return mAmount; }
 
-}
+    public void setmAmount(String mAmount) { this.mAmount = mAmount; }
+
+    public String getmMessage() {
+        return mMessage;
+    }
+
+    public void setmMessage(String mMessage) { this.mMessage = mMessage; }}

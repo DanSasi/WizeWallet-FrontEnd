@@ -19,7 +19,6 @@ import com.ebanx.swipebtn.OnStateChangeListener;
 import com.ebanx.swipebtn.SwipeButton;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
 import com.hit.wizewalletapp.views.activity.PaymentSplashScreen;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.R;
 
@@ -106,7 +105,7 @@ public class SendMoneyScreenFragment extends Fragment {
                     .inflate(R.layout.item_childs, viewGroup, false);
 
 
-            nameTxt = rootView.findViewById(R.id.spinner_name_tv);
+            nameTxt = rootView.findViewById(R.id.parent_task_kidid_tv);
             photo = rootView.findViewById(R.id.spinner_photo_item);
             nameTxt.setText(childList.get(i).getName());
             photo.setImageResource(childList.get(i).getPhoto());

@@ -58,6 +58,6 @@ public class ChildLinkFragmentScreen extends Fragment {
 
     private void initViews(View view) {
         sendLinkButton = view.findViewById(R.id.sendLink);
-        linkIdEditText = view.findViewById(R.id.add_child_id_et);
+        linkIdEditText = view.findViewById(R.id.parent_add_task_id_et);
     }
 }

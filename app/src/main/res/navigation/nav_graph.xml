@@ -37,8 +37,8 @@
         android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentTasksScreenFragment"
         android:label="ParentTasksScreen" >
         <action
-            android:id="@+id/action_parentTasksScreen_to_homeParentFragment"
-            app:destination="@id/homeParentFragment" />
+            android:id="@+id/action_parentTasksScreen_to_parentAddTaskFragment"
+            app:destination="@id/parentAddTaskFragment" />
     </fragment>
     <fragment
         android:id="@+id/parentTipsScreen"
@@ -122,6 +122,12 @@
         tools:layout="@layout/fragment_children_details" >
         <argument
             android:name="childId"
+            app:argType="string" />
+        <argument
+            android:name="childPassword"
+            app:argType="string" />
+        <argument
+            android:name="childBalance"
             app:argType="string" />
     </fragment>
     <fragment
@@ -229,24 +235,25 @@
         android:id="@+id/parentSettingsFragmentScreen"
         android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentSettingsFragmentScreen"
         android:label="fragment_parent_settings_screen"
-        tools:layout="@layout/fragment_parent_settings_screen" >
-        <action
-            android:id="@+id/action_parentSettingsFragmentScreen_to_parentMenuScreen"
-            app:destination="@id/parentMenuScreen" />
-    </fragment>
+        tools:layout="@layout/fragment_parent_settings_screen" />
     <fragment
         android:id="@+id/childLinkFragmentScreen"
         android:name="com.hit.wizewalletapp.views.fragments.parent.ChildLinkFragmentScreen"
         android:label="fragment_child_link"
-        tools:layout="@layout/fragment_child_link" >
-        <action
-            android:id="@+id/action_childLinkFragmentScreen_to_parentMenuScreen"
-            app:destination="@id/parentMenuScreen" />
-    </fragment>
+        tools:layout="@layout/fragment_child_link" />
     <fragment
         android:id="@+id/childPaymentFragment"
         android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildPaymentFragment"
         android:label="activity_child_payment_fragment"
         tools:layout="@layout/activity_child_payment_fragment" />
+    <fragment
+        android:id="@+id/parentAddTaskFragment"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentAddTaskFragment"
+        android:label="fragment_parent_add_task"
+        tools:layout="@layout/fragment_parent_add_task" >
+        <action
+            android:id="@+id/action_parentAddTaskFragment_to_parentTasksScreen"
+            app:destination="@id/parentTasksScreen" />
+    </fragment>
 
 </navigation>

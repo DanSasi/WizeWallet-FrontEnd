@@ -21,7 +21,7 @@
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:src="@drawable/childface"
-        app:layout_constraintBottom_toTopOf="@+id/add_child_id_et"
+        app:layout_constraintBottom_toTopOf="@+id/parent_add_task_id_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.398"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/add_child_balance_et"
+        android:id="@+id/parent_add_task_amount_et"
         android:layout_width="210dp"
         android:layout_height="45dp"
         android:layout_marginStart="82dp"
@@ -84,7 +84,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/add_child_id_et"
+        android:id="@+id/parent_add_task_id_et"
         android:layout_width="210dp"
         android:layout_height="45dp"
         android:layout_marginStart="80dp"
@@ -115,7 +115,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/add_child_balance_et"
+        app:layout_constraintBottom_toTopOf="@+id/parent_add_task_amount_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"

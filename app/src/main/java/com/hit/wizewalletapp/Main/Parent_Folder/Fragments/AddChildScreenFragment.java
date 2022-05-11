@@ -24,8 +24,6 @@ import android.widget.Toast;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
-import com.hit.wizewalletapp.api.RetrofitInterface;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.utilities.Utilities;
@@ -33,12 +31,6 @@ import com.hit.wizewalletapp.utilities.Utilities;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.HashMap;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 
 @SuppressWarnings("ALL")
@@ -67,10 +59,10 @@ public class AddChildScreenFragment extends Fragment {
         addChildPasswordET = view.findViewById(R.id.add_child_password_et);
         addChildEmailEt = view.findViewById(R.id.add_child_username_et);
         addChildButton = view.findViewById(R.id.add_child_btn);
-        addChildIdEt = view.findViewById(R.id.add_child_id_et);
+        addChildIdEt = view.findViewById(R.id.parent_add_task_id_et);
         addChildImageFilterButton = view.findViewById(R.id.add_child_img_filter_btn);
         addChildImageView = view.findViewById(R.id.add_child_imgv);
-        addChildBalanceEt = view.findViewById(R.id.add_child_balance_et);
+        addChildBalanceEt = view.findViewById(R.id.parent_add_task_amount_et);
     }
 
     private void openGallery() {

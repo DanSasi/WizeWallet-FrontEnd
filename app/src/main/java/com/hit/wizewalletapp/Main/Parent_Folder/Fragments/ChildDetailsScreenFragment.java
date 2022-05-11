@@ -11,8 +11,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
 import com.hit.wizewalletapp.R;
 
 
@@ -30,16 +28,20 @@ public class ChildDetailsScreenFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_children_details, container, false);
         String childId = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildId();
+        String childPassword = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildPassword();
+        String childBalance = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildBalance();
         //ChildModel childModel = ChildListModel.instance.getChildById(childId);
-        childBalanceTv= view.findViewById(R.id.add_child_balance_et);
+        childBalanceTv= view.findViewById(R.id.parent_add_task_amount_et);
         childUsernameTv = view.findViewById(R.id.add_child_username_et);
         childImageView = view.findViewById(R.id.add_child_imgv);
-        childIdTv = view.findViewById(R.id.add_child_id_et);
+        childIdTv = view.findViewById(R.id.parent_add_task_id_et);
         childPasswordTv =view.findViewById(R.id.add_child_password_et);
 
 
 
         childIdTv.setText(childId);
+        childBalanceTv.setText(String.format("Balance: ", ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildBalance()));
+        childPasswordTv.setText(childPassword);
 //        childUsernameTv.setText(childModel.getName());
 //        childBalanceTv.setText(childModel.getBalance());
 //        childPasswordTv.setText(childModel.getPassword());

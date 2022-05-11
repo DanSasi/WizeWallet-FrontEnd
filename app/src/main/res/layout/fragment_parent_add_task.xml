@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/home_svetaphoto"
+    tools:context=".Main.Parent_Folder.Fragments.ParentAddTaskFragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="172dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="120dp"
+        android:src="@drawable/walleticon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="132dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="180dp"
+        android:text="New Task"
+        android:textAppearance="@style/balance_text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/parent_add_task_amount_et"
+        android:layout_width="355dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/money_icon"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Child Amount"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/parent_add_task_message_et"
+        android:layout_width="361dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="408dp"
+        android:layout_marginEnd="28dp"
+        android:drawableLeft="@drawable/description_icon"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Child Message"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/parent_add_task_id_et"
+        android:layout_width="355dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="252dp"
+        android:layout_marginEnd="28dp"
+        android:drawableLeft="@drawable/id_icon_child"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Child Id"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/parent_add_task_add_btn"
+        android:layout_width="311dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/btn_main"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins"
+        android:text="Add "
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parent_add_task_message_et"
+        app:layout_constraintVertical_bias="0.485" />
+
+    <ImageView
+        android:id="@+id/add_task_imgbtn_backarrow"
+        android:layout_width="26.5dp"
+        android:layout_height="26.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="316.5dp"
+        android:src="@drawable/ic_arrow___left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
