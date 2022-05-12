@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,8 +30,9 @@ public class LoginFragment extends Fragment {
     private EditText emailEditText, passwordEditText;
     private Spinner userSpinner;
     private TextView forgetPass;
-    private TextView regisger;
+    private TextView regisger , wellcomTv;
     private Button login;
+    private ImageView mainIconIv;
     private SpinnerUserAdater adapter;
 
 
@@ -70,15 +72,43 @@ public class LoginFragment extends Fragment {
     }
 
     private void initViews(View fragment) {
+        float v = 0 ;
         emailEditText = fragment.findViewById(R.id.fragment_home_email_et);
         passwordEditText = fragment.findViewById(R.id.fragment_home_password_et);
         forgetPass = fragment.findViewById(R.id.fragment_home_forgetpass_tv);
         regisger = fragment.findViewById(R.id.fragment_home_register_tv);
         userSpinner = fragment.findViewById(R.id.fragment_home_spinner);
         login = fragment.findViewById(R.id.fragment_home_login_btn);
+        mainIconIv = fragment.findViewById(R.id.fragment_loging_icon_imgv);
+        wellcomTv = fragment.findViewById(R.id.fragment_login_man_tv);
         adapter = new SpinnerUserAdater(getContext(), SpinnerData.getSpinnerList());
         userSpinner.setAdapter(adapter);
+
+        emailEditText.setTranslationX(50);
+        passwordEditText.setTranslationX(50);
+        forgetPass.setTranslationX(50);
+        userSpinner.setTranslationX(50);
+        login.setTranslationX(50);
+        mainIconIv.setTranslationX(50);
+        wellcomTv.setTranslationX(50);
+
+        emailEditText.setAlpha(v);
+        passwordEditText.setAlpha(v);
+        forgetPass.setAlpha(v);
+        userSpinner.setAlpha(v);
+        login.setAlpha(v);
+        mainIconIv.setAlpha(v);
+        wellcomTv.setAlpha(v);
+
+        emailEditText.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
+        passwordEditText.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
+        forgetPass.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
+        userSpinner.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
+        login.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
+        mainIconIv.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
+        wellcomTv.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
     }
+
 
 
 

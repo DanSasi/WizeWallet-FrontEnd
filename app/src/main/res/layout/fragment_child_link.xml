@@ -27,7 +27,7 @@
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Please Enter Child Id"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

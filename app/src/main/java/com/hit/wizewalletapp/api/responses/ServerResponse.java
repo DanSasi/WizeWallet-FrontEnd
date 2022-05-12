@@ -12,5 +12,16 @@ public class ServerResponse {
     public List<Integer> kidID;
     public Integer kidId;
     public Integer amount;
+
+
+
     public List<ChildTaskModel> childTaskModels;
+
+    public List<ChildTaskModel> getChildTaskModels() {
+        return childTaskModels;
+    }
+
+    public void setChildTaskModels(List<ChildTaskModel> childTaskModels) {
+        this.childTaskModels = childTaskModels;
+    }
 }

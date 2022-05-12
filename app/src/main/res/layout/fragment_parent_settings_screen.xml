@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_svetaphoto"
+
     tools:context=".Main.Parent_Folder.Fragments.ParentSettingsFragmentScreen">
 
     <ImageView
@@ -24,7 +24,6 @@
         android:layout_marginStart="44dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="88dp"
-        android:background="@drawable/home_svetaphoto"
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/ic_arrow___left"
@@ -90,7 +89,7 @@
         android:id="@+id/button3"
         android:layout_width="136dp"
         android:layout_height="71dp"
-        android:background="@drawable/home_svetaphoto"
+        android:background="@drawable/btn_main"
         android:text="SAVE"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,8 +130,11 @@
         android:id="@+id/button"
         android:layout_width="136dp"
         android:layout_height="71dp"
-        android:background="@drawable/home_svetaphoto"
+        android:background="@drawable/btn_main"
+        android:scrollbarSize="4dp"
         android:text="SAVE"
+        android:textAppearance="@style/balance_text"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textView18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
@@ -144,7 +146,7 @@
         android:id="@+id/button2"
         android:layout_width="136dp"
         android:layout_height="71dp"
-        android:background="#8BF10909"
+        android:background="@drawable/btn_main_2"
         android:text="DELETE PROFILE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

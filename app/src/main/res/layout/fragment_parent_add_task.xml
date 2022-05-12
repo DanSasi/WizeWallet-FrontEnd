@@ -39,7 +39,7 @@
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Child Amount"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,7 +67,7 @@
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Child Id"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

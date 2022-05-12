@@ -67,7 +67,7 @@
         app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <!--        android:digits="1234567890"-->
     <EditText
         android:id="@+id/parent_add_task_amount_et"
         android:layout_width="210dp"
@@ -77,7 +77,7 @@
         android:layout_marginEnd="119dp"
         android:ems="10"
         android:hint="Child Balance"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.403"
         app:layout_constraintStart_toStartOf="parent"

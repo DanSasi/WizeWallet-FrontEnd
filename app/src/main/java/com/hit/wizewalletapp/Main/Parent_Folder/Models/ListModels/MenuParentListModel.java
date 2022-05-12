@@ -12,14 +12,13 @@ public class MenuParentListModel {
     public static final MenuParentListModel instance = new MenuParentListModel();
 
     MenuParentListModel(){
-        MenuParentModel history_Transaction = new MenuParentModel("1", R.drawable.icon5, "History Transaction");
-        MenuParentModel send_Money = new MenuParentModel("2", R.drawable.icon, "Send Money");
-        MenuParentModel request_Payment = new MenuParentModel("3" , R.drawable.icon6, "Request Payment");
-        MenuParentModel settings = new MenuParentModel("4", R.drawable.icon7, "Settings");
-        MenuParentModel child_link = new MenuParentModel("5", R.drawable.link_icon_parent, "Child Link");
-        MenuParentModel logout = new MenuParentModel("6",R.drawable.icon_logout,"Logout");
+        MenuParentModel send_Money = new MenuParentModel("2", R.drawable.moneytransfler_icon, "Send Money");
+        MenuParentModel request_Payment = new MenuParentModel("3" , R.drawable.money_request, "Children Requests Payment");
+        MenuParentModel settings = new MenuParentModel("4", R.drawable.settings_icon_two, "Settings");
+        MenuParentModel child_link = new MenuParentModel("5", R.drawable.icon_link, "Child Link");
+        MenuParentModel logout = new MenuParentModel("6",R.drawable.logout_icon_two,"Logout");
 
-        menuParentModelData.add(history_Transaction);
+
         menuParentModelData.add(send_Money);
         menuParentModelData.add(request_Payment);
         menuParentModelData.add(settings);
