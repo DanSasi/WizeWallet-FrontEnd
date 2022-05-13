@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/home_svetaphoto"
+    tools:context=".Main.Child_Folder.Fragments.childAddTransactionFragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="134dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/walleticon"
+        android:translationX="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/img_back_arrow_contact"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="88dp"
+        android:background="@drawable/home_svetaphoto"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_arrow___left"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/add_transaction_btn"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:background="@drawable/home_svetaphoto"
+        android:text="save"
+        android:translationX="150dp"
+        android:translationY="550dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_child_password_et"
+        app:layout_constraintVertical_bias="0.368" />
+
+    <EditText
+        android:id="@+id/add_transaction_description_et"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="404dp"
+        android:layout_marginStart="82dp"
+        android:ems="10"
+        android:hint="Where did you pay?"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/parent_add_transaction_amount_et"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="348dp"
+        android:layout_marginEnd="119dp"
+        android:ems="10"
+        android:hint="How much did you pay?"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</FrameLayout>

@@ -99,6 +99,14 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  Balance
                Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childMenuFragment);
             }
         });
+        /////////////////////////////////////////////////////////////Transactions/////////////////////////////////////////////////////////////
+        transfer=view.findViewById(R.id.imageView4);
+        transfer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment_to_child_add_transaction);
+            }
+        });
 
         /////////////////////////////////////////////////////////////Done/////////////////////////////////////////////////////////////
         bData = new ArrayList<BalanceParentModel>();
