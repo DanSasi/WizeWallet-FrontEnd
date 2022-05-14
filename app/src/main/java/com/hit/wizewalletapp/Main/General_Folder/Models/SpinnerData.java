@@ -1,7 +1,5 @@
 package com.hit.wizewalletapp.Main.General_Folder.Models;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;

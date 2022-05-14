@@ -2,6 +2,7 @@ package com.hit.wizewalletapp.api;
 
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTaskModel;
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
 import com.hit.wizewalletapp.api.responses.LoginResponse;
 import com.hit.wizewalletapp.api.responses.ServerResponse;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
@@ -132,7 +133,7 @@ public class ApiCallsHelper {
                     final List<ChildModel>childModelToReturn = new ArrayList<>();
                     if(childIdList != null){
                         for(Integer ptr : childIdList){
-                            childModelToReturn.add( new ChildModel(ptr));
+                            childModelToReturn.add( new ChildModel(ptr,null));
                         }
                     }
                     //5. Post the data to the caller
@@ -212,6 +213,66 @@ public class ApiCallsHelper {
             }
         });
     }
+    public static void performChildTransaction(String token,HashMap<String,Object> map,CustomCallBack<Void> callback) {
+        HashMap<String,String> headerMap = new HashMap<>();
+        headerMap.put("authorization",token);
+        Call<Void> call = RetrofitInstance.retrofitInterface.executeChildTransactions(headerMap,map);
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful() && response.code() == 200) {
+                    callback.onSuccesses(null);
+                } else if (response.code() == 400) {
+                    callback.onFailure("wrong email or password/already have user");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                callback.onFailure(t.getLocalizedMessage());
+
+            }
+        });
+    }
+    public static void performGetAllTransForChild(String token,CustomCallBack<List<ChildTransactionModel>> callback) {
+        //1.Set headers to hashmap
+        HashMap<String,String> map = new HashMap<>();
+        map.put("authorization",token);
+//        HashMap<String,Object> bodyMap = new HashMap<>();
+//        bodyMap.put("transactions",list);
+        //2.preapre retrofit request
+        Call<ServerResponse> call = RetrofitInstance.retrofitInterface.getAllTransForChild(map);
+
+        //3.execute the request
+        call.enqueue(new Callback<ServerResponse>() {
+            @Override
+            public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+                //4.SUCSSES (HANDLE DATA)
+                if (response.isSuccessful() && response.code() == 200) {
+                    List<ChildTransactionModel> childList=response.body().childTransModels;
+                    final List<ChildTransactionModel>childModelToReturn = new ArrayList<>();
+                    if(childList != null){
+                        for(ChildTransactionModel ptr : childList)
+                            childModelToReturn.add(new ChildTransactionModel(Integer.parseInt(ptr.getAmount()), ptr.getDesc()));
+                    }
+                    //5. Post the data to the caller
+                    callback.onSuccesses(childModelToReturn);
+                } else if (response.code() == 400) {
+                    //5. Post Error the data to the caller
+                    callback.onFailure("wrong email or password/already have user");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ServerResponse> call, Throwable t) {
+                //4.FAILURE
+
+                //5. Post Error the data to the caller
+                callback.onFailure(t.getLocalizedMessage());
+            }
+        });
+    }
+
 
 
 

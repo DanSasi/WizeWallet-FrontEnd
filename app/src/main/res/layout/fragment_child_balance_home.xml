@@ -29,7 +29,7 @@
         android:text="Transactions"
         android:textColor="#818197"
         android:textSize="19dp"
-        app:layout_constraintBottom_toTopOf="@+id/rv_balance"
+        app:layout_constraintBottom_toTopOf="@+id/rv_trans_child"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -185,7 +185,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_balance"
+        android:id="@+id/rv_trans_child"
         android:layout_width="360dp"
         android:layout_height="302dp"
         android:layout_marginStart="23dp"

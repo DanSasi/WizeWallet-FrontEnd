@@ -1,5 +1,7 @@
 package com.hit.wizewalletapp.Main.Child_Folder.Models.Models;
 
+import java.util.List;
+
 public class ChildModel {
      int photo ;
     String mBalance ="";
@@ -11,8 +13,14 @@ public class ChildModel {
 
 
 
-    public ChildModel(Integer id){
+    List<ChildTransactionModel> mChildTransactionModelList;
+
+
+
+    public ChildModel(Integer id, List<ChildTransactionModel> childTransactionModelList){
         mId = id.toString();
+        mChildTransactionModelList = childTransactionModelList;
+
     }
 
     public ChildModel(Integer id , Integer amount , String message ){
@@ -77,4 +85,11 @@ public class ChildModel {
         return mMessage;
     }
 
+    public List<ChildTransactionModel> getmChildTransactionModelList() {
+        return mChildTransactionModelList;
+    }
+
+    public void setmChildTransactionModelList(List<ChildTransactionModel> mChildTransactionModelList) {
+        this.mChildTransactionModelList = mChildTransactionModelList;
+    }
     public void setmMessage(String mMessage) { this.mMessage = mMessage; }}

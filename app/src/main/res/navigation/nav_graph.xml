@@ -260,7 +260,7 @@
     </fragment>
     <fragment
         android:id="@+id/child_add_transaction"
-        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.childAddTransactionFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildAddTransactionFragment"
         android:label="fragment_child_add_transaction"
         tools:layout="@layout/fragment_child_add_transaction" />
 

@@ -1,6 +1,5 @@
 package com.hit.wizewalletapp.Main.Parent_Folder.Fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,33 +10,31 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
 import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment;
-import com.hit.wizewalletapp.adapters.Parent_Adapters.BalanceListParentAdapter;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.adapters.child.ChildAdapterSpinner;
+import com.hit.wizewalletapp.adapters.child.ChildTransListAdapter;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 
-public class ParentBalanceHomeScreenFragment extends Fragment implements BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener {
+public class ParentBalanceHomeScreenFragment extends Fragment {
 
-    BalanceListParentAdapter balanceListAdapter;
-    ArrayList<BalanceParentModel> bData;
+
+
     static List<ChildModel> childList;
-    RecyclerView recyclerView;
 
-    private BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener clickListener;
 
     ImageView childs, task, more, tips;
     TextView childText, taskText, moreText, tipText, helloText ;
@@ -45,6 +42,8 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
     TextView nameTxt;
     ImageView photo;
     String refreshToken ="";
+    private RecyclerView rv;
+     ChildTransListAdapter childTransListAdapter= new ChildTransListAdapter();
 
 
 
@@ -146,36 +145,63 @@ public class ParentBalanceHomeScreenFragment extends Fragment implements Balance
             public void onFailure(String msg) {
             }
         });
+//
+//        initViewRv(view);
+//        fetchData();
+
+//        spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//
+//            }
+//        });
 
 
         /////////////////////////////////////////////////////////////Done/////////////////////////////////////////////////////////////
-        bData = new ArrayList<BalanceParentModel>();
-        recyclerView = view.findViewById(R.id.rv_balance);
-        getData();
-        setDataAdapter();
+
+
 
         return view;
     }
 
+//
+//
+//    private void initViewRv(View view) {
+//        rv= view.findViewById(R.id.rv_trans_child);
+//        rv.setHasFixedSize(true);
+//        rv.setLayoutManager(new LinearLayoutManager(getContext()));
+//        rv.setAdapter(childTransListAdapter);
+//        childTransListAdapter.setOnItemClickListener(this);
+//
+//    }
+//
+//    private void fetchData() {
+////        List<ChildTransactionModel> list= (List<ChildTransactionModel>) rv.getAdapter();
+//
+//        String token= CacheUtilities.getAcssesToken(requireContext());
+//        ApiCallsHelper.performGetAllTransForChild(token,new CustomCallBack<List<ChildTransactionModel>>() {
+//            @Override
+//            public void onSuccesses(List<ChildTransactionModel> response) {
+//                childTransListAdapter.updateTransList(response);
+//            }
+//
+//            @Override
+//            public void onFailure(String msg) {
+//
+//            }
+//        });
+//
+//    }
+//
+//
+//
+//    @Override
+//    public void onItemClick(ChildTransactionModel childModel) {
+//
+//
+//    }
+//
 
 
-    private void getData() {
-        bData = new ArrayList<>();
-        bData.add(new BalanceParentModel(R.drawable.grocery_icon, "Dec 21", "Birthday gift", "300", "Happy Birthday!"));
-        bData.add(new BalanceParentModel(R.drawable.entertainment_icon, "Jan 22", "HomeWork", "60", "Math"));
-        bData.add(new BalanceParentModel(R.drawable.equipment_icon, "Feb 22", "Allowance", "200", "Enjoy"));
-        bData.add(new BalanceParentModel(R.drawable.officeitem_icon, "March 21", "new ball", "50", "Basketball"));
-    }
 
-    private void setDataAdapter() {
-        balanceListAdapter = new BalanceListParentAdapter(getActivity(), bData);
-        recyclerView.setAdapter(balanceListAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-    }
-
-    @Override
-    public void recycleViewClick(int position) {
-        Intent intent = new Intent(getActivity(), ChildTransactionHistoryScreenFragment.class);
-        startActivity(intent);
-    }
 }

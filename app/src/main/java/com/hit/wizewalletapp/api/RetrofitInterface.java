@@ -34,5 +34,11 @@ public interface RetrofitInterface {
     @GET("/task/kid")
     Call<ServerResponse> getChildTaskById(@HeaderMap HashMap<String, String> map);
 
+    @POST("/child/transactions")
+    Call<Void> executeChildTransactions(@HeaderMap HashMap<String, String> map1, @Body HashMap<String, Object> map);
+
+    @GET("/child/transactions")
+    Call<ServerResponse> getAllTransForChild(@HeaderMap HashMap<String, String> map);
+
 }
 

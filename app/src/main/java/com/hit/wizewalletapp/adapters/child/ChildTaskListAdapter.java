@@ -3,13 +3,11 @@ package com.hit.wizewalletapp.adapters.child;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTaskModel;
 import com.hit.wizewalletapp.R;
 
@@ -41,7 +39,7 @@ import java.util.List;
 
             public MyViewHolder(@NonNull View itemView) {
                 super(itemView);
-                kidId_VH_Tv = itemView.findViewById(R.id.parent_task_kidid_tv);
+                kidId_VH_Tv = itemView.findViewById(R.id.parent_trns_kidid_tv);
                 amount_VH_Tv = itemView.findViewById(R.id.parent_task_messageTv);
                 message_Vh_Tv = itemView.findViewById(R.id.parent_task_amout_tv);
             }

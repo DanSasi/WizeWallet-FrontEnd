@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/parent_task_kidid_tv"
+        android:id="@+id/parent_trns_kidid_tv"
         android:layout_width="355dp"
         android:layout_height="24dp"
         android:layout_marginTop="8dp"
@@ -23,7 +23,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parent_task_kidid_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/parent_trns_kidid_tv" />
 
     <TextView
         android:id="@+id/parent_task_amout_tv"

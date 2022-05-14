@@ -14,23 +14,25 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.adapters.Parent_Adapters.BalanceListParentAdapter;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.BalanceParentModel;
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
 import com.hit.wizewalletapp.R;
+import com.hit.wizewalletapp.adapters.child.ChildTransListAdapter;
+import com.hit.wizewalletapp.api.ApiCallsHelper;
+import com.hit.wizewalletapp.api.CustomCallBack;
+import com.hit.wizewalletapp.utilities.CacheUtilities;
 
-import java.util.ArrayList;
+import java.util.List;
 
 
-public class ChildBalanceHomeScreenFragment extends Fragment implements  BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener {
+public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTransListAdapter.OnItemClickListener  {
 
 
-    BalanceListParentAdapter balanceListAdapter;
-    ArrayList<BalanceParentModel> bData;
-    RecyclerView recyclerView;
-    private BalanceListParentAdapter.BalanceViewHolder.RecycleViewClickListener clickListener;
+
 
     ImageView transfer, task, more, tips;
     TextView transferText, taskText, moreText, tipText, hellowText;
+    private RecyclerView rv;
+    private final ChildTransListAdapter childTransListAdapter= new ChildTransListAdapter();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -109,31 +111,44 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  Balance
         });
 
         /////////////////////////////////////////////////////////////Done/////////////////////////////////////////////////////////////
-        bData = new ArrayList<BalanceParentModel>();
-        recyclerView = view.findViewById(R.id.rv_balance);
-        getData();
-        setDataAdapter();
+        initViewRv(view);
+        fetchData();
+
+
+
 
         return view;
     }
+//
+    private void initViewRv(View view) {
+        rv= view.findViewById(R.id.rv_trans_child);
+        rv.setHasFixedSize(true);
+        rv.setLayoutManager(new LinearLayoutManager(getContext()));
+        rv.setAdapter(childTransListAdapter);
+        childTransListAdapter.setOnItemClickListener(this);
 
-    private void getData() {
-        bData = new ArrayList<>();
-        bData.add(new BalanceParentModel(R.drawable.grocery_icon, "Dec 21", "Birthday gift", "300", "Happy Birthday!"));
-        bData.add(new BalanceParentModel(R.drawable.entertainment_icon, "Jan 22", "HomeWork", "60", "Math"));
-        bData.add(new BalanceParentModel(R.drawable.equipment_icon, "Feb 22", "Allowance", "200", "Enjoy"));
-        bData.add(new BalanceParentModel(R.drawable.officeitem_icon, "March 21", "new ball", "50", "Basketball"));
     }
 
-    private void setDataAdapter() {
-        balanceListAdapter = new BalanceListParentAdapter(getActivity(), bData);
-        recyclerView.setAdapter(balanceListAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+    private void fetchData() {
+        String token= CacheUtilities.getAcssesToken(requireContext());
+        ApiCallsHelper.performGetAllTransForChild(token, new CustomCallBack<List<ChildTransactionModel>>() {
+            @Override
+            public void onSuccesses(List<ChildTransactionModel> response) {
+                childTransListAdapter.updateTransList(response);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+
     }
+
+
 
     @Override
-    public void recycleViewClick(int position) {
-        Intent intent = new Intent(getActivity(), ChildTransactionHistoryScreenFragment.class);
-        startActivity(intent);
+    public void onItemClick(ChildTransactionModel childModel) {
+
     }
 }
