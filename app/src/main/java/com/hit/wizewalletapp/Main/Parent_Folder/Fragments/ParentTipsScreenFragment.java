@@ -38,7 +38,7 @@ public class ParentTipsScreenFragment extends Fragment {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_parentTipsScreen_to_homeParentFragment);
+                Navigation.findNavController(view).navigate(R.id.childBalanceHomeScreenFragment);
             }
         });
             return view;

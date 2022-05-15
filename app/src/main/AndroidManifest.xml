@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.hit.wizewalletapp">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -16,9 +18,18 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:replace="android:label">
-<!--        <activity-->
-<!--            android:name=".Main.Child_Folder.Fragments.ChildPaymentFragment"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".Main.Child_Folder.Fragments.CurrentLocation"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- <activity -->
+        <!-- android:name=".Main.Child_Folder.Fragments.ChildPaymentFragment" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".views.activity.LoginActivity"
             android:exported="true" />
@@ -27,20 +38,14 @@
             android:exported="true" />
         <activity
             android:name=".views.activity.SplashScreen"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Main.Child_Folder.Fragments.Capture"
-                android:screenOrientation="portrait"
-                android:stateNotNeeded="true"
-                android:theme="@style/zxing_CaptureTheme" >
+            android:exported="true">
 
         </activity>
-
+        <activity
+            android:name=".Main.Child_Folder.Fragments.Capture"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
