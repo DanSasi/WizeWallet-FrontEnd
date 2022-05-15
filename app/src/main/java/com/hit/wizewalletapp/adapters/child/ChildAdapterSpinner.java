@@ -30,7 +30,7 @@ public class ChildAdapterSpinner extends BaseAdapter {
 
     @Override
     public Object getItem(int i) {
-        return i;
+       return childList.get(i).getmId();
     }
 
     @Override
