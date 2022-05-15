@@ -22,7 +22,6 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
     private OnItemClickListener listener;
 
 
-
     public interface OnItemClickListener{
         void onItemClick(ChildTransactionModel childModel);
     }
@@ -33,7 +32,7 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
     public void updateTransList(List<ChildTransactionModel> childTransList){
         list.clear();
         list.addAll(childTransList);
-        //notify
+        notifyDataSetChanged();
     }
 
 
@@ -62,12 +61,7 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
         final ChildTransactionModel childTransactionModel=list.get(position);
         holder.desc_tv.setText(String.valueOf(childTransactionModel.getDesc()));
         holder.amount_tv.setText(String.valueOf(childTransactionModel.getAmount()));
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listener.onItemClick(childTransactionModel);
-            }
-        });
+        holder.itemView.setOnClickListener(v -> listener.onItemClick(childTransactionModel));
 
     }
 

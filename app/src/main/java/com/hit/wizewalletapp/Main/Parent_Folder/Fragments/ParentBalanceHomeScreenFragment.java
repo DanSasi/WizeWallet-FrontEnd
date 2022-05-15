@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
@@ -45,7 +46,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment {
     private RecyclerView rv;
      ChildTransListAdapter childTransListAdapter= new ChildTransListAdapter();
 
-
+    private ChildAdapterSpinner childAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,7 +57,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment {
         helloText.setText(String.format("Hello %s",ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getName()));
         refreshToken = ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
 
-        ChildAdapterSpinner childAdapter = new ChildAdapterSpinner(getContext());
+        childAdapter = new ChildAdapterSpinner(getContext());
 
         /////////////////////////////////////////////////////////////Childs/////////////////////////////////////////////////////////////
 
@@ -136,6 +137,20 @@ public class ParentBalanceHomeScreenFragment extends Fragment {
         spinner = view.findViewById(R.id.fragment_Parent_spinner);
 
         spinner.setAdapter(childAdapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectChildId = String.valueOf(childAdapter.getItem(position));
+                fetchTransactionsForChild(selectChildId);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         ApiCallsHelper.performGetAllChilds( CacheUtilities.getAcssesToken(requireContext()), new CustomCallBack<List<ChildModel>>() {
             @Override
             public void onSuccesses(List<ChildModel> response) {
@@ -146,7 +161,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment {
             }
         });
 //
-//        initViewRv(view);
+        initViewRv(view);
 //        fetchData();
 
 //        spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -164,19 +179,37 @@ public class ParentBalanceHomeScreenFragment extends Fragment {
         return view;
     }
 
+    private void fetchTransactionsForChild(String selectChildId) {
+        String token= CacheUtilities.getAcssesToken(requireContext());
+        ApiCallsHelper.performGetAllTransForChildByParent(token,selectChildId, new CustomCallBack<List<ChildTransactionModel>>() {
+            @Override
+            public void onSuccesses(List<ChildTransactionModel> response) {
+                childTransListAdapter.updateTransList(response);
+               // progressBar.setVisibility(View.GONE);
+
+            }
+
+            @Override
+            public void onFailure(String msg) {
+                Toast.makeText(getContext(),msg,Toast.LENGTH_SHORT).show();
+                //progressBar.setVisibility(View.GONE);
+            }
+        });
+
+    }
+
 //
 //
-//    private void initViewRv(View view) {
-//        rv= view.findViewById(R.id.rv_trans_child);
-//        rv.setHasFixedSize(true);
-//        rv.setLayoutManager(new LinearLayoutManager(getContext()));
-//        rv.setAdapter(childTransListAdapter);
-//        childTransListAdapter.setOnItemClickListener(this);
-//
-//    }
+    private void initViewRv(View view) {
+        rv= view.findViewById(R.id.rv_trans_child);
+        rv.setHasFixedSize(true);
+        rv.setLayoutManager(new LinearLayoutManager(getContext()));
+        rv.setAdapter(childTransListAdapter);
+    }
 //
 //    private void fetchData() {
 ////        List<ChildTransactionModel> list= (List<ChildTransactionModel>) rv.getAdapter();
+//
 //
 //        String token= CacheUtilities.getAcssesToken(requireContext());
 //        ApiCallsHelper.performGetAllTransForChild(token,new CustomCallBack<List<ChildTransactionModel>>() {

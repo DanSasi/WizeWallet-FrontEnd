@@ -248,15 +248,10 @@ public class ApiCallsHelper {
             @Override
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
                 //4.SUCSSES (HANDLE DATA)
-                if (response.isSuccessful() && response.code() == 200) {
-                    List<ChildTransactionModel> childList=response.body().childTransModels;
-                    final List<ChildTransactionModel>childModelToReturn = new ArrayList<>();
-                    if(childList != null){
-                        for(ChildTransactionModel ptr : childList)
-                            childModelToReturn.add(new ChildTransactionModel(Integer.parseInt(ptr.getAmount()), ptr.getDesc()));
-                    }
-                    //5. Post the data to the caller
-                    callback.onSuccesses(childModelToReturn);
+                if (response.isSuccessful()  && response.body() != null && response.code() == 200) {
+                    List<ChildTransactionModel> childList=response.body().getChildTransModels();
+                    //5. Post the data to he caller
+                    callback.onSuccesses(childList);
                 } else if (response.code() == 400) {
                     //5. Post Error the data to the caller
                     callback.onFailure("wrong email or password/already have user");
@@ -272,6 +267,44 @@ public class ApiCallsHelper {
             }
         });
     }
+
+    public static void performGetAllTransForChildByParent(String token,String childId,CustomCallBack<List<ChildTransactionModel>> callback) {
+        //1.Set headers to hashmap
+        HashMap<String,String> map = new HashMap<>();
+        map.put("authorization",token);
+
+        HashMap<String,Object> body = new HashMap<>();
+        body.put("id",childId);
+//        HashMap<String,Object> bodyMap = new HashMap<>();
+//        bodyMap.put("transactions",list);
+        //2.preapre retrofit request
+        Call<ServerResponse> call = RetrofitInstance.retrofitInterface.getAllTransForChildByParent(map,body);
+
+        //3.execute the request
+        call.enqueue(new Callback<ServerResponse>() {
+            @Override
+            public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+                //4.SUCSSES (HANDLE DATA)
+                if (response.isSuccessful()  && response.body() != null && response.code() == 200) {
+                    List<ChildTransactionModel> childList=response.body().getChildTransModels();
+                    //5. Post the data to he caller
+                    callback.onSuccesses(childList);
+                } else {
+                    //5. Post Error the data to the caller
+                    callback.onFailure("asdasdsadsadsa");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ServerResponse> call, Throwable t) {
+                //4.FAILURE
+
+                //5. Post Error the data to the caller
+                callback.onFailure(t.getLocalizedMessage());
+            }
+        });
+    }
+
 
 
 

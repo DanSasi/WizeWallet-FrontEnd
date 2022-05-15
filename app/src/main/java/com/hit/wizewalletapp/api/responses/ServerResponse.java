@@ -14,15 +14,18 @@ public class ServerResponse {
     public Integer kidId;
     public Integer amount;
 
+
+    public List<ChildTransactionModel> transactions;
+
     public List<ChildTransactionModel> getChildTransModels() {
-        return childTransModels;
+        return transactions;
     }
 
     public void setChildTransModels(List<ChildTransactionModel> childTransModels) {
-        this.childTransModels = childTransModels;
+        this.transactions = childTransModels;
     }
 
-    public List<ChildTransactionModel> childTransModels;
+
 
 
     public List<ChildTaskModel> childTaskModels;

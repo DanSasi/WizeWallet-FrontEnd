@@ -40,5 +40,8 @@ public interface RetrofitInterface {
     @GET("/child/transactions")
     Call<ServerResponse> getAllTransForChild(@HeaderMap HashMap<String, String> map);
 
+    @POST("/child/transactions/parent")
+    Call<ServerResponse> getAllTransForChildByParent(@HeaderMap HashMap<String, String> map, @Body HashMap<String, Object> map2);
+
 }
 
