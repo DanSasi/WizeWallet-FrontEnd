@@ -43,7 +43,7 @@ public class SpinnerUserAdater extends BaseAdapter {
         View rootView = LayoutInflater.from(context)
                 .inflate(R.layout.spinner_member_item, parent, false);
 
-        TextView txtName = rootView.findViewById(R.id.parent_trns_kidid_tv);
+        TextView txtName = rootView.findViewById(R.id.parent_task_task_tv);
         ImageView image = rootView.findViewById(R.id.spinner_photo_item);
 
         txtName.setText(spinnerModelList.get(position).getName());

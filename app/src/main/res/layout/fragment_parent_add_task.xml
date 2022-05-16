@@ -7,6 +7,19 @@
     android:background="@drawable/home_svetaphoto"
     tools:context=".Main.Parent_Folder.Fragments.ParentAddTaskFragment">
 
+    <Spinner
+        android:id="@+id/add_task_Parent_spinner2"
+        android:layout_width="355dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="28dp"
+        android:tooltipText="add id"
+        app:layout_constraintBottom_toTopOf="@+id/parent_add_task_amount_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="172dp"
@@ -32,9 +45,9 @@
     <EditText
         android:id="@+id/parent_add_task_amount_et"
         android:layout_width="355dp"
-        android:layout_height="61dp"
+        android:layout_height="73dp"
         android:layout_marginTop="332dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="28dp"
         android:drawableLeft="@drawable/money_icon"
         android:drawablePadding="5dp"
         android:ems="10"
@@ -45,29 +58,15 @@
 
     <EditText
         android:id="@+id/parent_add_task_message_et"
-        android:layout_width="361dp"
+        android:layout_width="355dp"
         android:layout_height="73dp"
-        android:layout_marginTop="408dp"
+        android:layout_marginTop="420dp"
         android:layout_marginEnd="28dp"
         android:drawableLeft="@drawable/description_icon"
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Child Message"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/parent_add_task_id_et"
-        android:layout_width="355dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="252dp"
-        android:layout_marginEnd="28dp"
-        android:drawableLeft="@drawable/id_icon_child"
-        android:drawablePadding="5dp"
-        android:ems="10"
-        android:hint="Child Id"
-        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

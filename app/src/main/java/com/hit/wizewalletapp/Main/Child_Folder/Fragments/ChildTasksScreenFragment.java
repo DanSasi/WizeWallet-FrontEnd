@@ -8,8 +8,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTaskModel;
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.adapters.child.ChildTaskListAdapter;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
@@ -18,11 +19,13 @@ import com.hit.wizewalletapp.utilities.CacheUtilities;
 
 import java.util.List;
 
-public class ChildTasksScreenFragment extends Fragment {
+public class ChildTasksScreenFragment extends Fragment implements  ChildTaskListAdapter.OnItemClickListener {
 
 
     private RecyclerView childTaskRv;
     private final ChildTaskListAdapter listAdapter = new ChildTaskListAdapter();
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,8 +33,8 @@ public class ChildTasksScreenFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_tasks_child_screen, container, false);
 
-        fetchData();
         initRecyclerView(view);
+        fetchData();
 
         return view;
     }
@@ -41,27 +44,35 @@ public class ChildTasksScreenFragment extends Fragment {
         childTaskRv.setHasFixedSize(true);
         childTaskRv.setLayoutManager(new LinearLayoutManager(getContext()));
         childTaskRv.setAdapter(listAdapter);
+        listAdapter.setOnItemClickListener(this);
+
     }
 
 
     //
     private void fetchData() {
-
+//        progressBar.setVisibility(View.VISIBLE);
         String token = CacheUtilities.getAcssesToken(requireContext());
-            ApiCallsHelper.performChildGetTaskById(token, new CustomCallBack<List<ChildTaskModel>>() {
+        ApiCallsHelper.performChildGetTaskById(token, new CustomCallBack<List<TaskChildModel>>() {
             @Override
-            public void onSuccesses(List<ChildTaskModel> response) {
-                listAdapter.updateList(response);
+            public void onSuccesses(List<TaskChildModel> response) {
+                listAdapter.updateTaskList(response);
+//                progressBar.setVisibility(View.GONE);
+                childTaskRv.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onFailure(String msg) {
-                //....
+                Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
+                //  progressBar.setVisibility(View.GONE);
             }
         });
 
-
     }
 
+    @Override
+    public void onItemClick(TaskChildModel childModel) {
+
+    }
 }
 

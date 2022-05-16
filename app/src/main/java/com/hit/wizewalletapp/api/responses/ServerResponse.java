@@ -3,6 +3,7 @@ package com.hit.wizewalletapp.api.responses;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTaskModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,7 +14,6 @@ public class ServerResponse {
     public List<Integer> kidID;
     public Integer kidId;
     public Integer amount;
-
 
     public List<ChildTransactionModel> transactions;
 
@@ -28,14 +28,25 @@ public class ServerResponse {
 
 
 
-    public List<ChildTaskModel> childTaskModels;
+    public List<ChildTaskModel> tasks;
+
 
     public List<ChildTaskModel> getChildTaskModels()
     {
-        return childTaskModels;
+        return tasks;
     }
 
+    public List<TaskChildModel> getTaskChildModels() {
+        return taskChildModels;
+    }
+
+    public void setTaskChildModels(List<TaskChildModel> taskChildModels) {
+        this.taskChildModels = taskChildModels;
+    }
+
+    public List<TaskChildModel> taskChildModels;
+
     public void setChildTaskModels(List<ChildTaskModel> childTaskModels) {
-        this.childTaskModels = childTaskModels;
+        this.tasks = childTaskModels;
     }
 }

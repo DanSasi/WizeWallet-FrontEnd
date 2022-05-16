@@ -105,7 +105,7 @@ public class SendMoneyScreenFragment extends Fragment {
                     .inflate(R.layout.item_childs, viewGroup, false);
 
 
-            nameTxt = rootView.findViewById(R.id.parent_trns_kidid_tv);
+            nameTxt = rootView.findViewById(R.id.parent_task_task_tv);
             photo = rootView.findViewById(R.id.spinner_photo_item);
             nameTxt.setText(childList.get(i).getName());
             photo.setImageResource(childList.get(i).getPhoto());

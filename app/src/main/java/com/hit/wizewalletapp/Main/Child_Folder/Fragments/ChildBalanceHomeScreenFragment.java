@@ -28,9 +28,6 @@ import java.util.List;
 
 public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTransListAdapter.OnItemClickListener  {
 
-
-
-
     ImageView transfer, task, more, tips;
     TextView transferText, taskText, moreText, tipText, hellowText;
     private RecyclerView rv;
@@ -45,7 +42,6 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
 
         //get the refresh token
         String refreshToken = ChildBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
-
 
         ////////////////////////////////////////////////////////////Tasks///////////////////////////////////////////////////////////////
 
@@ -69,8 +65,6 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
         more = view.findViewById(R.id.imageView8);
         more.setOnClickListener(v -> Navigation.findNavController(v).navigate(ChildBalanceHomeScreenFragmentDirections.actionChildBalanceHomeScreenFragment2ToChildMenuFragment(refreshToken)));
 
-
-
         moreText =view.findViewById(R.id.text_more);
         moreText.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childMenuFragment));
         /////////////////////////////////////////////////////////////Transactions/////////////////////////////////////////////////////////////
@@ -80,9 +74,6 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
         /////////////////////////////////////////////////////////////Done/////////////////////////////////////////////////////////////
         initViewRv(view);
         fetchData();
-
-
-
 
         return view;
     }

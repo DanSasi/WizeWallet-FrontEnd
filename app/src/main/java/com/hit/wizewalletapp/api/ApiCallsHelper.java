@@ -3,6 +3,7 @@ package com.hit.wizewalletapp.api;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTaskModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
 import com.hit.wizewalletapp.api.responses.LoginResponse;
 import com.hit.wizewalletapp.api.responses.ServerResponse;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
@@ -154,10 +155,11 @@ public class ApiCallsHelper {
         });
     }
 
-    public static void performChildGetTaskById(String token,CustomCallBack<List<ChildTaskModel>> callback) {
-        //1.Set headers to hashmap
+    public static void performChildGetTaskById(String token,CustomCallBack<List<TaskChildModel>> callback) {
         HashMap<String,String> map = new HashMap<>();
         map.put("authorization",token);
+//        HashMap<String,Object> bodyMap = new HashMap<>();
+//        bodyMap.put("transactions",list);
         //2.preapre retrofit request
         Call<ServerResponse> call = RetrofitInstance.retrofitInterface.getChildTaskById(map);
 
@@ -166,15 +168,16 @@ public class ApiCallsHelper {
             @Override
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
                 //4.SUCSSES (HANDLE DATA)
-                if (response.isSuccessful() && response.code() == 200) {
-                    List<ChildTaskModel> childTasks = response.body().childTaskModels;
-                    final List<ChildTaskModel>childModelToReturn = new ArrayList<>();
-                    if(childTasks != null){
-                        for(ChildTaskModel ptr : childTasks){
-                            childModelToReturn.add( new ChildTaskModel(Integer.parseInt(ptr.mId), ptr.message,Integer.parseInt(ptr.mAmount)));
+                if (response.isSuccessful()  && response.body() != null && response.code() == 200) {
+                    List<TaskChildModel> childIdList = response.body().taskChildModels;
+
+                    final List<TaskChildModel>childModelToReturn = new ArrayList<>();
+                    if(childIdList != null){
+                        for(TaskChildModel ptr : childIdList){
+                            childModelToReturn.add( new TaskChildModel(ptr.getmAmount(),ptr.getMessage()));
                         }
                     }
-                    //5. Post the data to the caller
+                    //5. Post the data to he caller
                     callback.onSuccesses(childModelToReturn);
                 } else if (response.code() == 400) {
                     //5. Post Error the data to the caller

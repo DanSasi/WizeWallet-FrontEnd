@@ -4,32 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/spinner_photo_item"
+        android:layout_width="54dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/imageprofile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47" />
 
     <TextView
-        android:id="@+id/parent_trns_kidid_tv"
-        android:layout_width="355dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="36dp"
+        android:id="@+id/parent_task_task_tv"
+        android:layout_width="335dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:layout_toEndOf="@+id/spinner_photo_item"
+        android:text="Task"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/spinner_photo_item"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/parent_task_messageTv"
-        android:layout_width="357dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parent_trns_kidid_tv" />
-
-    <TextView
-        android:id="@+id/parent_task_amout_tv"
-        android:layout_width="368dp"
-        android:layout_height="27dp"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="78dp" />
+        android:id="@+id/child_task_amount_kid_tv"
+        android:layout_width="335dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:text="amount"
+        app:layout_constraintStart_toEndOf="@+id/spinner_photo_item"
+        app:layout_constraintTop_toBottomOf="@+id/parent_task_task_tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

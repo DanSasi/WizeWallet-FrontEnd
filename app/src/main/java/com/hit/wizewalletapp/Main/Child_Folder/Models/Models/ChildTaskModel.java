@@ -2,21 +2,26 @@ package com.hit.wizewalletapp.Main.Child_Folder.Models.Models;
 
 public class ChildTaskModel {
 
-    public String mId;
-    public String message;
-    public String mAmount;
+     int mId;
+     String message;
+     int mAmount;
 
-    public ChildTaskModel(Integer id, String message , Integer amount){
-        this.mId = id.toString();
+    public ChildTaskModel(Integer mAmount,String message){
+        this.mAmount = mAmount;
         this.message = message;
-        this.mAmount = amount.toString();
     }
 
-    public String getmId() {
+    public ChildTaskModel(int id , String message , Integer amount){
+        this.mId = id;
+        this.message = message;
+        this.mAmount = amount;
+    }
+
+    public int getmId() {
         return mId;
     }
 
-    public void setmId(String mId) {
+    public void setmId(int mId) {
         this.mId = mId;
     }
 
@@ -28,11 +33,11 @@ public class ChildTaskModel {
         this.message = message;
     }
 
-    public String getmAmount() {
+    public int getmAmount() {
         return mAmount;
     }
 
-    public void setmAmount(String mAmount) {
+    public void setmAmount(int mAmount) {
         this.mAmount = mAmount;
     }
 }

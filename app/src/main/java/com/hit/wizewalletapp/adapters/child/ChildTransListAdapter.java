@@ -7,10 +7,8 @@ import android.widget.TextView;
 import com.hit.wizewalletapp.R;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.helper.widget.Layer;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTaskModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
 
 import java.util.ArrayList;
@@ -43,8 +41,8 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            amount_tv= itemView.findViewById(R.id.parent_amount_kid_tv);
-            desc_tv=itemView.findViewById(R.id.parent_trns_kidid_tv);
+            amount_tv= itemView.findViewById(R.id.child_task_amount_kid_tv);
+            desc_tv=itemView.findViewById(R.id.parent_task_task_tv);
         }
 
     }
