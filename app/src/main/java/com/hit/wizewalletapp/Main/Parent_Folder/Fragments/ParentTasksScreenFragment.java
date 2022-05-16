@@ -46,7 +46,7 @@ public class ParentTasksScreenFragment extends Fragment {
         taskParentRv = view.findViewById(R.id.child_task_rv);
         backArrow.setOnClickListener(v -> Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp());
 
-        Spinner childrenTaskSpinner = view.findViewById(R.id.parent_task_spinner);
+        Spinner childrenTaskSpinner = (Spinner)view.findViewById(R.id.parent_task_spinner);
         setRecycleView(taskParentRv);
         setSpinner(childrenTaskSpinner);
 
