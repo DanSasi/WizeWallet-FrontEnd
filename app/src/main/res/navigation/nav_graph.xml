@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeParentFragment"
-        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentBalanceHomeScreenFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.parent.ParentBalanceHomeScreenFragment"
         android:label="fragment_home_parent"
         tools:layout="@layout/fragment_parent_balance_home" >
         <action
@@ -16,9 +16,6 @@
         <action
             android:id="@+id/action_homeParentFragment_to_parentTipsScreen"
             app:destination="@id/parentTipsScreen" />
-        <action
-            android:id="@+id/action_homeParentFragment_to_parentTransactionHistoryActivity"
-            app:destination="@id/parentTransactionHistoryActivity" />
         <action
             android:id="@+id/action_homeParentFragment_to_parentMenuScreen"
             app:destination="@id/parentMenuScreen" />
@@ -49,14 +46,6 @@
             app:destination="@id/homeParentFragment" />
     </fragment>
     <fragment
-        android:id="@+id/parentTransactionHistoryActivity"
-        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentTransactionHistoryScreenFragment"
-        android:label="ParentTransactionHistoryActivity" >
-        <action
-            android:id="@+id/action_parentTransactionHistoryActivity_to_homeParentFragment"
-            app:destination="@id/homeParentFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/parentMenuScreen"
         android:name="com.hit.wizewalletapp.views.fragments.parent.ParentMenuScreenFragment"
         android:label="ParentMenuScreen" >
@@ -66,9 +55,6 @@
         <action
             android:id="@+id/action_parentMenuScreen_to_sendMoneyScreen"
             app:destination="@id/sendMoneyScreen" />
-        <action
-            android:id="@+id/action_parentMenuScreen_to_childTransactionHistoryScreenFragment"
-            app:destination="@id/childTransactionHistoryScreenFragment" />
         <action
             android:id="@+id/action_parentMenuScreen_to_loginFragmentHome"
             app:destination="@id/loginFragmentHome" />
@@ -108,7 +94,7 @@
     </fragment>
     <fragment
         android:id="@+id/addChildFragment"
-        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.AddChildScreenFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.parent.AddChildScreenFragment"
         android:label="add_child_fragment"
         tools:layout="@layout/fragment_parrent_add_child_fragment" >
         <action
@@ -131,17 +117,8 @@
             app:argType="string" />
     </fragment>
     <fragment
-        android:id="@+id/childTransactionHistoryScreenFragment"
-        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment"
-        android:label="fragment_transaction_parent_history"
-        tools:layout="@layout/fragment_transaction_parent_history" >
-        <action
-            android:id="@+id/action_childTransactionHistoryScreenFragment_to_parentMenuScreen"
-            app:destination="@id/parentMenuScreen" />
-    </fragment>
-    <fragment
         android:id="@+id/childTasksScreenFragment"
-        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTasksScreenFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.child.ChildTasksScreenFragment"
         android:label="ChildTasksScreenFragment" >
         <action
             android:id="@+id/action_childTasksScreenFragment_to_childBalanceHomeScreenFragment"
@@ -149,7 +126,7 @@
     </fragment>
     <fragment
         android:id="@+id/childBalanceHomeScreenFragment"
-        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildBalanceHomeScreenFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.child.ChildBalanceHomeScreenFragment"
         android:label="fragment_child_balance_home"
         tools:layout="@layout/fragment_child_balance_home" >
         <action
@@ -194,9 +171,6 @@
         <action
             android:id="@+id/action_childMenuFragment_to_childBalanceHomeScreenFragment2"
             app:destination="@id/childBalanceHomeScreenFragment" />
-        <action
-            android:id="@+id/action_childMenuFragment_to_childTransactionHistoryFragment"
-            app:destination="@id/childTransactionHistoryFragment" />
         <argument
             android:name="refreshToken"
             app:argType="string" />
@@ -206,15 +180,6 @@
         <action
             android:id="@+id/action_childMenuFragment_to_childPaymentFragment"
             app:destination="@id/childPaymentFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/childTransactionHistoryFragment"
-        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildTransactionHistoryScreenFragment"
-        android:label="fragment_transaction_child_history"
-        tools:layout="@layout/fragment_transaction_child_history">
-        <action
-            android:id="@+id/action_childTransactionHistoryFragment_to_childMenuFragment"
-            app:destination="@id/childMenuFragment" />
     </fragment>
 
     <fragment
@@ -251,7 +216,7 @@
         tools:layout="@layout/activity_child_payment_fragment" />
     <fragment
         android:id="@+id/parentAddTaskFragment"
-        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentAddTaskFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.parent.ParentAddTaskFragment"
         android:label="fragment_parent_add_task"
         tools:layout="@layout/fragment_parent_add_task" >
         <action
@@ -260,7 +225,7 @@
     </fragment>
     <fragment
         android:id="@+id/child_add_transaction"
-        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildAddTransactionFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.child.ChildAddTransactionFragment"
         android:label="fragment_child_add_transaction"
         tools:layout="@layout/fragment_child_add_transaction" />
 

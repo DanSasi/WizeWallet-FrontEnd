@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/home_svetaphoto"
-    tools:context=".Main.Parent_Folder.Fragments.ParentAddTaskFragment">
+    tools:context=".views.fragments.parent.ParentAddTaskFragment">
 
     <Spinner
         android:id="@+id/add_task_Parent_spinner2"

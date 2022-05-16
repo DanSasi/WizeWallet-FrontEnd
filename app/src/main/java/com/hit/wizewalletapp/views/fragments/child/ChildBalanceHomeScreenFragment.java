@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Main.Child_Folder.Fragments;
+package com.hit.wizewalletapp.views.fragments.child;
 
 import android.content.Intent;
 import android.os.Bundle;

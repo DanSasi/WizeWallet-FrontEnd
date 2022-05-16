@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Main.Child_Folder.Fragments.ChildBalanceHomeScreenFragment">
+    tools:context=".views.fragments.child.ChildBalanceHomeScreenFragment">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/fragment_loging_icon_imgv"

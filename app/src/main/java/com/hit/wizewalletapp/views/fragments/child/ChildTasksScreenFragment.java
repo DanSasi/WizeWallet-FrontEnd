@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Main.Child_Folder.Fragments;
+package com.hit.wizewalletapp.views.fragments.child;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;

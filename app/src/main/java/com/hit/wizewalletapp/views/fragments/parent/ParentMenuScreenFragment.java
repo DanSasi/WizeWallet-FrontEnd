@@ -65,7 +65,7 @@ public class ParentMenuScreenFragment extends Fragment {
                 String id = menu_items.get(position).getId();
                 switch (id){
                     case "1":
-                       Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_childTransactionHistoryScreenFragment);
+                   //    Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_childTransactionHistoryScreenFragment);
                         break;
                     case "2":
                         Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_sendMoneyScreen);
