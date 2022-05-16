@@ -1,9 +1,11 @@
 package com.hit.wizewalletapp.api;
 
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
 import com.hit.wizewalletapp.api.responses.LoginResponse;
 import com.hit.wizewalletapp.api.responses.ServerResponse;
 
 import java.util.HashMap;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -32,7 +34,7 @@ public interface RetrofitInterface {
     Call<Void> executeAddTasks(@HeaderMap HashMap<String,String> map1 ,@Body HashMap<String, Object> map2);
 
     @GET("/task/kid")
-    Call<ServerResponse> getChildTaskById(@HeaderMap HashMap<String, String> map);
+    Call<List<TaskChildModel>> getChildTaskById(@HeaderMap HashMap<String, String> map);
 
     @POST("/child/transactions")
     Call<Void> executeChildTransactions(@HeaderMap HashMap<String, String> map1, @Body HashMap<String, Object> map);
@@ -40,8 +42,14 @@ public interface RetrofitInterface {
     @GET("/child/transactions")
     Call<ServerResponse> getAllTransForChild(@HeaderMap HashMap<String, String> map);
 
+    @GET("/child/balance")
+    Call<ServerResponse> getBalanceChild(@HeaderMap HashMap<String,String> map);
+
     @POST("/child/transactions/parent")
     Call<ServerResponse> getAllTransForChildByParent(@HeaderMap HashMap<String, String> map, @Body HashMap<String, Object> map2);
+
+    @POST("/task/parent")
+    Call<List<TaskChildModel>> getAllTasksForChildByParent(@HeaderMap HashMap<String, String> map, @Body HashMap<String, Object> map2);
 
 }
 

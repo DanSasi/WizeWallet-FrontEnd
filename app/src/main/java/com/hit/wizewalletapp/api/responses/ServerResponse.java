@@ -14,8 +14,11 @@ public class ServerResponse {
     public List<Integer> kidID;
     public Integer kidId;
     public Integer amount;
+    public Long balance;
 
     public List<ChildTransactionModel> transactions;
+    public List<TaskChildModel> taskChildModels;
+
 
     public List<ChildTransactionModel> getChildTransModels() {
         return transactions;
@@ -24,8 +27,6 @@ public class ServerResponse {
     public void setChildTransModels(List<ChildTransactionModel> childTransModels) {
         this.transactions = childTransModels;
     }
-
-
 
 
     public List<ChildTaskModel> tasks;
@@ -44,7 +45,7 @@ public class ServerResponse {
         this.taskChildModels = taskChildModels;
     }
 
-    public List<TaskChildModel> taskChildModels;
+
 
     public void setChildTaskModels(List<ChildTaskModel> childTaskModels) {
         this.tasks = childTaskModels;

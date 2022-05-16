@@ -30,6 +30,7 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
 
     ImageView transfer, task, more, tips;
     TextView transferText, taskText, moreText, tipText, hellowText;
+    TextView ballance;
     private RecyclerView rv;
     private ProgressBar progressBar;
     private final ChildTransListAdapter childTransListAdapter= new ChildTransListAdapter();
@@ -46,6 +47,8 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
         ////////////////////////////////////////////////////////////Tasks///////////////////////////////////////////////////////////////
 
         task = view.findViewById(R.id.imageView5);
+        ballance = view.findViewById(R.id.child_fragment_ballance_tv);
+
         task.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childTasksScreenFragment));
         taskText = view.findViewById(R.id.textView7);
         taskText.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childTasksScreenFragment));
@@ -103,6 +106,18 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
             public void onFailure(String msg) {
                 Toast.makeText(getContext(),msg,Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
+            }
+        });
+
+        ApiCallsHelper.performGetChildBalance(token, new CustomCallBack<String>() {
+            @Override
+            public void onSuccesses(String response) {
+                ballance.setText("Nis: " +response);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+                Toast.makeText(getContext(),msg,Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -30,6 +30,7 @@ public class LoginFragment extends Fragment {
     private EditText emailEditText, passwordEditText;
     private Spinner userSpinner;
     private TextView forgetPass;
+    private TextView logas;
     private TextView regisger , wellcomTv;
     private Button login;
     private ImageView mainIconIv;
@@ -81,6 +82,7 @@ public class LoginFragment extends Fragment {
         login = fragment.findViewById(R.id.fragment_home_login_btn);
         mainIconIv = fragment.findViewById(R.id.fragment_loging_icon_imgv);
         wellcomTv = fragment.findViewById(R.id.fragment_login_man_tv);
+        logas = fragment.findViewById(R.id.fragment_home_log_as);
         adapter = new SpinnerUserAdater(getContext(), SpinnerData.getSpinnerList());
         userSpinner.setAdapter(adapter);
 
@@ -91,6 +93,7 @@ public class LoginFragment extends Fragment {
         login.setTranslationX(50);
         mainIconIv.setTranslationX(50);
         wellcomTv.setTranslationX(50);
+        logas.setTranslationX(50);
 
         emailEditText.setAlpha(v);
         passwordEditText.setAlpha(v);
@@ -98,6 +101,7 @@ public class LoginFragment extends Fragment {
         userSpinner.setAlpha(v);
         login.setAlpha(v);
         mainIconIv.setAlpha(v);
+        logas.setAlpha(v);
         wellcomTv.setAlpha(v);
 
         emailEditText.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
@@ -107,6 +111,7 @@ public class LoginFragment extends Fragment {
         login.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
         mainIconIv.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
         wellcomTv.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
+        logas.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
     }
 
 

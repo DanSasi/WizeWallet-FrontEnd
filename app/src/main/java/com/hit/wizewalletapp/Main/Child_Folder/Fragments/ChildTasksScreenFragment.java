@@ -19,13 +19,11 @@ import com.hit.wizewalletapp.utilities.CacheUtilities;
 
 import java.util.List;
 
-public class ChildTasksScreenFragment extends Fragment implements  ChildTaskListAdapter.OnItemClickListener {
+public class ChildTasksScreenFragment extends Fragment implements ChildTaskListAdapter.OnItemClickListener {
 
 
     private RecyclerView childTaskRv;
     private final ChildTaskListAdapter listAdapter = new ChildTaskListAdapter();
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,22 +47,21 @@ public class ChildTasksScreenFragment extends Fragment implements  ChildTaskList
     }
 
 
-    //
+
     private void fetchData() {
-//        progressBar.setVisibility(View.VISIBLE);
+
         String token = CacheUtilities.getAcssesToken(requireContext());
         ApiCallsHelper.performChildGetTaskById(token, new CustomCallBack<List<TaskChildModel>>() {
             @Override
             public void onSuccesses(List<TaskChildModel> response) {
                 listAdapter.updateTaskList(response);
-//                progressBar.setVisibility(View.GONE);
                 childTaskRv.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onFailure(String msg) {
                 Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
-                //  progressBar.setVisibility(View.GONE);
+
             }
         });
 

@@ -46,10 +46,15 @@ public class SignupFragment extends Fragment {
     }
 
     private void preformSignUp() {
+        String name = userFullName.getText().toString();
         String email = emailEditText.getText().toString();
         String password = passwordEditText.getText().toString();
-        if (Utilities.verifyAllTextNotEmpty(email, password)) {
-            ApiCallsHelper.performRegister(ApiCallsHelper.getAuthBody(email, password), new CustomCallBack<Void>() {
+        if (Utilities.verifyAllTextNotEmpty(email, password,name)) {
+            HashMap<String, String> bodyMap = new HashMap<>();
+            bodyMap.put("email",email );
+            bodyMap.put("password",password);
+            bodyMap.put("name",name);
+            ApiCallsHelper.performRegister(bodyMap, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {
                     Navigation.findNavController(getActivity(), R.id.nav_host).navigate(SignupFragmentDirections.actionSignupTabFragmentToLoginFragmentHome());

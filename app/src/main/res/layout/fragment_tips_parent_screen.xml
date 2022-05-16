@@ -58,7 +58,7 @@
         app:layout_constraintVertical_bias="0.19999999" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/child_fragment_ballance_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
@@ -75,9 +75,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:src="@drawable/ic_arrow___left_circle"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintBottom_toBottomOf="@+id/child_fragment_ballance_tv"
+        app:layout_constraintStart_toEndOf="@+id/child_fragment_ballance_tv"
+        app:layout_constraintTop_toTopOf="@+id/child_fragment_ballance_tv" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"

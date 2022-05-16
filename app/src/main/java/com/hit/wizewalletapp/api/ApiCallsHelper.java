@@ -161,24 +161,12 @@ public class ApiCallsHelper {
 //        HashMap<String,Object> bodyMap = new HashMap<>();
 //        bodyMap.put("transactions",list);
         //2.preapre retrofit request
-        Call<ServerResponse> call = RetrofitInstance.retrofitInterface.getChildTaskById(map);
-
-        //3.execute the request
-        call.enqueue(new Callback<ServerResponse>() {
+        Call<List<TaskChildModel>> call = RetrofitInstance.retrofitInterface.getChildTaskById(map);
+        call.enqueue(new Callback<List<TaskChildModel>>() {
             @Override
-            public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
-                //4.SUCSSES (HANDLE DATA)
+            public void onResponse(Call<List<TaskChildModel>> call, Response<List<TaskChildModel>> response) {
                 if (response.isSuccessful()  && response.body() != null && response.code() == 200) {
-                    List<TaskChildModel> childIdList = response.body().taskChildModels;
-
-                    final List<TaskChildModel>childModelToReturn = new ArrayList<>();
-                    if(childIdList != null){
-                        for(TaskChildModel ptr : childIdList){
-                            childModelToReturn.add( new TaskChildModel(ptr.getmAmount(),ptr.getMessage()));
-                        }
-                    }
-                    //5. Post the data to he caller
-                    callback.onSuccesses(childModelToReturn);
+                    callback.onSuccesses(response.body());
                 } else if (response.code() == 400) {
                     //5. Post Error the data to the caller
                     callback.onFailure("wrong email or password/already have user");
@@ -186,13 +174,12 @@ public class ApiCallsHelper {
             }
 
             @Override
-            public void onFailure(Call<ServerResponse> call, Throwable t) {
-                //4.FAILURE
-
-                //5. Post Error the data to the caller
+            public void onFailure(Call<List<TaskChildModel>> call, Throwable t) {
                 callback.onFailure(t.getLocalizedMessage());
             }
         });
+        //3.execute the request
+
     }
 
     public static void performAddTasks(String token,HashMap<String,Object> map,CustomCallBack<Void> callback) {
@@ -307,10 +294,66 @@ public class ApiCallsHelper {
             }
         });
     }
+    public static void performGetAllTaskForChildByParent(String token,String childId,CustomCallBack<List<TaskChildModel>> callback) {
+        //1.Set headers to hashmap
+        HashMap<String,String> map = new HashMap<>();
+        map.put("authorization",token);
+
+        HashMap<String,Object> body = new HashMap<>();
+        body.put("kidid",Integer.valueOf(childId));
+//        HashMap<String,Object> bodyMap = new HashMap<>();
+//        bodyMap.put("transactions",list);
+        //2.preapre retrofit request
+        Call<List<TaskChildModel>> call = RetrofitInstance.retrofitInterface.getAllTasksForChildByParent(map,body);
+
+        //3.execute the request
+        call.enqueue(new Callback<List<TaskChildModel>>() {
+            @Override
+            public void onResponse(Call<List<TaskChildModel>> call, Response<List<TaskChildModel>> response) {
+                if (response.isSuccessful()  && response.body() != null && response.code() == 200) {
+
+                    //5. Post the data to he caller
+                    callback.onSuccesses(response.body());
+                } else {
+                    //5. Post Error the data to the caller
+                    callback.onFailure("asdasdsadsadsa");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<TaskChildModel>> call, Throwable t) {
+                callback.onFailure(t.getLocalizedMessage());
+            }
 
 
+        });
+    }
 
+    public static void performGetChildBalance(String token, CustomCallBack<String> callback) {
+        //1.Set headers to hashmap
+        HashMap<String,String> map = new HashMap<>();
+        map.put("authorization",token);
+        //2.preapre retrofit request
+        Call<ServerResponse> call = RetrofitInstance.retrofitInterface.getBalanceChild(map);
 
+        //3.execute the request
+        call.enqueue(new Callback<ServerResponse>() {
+            @Override
+            public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+                //4.SUCSSES (HANDLE DATA)
+                if (response.isSuccessful() && response.body() != null &&  response.code() == 200) {
+                    callback.onSuccesses(response.body().balance.toString());
+                } else if (response.code() == 400) {
+                    //5. Post Error the data to the caller
+                    callback.onFailure("wrong email or password/already have user");
+                }
+            }
 
+            @Override
+            public void onFailure(Call<ServerResponse> call, Throwable t) {
+                callback.onFailure(t.getLocalizedMessage());
+            }
+        });
+    }
 
 }
