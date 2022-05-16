@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/home_svetaphoto"
     tools:context=".views.fragments.parent.ParentAddTaskFragment">
 
     <Spinner
@@ -48,6 +47,7 @@
         android:layout_height="73dp"
         android:layout_marginTop="332dp"
         android:layout_marginEnd="28dp"
+        android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/money_icon"
         android:drawablePadding="5dp"
         android:ems="10"
@@ -62,6 +62,7 @@
         android:layout_height="73dp"
         android:layout_marginTop="420dp"
         android:layout_marginEnd="28dp"
+        android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/description_icon"
         android:drawablePadding="5dp"
         android:ems="10"
@@ -78,6 +79,7 @@
         android:background="@drawable/btn_main"
         android:backgroundTint="@null"
         android:fontFamily="@font/poppins"
+        android:textColor="#ffffff"
         android:text="Add "
         android:textSize="15sp"
         android:textStyle="bold"

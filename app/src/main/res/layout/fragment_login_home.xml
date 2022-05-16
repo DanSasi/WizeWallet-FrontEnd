@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.fragments.LoginFragment"
-    android:background="@drawable/home_svetaphoto">
+    tools:context=".views.fragments.LoginFragment">
 
     <ImageView
         android:id="@+id/fragment_loging_icon_imgv"
@@ -39,6 +38,7 @@
         android:drawablePadding="5dp"
         android:hint="E-mail"
         android:minHeight="48dp"
+        android:background="@drawable/search_bar"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
@@ -60,6 +60,7 @@
         android:hint="Password"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
+        android:background="@drawable/search_bar"
         android:paddingBottom="10dp"
         android:password="true"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/bgRound"
-    android:background="@drawable/home_svetaphoto"
     tools:context=".views.fragments.parent.ParentChildsFragment">
 
     <ImageView
@@ -48,28 +47,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-    <EditText
-        android:id="@+id/et_search"
-        style="@style/contactFont"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="648dp"
-        android:layout_marginEnd="48dp"
-        android:autofillHints="name"
-        android:background="@drawable/search_bar"
-        android:drawableEnd="@drawable/ic_search"
-        android:hint="Search"
-        android:paddingStart="25dp"
-        android:paddingEnd="25dp"
-        android:textColor="#000"
-        android:textColorHint="#2C3A4B"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tv_all_childs"
         style="@style/contactFont"
@@ -79,13 +56,12 @@
         android:text="All Childs"
         android:textColor="#082431"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/et_search"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="48dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/child_recycler_view"
-        android:background="@drawable/home_svetaphoto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="48dp"
@@ -105,7 +81,8 @@
         android:layout_width="209dp"
         android:layout_height="77dp"
         android:layout_marginBottom="250dp"
-        android:background="@drawable/home_svetaphoto"
+        android:background="@drawable/btn_main"
+        android:textColor="#ffffff"
         android:text="Register a new Child"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/child_recycler_view"

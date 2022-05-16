@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/home_svetaphoto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/fragment_loging_icon_imgv"
@@ -40,6 +39,7 @@
         android:drawableLeft="@drawable/name_icon"
         android:drawablePadding="5dp"
         android:hint="Enter your Full Name"
+        android:background="@drawable/search_bar"
         android:minHeight="48dp"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
@@ -57,6 +57,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="388dp"
+        android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/email_icon"
         android:drawablePadding="5dp"
         android:hint="Enter Your Email"
@@ -77,6 +78,7 @@
         android:layout_marginTop="20dp"
         android:drawableLeft="@drawable/password_icon_4"
         android:drawablePadding="5dp"
+        android:background="@drawable/search_bar"
         android:hint="Enter Your Password"
         android:minHeight="48dp"
         android:paddingLeft="10dp"
