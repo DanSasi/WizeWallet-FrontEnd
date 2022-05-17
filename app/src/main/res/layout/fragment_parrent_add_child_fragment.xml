@@ -29,9 +29,9 @@
 
     <Button
         android:id="@+id/add_child_btn"
-        android:layout_width="182dp"
-        android:layout_height="73dp"
-        android:background="@drawable/button_item_new"
+        android:layout_width="120dp"
+        android:layout_height="46dp"
+        android:background="@drawable/main_icon_app"
         android:text="Register"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

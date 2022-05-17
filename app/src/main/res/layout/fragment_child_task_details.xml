@@ -65,7 +65,7 @@
         android:layout_width="121dp"
         android:layout_height="79dp"
         android:layout_marginBottom="112dp"
-        android:background="@drawable/button_item_new"
+        android:background="@drawable/main_icon_app"
         android:text="FINISH"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

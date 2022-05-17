@@ -213,7 +213,7 @@
         android:id="@+id/con_btn"
         android:layout_width="340dp"
         android:layout_height="64dp"
-        android:background="@drawable/button_item_new"
+        android:background="@drawable/main_icon_app"
         android:text="CONTINUE"
         android:layout_marginTop="385dp"
         android:layout_marginLeft="30dp"

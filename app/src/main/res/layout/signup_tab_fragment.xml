@@ -96,19 +96,18 @@
 
     <Button
         android:id="@+id/SignUp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_main"
+        android:layout_width="128dp"
+        android:layout_height="49dp"
+        android:background="@drawable/main_icon_app"
         android:text="SignUp"
-        android:textColor="#ffffff"
         android:textSize="16sp"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.714"
+        app:layout_constraintVertical_bias="0.721"
         app:layout_constraintWidth_percent=".8" />
 
 

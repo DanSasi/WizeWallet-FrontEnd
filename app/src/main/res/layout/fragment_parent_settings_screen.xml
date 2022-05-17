@@ -88,9 +88,9 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="136dp"
-        android:layout_height="71dp"
-        android:background="@drawable/button_item_new"
+        android:layout_width="88dp"
+        android:layout_height="52dp"
+        android:background="@drawable/main_icon_app"
         android:text="SAVE"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button2"
@@ -131,9 +131,9 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="136dp"
-        android:layout_height="71dp"
-        android:background="@drawable/button_item_new"
+        android:layout_width="110dp"
+        android:layout_height="65dp"
+        android:background="@drawable/main_icon_app"
         android:scrollbarSize="4dp"
         android:text="SAVE"
         android:textAppearance="@style/balance_text"
