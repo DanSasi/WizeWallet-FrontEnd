@@ -22,6 +22,9 @@ public class ChildModel {
         mChildTransactionModelList = childTransactionModelList;
 
     }
+    public ChildModel() {
+
+    }
 
     public ChildModel(Integer id , Integer amount , String message ){
         mId = id.toString();

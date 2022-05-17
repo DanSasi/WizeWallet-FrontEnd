@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/send_money_editText"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_centerHorizontal="true"
@@ -56,7 +56,7 @@
         android:drawablePadding="10dp"
         android:inputType="number"
         android:paddingLeft="10dp"
-        android:text="150.000"
+        android:text="150"
         android:textAlignment="center"
         android:textColor="#525298"
         android:textSize="50sp"
@@ -101,34 +101,6 @@
 
     </LinearLayout>
 
-    <com.ebanx.swipebtn.SwipeButton
-        android:id="@+id/swipeId"
-        android:layout_width="315dp"
-        android:layout_height="60dp"
-        android:layout_margin="20dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/swipe_button"
-        android:gravity="center"
-
-        app:button_bottom_padding="20dp"
-        app:button_left_padding="20dp"
-        app:button_right_padding="20dp"
-        app:button_top_padding="20dp"
-        app:inner_text="SWIPE TO SEND"
-        app:inner_text_background="@drawable/text_design"
-        app:inner_text_size="16sp"
-        app:inner_text_top_padding="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="0.958">
-
-    </com.ebanx.swipebtn.SwipeButton>
-
     <Spinner
         android:id="@+id/send_money_spinner"
         android:layout_width="340dp"
@@ -142,6 +114,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.351" />
+
+    <Button
+        android:id="@+id/send_money_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="170dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

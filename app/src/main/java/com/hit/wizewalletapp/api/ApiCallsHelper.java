@@ -356,4 +356,27 @@ public class ApiCallsHelper {
         });
     }
 
+        public static void performAddBalanceForChild(String token,HashMap<String,Object> map, CustomCallBack<Void> callBack){
+        HashMap<String,String> headerMap=new HashMap<>();
+        headerMap.put("authorization",token);
+
+        Call<Void> call = RetrofitInstance.retrofitInterface.addChildBalance(headerMap,map);
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if(response.isSuccessful() && response.code() == 200){
+                    callBack.onSuccesses(null);
+                }else if(response.code() == 400){
+                    callBack.onFailure("wrong");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                callBack.onFailure(t.getLocalizedMessage());
+
+            }
+        });
+    }
+
 }
