@@ -41,7 +41,10 @@ public class LoginFragment extends Fragment {
                              Bundle savadInstanceState) {
         View myFragmet = inflater.inflate(R.layout.fragment_login_home, container, false);
         initViews(myFragmet);
-        regisger.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_loginFragmentHome_to_signupTabFragment));
+        regisger.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(LoginFragmentDirections
+                        .actionLoginFragmentHomeToSignupTabFragment()));
+
         login.setOnClickListener(v -> preformLogin());
         return myFragmet;
     }
@@ -56,9 +59,13 @@ public class LoginFragment extends Fragment {
                     CacheUtilities.saveToken(getContext(),"authorization "+response.getRefreshToken(),"authorization "+response.getAccessToken());
                     String item = userSpinner.getSelectedItem().toString();
                     if (item.equals("Parent")) {
-                        Navigation.findNavController(getActivity(), R.id.nav_host).navigate(LoginFragmentDirections.actionLoginFragmentHomeToHomeParentFragment(response.getRefreshToken(),email));
+                        Navigation.findNavController(getActivity(), R.id.nav_host)
+                                .navigate(LoginFragmentDirections
+                                .actionLoginFragmentHomeToHomeParentFragment(response.getRefreshToken(),email));
                     } else if (item.equals("Child")) {
-                        Navigation.findNavController(getActivity(), R.id.nav_host).navigate(LoginFragmentDirections.actionLoginFragmentHomeToChildBalanceHomeScreenFragment(response.getRefreshToken()));
+                        Navigation.findNavController(getActivity(), R.id.nav_host)
+                                .navigate(LoginFragmentDirections
+                                        .actionLoginFragmentHomeToChildBalanceHomeScreenFragment(response.getRefreshToken()));
                     }
                 }
 

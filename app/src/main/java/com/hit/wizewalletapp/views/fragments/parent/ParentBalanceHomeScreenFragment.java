@@ -62,77 +62,57 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
         /////////////////////////////////////////////////////////////Childs/////////////////////////////////////////////////////////////
 
         childs = view.findViewById(R.id.imageView4);
-        childs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_childListScreen);
-            }
-        });
+        childs.setOnClickListener(v->Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ParentBalanceHomeScreenFragmentDirections.
+                        actionHomeParentFragmentToChildListScreen()));
+
         childText = view.findViewById(R.id.textView6);
-        childText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_childListScreen);
-            }
-        });
+        childText.setOnClickListener(v->Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ParentBalanceHomeScreenFragmentDirections.
+                        actionHomeParentFragmentToChildListScreen()));
 
 
         ////////////////////////////////////////////////////////////Tasks///////////////////////////////////////////////////////////////
 
         task = view.findViewById(R.id.imageView5);
-        task.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentTasksScreen);
-            }
-        });
+        task.setOnClickListener(v->Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ParentBalanceHomeScreenFragmentDirections.
+                        actionHomeParentFragmentToParentTasksScreen()));
+
         taskText = view.findViewById(R.id.textView7);
-        taskText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentTasksScreen);
-            }
-        });
+        taskText.setOnClickListener(v->Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ParentBalanceHomeScreenFragmentDirections
+                        .actionHomeParentFragmentToParentTasksScreen()));
 
 
         /////////////////////////////////////////////////////////////Tips/////////////////////////////////////////////////////////////
 
         tips = view.findViewById(R.id.imageView6);
-        tips.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentTipsScreen);
-            }
-        });
+        tips.setOnClickListener( v-> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ParentBalanceHomeScreenFragmentDirections
+                        .actionHomeParentFragmentToParentTipsScreen()));
 
         tipText = view.findViewById(R.id.textView8);
-        tipText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentTipsScreen);
-            }
-        });
+        tipText.setOnClickListener(v-> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ParentBalanceHomeScreenFragmentDirections
+                        .actionHomeParentFragmentToParentTipsScreen()));
 
         /////////////////////////////////////////////////////////////More/////////////////////////////////////////////////////////////
 
 
         more = view.findViewById(R.id.imageView8);
-        more.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(ParentBalanceHomeScreenFragmentDirections.actionHomeParentFragmentToParentMenuScreen(refreshToken));
-            }
-        });
+        more.setOnClickListener(v-> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ParentBalanceHomeScreenFragmentDirections
+                        .actionHomeParentFragmentToParentMenuScreen(refreshToken)));
 
 
 
         moreText =view.findViewById(R.id.text_more);
-        moreText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_homeParentFragment_to_parentMenuScreen);
-            }
-        });
+        moreText.setOnClickListener(v-> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ParentBalanceHomeScreenFragmentDirections
+                        .actionHomeParentFragmentToParentMenuScreen(refreshToken)));
+
+        /////////////////////////////////////////////////Done//////////////////////////////////////////////////
         childList = ChildListModel.instance.getAllData();
         spinner = view.findViewById(R.id.fragment_Parent_spinner);
 

@@ -43,36 +43,57 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
 
         //get the refresh token
         String refreshToken = ChildBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
-
+        ballance = view.findViewById(R.id.child_fragment_ballance_tv);
         ////////////////////////////////////////////////////////////Tasks///////////////////////////////////////////////////////////////
 
         task = view.findViewById(R.id.imageView5);
-        ballance = view.findViewById(R.id.child_fragment_ballance_tv);
+        task.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ChildBalanceHomeScreenFragmentDirections
+                        .actionChildBalanceHomeScreenFragment2ToChildTasksScreenFragment()));
 
-        task.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childTasksScreenFragment));
         taskText = view.findViewById(R.id.textView7);
-        taskText.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childTasksScreenFragment));
+        taskText.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                    .navigate(ChildBalanceHomeScreenFragmentDirections
+                        .actionChildBalanceHomeScreenFragment2ToChildTasksScreenFragment()));
 
 
         /////////////////////////////////////////////////////////////Tips/////////////////////////////////////////////////////////////
 
         tips = view.findViewById(R.id.imageView6);
-        tips.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childTipsFragment));
+        tips.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ChildBalanceHomeScreenFragmentDirections.
+                        actionChildBalanceHomeScreenFragment2ToChildTipsFragment()));
 
         tipText = view.findViewById(R.id.textView8);
-        tipText.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childTipsFragment));
+        tipText.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ChildBalanceHomeScreenFragmentDirections.
+                        actionChildBalanceHomeScreenFragment2ToChildTipsFragment()));
 
         /////////////////////////////////////////////////////////////More/////////////////////////////////////////////////////////////
 
 
         more = view.findViewById(R.id.imageView8);
-        more.setOnClickListener(v -> Navigation.findNavController(v).navigate(ChildBalanceHomeScreenFragmentDirections.actionChildBalanceHomeScreenFragment2ToChildMenuFragment(refreshToken)));
+        more.setOnClickListener(v -> Navigation.findNavController(requireActivity(), R.id.nav_host)
+                .navigate(ChildBalanceHomeScreenFragmentDirections.
+                        actionChildBalanceHomeScreenFragment2ToChildMenuFragment(refreshToken)));
 
         moreText =view.findViewById(R.id.text_more);
-        moreText.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment2_to_childMenuFragment));
+        moreText.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ChildBalanceHomeScreenFragmentDirections.
+                     actionChildBalanceHomeScreenFragment2ToChildMenuFragment(refreshToken)));
+
         /////////////////////////////////////////////////////////////Transactions/////////////////////////////////////////////////////////////
         transfer=view.findViewById(R.id.imageView4);
-        transfer.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_childBalanceHomeScreenFragment_to_child_add_transaction));
+        transfer.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ChildBalanceHomeScreenFragmentDirections
+                        .actionChildBalanceHomeScreenFragmentToChildAddTransaction()));
+
+        transferText = view.findViewById(R.id.textView6);
+        transferText.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host)
+                        .navigate(ChildBalanceHomeScreenFragmentDirections
+                            .actionChildBalanceHomeScreenFragmentToChildAddTransaction()));
+
+
         progressBar = view.findViewById(R.id.progressBar);
         /////////////////////////////////////////////////////////////Done/////////////////////////////////////////////////////////////
         initViewRv(view);

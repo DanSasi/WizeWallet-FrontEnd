@@ -63,16 +63,16 @@ public class ParentMenuScreenFragment extends Fragment {
                    //    Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_childTransactionHistoryScreenFragment);
                         break;
                     case "2":
-                        Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_sendMoneyScreen);
+                        Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ParentMenuScreenFragmentDirections.actionParentMenuScreenToSendMoneyScreen());
                         break;
                     case "3":
 
                         break;
                     case "4":
-                        Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_parentSettingsFragmentScreen);
+                        Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ParentMenuScreenFragmentDirections.actionParentMenuScreenToParentSettingsFragmentScreen());
                         break;
                     case "5":
-                        Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_childLinkFragmentScreen);
+                        Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ParentMenuScreenFragmentDirections.actionParentMenuScreenToChildLinkFragmentScreen());
 
                         break;
                     case "6":
