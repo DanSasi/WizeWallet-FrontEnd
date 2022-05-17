@@ -28,6 +28,9 @@
         <argument
             android:name="name"
             app:argType="string" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_childTransDetailsFragment"
+            app:destination="@id/childTransDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/parentTasksScreen"
@@ -150,6 +153,9 @@
         <action
             android:id="@+id/action_childBalanceHomeScreenFragment_to_child_add_transaction"
             app:destination="@id/child_add_transaction" />
+        <action
+            android:id="@+id/action_childBalanceHomeScreenFragment_to_childTransDetailsFragment"
+            app:destination="@id/childTransDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragmentHome"
@@ -241,6 +247,18 @@
             app:argType="string" />
 
 
+    </fragment>
+    <fragment
+        android:id="@+id/childTransDetailsFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.child.ChildTransDetailsFragment"
+        android:label="fragment_child_trans_details"
+        tools:layout="@layout/fragment_child_trans_details" >
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="integer" />
     </fragment>
 
 </navigation>

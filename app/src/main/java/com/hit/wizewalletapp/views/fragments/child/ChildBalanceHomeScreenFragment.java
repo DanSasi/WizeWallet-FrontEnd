@@ -127,6 +127,7 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
 
     @Override
     public void onItemClick(ChildTransactionModel childModel) {
-
+        Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ChildBalanceHomeScreenFragmentDirections.
+                actionChildBalanceHomeScreenFragmentToChildTransDetailsFragment(childModel.getDesc(),childModel.getAmount()));
     }
 }

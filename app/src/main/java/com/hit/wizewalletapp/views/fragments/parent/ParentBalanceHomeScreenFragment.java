@@ -30,7 +30,7 @@ import com.hit.wizewalletapp.utilities.CacheUtilities;
 import java.util.List;
 
 
-public class ParentBalanceHomeScreenFragment extends Fragment {
+public class ParentBalanceHomeScreenFragment extends Fragment  implements  ChildTransListAdapter.OnItemClickListener{
 
 
 
@@ -44,7 +44,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment {
     ImageView photo;
     String refreshToken ="";
     private RecyclerView rv;
-     ChildTransListAdapter childTransListAdapter= new ChildTransListAdapter();
+    private final ChildTransListAdapter childTransListAdapter= new ChildTransListAdapter();
 
     private ChildAdapterSpinner childAdapter;
 
@@ -228,11 +228,10 @@ public class ParentBalanceHomeScreenFragment extends Fragment {
 //
 //
 //
-//    @Override
-//    public void onItemClick(ChildTransactionModel childModel) {
-//
-//
-//    }
+    @Override
+    public void onItemClick(ChildTransactionModel childModel) {
+        Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ParentBalanceHomeScreenFragmentDirections.actionHomeParentFragmentToChildTransDetailsFragment(childModel.getDesc(),childModel.getAmount()));
+    }
 //
 
 
