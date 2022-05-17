@@ -41,36 +41,18 @@
         app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_mambers"
-        android:layout_width="371dp"
-        android:layout_height="114dp"
-        android:layout_margin="45dp"
-        android:layout_marginTop="30dp"
-
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/bg_spinner_members"
-        android:dropDownVerticalOffset="55dp"
-        android:popupBackground="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
+
         android:layout_marginRight="40dp"
 
+
         android:background="@drawable/edit_backgroud"
-
-
         android:drawablePadding="10dp"
         android:inputType="number"
         android:paddingLeft="10dp"
@@ -78,9 +60,10 @@
         android:textAlignment="center"
         android:textColor="#525298"
         android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_mambers" />
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
 
     <LinearLayout
@@ -145,6 +128,20 @@
         app:layout_constraintVertical_bias="0.958">
 
     </com.ebanx.swipebtn.SwipeButton>
+
+    <Spinner
+        android:id="@+id/send_money_spinner"
+        android:layout_width="340dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
