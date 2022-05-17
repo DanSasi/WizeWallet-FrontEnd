@@ -1,6 +1,7 @@
 package com.hit.wizewalletapp.views.fragments.child;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -69,6 +70,8 @@ public class ChildTasksScreenFragment extends Fragment implements ChildTaskListA
 
     @Override
     public void onItemClick(TaskChildModel childModel) {
+        Navigation.findNavController(requireActivity(),R.id.nav_host).
+                navigate(ChildTasksScreenFragmentDirections.actionChildTasksScreenFragmentToChildTaskDetailsFragment(childModel.getMessage()));
 
     }
 }

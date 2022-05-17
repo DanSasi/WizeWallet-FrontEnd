@@ -123,6 +123,9 @@
         <action
             android:id="@+id/action_childTasksScreenFragment_to_childBalanceHomeScreenFragment"
             app:destination="@id/childBalanceHomeScreenFragment" />
+        <action
+            android:id="@+id/action_childTasksScreenFragment_to_childTaskDetailsFragment"
+            app:destination="@id/childTaskDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/childBalanceHomeScreenFragment"
@@ -228,5 +231,16 @@
         android:name="com.hit.wizewalletapp.views.fragments.child.ChildAddTransactionFragment"
         android:label="fragment_child_add_transaction"
         tools:layout="@layout/fragment_child_add_transaction" />
+    <fragment
+        android:id="@+id/childTaskDetailsFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.child.ChildTaskDetailsFragment"
+        android:label="fragment_child_task_details"
+        tools:layout="@layout/fragment_child_task_details" >
+        <argument
+            android:name="description"
+            app:argType="string" />
+
+
+    </fragment>
 
 </navigation>

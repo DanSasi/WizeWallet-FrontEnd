@@ -58,7 +58,7 @@ public class ChildTaskListAdapter extends RecyclerView.Adapter<ChildTaskListAdap
     public void onBindViewHolder(@NonNull ChildTaskListAdapter.MyViewHolder holder, int position) {
         final TaskChildModel childModel = list.get(position);
         holder.message_Vh_Tv.setText(String.valueOf(childModel.getMessage()));
-        // holder.amount_VH_Tv.setText(String.valueOf(childModel.getmAmount()));
+        //holder.amount_VH_Tv.setText(String.valueOf(childModel.getmAmount()));
         //holder.nameTxt.setText(String.valueOf(childModel.getmId()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
