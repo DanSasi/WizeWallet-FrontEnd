@@ -12,6 +12,9 @@ public class ChildModel {
     String mMessage = "";
 
 
+    String mName = "";
+
+
 
     List<ChildTransactionModel> mChildTransactionModelList;
 
@@ -32,21 +35,30 @@ public class ChildModel {
         mMessage = message;
     }
 
-    public ChildModel(Integer photo, String balance, String username, String id, String password) {
+    public ChildModel(Integer photo, String balance, String username, String id, String password,String name) {
         this.photo = photo;
         this.mBalance = balance;
         this.username = username ;
         this.mId = id;
         this.mPassword = password;
+        this.mName = name ;
     }
 
-    public void setName(String username) {
+    public void setUserName(String username) {
         this.username = username;
     }
 
-    public String getName() {
+    public String getUserName() {
         return username;
     }
+    public String getmName() {
+        return mName;
+    }
+
+    public void setmName(String mName) {
+        this.mName = mName;
+    }
+
 
     public void setmId(String mId) {
         this.mId = mId;

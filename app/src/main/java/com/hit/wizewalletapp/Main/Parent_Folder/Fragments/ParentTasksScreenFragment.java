@@ -87,7 +87,7 @@ public class ParentTasksScreenFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectChildId = String.valueOf(childAdapter.getItem(position));
-                fetchTransactionsForChild(selectChildId);
+                fetchTasksForChild(selectChildId);
             }
 
             @Override
@@ -97,7 +97,7 @@ public class ParentTasksScreenFragment extends Fragment {
         });
     }
 
-    private void fetchTransactionsForChild(String selectChildId) {
+    private void fetchTasksForChild(String selectChildId) {
         String token= CacheUtilities.getAcssesToken(requireContext());
         ApiCallsHelper.performGetAllTaskForChildByParent(token, selectChildId, new CustomCallBack<List<TaskChildModel>>() {
             @Override

@@ -89,13 +89,12 @@
         android:layout_height="61dp"
         android:layout_marginTop="492dp"
         android:layout_marginEnd="28dp"
-        android:drawableLeft="@drawable/password_icon_4"
+        android:drawableLeft="@drawable/name_icon"
         android:drawablePadding="5dp"
         android:ems="10"
         android:background="@drawable/search_bar"
-        android:hint="Password"
+        android:hint="Name"
         android:inputType="textPersonName"
-        android:password="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -126,7 +126,7 @@ public class AddChildScreenFragment extends Fragment {
             ApiCallsHelper.performRegisterChild(token,userRegisterMap, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {
-                    ChildModel childModel = new ChildModel(imageView, balance, userEmail, id, password);
+                    ChildModel childModel = new ChildModel(imageView, balance, userEmail, id, password,name);
                     ChildListModel.instance.addChild(childModel);
                     Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp();
                 }

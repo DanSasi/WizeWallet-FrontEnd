@@ -95,10 +95,10 @@
             android:name="childId"
             app:argType="string" />
         <argument
-            android:name="childPassword"
+            android:name="childBalance"
             app:argType="string" />
         <argument
-            android:name="childBalance"
+            android:name="name"
             app:argType="string" />
     </fragment>
     <fragment

@@ -16,7 +16,7 @@ import com.hit.wizewalletapp.R;
 
 public class ChildDetailsScreenFragment extends Fragment {
 
-    TextView childBalanceTv,childUsernameTv,childIdTv,childPasswordTv;
+    TextView childBalanceTv,childUsernameTv,childIdTv,childNameTv;
     ImageView childImageView;
     Button arrowBack,EditButton,DeleteButton;
 
@@ -28,20 +28,22 @@ public class ChildDetailsScreenFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_children_details, container, false);
         String childId = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildId();
-        String childPassword = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildPassword();
+        String childName = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getName();
         String childBalance = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildBalance();
         //ChildModel childModel = ChildListModel.instance.getChildById(childId);
         childBalanceTv= view.findViewById(R.id.parent_add_task_amount_et);
         childUsernameTv = view.findViewById(R.id.add_child_username_et);
         childImageView = view.findViewById(R.id.add_child_imgv);
         childIdTv = view.findViewById(R.id.parent_add_task_id_et);
-        childPasswordTv =view.findViewById(R.id.add_child_password_et);
+        childNameTv =view.findViewById(R.id.add_child_password_et);
 
 
 
         childIdTv.setText(childId);
-        childBalanceTv.setText(String.format("Balance: ", ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildBalance()));
-        childPasswordTv.setText(childPassword);
+        childBalanceTv.setText(childBalance);
+        childNameTv.setText(childName);
+
+
 //        childUsernameTv.setText(childModel.getName());
 //        childBalanceTv.setText(childModel.getBalance());
 //        childPasswordTv.setText(childModel.getPassword());
