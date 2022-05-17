@@ -45,9 +45,9 @@ public class ChildAddTransactionFragment extends Fragment {
     }
 
     private void save() {
-        String amount=amount_et.getText().toString();
+        Integer amount=Integer.valueOf(amount_et.getText().toString());
         String desc=description_et.getText().toString();
-        if(Utilities.verifyAllTextNotEmpty(amount,desc)) {
+        if(Utilities.verifyAllTextNotEmpty(amount.toString(),desc)) {
             String token = CacheUtilities.getAcssesToken(requireContext());
             HashMap<String, Object> map = new HashMap<>();
             map.put("amount",amount);
@@ -55,7 +55,7 @@ public class ChildAddTransactionFragment extends Fragment {
             ApiCallsHelper.performChildTransaction(token,map, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {
-                    ChildTransactionModel childTransactionModel=new ChildTransactionModel(Integer.parseInt(amount),desc);
+                    ChildTransactionModel childTransactionModel=new ChildTransactionModel(amount,desc);
                     ChildListModel.instance.childAddTran(childTransactionModel);
                     Navigation.findNavController(getActivity(),R.id.nav_host).navigateUp();
                 }

@@ -329,7 +329,7 @@ public class ApiCallsHelper {
         });
     }
 
-    public static void performGetChildBalance(String token, CustomCallBack<String> callback) {
+    public static void performGetChildBalance(String token, CustomCallBack<Integer> callback) {
         //1.Set headers to hashmap
         HashMap<String,String> map = new HashMap<>();
         map.put("authorization",token);
@@ -342,7 +342,7 @@ public class ApiCallsHelper {
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
                 //4.SUCSSES (HANDLE DATA)
                 if (response.isSuccessful() && response.body() != null &&  response.code() == 200) {
-                    callback.onSuccesses(response.body().balance.toString());
+                    callback.onSuccesses(response.body().balance);
                 } else if (response.code() == 400) {
                     //5. Post Error the data to the caller
                     callback.onFailure("wrong email or password/already have user");

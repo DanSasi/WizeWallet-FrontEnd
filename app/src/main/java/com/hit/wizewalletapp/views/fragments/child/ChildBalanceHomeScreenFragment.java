@@ -130,10 +130,10 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
             }
         });
 
-        ApiCallsHelper.performGetChildBalance(token, new CustomCallBack<String>() {
+        ApiCallsHelper.performGetChildBalance(token, new CustomCallBack<Integer>() {
             @Override
-            public void onSuccesses(String response) {
-                ballance.setText("Nis: " +response);
+            public void onSuccesses(Integer response) {
+                ballance.setText("Nis: " + Integer.valueOf(response));
             }
 
             @Override

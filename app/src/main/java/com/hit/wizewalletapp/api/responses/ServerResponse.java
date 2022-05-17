@@ -15,11 +15,8 @@ public class ServerResponse {
     public Integer kidId;
     public Integer amount;
 
-    public void setBalance(Long balance) {
-        this.balance = balance;
-    }
 
-    public Long balance;
+    public Integer balance;
 
     public List<ChildTransactionModel> transactions;
     public List<TaskChildModel> taskChildModels;
