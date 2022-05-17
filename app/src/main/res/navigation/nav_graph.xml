@@ -209,6 +209,9 @@
         <argument
             android:name="description"
             app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="integer" />
 
 
     </fragment>

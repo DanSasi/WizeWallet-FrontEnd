@@ -42,6 +42,8 @@ public class ChildTaskDetailsFragment extends Fragment {
         finish_btn = view.findViewById(R.id.finish_task_btn);
         String message_desc = ChildTaskDetailsFragmentArgs.fromBundle(getArguments()).getDescription();
         desc.setText(message_desc);
+        Integer message_amount =ChildTaskDetailsFragmentArgs.fromBundle(getArguments()).getAmount();
+        amount.setText(message_amount.toString());
 
     }
 
