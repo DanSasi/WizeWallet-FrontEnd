@@ -73,13 +73,12 @@
 
     <Button
         android:id="@+id/parent_add_task_add_btn"
-        android:layout_width="311dp"
-        android:layout_height="76dp"
+        android:layout_width="312dp"
+        android:layout_height="95dp"
         android:layout_marginBottom="40dp"
-        android:background="@drawable/btn_main"
+        android:background="@drawable/button_item_new"
         android:backgroundTint="@null"
         android:fontFamily="@font/poppins"
-        android:textColor="#ffffff"
         android:text="Add "
         android:textSize="15sp"
         android:textStyle="bold"

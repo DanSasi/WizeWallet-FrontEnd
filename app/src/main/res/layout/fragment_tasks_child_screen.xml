@@ -55,6 +55,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginBottom="24dp"
         android:text="List of your tasks:"
+        android:textStyle="bold"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/parent_task_spinner"
         app:layout_constraintEnd_toEndOf="parent"

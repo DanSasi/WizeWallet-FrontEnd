@@ -29,11 +29,11 @@
 
     <Button
         android:id="@+id/add_child_btn"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:background="@drawable/btn_main"
-        android:textColor="#ffffff"
+        android:layout_width="182dp"
+        android:layout_height="73dp"
+        android:background="@drawable/button_item_new"
         android:text="Register"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.445"

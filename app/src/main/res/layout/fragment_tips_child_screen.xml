@@ -211,22 +211,21 @@
 
 
         <Button
-        android:id="@+id/con_btn"
-        android:layout_width="340dp"
-        android:layout_height="64dp"
-        android:background="@drawable/btn_main"
-        android:text="CONTINUE"
-        android:textColor="#ffffff"
-        android:layout_marginTop="385dp"
-        android:layout_marginLeft="30dp"
+            android:id="@+id/con_btn"
+            android:layout_width="337dp"
+            android:layout_height="73dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="385dp"
             android:layout_marginBottom="10dp"
-        android:textSize="18sp"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:background="@drawable/button_item_new"
+            android:text="CONTINUE"
+            android:textSize="18sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.cardview.widget.CardView>
 
 

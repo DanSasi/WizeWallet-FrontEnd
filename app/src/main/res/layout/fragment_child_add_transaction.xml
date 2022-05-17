@@ -34,11 +34,11 @@
 
     <Button
         android:id="@+id/add_transaction_btn"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:background="@drawable/btn_main"
-        android:textColor="#ffffff"
+        android:layout_width="198dp"
+        android:layout_height="88dp"
+        android:background="@drawable/button_item_new"
         android:text="save"
+        android:textStyle="bold"
         android:translationX="150dp"
         android:translationY="550dp"
         app:layout_constraintBottom_toBottomOf="parent"
