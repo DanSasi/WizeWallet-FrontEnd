@@ -47,7 +47,7 @@
         android:id="@+id/add_child_username_et"
         android:layout_width="291dp"
         android:layout_height="53dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="344dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/email_icon"
         android:drawablePadding="5dp"
@@ -55,7 +55,6 @@
         android:hint="Child Email"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,7 +62,7 @@
         android:id="@+id/add_child_password_et"
         android:layout_width="291dp"
         android:layout_height="53dp"
-        android:layout_marginTop="504dp"
+        android:layout_marginTop="452dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/password_icon_4"
         android:drawablePadding="5dp"
@@ -72,7 +71,7 @@
         android:inputType="textPersonName"
         android:password="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,7 +80,7 @@
         android:layout_width="291dp"
         android:layout_height="53dp"
         android:layout_marginStart="82dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="296dp"
         android:layout_marginEnd="119dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/money_icon"
@@ -90,7 +89,25 @@
         android:hint="Child Balance"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/parent_add_task_name_et"
+        android:layout_width="291dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="512dp"
+        android:layout_marginEnd="119dp"
+        android:background="@drawable/search_bar"
+        android:drawableLeft="@drawable/name_icon"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Child Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -99,17 +116,18 @@
         android:layout_width="291dp"
         android:layout_height="53dp"
         android:layout_marginStart="80dp"
+        android:layout_marginTop="396dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="12dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/id_icon_child"
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Child Id"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/add_child_password_et"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/add_child_backArrow"
@@ -127,7 +145,7 @@
         android:id="@+id/add_child_img_filter_btn"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/parent_add_task_amount_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.459"

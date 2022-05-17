@@ -54,5 +54,8 @@ public interface RetrofitInterface {
     @POST("/child/balance")
     Call<Void> addChildBalance(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
 
+    @POST("/auth/register/child")
+    Call<Void> registerChild(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
+
 }
 

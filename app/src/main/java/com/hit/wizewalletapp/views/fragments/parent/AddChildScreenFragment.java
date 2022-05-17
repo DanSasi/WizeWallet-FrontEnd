@@ -26,6 +26,7 @@ import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.R;
+import com.hit.wizewalletapp.utilities.CacheUtilities;
 import com.hit.wizewalletapp.utilities.Utilities;
 
 import java.io.FileNotFoundException;
@@ -39,7 +40,7 @@ public class AddChildScreenFragment extends Fragment {
     private final int REQUEST_IMAGE_CAPTURE = 1;
     private static final int REQUEST_IMAGE_PICK = 2;
 
-    private EditText addChildEmailEt, addChildPasswordET, addChildIdEt, addChildBalanceEt;
+    private EditText addChildEmailEt, addChildPasswordET, addChildIdEt, addChildBalanceEt,addChildNameEt;
     private Button addChildButton;
     private ImageFilterButton addChildImageFilterButton;
     private ImageView addChildImageView, back_arrow;
@@ -66,7 +67,7 @@ public class AddChildScreenFragment extends Fragment {
         addChildImageFilterButton = view.findViewById(R.id.add_child_img_filter_btn);
         addChildImageView = view.findViewById(R.id.add_child_imgv);
         addChildBalanceEt = view.findViewById(R.id.parent_add_task_amount_et);
-
+        addChildNameEt = view.findViewById(R.id.parent_add_task_name_et);
     }
 
     private void openGallery() {
@@ -113,13 +114,16 @@ public class AddChildScreenFragment extends Fragment {
         String id = addChildIdEt.getText().toString();
         Integer imageView = addChildImageView.getImageAlpha();
         String balance = addChildBalanceEt.getText().toString();
+        String name = addChildNameEt.getText().toString();
         if (Utilities.verifyAllTextNotEmpty(userEmail, password, id, balance)) {
-            HashMap<String, String> userRegisterMap = new HashMap<>();
+            String token = CacheUtilities.getAcssesToken(requireContext());
+            HashMap<String, Object> userRegisterMap = new HashMap<>();
             userRegisterMap.put("email", userEmail);
             userRegisterMap.put("password", password);
             userRegisterMap.put("_id", id);
             userRegisterMap.put("balance", balance);
-            ApiCallsHelper.performRegister(userRegisterMap, new CustomCallBack<Void>() {
+            userRegisterMap.put("name",name);
+            ApiCallsHelper.performRegisterChild(token,userRegisterMap, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {
                     ChildModel childModel = new ChildModel(imageView, balance, userEmail, id, password);
