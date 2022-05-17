@@ -57,8 +57,8 @@ public class ChildMenuScreenFragment extends Fragment  {
         arr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             //   Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_homeParentFragment);
-            }
+                Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp();
+             }
         });
 
         myChildMenuAdapter.setOnItemClickListener(new OnItemClickListener() {

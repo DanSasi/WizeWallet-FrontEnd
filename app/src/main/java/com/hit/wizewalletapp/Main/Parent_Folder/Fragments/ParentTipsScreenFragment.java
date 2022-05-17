@@ -27,29 +27,11 @@ public class ParentTipsScreenFragment extends Fragment {
         backArrow = view.findViewById(R.id.details_arrow_back);
         button = view.findViewById( R.id.con_btn);
 
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                continueBtn();
-//
-//            }
-//        });
 
-        backArrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_parentTipsScreen_to_homeParentFragment);
-            }
-        });
+        backArrow.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp());
             return view;
 
         }
-//        public  void continueBtn(){
-//        Intent intent= new Intent(this, PaymentSummaryScreen.class);
-//        startActivity(intent);
-//        }
-
-
 
 
 

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -23,6 +24,7 @@ public class ChildLinkFragmentScreen extends Fragment {
 
     private Button sendLinkButton;
     private EditText linkIdEditText;
+    private ImageButton back_arrow;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,6 +33,8 @@ public class ChildLinkFragmentScreen extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_child_link, container, false);
         initViews(view);
         sendLinkButton.setOnClickListener( v -> linkChildToParent());
+        back_arrow = view.findViewById(R.id.img_back_arrow_contact);
+        back_arrow.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp());
         return view;
 
     }

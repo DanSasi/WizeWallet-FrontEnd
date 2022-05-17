@@ -65,7 +65,7 @@ public class SendMoneyScreenFragment extends Fragment {
         arr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_sendMoneyScreen_to_childListScreen);
+                Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp();
             }
         });
 

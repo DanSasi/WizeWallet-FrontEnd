@@ -39,7 +39,6 @@
         android:layout_marginEnd="88dp"
         android:clickable="true"
         android:focusable="true"
-        android:background="@drawable/home_svetaphoto"
         android:src="@drawable/ic_arrow___left"
         app:layout_constraintEnd_toStartOf="@+id/tv_childs"
         app:layout_constraintHorizontal_bias="0.0"

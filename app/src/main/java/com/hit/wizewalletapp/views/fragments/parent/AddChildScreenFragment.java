@@ -42,8 +42,9 @@ public class AddChildScreenFragment extends Fragment {
     private EditText addChildEmailEt, addChildPasswordET, addChildIdEt, addChildBalanceEt;
     private Button addChildButton;
     private ImageFilterButton addChildImageFilterButton;
-    private ImageView addChildImageView;
+    private ImageView addChildImageView, back_arrow;
     private Bitmap imageBitmap;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,6 +53,8 @@ public class AddChildScreenFragment extends Fragment {
         initViews(view);
         addChildButton.setOnClickListener(v -> save());
         addChildImageFilterButton.setOnClickListener(v -> openGallery());
+        back_arrow = view.findViewById(R.id.add_child_backArrow);
+        back_arrow.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp());
         return view;
     }
 
@@ -63,6 +66,7 @@ public class AddChildScreenFragment extends Fragment {
         addChildImageFilterButton = view.findViewById(R.id.add_child_img_filter_btn);
         addChildImageView = view.findViewById(R.id.add_child_imgv);
         addChildBalanceEt = view.findViewById(R.id.parent_add_task_amount_et);
+
     }
 
     private void openGallery() {
@@ -120,7 +124,7 @@ public class AddChildScreenFragment extends Fragment {
                 public void onSuccesses(Void response) {
                     ChildModel childModel = new ChildModel(imageView, balance, userEmail, id, password);
                     ChildListModel.instance.addChild(childModel);
-                    Navigation.findNavController(getActivity(), R.id.nav_host).navigate(AddChildScreenFragmentDirections.actionAddChildFragmentToChildListScreen());
+                    Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp();
                 }
                 @Override
                 public void onFailure(String msg) {

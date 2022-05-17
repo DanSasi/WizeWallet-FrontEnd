@@ -57,7 +57,7 @@ public class SignupFragment extends Fragment {
             ApiCallsHelper.performRegister(bodyMap, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {
-                    Navigation.findNavController(getActivity(), R.id.nav_host).navigate(SignupFragmentDirections.actionSignupTabFragmentToLoginFragmentHome());
+                    Navigation.findNavController(requireActivity(), R.id.nav_host).navigateUp();
                 }
 
                 @Override

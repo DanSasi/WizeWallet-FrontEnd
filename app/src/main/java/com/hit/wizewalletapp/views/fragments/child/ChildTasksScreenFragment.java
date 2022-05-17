@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
@@ -22,7 +25,7 @@ import java.util.List;
 
 public class ChildTasksScreenFragment extends Fragment implements ChildTaskListAdapter.OnItemClickListener {
 
-
+    private ImageView back_arrow;
     private RecyclerView childTaskRv;
     private final ChildTaskListAdapter listAdapter = new ChildTaskListAdapter();
 
@@ -31,9 +34,10 @@ public class ChildTasksScreenFragment extends Fragment implements ChildTaskListA
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_tasks_child_screen, container, false);
-
         initRecyclerView(view);
         fetchData();
+        back_arrow = view.findViewById(R.id.child_task_back_arrow);
+        back_arrow.setOnClickListener(v-> Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp());
 
         return view;
     }

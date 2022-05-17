@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,7 +42,7 @@ public class ParentAddTaskFragment extends Fragment {
     Spinner spinner;
     private ChildAdapterSpinner childAdapter ;
     ChildTaskListAdapter listAdapter= new ChildTaskListAdapter();
-
+    ImageView back_arrow;
 
 
     @Override
@@ -55,7 +56,8 @@ public class ParentAddTaskFragment extends Fragment {
         addTaskBtn = view.findViewById(R.id.parent_add_task_add_btn);
         spinner=(Spinner)view.findViewById(R.id.add_task_Parent_spinner2);
         childAdapter = new ChildAdapterSpinner(getContext());
-
+        back_arrow = view.findViewById(R.id.add_task_imgbtn_backarrow);
+        back_arrow.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp());
 
         spinner.setAdapter(childAdapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

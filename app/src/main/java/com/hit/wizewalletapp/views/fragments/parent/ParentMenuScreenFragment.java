@@ -52,12 +52,7 @@ public class ParentMenuScreenFragment extends Fragment {
         MyMenuAdapter myMenuAdapter = new MyMenuAdapter();
         recyclerView.setAdapter(myMenuAdapter);
         arr = view.findViewById(R.id.arrow);
-        arr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_parentMenuScreen_to_homeParentFragment);
-            }
-        });
+        arr.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp());
 
         myMenuAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
@@ -85,7 +80,7 @@ public class ParentMenuScreenFragment extends Fragment {
                         ApiCallsHelper.performLogout(tokenToSend, new CustomCallBack<Void>() {
                             @Override
                             public void onSuccesses(Void response) {
-                                Navigation.findNavController(getActivity(), R.id.nav_host).navigate(R.id.action_parentMenuScreen_to_loginFragmentHome);
+                                Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(ParentMenuScreenFragmentDirections.actionParentMenuScreenToLoginFragmentHome());
                             }
                             @Override
                             public void onFailure(String msg) {
