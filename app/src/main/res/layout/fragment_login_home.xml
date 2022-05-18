@@ -103,15 +103,16 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/fragment_home_login_btn"
         app:layout_constraintEnd_toEndOf="@id/fragment_home_password_et"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fragment_home_password_et"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.33" />
 
     <TextView
         android:id="@+id/fragment_home_register_tv"
         android:layout_width="201dp"
         android:layout_height="46dp"
+        android:layout_marginStart="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="12dp"
         android:clickable="true"
@@ -121,10 +122,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/fragment_home_login_btn"
         app:layout_constraintEnd_toEndOf="@id/fragment_home_password_et"
-        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_home_password_et"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/fragment_home_forgetpass_tv"
+        app:layout_constraintVertical_bias="0.84000003" />
 
     <TextView
         android:id="@+id/fragment_home_log_as"
