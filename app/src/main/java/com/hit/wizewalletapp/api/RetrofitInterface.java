@@ -16,7 +16,7 @@ import retrofit2.http.POST;
 public interface RetrofitInterface {
 
     @POST("/auth/login")
-    Call<LoginResponse> executeLogin(@Body HashMap<String, String> map);
+    Call<LoginResponse> executeLogin(@Body HashMap<String, Object> map);
 
     @POST("/auth/register")
     Call<Void> executeRegister(@Body HashMap<String, String> map);
@@ -56,6 +56,9 @@ public interface RetrofitInterface {
 
     @POST("/auth/register/child")
     Call<Void> registerChild(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
+
+    @POST("/task/completed")
+    Call<Void> onCompletedTask(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
 
 }
 

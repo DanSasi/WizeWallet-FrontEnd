@@ -33,7 +33,7 @@ import java.util.List;
 
 import retrofit2.Call;
 
-public class ParentTasksScreenFragment extends Fragment {
+public class ParentTasksScreenFragment extends Fragment implements ChildTaskListAdapter.OnItemClickListener {
 
 
     private final ChildTaskListAdapter listAdapter = new ChildTaskListAdapter();
@@ -67,7 +67,7 @@ public class ParentTasksScreenFragment extends Fragment {
         taskParentRv.setHasFixedSize(true);
         taskParentRv.setLayoutManager(new LinearLayoutManager(getContext()));
         taskParentRv.setAdapter(listAdapter);
-       // listAdapter.setOnItemClickListener(this);
+        listAdapter.setOnItemClickListener(this);
 
     }
 
@@ -115,4 +115,11 @@ public class ParentTasksScreenFragment extends Fragment {
     }
 
 
+    @Override
+    public void onItemClick(TaskChildModel childModel) {
+        Navigation.findNavController(requireActivity(),R.id.nav_host)
+                .navigate(ParentTasksScreenFragmentDirections
+                        .actionParentTasksScreenToChildTaskDetailsFragment(childModel.getMessage(),childModel.getAmount(),"",true));
+
+    }
 }

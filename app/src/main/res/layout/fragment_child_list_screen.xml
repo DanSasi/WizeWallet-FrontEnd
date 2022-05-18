@@ -77,13 +77,14 @@
 
     <Button
         android:id="@+id/add_child_Btn"
-        android:layout_width="318dp"
-        android:layout_height="90dp"
+        android:layout_width="252dp"
+        android:layout_height="89dp"
         android:layout_marginBottom="250dp"
-        android:background="@drawable/main_icon_app"
+        android:background="@drawable/btn_main"
         android:text="Register a new Child"
-        android:textStyle="bold"
+        android:textColor="#ffffff"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/child_recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

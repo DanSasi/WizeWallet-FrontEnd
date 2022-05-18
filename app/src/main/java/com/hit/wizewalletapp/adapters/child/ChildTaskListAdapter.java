@@ -3,6 +3,7 @@ package com.hit.wizewalletapp.adapters.child;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -38,11 +39,13 @@ public class ChildTaskListAdapter extends RecyclerView.Adapter<ChildTaskListAdap
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView amount_VH_Tv;
         TextView message_Vh_Tv;
+        CheckBox completed_task_checkBox;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             amount_VH_Tv = itemView.findViewById(R.id.child_task_amount_kid_tv);
             message_Vh_Tv = itemView.findViewById(R.id.parent_task_task_tv);
+            completed_task_checkBox = itemView.findViewById(R.id.is_completed_task);
         }
 
     }
@@ -59,11 +62,14 @@ public class ChildTaskListAdapter extends RecyclerView.Adapter<ChildTaskListAdap
         final TaskChildModel childModel = list.get(position);
         holder.message_Vh_Tv.setText(String.valueOf(childModel.getMessage()));
         holder.amount_VH_Tv.setText(String.valueOf(childModel.getAmount()));
+        holder.completed_task_checkBox.setChecked(childModel.isCompleted());
         //holder.nameTxt.setText(String.valueOf(childModel.getmId()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.onItemClick(childModel);
+                if(listener != null) {
+                    listener.onItemClick(childModel);
+                }
             }
         });
 

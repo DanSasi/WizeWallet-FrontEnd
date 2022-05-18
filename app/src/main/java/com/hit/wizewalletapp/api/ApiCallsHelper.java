@@ -21,8 +21,8 @@ public class ApiCallsHelper {
 
     private static final String TAG = "ApiCall";
 
-    public static void performLogin(String email, String password , CustomCallBack<LoginResponse> callback){
-        Call<LoginResponse> call = RetrofitInstance.retrofitInterface.executeLogin(getAuthBody(email, password));
+    public static void performLogin(String email, String password ,boolean isChild, CustomCallBack<LoginResponse> callback){
+        Call<LoginResponse> call = RetrofitInstance.retrofitInterface.executeLogin(getAuthBody(email, password,isChild));
         call.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
@@ -62,10 +62,11 @@ public class ApiCallsHelper {
     }
 
 
-    public static HashMap<String,String> getAuthBody(String email, String password){
-        HashMap<String, String> userLoginMap = new HashMap<>();
+    public static HashMap<String,Object> getAuthBody(String email, String password,boolean isChild){
+        HashMap<String, Object> userLoginMap = new HashMap<>();
         userLoginMap.put("email",email );
         userLoginMap.put("password",password);
+        userLoginMap.put("is_child",isChild);
         return userLoginMap;
     }
 
@@ -400,5 +401,30 @@ public class ApiCallsHelper {
             }
         });
     }
+
+    public static void onCompletedTask(String token,HashMap<String,Object> map,CustomCallBack<Void> callback) {
+        HashMap<String,String> headerMap=new HashMap<>();
+        headerMap.put("authorization",token);
+        Call<Void> call = RetrofitInstance.retrofitInterface.onCompletedTask(headerMap,map);
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful() && response.code() == 200) {
+                    callback.onSuccesses(null);
+                } else if (response.code() == 400) {
+                    callback.onFailure("error 400");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                callback.onFailure(t.getLocalizedMessage());
+
+            }
+        });
+    }
+
+
+
 
 }

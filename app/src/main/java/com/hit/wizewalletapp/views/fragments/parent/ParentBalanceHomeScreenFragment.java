@@ -185,6 +185,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
         rv.setAdapter(childTransListAdapter);
+        childTransListAdapter.setOnItemClickListener(this);
     }
 //
 //    private void fetchData() {

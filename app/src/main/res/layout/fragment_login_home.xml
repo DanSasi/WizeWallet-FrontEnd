@@ -75,7 +75,8 @@
         android:id="@+id/fragment_home_login_btn"
         android:layout_width="103dp"
         android:layout_height="56dp"
-        android:background="@drawable/main_icon_app"
+        android:background="@drawable/btn_main"
+        android:textColor="#ffffff"
         android:text="Login"
 
         android:textAppearance="@style/balance_text"

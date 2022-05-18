@@ -39,6 +39,9 @@
         <action
             android:id="@+id/action_parentTasksScreen_to_parentAddTaskFragment"
             app:destination="@id/parentAddTaskFragment" />
+        <action
+            android:id="@+id/action_parentTasksScreen_to_childTaskDetailsFragment"
+            app:destination="@id/childTaskDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/parentTipsScreen"
@@ -212,6 +215,12 @@
         <argument
             android:name="amount"
             app:argType="integer" />
+        <argument
+            android:name="_id"
+            app:argType="string" />
+        <argument
+            android:name="isParent"
+            app:argType="boolean" />
 
 
     </fragment>

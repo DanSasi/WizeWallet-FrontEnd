@@ -34,9 +34,10 @@
 
     <Button
         android:id="@+id/sendLink"
-        android:layout_width="165dp"
-        android:layout_height="93dp"
-        android:background="@drawable/main_icon_app"
+        android:layout_width="111dp"
+        android:layout_height="68dp"
+        android:background="@drawable/btn_main"
+        android:textColor="#ffffff"
         android:text="Send Link"
         android:textAppearance="@style/balance_text"
         android:textSize="16dp"

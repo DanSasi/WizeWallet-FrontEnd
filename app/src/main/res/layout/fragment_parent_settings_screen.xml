@@ -90,7 +90,8 @@
         android:id="@+id/button3"
         android:layout_width="88dp"
         android:layout_height="52dp"
-        android:background="@drawable/main_icon_app"
+        android:background="@drawable/btn_main"
+        android:textColor="#ffffff"
         android:text="SAVE"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button2"
@@ -131,19 +132,21 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="110dp"
-        android:layout_height="65dp"
-        android:background="@drawable/main_icon_app"
+        android:layout_width="97dp"
+        android:layout_height="56dp"
+        android:background="@drawable/btn_main"
         android:scrollbarSize="4dp"
         android:text="SAVE"
         android:textAppearance="@style/balance_text"
+        android:textColor="#ffffff"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView18"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.363" />
 
     <Button
         android:id="@+id/button2"

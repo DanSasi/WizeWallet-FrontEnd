@@ -61,12 +61,29 @@
 
 
     <Button
-        android:id="@+id/finish_task_btn"
-        android:layout_width="121dp"
-        android:layout_height="79dp"
+        android:visibility="gone"
+        android:id="@+id/accept_task_button"
+        android:layout_width="124dp"
+        android:layout_height="81dp"
         android:layout_marginBottom="112dp"
-        android:background="@drawable/main_icon_app"
+        android:background="@drawable/btn_main"
+        android:text="ACCEPT"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/finish_task_btn"
+        android:layout_width="124dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/btn_main"
         android:text="FINISH"
+        android:textColor="#ffffff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

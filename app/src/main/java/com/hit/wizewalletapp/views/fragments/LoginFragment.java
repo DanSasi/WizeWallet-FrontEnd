@@ -52,17 +52,18 @@ public class LoginFragment extends Fragment {
     private void preformLogin() {
         String email = emailEditText.getText().toString();
         String password = passwordEditText.getText().toString();
+        String item = userSpinner.getSelectedItem().toString();
+        boolean isChild = item.equals("Child");
         if (Utilities.verifyAllTextNotEmpty(email, password)) {
-            ApiCallsHelper.performLogin(email, password, new CustomCallBack<LoginResponse>() {
+            ApiCallsHelper.performLogin(email, password,isChild, new CustomCallBack<LoginResponse>() {
                 @Override
                 public void onSuccesses(LoginResponse response) {
                     CacheUtilities.saveToken(getContext(),"authorization "+response.getRefreshToken(),"authorization "+response.getAccessToken());
-                    String item = userSpinner.getSelectedItem().toString();
-                    if (item.equals("Parent")) {
+                    if (!isChild) {
                         Navigation.findNavController(getActivity(), R.id.nav_host)
                                 .navigate(LoginFragmentDirections
                                 .actionLoginFragmentHomeToHomeParentFragment(response.getRefreshToken(),email));
-                    } else if (item.equals("Child")) {
+                    } else  {
                         Navigation.findNavController(getActivity(), R.id.nav_host)
                                 .navigate(LoginFragmentDirections
                                         .actionLoginFragmentHomeToChildBalanceHomeScreenFragment(response.getRefreshToken()));
