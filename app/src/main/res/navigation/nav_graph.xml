@@ -103,6 +103,7 @@
         <argument
             android:name="name"
             app:argType="string" />
+        <argument android:name="email" />
     </fragment>
     <fragment
         android:id="@+id/childTasksScreenFragment"

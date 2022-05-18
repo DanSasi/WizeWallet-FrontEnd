@@ -27,15 +27,11 @@ import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class ParentBalanceHomeScreenFragment extends Fragment  implements  ChildTransListAdapter.OnItemClickListener{
-
-
-
-    static List<ChildModel> childList;
-
 
     ImageView childs, task, more, tips;
     TextView childText, taskText, moreText, tipText, helloText ;
@@ -113,7 +109,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
                         .actionHomeParentFragmentToParentMenuScreen(refreshToken)));
 
         /////////////////////////////////////////////////Done//////////////////////////////////////////////////
-        childList = ChildListModel.instance.getAllData();
+
         spinner = view.findViewById(R.id.fragment_Parent_spinner);
 
         spinner.setAdapter(childAdapter);

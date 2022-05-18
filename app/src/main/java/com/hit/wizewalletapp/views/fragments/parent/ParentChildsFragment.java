@@ -76,9 +76,10 @@ public class ParentChildsFragment extends Fragment implements ChildListAdapter.O
 
     @Override
     public void onItemClick(ChildModel childModel) {
-        Navigation.findNavController(getActivity(), R.id.nav_host).navigate(ParentChildsFragmentDirections.actionChildListScreenToChildDetailsScreenFragment(childModel.getmId()
-                ,childModel.getmName(),
-                childModel.getmBalance()));
+        Navigation.findNavController(getActivity(), R.id.nav_host)
+                .navigate(ParentChildsFragmentDirections.actionChildListScreenToChildDetailsScreenFragment(
+                        childModel.get_id(),
+                childModel.getBalance().toString(),childModel.getmName(),childModel.getUserName()));
     }
 }
 

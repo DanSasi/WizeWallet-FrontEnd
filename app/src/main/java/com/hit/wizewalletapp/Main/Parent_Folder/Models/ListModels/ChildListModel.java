@@ -7,7 +7,7 @@ import com.hit.wizewalletapp.api.RetrofitInterface;
 
 import java.util.LinkedList;
 import java.util.List;
-import com.hit.wizewalletapp.R;
+
 import retrofit2.Retrofit;
 
 public class ChildListModel {
@@ -48,7 +48,7 @@ public class ChildListModel {
 
         public ChildModel getChildById(String childId) {
             for (ChildModel s: childModelsData) {
-                if (s.getmId().equals(childId)){
+                if (s.get_id().equals(childId)){
                     return s;
                 }
             }

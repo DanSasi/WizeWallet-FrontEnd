@@ -4,24 +4,23 @@ import java.util.List;
 
 public class ChildModel {
      int photo ;
-    String mBalance ="";
-    String username ="";
-    String mId = "";
-    String mPassword = "";
+    Integer balance = 0;
+    String email ="";
+    String _id = "";
+    String password = "";
     String mAmount = "";
     String mMessage = "";
-
-
-    String mName = "";
-
-
+    String name = "";
 
     List<ChildTransactionModel> mChildTransactionModelList;
 
 
 
-    public ChildModel(Integer id, List<ChildTransactionModel> childTransactionModelList){
-        mId = id.toString();
+    public ChildModel(Integer id,String username,Integer balance,String name, List<ChildTransactionModel> childTransactionModelList){
+        _id = id.toString();
+        email = username;
+        this.balance = balance;
+        this.name = name;
         mChildTransactionModelList = childTransactionModelList;
 
     }
@@ -30,50 +29,50 @@ public class ChildModel {
     }
 
     public ChildModel(Integer id , Integer amount , String message ){
-        mId = id.toString();
+        _id = id.toString();
         mAmount = amount.toString();
         mMessage = message;
     }
 
     public ChildModel(Integer photo, String balance, String username, String id, String password,String name) {
         this.photo = photo;
-        this.mBalance = balance;
-        this.username = username ;
-        this.mId = id;
-        this.mPassword = password;
-        this.mName = name ;
+        this.balance = Integer.valueOf(balance);
+        this.email = username ;
+        this._id = id;
+        this.password = password;
+        this.name = name ;
     }
 
     public void setUserName(String username) {
-        this.username = username;
+        this.email = username;
     }
 
     public String getUserName() {
-        return username;
+        return email;
     }
     public String getmName() {
-        return mName;
+        return name;
     }
 
     public void setmName(String mName) {
-        this.mName = mName;
+        this.name = mName;
     }
 
 
-    public void setmId(String mId) {
-        this.mId = mId;
+    public void set_id(String _id) {
+        this._id = _id;
     }
 
-    public String getmId() {
-        return mId;
+    public String get_id() {
+        return _id;
     }
 
-    public void setmPassword(String mPassword) {
-        this.mPassword = mPassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getmPassword() {
-        return mPassword;
+    public String getPassword() {
+        return password;
     }
 
     public Integer getPhoto(){
@@ -84,12 +83,12 @@ public class ChildModel {
     }
 
 
-    public String getmBalance() {
-        return mBalance;
+    public Integer getBalance() {
+        return balance;
     }
 
-    public void setmBalance(String mBalance) {
-        this.mBalance = mBalance;
+    public void setBalance(Integer balance) {
+        this.balance = balance;
     }
 
     public String getmAmount() {return mAmount; }

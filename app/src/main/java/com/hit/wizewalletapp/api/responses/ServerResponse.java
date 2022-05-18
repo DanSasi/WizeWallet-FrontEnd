@@ -11,7 +11,10 @@ import java.util.List;
 public class ServerResponse {
     public String status;
     public String message;
-    public List<Integer> kidID;
+
+
+
+    public List<ChildModel> children;
     public Integer kidId;
     public Integer amount;
 
@@ -29,7 +32,9 @@ public class ServerResponse {
     public void setChildTransModels(List<ChildTransactionModel> childTransModels) {
         this.transactions = childTransModels;
     }
-
+    public List<ChildModel> getChilds() {
+        return children;
+    }
 
     public List<ChildTaskModel> tasks;
 

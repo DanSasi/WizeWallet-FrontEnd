@@ -28,6 +28,8 @@ public class ChildDetailsScreenFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_children_details, container, false);
         String childId = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildId();
+        String email = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getEmail();
+
         String childName = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getName();
         String childBalance = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getChildBalance();
         //ChildModel childModel = ChildListModel.instance.getChildById(childId);
@@ -38,7 +40,7 @@ public class ChildDetailsScreenFragment extends Fragment {
         childNameTv =view.findViewById(R.id.add_child_password_et);
 
 
-
+        childUsernameTv.setText(email);
         childIdTv.setText(childId);
         childBalanceTv.setText(childBalance);
         childNameTv.setText(childName);

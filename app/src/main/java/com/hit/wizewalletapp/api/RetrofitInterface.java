@@ -1,5 +1,6 @@
 package com.hit.wizewalletapp.api;
 
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
 import com.hit.wizewalletapp.api.responses.LoginResponse;
 import com.hit.wizewalletapp.api.responses.ServerResponse;
@@ -59,6 +60,9 @@ public interface RetrofitInterface {
 
     @POST("/task/completed")
     Call<Void> onCompletedTask(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
+
+    @POST("/task/accept")
+    Call<Void> onAcceptedTask(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
 
 }
 

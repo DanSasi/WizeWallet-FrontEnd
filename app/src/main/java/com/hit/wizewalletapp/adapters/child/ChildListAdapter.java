@@ -63,7 +63,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull ChildListAdapter.MyViewHolder holder, int position) {
         final ChildModel childModel = childList.get(position);
-        holder.nameTxt.setText(String.valueOf(childModel.getmId()));
+        holder.nameTxt.setText(childModel.getmName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
