@@ -242,7 +242,7 @@
         tools:layout="@layout/fragment_child_request_money" />
     <fragment
         android:id="@+id/parentMoneyRequests"
-        android:name="com.hit.wizewalletapp.ParentMoneyRequests"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentMoneyRequests"
         android:label="fragment_parent_money_requests"
         tools:layout="@layout/fragment_parent_money_requests" />
 

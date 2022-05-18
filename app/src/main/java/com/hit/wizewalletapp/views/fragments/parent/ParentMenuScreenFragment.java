@@ -66,6 +66,7 @@ public class ParentMenuScreenFragment extends Fragment {
                         Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ParentMenuScreenFragmentDirections.actionParentMenuScreenToSendMoneyScreen());
                         break;
                     case "3":
+                        Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ParentMenuScreenFragmentDirections.actionParentMenuScreenToParentMoneyRequests());
 
                         break;
                     case "4":
