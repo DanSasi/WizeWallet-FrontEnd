@@ -66,6 +66,9 @@
         <action
             android:id="@+id/action_parentMenuScreen_to_loginFragmentHome"
             app:destination="@id/loginFragmentHome" />
+        <action
+            android:id="@+id/action_parentMenuScreen_to_parentMoneyRequests"
+            app:destination="@id/parentMoneyRequests" />
     </fragment>
     <fragment
         android:id="@+id/sendMoneyScreen"
@@ -167,8 +170,8 @@
             android:id="@+id/action_childMenuFragment_to_loginFragmentHome"
             app:destination="@id/loginFragmentHome" />
         <action
-            android:id="@+id/action_childMenuFragment_to_childPaymentFragment"
-            app:destination="@id/childPaymentFragment" />
+            android:id="@+id/action_childMenuFragment_to_childRequestMoneyFragment"
+            app:destination="@id/childRequestMoneyFragment" />
     </fragment>
 
     <fragment
@@ -190,11 +193,6 @@
         android:name="com.hit.wizewalletapp.views.fragments.parent.ChildLinkFragmentScreen"
         android:label="fragment_child_link"
         tools:layout="@layout/fragment_child_link" />
-    <fragment
-        android:id="@+id/childPaymentFragment"
-        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildPaymentFragment"
-        android:label="activity_child_payment_fragment"
-        tools:layout="@layout/activity_child_payment_fragment" />
     <fragment
         android:id="@+id/parentAddTaskFragment"
         android:name="com.hit.wizewalletapp.views.fragments.parent.ParentAddTaskFragment"
@@ -237,5 +235,15 @@
             android:name="amount"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/childRequestMoneyFragment"
+        android:name="com.hit.wizewalletapp.Main.Child_Folder.Fragments.ChildRequestMoneyFragment"
+        android:label="fragment_child_request_money"
+        tools:layout="@layout/fragment_child_request_money" />
+    <fragment
+        android:id="@+id/parentMoneyRequests"
+        android:name="com.hit.wizewalletapp.ParentMoneyRequests"
+        android:label="fragment_parent_money_requests"
+        tools:layout="@layout/fragment_parent_money_requests" />
 
 </navigation>

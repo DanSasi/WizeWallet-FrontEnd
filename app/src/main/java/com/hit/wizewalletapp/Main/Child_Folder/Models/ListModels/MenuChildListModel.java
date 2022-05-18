@@ -12,7 +12,7 @@ public class MenuChildListModel {
     public static final MenuChildListModel instance = new MenuChildListModel();
 
     MenuChildListModel(){
-        ChildMenuModel request_Payment = new ChildMenuModel("2" , R.drawable.money_request, "Request Payment");
+        ChildMenuModel request_Payment = new ChildMenuModel("1" , R.drawable.money_request, "Request Payment");
         ChildMenuModel settings = new ChildMenuModel("4", R.drawable.settings_icon_two, "Settings");
         ChildMenuModel logout = new ChildMenuModel("5",R.drawable.logout_icon_two,"Logout");
 

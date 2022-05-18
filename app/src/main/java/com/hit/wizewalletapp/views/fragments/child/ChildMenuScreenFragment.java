@@ -67,10 +67,11 @@ public class ChildMenuScreenFragment extends Fragment  {
                 String id = menu_items.get(position).getId();
                 switch (id){
                     case "1":
-                        //Navigation.findNavController(v).navigate(R.id.action_childMenuFragment_to_childTransactionHistoryFragment);
+                        Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ChildMenuScreenFragmentDirections.actionChildMenuFragmentToChildRequestMoneyFragment());
                         break;
                     case "2":
-                        Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ChildMenuScreenFragmentDirections.actionChildMenuFragmentToChildPaymentFragment());
+                        //Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ChildMenuScreenFragmentDirections.actionChildMenuFragmentToChildPaymentFragment());
+
                         break;
                     case "3":
 

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.fragments.parent.ParentAddTaskFragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="172dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="120dp"
+        android:src="@drawable/walleticon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="299dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="188dp"
+        android:text="Need more cash?               Request money"
+        android:textAppearance="@style/balance_text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/child_request_payment_amount_et"
+        android:layout_width="355dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/search_bar"
+        android:drawableLeft="@drawable/money_icon"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="How much money?"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/child_request_payment_desc_et"
+        android:layout_width="355dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/search_bar"
+        android:drawableLeft="@drawable/description_icon"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="For what purpose?"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/child_request_payment_btn"
+        android:layout_width="129dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/btn_main"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins"
+        android:text="send Request"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/child_request_payment_desc_et"
+        app:layout_constraintVertical_bias="0.485" />
+
+    <ImageView
+        android:id="@+id/add_task_imgbtn_backarrow"
+        android:layout_width="26.5dp"
+        android:layout_height="26.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="316.5dp"
+        android:src="@drawable/ic_arrow___left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
