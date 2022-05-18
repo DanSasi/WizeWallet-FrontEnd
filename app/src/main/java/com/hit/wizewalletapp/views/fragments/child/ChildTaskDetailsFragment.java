@@ -72,7 +72,7 @@ public class ChildTaskDetailsFragment extends Fragment {
                     String token = CacheUtilities.getAcssesToken(requireContext());
                     HashMap<String, Object> bodyMap = new HashMap<>();
                     bodyMap.put("_id", ChildTaskDetailsFragmentArgs.fromBundle(getArguments()).getId());
-                    ApiCallsHelper.onCompletedTask(token, bodyMap, new CustomCallBack<Void>() {
+                    ApiCallsHelper.onAcceptedTask(token, bodyMap, new CustomCallBack<Void>() {
                         @Override
                         public void onSuccesses(Void response) {
                             Navigation.findNavController(requireActivity(), R.id.nav_host).navigateUp();

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/home_photo_new"
     tools:context=".Main.Child_Folder.Fragments.ChildTipsScreenFragment">
     <ImageView
         android:id="@+id/imageView2"
@@ -50,16 +51,16 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="158dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="246dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="24dp"
         android:text="List of your tasks:"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/parent_task_spinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintHorizontal_bias="0.381"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -68,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="69dp"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="96dp"
         android:fontFamily="@font/poppins"
         android:text="Tasks"
@@ -77,22 +78,20 @@
         android:textSize="19sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/child_task_back_arrow"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/child_task_rv"
-        android:layout_width="323dp"
-        android:layout_height="427dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="12dp"
-        android:background="@color/white"
+        android:layout_width="273dp"
+        android:layout_height="376dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.602" />
+        app:layout_constraintVertical_bias="0.443" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

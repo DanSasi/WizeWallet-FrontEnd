@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/home_photo_new"
     tools:context=".Main.Parent_Folder.Fragments.ChildDetailsScreenFragment">
 
     <ImageView

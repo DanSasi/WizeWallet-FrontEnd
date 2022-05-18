@@ -61,7 +61,7 @@ public interface RetrofitInterface {
     @POST("/task/completed")
     Call<Void> onCompletedTask(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
 
-    @POST("/task/parent")
+    @POST("/task/parentaccept")
     Call<Void> onAcceptedTask(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
 
 }

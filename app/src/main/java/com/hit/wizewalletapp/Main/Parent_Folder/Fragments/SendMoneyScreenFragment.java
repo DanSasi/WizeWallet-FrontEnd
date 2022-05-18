@@ -114,7 +114,7 @@ public class SendMoneyScreenFragment extends Fragment {
             String token = CacheUtilities.getAcssesToken(requireContext());
             HashMap<String, Object> userTaskMap = new HashMap<>();
             userTaskMap.put("_id",_id);
-            userTaskMap.put("amount", amount);
+            userTaskMap.put("amount", Integer.parseInt(amount));
             userTaskMap.put("description",description);
             ApiCallsHelper.performAddBalanceForChild(token,userTaskMap, new CustomCallBack<Void>() {
                 @Override
