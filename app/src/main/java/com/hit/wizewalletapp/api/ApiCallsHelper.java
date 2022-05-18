@@ -370,6 +370,7 @@ public class ApiCallsHelper {
         });
     }
 
+
     public static void performRegisterChild(String token,HashMap<String,Object> map,CustomCallBack<Void> callback) {
         HashMap<String,String> headerMap=new HashMap<>();
         headerMap.put("authorization",token);

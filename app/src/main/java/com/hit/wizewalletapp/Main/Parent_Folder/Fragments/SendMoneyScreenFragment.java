@@ -43,7 +43,7 @@ public class SendMoneyScreenFragment extends Fragment {
     ImageView photo;
     TextView bankTxt;
     Spinner spinner;
-    EditText editText;
+    EditText amountEt,descriptionEt;
     Button saveButton;
 
     @Override
@@ -57,8 +57,8 @@ public class SendMoneyScreenFragment extends Fragment {
 
 
         setSpinner(spinner);
-        editText = view.findViewById(R.id.send_money_editText);
-
+        amountEt = view.findViewById(R.id.send_money_editText);
+        descriptionEt=view.findViewById(R.id.send_money_description_editText);
 
         arr = view.findViewById(R.id.IV01);
 
@@ -107,13 +107,15 @@ public class SendMoneyScreenFragment extends Fragment {
 
     private void save() {
 
-        String balance = editText.getText().toString();
-        String child = spinner.getSelectedItem().toString();
-        if (Utilities.verifyAllTextNotEmpty(balance)) {
+        String amount = amountEt.getText().toString();
+        String _id = spinner.getSelectedItem().toString();
+        String description=descriptionEt.getText().toString();
+        if (Utilities.verifyAllTextNotEmpty(amount,_id,description)) {
             String token = CacheUtilities.getAcssesToken(requireContext());
             HashMap<String, Object> userTaskMap = new HashMap<>();
-            userTaskMap.put("child",child);
-            userTaskMap.put("balance", balance);
+            userTaskMap.put("_id",_id);
+            userTaskMap.put("amount", amount);
+            userTaskMap.put("description",description);
             ApiCallsHelper.performAddBalanceForChild(token,userTaskMap, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {

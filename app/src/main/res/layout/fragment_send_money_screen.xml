@@ -31,6 +31,23 @@
 
 <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
+    <EditText
+        android:id="@+id/send_money_editText"
+        android:layout_width="355dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="308dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/search_bar"
+        android:drawableLeft="@drawable/money_icon"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="how much?"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="111dp"
@@ -40,30 +57,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/send_money_editText"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="40dp"
-
-        android:layout_marginRight="40dp"
-
-
-        android:background="@drawable/edit_backgroud"
-        android:drawablePadding="10dp"
-        android:inputType="number"
-        android:paddingLeft="10dp"
-        android:text="150"
-        android:textAlignment="center"
-        android:textColor="#525298"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
 
     <LinearLayout
@@ -126,6 +119,23 @@
         android:text="Send Money"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/send_money_description_editText"
+        android:layout_width="355dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="412dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/search_bar"
+        android:drawableLeft="@drawable/description_icon"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="description"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

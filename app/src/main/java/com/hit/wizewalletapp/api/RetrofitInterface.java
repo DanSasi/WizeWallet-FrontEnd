@@ -52,7 +52,7 @@ public interface RetrofitInterface {
     @POST("/task/parent")
     Call<List<TaskChildModel>> getAllTasksForChildByParent(@HeaderMap HashMap<String, String> map, @Body HashMap<String, Object> map2);
 
-    @POST("/child/balance")
+    @POST("/child/sendmoney")
     Call<Void> addChildBalance(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
 
     @POST("/auth/register/child")
