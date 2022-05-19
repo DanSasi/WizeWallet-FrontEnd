@@ -1,6 +1,7 @@
 package com.hit.wizewalletapp.api;
 
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildRequestModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
 import com.hit.wizewalletapp.api.responses.LoginResponse;
@@ -419,6 +420,83 @@ public class ApiCallsHelper {
         HashMap<String,String> headerMap=new HashMap<>();
         headerMap.put("authorization",token);
         Call<Void> call = RetrofitInstance.retrofitInterface.onAcceptedTask(headerMap,map);
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful() && response.code() == 200) {
+                    callback.onSuccesses(null);
+                } else if (response.code() == 400) {
+                    callback.onFailure("error 400");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                callback.onFailure(t.getLocalizedMessage());
+
+            }
+        });
+    }
+
+    public static void performChildRequestAmount(String token , HashMap<String,Object> map ,CustomCallBack<Void> callback){
+        HashMap<String,String> headerMap = new HashMap<>();
+        headerMap.put("authorization", token);
+        Call<Void> call = RetrofitInstance.retrofitInterface.addChildRequestAmount(headerMap,map);
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful() && response.code() == 200) {
+                    callback.onSuccesses(null);
+                } else if (response.code() == 400) {
+                    callback.onFailure("wrong");
+                }
+            }
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                callback.onFailure("error 400");callback.onFailure("error 400");
+            }
+        });
+    }
+
+    public static void performGetAllChildRequests(String token,String childId,CustomCallBack<List<ChildRequestModel>> callback) {
+        //1.Set headers to hashmap
+        HashMap<String,String> map = new HashMap<>();
+        map.put("authorization",token);
+
+        HashMap<String,Object> body = new HashMap<>();
+        body.put("_id",Integer.valueOf(childId));
+//        HashMap<String,Object> bodyMap = new HashMap<>();
+//        bodyMap.put("transactions",list);
+        //2.preapre retrofit request
+        Call<List<ChildRequestModel>> call = RetrofitInstance.retrofitInterface.getAllChildRequest(map,body);
+
+        //3.execute the request
+        call.enqueue(new Callback<List<ChildRequestModel>>() {
+            @Override
+            public void onResponse(Call<List<ChildRequestModel>> call, Response<List<ChildRequestModel>> response) {
+                if (response.isSuccessful()  && response.body() != null && response.code() == 200) {
+
+                    //5. Post the data to he caller
+                    callback.onSuccesses(response.body());
+                } else {
+                    //5. Post Error the data to the caller
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<ChildRequestModel>> call, Throwable t) {
+                callback.onFailure(t.getLocalizedMessage());
+            }
+
+
+        });
+    }
+
+    public static void onRejectChildRequest(String token,HashMap<String,Object> map,CustomCallBack<Void> callback) {
+        HashMap<String,String> headerMap=new HashMap<>();
+        headerMap.put("authorization",token);
+        Call<Void> call = RetrofitInstance.retrofitInterface.onRejectChildRequest(headerMap,map);
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {

@@ -15,13 +15,13 @@
         android:layout_marginEnd="10dp"
         android:src="@drawable/child_icon_new"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/parent_task_task_tv"
+        app:layout_constraintEnd_toStartOf="@+id/parent_request_message_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.47" />
 
     <TextView
-        android:id="@+id/parent_task_task_tv"
+        android:id="@+id/parent_request_message_tv"
         android:layout_width="335dp"
         android:layout_height="38dp"
         android:layout_marginStart="10dp"

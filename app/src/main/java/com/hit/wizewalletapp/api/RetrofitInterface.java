@@ -1,6 +1,7 @@
 package com.hit.wizewalletapp.api;
 
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildRequestModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
 import com.hit.wizewalletapp.api.responses.LoginResponse;
 import com.hit.wizewalletapp.api.responses.ServerResponse;
@@ -63,6 +64,15 @@ public interface RetrofitInterface {
 
     @POST("/task/parentaccept")
     Call<Void> onAcceptedTask(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
+
+    @POST("/request")
+    Call<Void> addChildRequestAmount(@HeaderMap HashMap<String,String> map ,@Body HashMap<String,Object> map2);
+
+   @POST("/request/getparent")
+    Call<List<ChildRequestModel>> getAllChildRequest(@HeaderMap HashMap<String,String> map, @Body HashMap<String,Object> map2 );
+
+    @POST("/request/delete")
+    Call<Void> onRejectChildRequest(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
 
 }
 

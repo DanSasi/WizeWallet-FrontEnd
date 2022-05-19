@@ -41,8 +41,8 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            amount_tv= itemView.findViewById(R.id.child_task_amount_kid_tv);
-            desc_tv=itemView.findViewById(R.id.parent_task_task_tv);
+            amount_tv= itemView.findViewById(R.id.parent_request_amount_tv);
+            desc_tv=itemView.findViewById(R.id.parent_request_message_tv);
         }
 
     }

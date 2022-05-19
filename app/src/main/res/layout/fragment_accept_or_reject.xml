@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".views.fragments.child.ChildTaskDetailsFragment">
+    tools:context=".views.fragments.parent.AcceptOrRejectFragment">
+
 
     <ImageButton
         android:id="@+id/img_back_arrow_task_details"
@@ -59,34 +60,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/child_reject_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_main_2"
+        android:text="REJECT"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.819" />
 
     <Button
-        android:visibility="gone"
-        android:id="@+id/accept_task_button"
-        android:layout_width="124dp"
-        android:layout_height="81dp"
-        android:layout_marginBottom="112dp"
+        android:id="@+id/child_accecpt_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/btn_main"
         android:text="ACCEPT"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <Button
-        android:visibility="gone"
-        android:id="@+id/finish_task_btn"
-        android:layout_width="124dp"
-        android:layout_height="81dp"
-        android:layout_marginBottom="112dp"
-        android:background="@drawable/btn_main"
-        android:text="FINISH"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.819" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

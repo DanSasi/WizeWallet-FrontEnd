@@ -3,67 +3,58 @@ package com.hit.wizewalletapp.adapters.child;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildRequestModel;
 import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class ChildTaskListAdapter extends RecyclerView.Adapter<ChildTaskListAdapter.MyViewHolder> {
-    private final List<TaskChildModel> list = new ArrayList<TaskChildModel>();
+public class ChildRequestListAdapter extends RecyclerView.Adapter<ChildRequestListAdapter.MyViewHolder> {
+    private final List<ChildRequestModel> list = new ArrayList<ChildRequestModel>();
     private OnItemClickListener listener;
 
 
     public interface OnItemClickListener {
-        void onItemClick(TaskChildModel childModel);
+        void onItemClick(ChildRequestModel childModel);
     }
-
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
     }
 
-    public void updateTaskList(List<TaskChildModel> childTaskList) {
+    public void updateRequestList(List<ChildRequestModel> childRequestList) {
         list.clear();
-        list.addAll(childTaskList);
+        list.addAll(childRequestList);
         notifyDataSetChanged();
     }
-
-
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView amount_VH_Tv;
         TextView message_Vh_Tv;
-        CheckBox completed_task_checkBox;
+        Button cancel_Vh_Btn;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             amount_VH_Tv = itemView.findViewById(R.id.parent_request_amount_tv);
             message_Vh_Tv = itemView.findViewById(R.id.parent_request_message_tv);
-            completed_task_checkBox = itemView.findViewById(R.id.is_completed_task);
         }
-
     }
-
     @NonNull
     @Override
-    public ChildTaskListAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_task, parent, false);
-        return new ChildTaskListAdapter.MyViewHolder(view);
+    public ChildRequestListAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_request, parent, false);
+        return new ChildRequestListAdapter.MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ChildTaskListAdapter.MyViewHolder holder, int position) {
-        final TaskChildModel childModel = list.get(position);
-        holder.message_Vh_Tv.setText(String.valueOf(childModel.getMessage()));
-        holder.amount_VH_Tv.setText(String.valueOf(childModel.getAmount()));
-        holder.completed_task_checkBox.setChecked(childModel.isCompleted());
-        //holder.nameTxt.setText(String.valueOf(childModel.getmId()));
+    public void onBindViewHolder(@NonNull ChildRequestListAdapter.MyViewHolder holder, int position) {
+        final ChildRequestModel childModel = list.get(position);
+        holder.message_Vh_Tv.setText(String.valueOf(childModel.getmMessage()));
+        holder.amount_VH_Tv.setText(String.valueOf(childModel.getmAmount()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +63,11 @@ public class ChildTaskListAdapter extends RecyclerView.Adapter<ChildTaskListAdap
                 }
             }
         });
+
+
+    }
+
+    private void onRejectRequst() {
 
     }
 

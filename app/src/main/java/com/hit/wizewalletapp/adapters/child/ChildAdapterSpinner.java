@@ -41,7 +41,7 @@ public class ChildAdapterSpinner extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View rootView = LayoutInflater.from(mContext).inflate(R.layout.item_childs, viewGroup, false);
-        TextView nameTxt = rootView.findViewById(R.id.parent_task_task_tv);
+        TextView nameTxt = rootView.findViewById(R.id.parent_request_message_tv);
         nameTxt.setText(childList.get(i).getmName());
 
 //        photo = rootView.findViewById(R.id.spinner_photo_item);

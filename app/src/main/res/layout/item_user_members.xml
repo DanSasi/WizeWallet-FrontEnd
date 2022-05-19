@@ -17,7 +17,7 @@
         app:layout_constraintVertical_bias="0.428" />
 
     <TextView
-        android:id="@+id/parent_task_task_tv"
+        android:id="@+id/parent_request_message_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

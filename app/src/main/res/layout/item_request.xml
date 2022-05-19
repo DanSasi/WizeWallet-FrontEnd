@@ -2,32 +2,41 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="238dp"
-    android:layout_height="69dp"
-    android:background="@drawable/search_bar">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/spinner_photo_item"
-        android:layout_width="52dp"
-        android:layout_height="58dp"
+        android:layout_width="54dp"
+        android:layout_height="85dp"
         android:layout_marginStart="4dp"
-        android:src="@drawable/imageprofile"
+        android:src="@drawable/task_icon_new_one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/parent_request_message_tv"
-        android:layout_width="104dp"
-        android:layout_height="49dp"
+        android:layout_width="256dp"
+        android:layout_height="29dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_toEndOf="@+id/spinner_photo_item"
-        android:text="Name"
+        android:text="Message"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/spinner_photo_item"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/parent_request_amount_tv"
+        android:layout_width="254dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="amount"
+        app:layout_constraintStart_toEndOf="@+id/spinner_photo_item"
+        app:layout_constraintTop_toBottomOf="@+id/parent_request_message_tv" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

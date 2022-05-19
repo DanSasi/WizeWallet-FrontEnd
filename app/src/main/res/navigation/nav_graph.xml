@@ -242,8 +242,27 @@
         tools:layout="@layout/fragment_child_request_money" />
     <fragment
         android:id="@+id/parentMoneyRequests"
-        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentMoneyRequests"
+        android:name="com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ParentMoneyRequestsFragment"
         android:label="fragment_parent_money_requests"
-        tools:layout="@layout/fragment_parent_money_requests" />
+        tools:layout="@layout/fragment_parent_money_requests" >
+        <action
+            android:id="@+id/action_parentMoneyRequests_to_acceptOrRejectFragment"
+            app:destination="@id/acceptOrRejectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/acceptOrRejectFragment"
+        android:name="com.hit.wizewalletapp.views.fragments.parent.AcceptOrRejectFragment"
+        android:label="fragment_accept_or_reject"
+        tools:layout="@layout/fragment_accept_or_reject" >
+        <argument
+            android:name="message"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="integer" />
+        <argument
+            android:name="_id"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

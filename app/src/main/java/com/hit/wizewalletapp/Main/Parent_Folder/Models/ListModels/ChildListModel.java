@@ -1,6 +1,7 @@
 package com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels;
 
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
+import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildRequestModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTaskModel;
 import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
 import com.hit.wizewalletapp.api.RetrofitInterface;
@@ -39,6 +40,7 @@ public class ChildListModel {
         List<ChildModel> childModelsData = new LinkedList<ChildModel>();
         List<ChildTaskModel> childTransData = new LinkedList<ChildTaskModel>();
         List<ChildTransactionModel> childTransactionData =new LinkedList<ChildTransactionModel>();
+        List<ChildRequestModel> childRequestModelList = new LinkedList<ChildRequestModel>();
 
         public List<ChildModel> getAllData(){
             return childModelsData;
@@ -66,6 +68,10 @@ public class ChildListModel {
 
             childModelsData.add(childModel);
 
+        }
+
+        public void addChildRequst(ChildRequestModel childRequestModel){
+            childRequestModelList.add(childRequestModel);
         }
 
 

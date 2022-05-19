@@ -39,7 +39,7 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyVi
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameTxt = itemView.findViewById(R.id.parent_task_task_tv);
+            nameTxt = itemView.findViewById(R.id.parent_request_message_tv);
             photo = itemView.findViewById(R.id.spinner_photo_item);
 
         }

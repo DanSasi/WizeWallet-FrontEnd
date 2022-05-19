@@ -17,7 +17,7 @@
         app:layout_constraintVertical_bias="0.47" />
 
     <TextView
-        android:id="@+id/parent_task_task_tv"
+        android:id="@+id/parent_request_message_tv"
         android:layout_width="335dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -31,12 +31,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/child_task_amount_kid_tv"
+        android:id="@+id/parent_request_amount_tv"
         android:layout_width="335dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:text="amount"
         app:layout_constraintStart_toEndOf="@+id/spinner_photo_item"
-        app:layout_constraintTop_toBottomOf="@+id/parent_task_task_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/parent_request_message_tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

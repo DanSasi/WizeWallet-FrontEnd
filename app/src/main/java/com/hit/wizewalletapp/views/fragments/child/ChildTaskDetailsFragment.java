@@ -1,10 +1,6 @@
 package com.hit.wizewalletapp.views.fragments.child;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +9,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hit.wizewalletapp.Main.Parent_Folder.Fragments.ChildDetailsScreenFragmentArgs;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
@@ -44,8 +42,8 @@ public class ChildTaskDetailsFragment extends Fragment {
     private void initViews(View view) {
         accept_btn = view.findViewById(R.id.accept_task_button);
         finish_btn = view.findViewById(R.id.finish_task_btn);
-        amount = view.findViewById(R.id.child_amount_task_tv);
-        desc = view.findViewById(R.id.child_task_description_tv);
+        amount = view.findViewById(R.id.child_request_details_amount_tv);
+        desc = view.findViewById(R.id.child_request_message_tv);
         if (!ChildTaskDetailsFragmentArgs.fromBundle(getArguments()).getIsParent()) {
             finish_btn.setVisibility(View.VISIBLE);
             finish_btn.setOnClickListener(v -> {
