@@ -13,12 +13,12 @@ public class SpinnerData {
 
         SpinnerModel parentUser = new SpinnerModel();
         parentUser.setName("Parent");
-        parentUser.setImage(R.drawable.facetherface);
+        parentUser.setImage(R.drawable.parent_icon_three);
         spinnerModelList.add(parentUser);
 
         SpinnerModel childUser = new SpinnerModel();
         childUser.setName("Child");
-        childUser.setImage(R.drawable.childface);
+        childUser.setImage(R.drawable.child_icon_new);
         spinnerModelList.add(childUser);
 
 

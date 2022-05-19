@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,7 +13,8 @@
         android:layout_height="match_parent"
         android:layout_marginStart="15sp"
         android:layout_marginTop="28dp"
-        android:background="@drawable/bg_menu_list1"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/search_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,14 +27,14 @@
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            android:contentDescription="TODO"
             android:src="@drawable/icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ImageContrastCheck"
-            android:contentDescription="TODO" />
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:id="@+id/menu_parent_text"
@@ -43,8 +45,8 @@
             android:layout_marginBottom="5dp"
             android:paddingStart="0sp"
             android:text="Send Money"
-            android:textColor="@color/black"
             android:textAppearance="@style/balance_text"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/menu_parent_img"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.036"

@@ -3,17 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_photo_new"
+    android:background="@drawable/background_img_four"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.fragments.parent.ParentAddTaskFragment">
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="172dp"
-        android:layout_height="119dp"
+        android:layout_width="178dp"
+        android:layout_height="142dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="120dp"
-        android:src="@drawable/walleticon"
+        android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

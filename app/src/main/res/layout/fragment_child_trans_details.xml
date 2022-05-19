@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/home_photo_new"
+    android:background="@drawable/background_img_four"
     tools:context=".views.fragments.child.ChildTransDetailsFragment">
 
     <ImageView
@@ -13,7 +13,7 @@
         android:layout_height="202dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="112dp"
-        android:src="@drawable/walleticon"
+        android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

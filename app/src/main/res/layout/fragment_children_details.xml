@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_photo_new"
+    android:background="@drawable/background_img_four"
     tools:context=".Main.Parent_Folder.Fragments.ChildDetailsScreenFragment">
 
     <ImageView
@@ -12,7 +12,7 @@
         android:layout_width="138dp"
         android:layout_height="114dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/walleticon"
+        android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,7 +20,7 @@
         android:id="@+id/add_child_imgv"
         android:layout_width="170dp"
         android:layout_height="170dp"
-        android:src="@drawable/childface"
+        android:src="@drawable/child_icon_new"
         app:layout_constraintBottom_toTopOf="@+id/parent_add_task_id_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.435"
