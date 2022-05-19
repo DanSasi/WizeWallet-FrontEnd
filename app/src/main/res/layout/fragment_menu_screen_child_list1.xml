@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:layout_marginStart="15sp"
         android:layout_marginTop="28dp"
-        android:background="@drawable/bg_menu_list1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
