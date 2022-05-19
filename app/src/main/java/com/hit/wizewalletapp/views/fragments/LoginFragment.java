@@ -62,7 +62,7 @@ public class LoginFragment extends Fragment {
                     if (!isChild) {
                         Navigation.findNavController(getActivity(), R.id.nav_host)
                                 .navigate(LoginFragmentDirections
-                                .actionLoginFragmentHomeToHomeParentFragment(response.getRefreshToken(),email));
+                                .actionLoginFragmentHomeToHomeParentFragment(response.getRefreshToken(), response.getName()));
                     } else  {
                         Navigation.findNavController(getActivity(), R.id.nav_host)
                                 .navigate(LoginFragmentDirections

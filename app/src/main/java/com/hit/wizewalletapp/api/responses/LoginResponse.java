@@ -9,6 +9,8 @@ public class LoginResponse {
     
     private String accessToken;
 
+    private String name;
+
     private String refreshToken;
 
     public String getAccessToken() {
@@ -17,6 +19,10 @@ public class LoginResponse {
 
     public String getRefreshToken() {
         return refreshToken;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getEmail() {
