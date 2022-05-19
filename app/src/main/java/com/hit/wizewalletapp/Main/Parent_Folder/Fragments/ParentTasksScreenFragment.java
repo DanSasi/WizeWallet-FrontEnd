@@ -119,7 +119,7 @@ public class ParentTasksScreenFragment extends Fragment implements ChildTaskList
     public void onItemClick(TaskChildModel childModel) {
         Navigation.findNavController(requireActivity(),R.id.nav_host)
                 .navigate(ParentTasksScreenFragmentDirections
-                        .actionParentTasksScreenToChildTaskDetailsFragment(childModel.getMessage(),childModel.getAmount(),"",true));
+                        .actionParentTasksScreenToChildTaskDetailsFragment(childModel.getMessage(),childModel.getAmount(),childModel.get_id(),true));
 
     }
 }
