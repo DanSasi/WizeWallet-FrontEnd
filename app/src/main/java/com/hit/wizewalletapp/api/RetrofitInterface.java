@@ -74,5 +74,8 @@ public interface RetrofitInterface {
     @POST("/request/delete")
     Call<Void> onRejectChildRequest(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
 
+    @POST("/request/accept")
+    Call<Void> onAcceptChildRequest(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
+
 }
 

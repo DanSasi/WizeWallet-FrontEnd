@@ -65,6 +65,27 @@ public class AcceptOrRejectFragment extends Fragment {
             }
         });
 
+        accept_Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String token = CacheUtilities.getAcssesToken(requireContext());
+                HashMap<String, Object> bodyMap = new HashMap<>();
+                bodyMap.put("_id",AcceptOrRejectFragmentArgs.fromBundle(getArguments()).getId());
+                ApiCallsHelper.onAcceptChildRequest(token, bodyMap, new CustomCallBack<Void>() {
+                    @Override
+                    public void onSuccesses(Void response) {
+                        Navigation.findNavController(requireActivity(), R.id.nav_host).navigateUp();
+                    }
+
+                    @Override
+                    public void onFailure(String msg) {
+                        Toast.makeText(requireContext(), "Error" + msg, Toast.LENGTH_LONG).show();
+                    }
+                });
+
+            }
+        });
+
     }
 
 
