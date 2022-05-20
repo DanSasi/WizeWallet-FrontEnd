@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main.Child_Folder.Fragments.ChildTipsScreenFragment">
+    tools:context=".views.fragments.child.needapi.ChildTipsScreenFragment">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -78,7 +78,7 @@
         android:textSize="19sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toEndOf="@+id/child_task_back_arrow"
         app:layout_constraintTop_toTopOf="parent" />
 

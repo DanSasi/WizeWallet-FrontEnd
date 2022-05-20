@@ -1,9 +1,9 @@
-package com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels;
+package com.hit.wizewalletapp.model;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildRequestModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTaskModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
+import com.hit.wizewalletapp.model.child.ChildRequestModel;
+import com.hit.wizewalletapp.model.child.ChildTaskModel;
+import com.hit.wizewalletapp.model.child.ChildTransactionModel;
 import com.hit.wizewalletapp.api.RetrofitInterface;
 
 import java.util.LinkedList;

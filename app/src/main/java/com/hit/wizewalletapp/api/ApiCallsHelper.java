@@ -1,13 +1,12 @@
 package com.hit.wizewalletapp.api;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildRequestModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
+import com.hit.wizewalletapp.model.child.ChildRequestModel;
+import com.hit.wizewalletapp.model.child.ChildTransactionModel;
+import com.hit.wizewalletapp.model.child.TaskChildModel;
 import com.hit.wizewalletapp.api.responses.LoginResponse;
 import com.hit.wizewalletapp.api.responses.ServerResponse;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 

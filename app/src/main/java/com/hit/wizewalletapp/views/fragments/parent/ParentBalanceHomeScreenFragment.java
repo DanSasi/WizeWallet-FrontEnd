@@ -16,9 +16,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
+import com.hit.wizewalletapp.model.child.ChildTransactionModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.adapters.child.ChildAdapterSpinner;
 import com.hit.wizewalletapp.adapters.child.ChildTransListAdapter;
@@ -27,7 +26,6 @@ import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 

@@ -1,6 +1,5 @@
 package com.hit.wizewalletapp.views.fragments.child;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,7 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
+import com.hit.wizewalletapp.model.child.ChildTransactionModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.adapters.child.ChildTransListAdapter;
 import com.hit.wizewalletapp.api.ApiCallsHelper;

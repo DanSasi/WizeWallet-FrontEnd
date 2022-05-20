@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Main.Parent_Folder.Fragments;
+package com.hit.wizewalletapp.views.fragments.parent.needapi;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

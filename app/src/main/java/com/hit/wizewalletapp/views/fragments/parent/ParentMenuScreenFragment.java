@@ -1,7 +1,6 @@
 package com.hit.wizewalletapp.views.fragments.parent;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,19 +15,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
-import com.hit.wizewalletapp.api.RetrofitInterface;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.MenuParentListModel;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.MenuParentModel;
+import com.hit.wizewalletapp.model.parent.MenuParentListModel;
+import com.hit.wizewalletapp.model.parent.MenuParentModel;
 import com.hit.wizewalletapp.R;
 
-import java.util.HashMap;
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 @SuppressWarnings("ALL")
 public class ParentMenuScreenFragment extends Fragment {

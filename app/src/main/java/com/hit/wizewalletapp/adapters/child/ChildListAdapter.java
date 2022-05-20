@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
 import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;

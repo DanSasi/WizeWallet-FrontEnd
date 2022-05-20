@@ -11,8 +11,8 @@ import android.widget.ImageButton;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
+import com.hit.wizewalletapp.model.child.ChildTransactionModel;
+import com.hit.wizewalletapp.model.ChildListModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;

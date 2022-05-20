@@ -1,10 +1,11 @@
-package com.hit.wizewalletapp.Main.Parent_Folder.Fragments;
+package com.hit.wizewalletapp.views.fragments.parent;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import androidx.fragment.app.Fragment;
@@ -12,8 +13,8 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildRequestModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
+import com.hit.wizewalletapp.model.child.ChildRequestModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.adapters.child.ChildAdapterSpinner;
 import com.hit.wizewalletapp.adapters.child.ChildRequestListAdapter;
@@ -27,6 +28,7 @@ import java.util.List;
 public class ParentMoneyRequestsFragment extends Fragment implements ChildRequestListAdapter.OnItemClickListener {
     Spinner spinner;
     RecyclerView rv;
+    ImageView arrowBack;
     private final ChildRequestListAdapter listAdapter = new ChildRequestListAdapter();
 
 
@@ -38,6 +40,8 @@ public class ParentMoneyRequestsFragment extends Fragment implements ChildReques
 
         rv =view.findViewById(R.id.parent_requests_rv);
         initRecyclerView(view);
+        arrowBack = view.findViewById(R.id.child_task_back_arrow);
+        arrowBack.setOnClickListener(v-> Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp());
         spinner =view.findViewById(R.id.parent_request_spinner);
         setSpinner(spinner);
 

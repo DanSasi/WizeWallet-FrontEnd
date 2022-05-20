@@ -21,10 +21,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
+import com.hit.wizewalletapp.model.ChildListModel;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
 import com.hit.wizewalletapp.utilities.Utilities;

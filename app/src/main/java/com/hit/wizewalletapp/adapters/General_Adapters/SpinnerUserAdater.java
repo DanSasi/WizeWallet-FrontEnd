@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Main.General_Folder.Models.SpinnerModel;
+import com.hit.wizewalletapp.views.generaldata.SpinnerModel;
 
 import com.hit.wizewalletapp.R;
 import java.util.List;

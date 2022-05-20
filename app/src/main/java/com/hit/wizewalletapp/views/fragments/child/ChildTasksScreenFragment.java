@@ -9,12 +9,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
+import com.hit.wizewalletapp.model.child.TaskChildModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.adapters.child.ChildTaskListAdapter;
 import com.hit.wizewalletapp.api.ApiCallsHelper;

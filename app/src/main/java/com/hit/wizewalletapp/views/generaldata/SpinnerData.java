@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Main.General_Folder.Models;
+package com.hit.wizewalletapp.views.generaldata;
 
 import com.hit.wizewalletapp.R;
 

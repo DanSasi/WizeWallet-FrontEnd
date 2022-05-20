@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Main.Parent_Folder.Fragments;
+package com.hit.wizewalletapp.views.fragments.parent;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,24 +14,16 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.common.api.Api;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
+import com.hit.wizewalletapp.model.child.TaskChildModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.adapters.child.ChildAdapterSpinner;
 import com.hit.wizewalletapp.adapters.child.ChildTaskListAdapter;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
-import com.hit.wizewalletapp.api.RetrofitInstance;
-import com.hit.wizewalletapp.api.responses.ServerResponse;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
-import com.hit.wizewalletapp.views.fragments.parent.ParentChildsFragmentDirections;
 
-import java.util.HashMap;
 import java.util.List;
-
-import retrofit2.Call;
 
 public class ParentTasksScreenFragment extends Fragment implements ChildTaskListAdapter.OnItemClickListener {
 

@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Main.Child_Folder.Models.Models;
+package com.hit.wizewalletapp.model.child;
 
 public class TaskChildModel {
 

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
 import com.hit.wizewalletapp.R;
 
 import java.util.ArrayList;

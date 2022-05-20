@@ -13,20 +13,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTaskModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
+import com.hit.wizewalletapp.model.child.ChildTaskModel;
+import com.hit.wizewalletapp.model.ChildListModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.adapters.child.ChildAdapterSpinner;
 import com.hit.wizewalletapp.adapters.child.ChildTaskListAdapter;
-import com.hit.wizewalletapp.adapters.child.ChildTransListAdapter;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
-import com.hit.wizewalletapp.api.responses.ServerResponse;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
 import com.hit.wizewalletapp.utilities.Utilities;
 
@@ -56,7 +52,7 @@ public class ParentAddTaskFragment extends Fragment {
         addTaskBtn = view.findViewById(R.id.parent_add_task_add_btn);
         spinner=(Spinner)view.findViewById(R.id.add_task_Parent_spinner2);
         childAdapter = new ChildAdapterSpinner(getContext());
-        back_arrow = view.findViewById(R.id.add_task_imgbtn_backarrow);
+        back_arrow = view.findViewById(R.id.child_request_imgbtn_backarrow);
         back_arrow.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp());
 
         spinner.setAdapter(childAdapter);

@@ -1,11 +1,10 @@
 package com.hit.wizewalletapp.api.responses;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTaskModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildTransactionModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
+import com.hit.wizewalletapp.model.child.ChildTaskModel;
+import com.hit.wizewalletapp.model.child.ChildTransactionModel;
+import com.hit.wizewalletapp.model.child.TaskChildModel;
 
-import java.util.HashMap;
 import java.util.List;
 
 public class ServerResponse {

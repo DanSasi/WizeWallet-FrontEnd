@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.MenuParentModel;
+import com.hit.wizewalletapp.model.parent.MenuParentModel;
 import com.hit.wizewalletapp.R;
 
 import java.util.List;

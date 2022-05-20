@@ -13,7 +13,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.adapters.child.ChildListAdapter;
 import com.hit.wizewalletapp.api.ApiCallsHelper;

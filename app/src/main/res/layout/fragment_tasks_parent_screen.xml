@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main.Child_Folder.Fragments.ChildTipsScreenFragment">
+    tools:context=".views.fragments.child.needapi.ChildTipsScreenFragment">
 
     <ImageView
         android:id="@+id/imageView2"

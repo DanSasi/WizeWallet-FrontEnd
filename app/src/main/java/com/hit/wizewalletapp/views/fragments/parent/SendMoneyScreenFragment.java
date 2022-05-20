@@ -1,15 +1,13 @@
-package com.hit.wizewalletapp.Main.Parent_Folder.Fragments;
+package com.hit.wizewalletapp.views.fragments.parent;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -18,15 +16,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.ChildListModel;
+import com.hit.wizewalletapp.model.ChildListModel;
 import com.hit.wizewalletapp.adapters.child.ChildAdapterSpinner;
 import com.hit.wizewalletapp.adapters.child.ChildTaskListAdapter;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
-import com.hit.wizewalletapp.api.responses.ServerResponse;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
 import com.hit.wizewalletapp.utilities.Utilities;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
+import com.hit.wizewalletapp.model.child.ChildModel;
 import com.hit.wizewalletapp.R;
 
 import java.util.HashMap;

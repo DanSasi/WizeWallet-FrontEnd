@@ -1,8 +1,5 @@
-package com.hit.wizewalletapp.Main.Child_Folder.Models.ListModels;
+package com.hit.wizewalletapp.model.child;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildMenuModel;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.ListModels.MenuParentListModel;
-import com.hit.wizewalletapp.Main.Parent_Folder.Models.Model.MenuParentModel;
 import com.hit.wizewalletapp.R;
 
 import java.util.LinkedList;

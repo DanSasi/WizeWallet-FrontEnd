@@ -1,4 +1,4 @@
-package com.hit.wizewalletapp.Main.Parent_Folder.Models.Model;
+package com.hit.wizewalletapp.model.parent;
 
 public class MenuParentModel {
     String id;

@@ -1,8 +1,7 @@
 package com.hit.wizewalletapp.api;
 
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.ChildRequestModel;
-import com.hit.wizewalletapp.Main.Child_Folder.Models.Models.TaskChildModel;
+import com.hit.wizewalletapp.model.child.ChildRequestModel;
+import com.hit.wizewalletapp.model.child.TaskChildModel;
 import com.hit.wizewalletapp.api.responses.LoginResponse;
 import com.hit.wizewalletapp.api.responses.ServerResponse;
 
