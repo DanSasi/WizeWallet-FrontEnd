@@ -190,7 +190,7 @@
         android:label="SignupTabFragment" />
     <fragment
         android:id="@+id/parentSettingsFragmentScreen"
-        android:name="com.hit.wizewalletapp.views.fragments.parent.needapi.ParentSettingsFragmentScreen"
+        android:name="com.hit.wizewalletapp.views.fragments.parent.ParentSettingsFragmentScreen"
         android:label="fragment_parent_settings_screen"
         tools:layout="@layout/fragment_parent_settings_screen" />
     <fragment
