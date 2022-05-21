@@ -536,7 +536,31 @@ public class ApiCallsHelper {
         });
     }
 
+    public static void performOnChangePassword(String token,HashMap<String,String> map,CustomCallBack<Void> callback) {
+        HashMap<String,String> headerMap=new HashMap<>();
+        headerMap.put("authorization",token);
 
+        Call<Void> call = RetrofitInstance.retrofitInterface.onChangePassword(headerMap,map);
+
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful() && response.code() == 200) {
+                    callback.onSuccesses(null);
+                } else if (response.code() == 400) {
+                    callback.onFailure("error 400");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                callback.onFailure(t.getLocalizedMessage());
+            }
+        });
+
+
+
+    }
 
 
 

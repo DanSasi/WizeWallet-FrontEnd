@@ -76,5 +76,8 @@ public interface RetrofitInterface {
     @POST("/request/accept")
     Call<Void> onAcceptChildRequest(@HeaderMap HashMap<String,String> map,@Body HashMap<String,Object> map2);
 
+    @POST("/auth/changepassword")
+    Call<Void> onChangePassword(@HeaderMap HashMap<String,String> map,@Body HashMap<String,String> map2);
+
 }
 

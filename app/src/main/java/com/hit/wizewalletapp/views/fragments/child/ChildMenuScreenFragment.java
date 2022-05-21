@@ -61,8 +61,7 @@ public class ChildMenuScreenFragment extends Fragment  {
                         Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ChildMenuScreenFragmentDirections.actionChildMenuFragmentToChildRequestMoneyFragment());
                         break;
                     case "2":
-                        //Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ChildMenuScreenFragmentDirections.actionChildMenuFragmentToChildPaymentFragment());
-
+                        Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(ChildMenuScreenFragmentDirections.actionChildMenuFragmentToParentSettingsFragmentScreen());
                         break;
                     case "3":
 

@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText7" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/setting_current_password_et"
         android:layout_width="406dp"
         android:layout_height="66dp"
         android:layout_marginStart="2dp"
@@ -79,14 +79,14 @@
         android:drawableLeft="@drawable/password_icon_4"
         android:drawablePadding="5dp"
         android:hint="Current Password"
-        app:layout_constraintBottom_toTopOf="@+id/editText5"
+        app:layout_constraintBottom_toTopOf="@+id/setting_new_password_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/setting_save_password_Btn"
         android:layout_width="88dp"
         android:layout_height="52dp"
         android:background="@drawable/btn_main"
@@ -97,11 +97,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5"
+        app:layout_constraintTop_toBottomOf="@+id/setting_new_password_et"
         app:layout_constraintVertical_bias="0.803" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/setting_new_password_et"
         android:layout_width="406dp"
         android:layout_height="66dp"
         android:layout_marginStart="2dp"
@@ -110,11 +110,11 @@
         android:drawablePadding="5dp"
         android:background="@drawable/search_bar"
         android:hint="New Password"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/setting_save_password_Btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/setting_current_password_et" />
 
     <TextView
         android:id="@+id/textView18"
@@ -158,7 +158,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/setting_save_password_Btn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -174,6 +174,9 @@
         <action
             android:id="@+id/action_childMenuFragment_to_childRequestMoneyFragment"
             app:destination="@id/childRequestMoneyFragment" />
+        <action
+            android:id="@+id/action_childMenuFragment_to_parentSettingsFragmentScreen"
+            app:destination="@id/parentSettingsFragmentScreen" />
     </fragment>
 
     <fragment
