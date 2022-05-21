@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
@@ -63,6 +64,7 @@ public class ParentSettingsFragmentScreen extends Fragment {
 
                     @Override
                     public void onFailure(String msg) {
+                        Toast.makeText(getActivity(), "You typed wrong the current password", Toast.LENGTH_LONG).show();
 
                     }
                 });

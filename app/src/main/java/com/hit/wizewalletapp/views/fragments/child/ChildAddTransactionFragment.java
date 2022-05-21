@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -127,7 +128,7 @@ public class ChildAddTransactionFragment extends Fragment {
 
                 @Override
                 public void onFailure(String msg) {
-
+                    Toast.makeText(getActivity(), "Please, check your balance", Toast.LENGTH_LONG).show();
                 }
             });
 
