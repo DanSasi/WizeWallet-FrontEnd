@@ -8,32 +8,30 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="150dp"
-        android:layout_height="136dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
         android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/add_child_imgv"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!--        android:digits="1234567890"-->
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/add_child_imgv"
         android:layout_width="168dp"
         android:layout_height="153dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/child_icon_new"
-        app:layout_constraintBottom_toTopOf="@+id/parent_add_task_id_et"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.398"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101" />
-
-    <!--        android:digits="1234567890"-->
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/add_child_btn"
-        android:layout_width="120dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/btn_main"
         android:text="Register"
@@ -42,13 +40,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parent_add_task_name_et" />
 
     <EditText
         android:id="@+id/add_child_username_et"
         android:layout_width="291dp"
         android:layout_height="53dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/email_icon"
         android:drawablePadding="5dp"
@@ -79,9 +78,7 @@
         android:id="@+id/parent_add_task_amount_et"
         android:layout_width="291dp"
         android:layout_height="53dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="119dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/money_icon"
         android:drawablePadding="5dp"
@@ -89,7 +86,6 @@
         android:hint="Child Balance"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.271"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_child_img_filter_btn" />
 
@@ -97,19 +93,14 @@
         android:id="@+id/parent_add_task_name_et"
         android:layout_width="291dp"
         android:layout_height="53dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="119dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/name_icon"
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Child Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/add_child_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.271"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_child_password_et" />
 
@@ -117,9 +108,7 @@
         android:id="@+id/parent_add_task_id_et"
         android:layout_width="291dp"
         android:layout_height="53dp"
-        android:layout_marginStart="80dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="100dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/id_icon_child"
         android:drawablePadding="5dp"
@@ -127,7 +116,6 @@
         android:hint="Child Id"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_child_username_et" />
 
@@ -147,11 +135,10 @@
         android:id="@+id/add_child_img_filter_btn"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/parent_add_task_amount_et"
+        android:layout_marginTop="29dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_child_imgv"
         app:srcCompat="@drawable/camera_icon_two" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

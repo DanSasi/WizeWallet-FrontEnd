@@ -9,9 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="125dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
         android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,15 +34,15 @@
         android:layout_width="22dp"
         android:layout_height="20dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="72dp"
         android:layout_marginEnd="88dp"
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/ic_arrow___left"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_childs"
         app:layout_constraintEnd_toStartOf="@+id/tv_childs"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_childs"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
@@ -51,13 +50,15 @@
         style="@style/contactFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="216dp"
+        android:layout_marginTop="24dp"
         android:text="All Childs"
         android:textColor="#082431"
         android:textSize="14sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="151dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_child_Btn"
+        tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/child_recycler_view"
@@ -67,25 +68,25 @@
         android:layout_marginEnd="48dp"
         android:layout_marginTop="250dp"
         android:layout_marginBottom="25dp"
-        android:scrollbars="vertical"
+        android:scrollbars="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1"
         app:layout_constraintStart_toStartOf="@+id/tv_all_childs"
         app:layout_constraintTop_toBottomOf="@+id/tv_all_childs"
         app:layout_constraintVertical_bias="0.081" />
 
     <Button
         android:id="@+id/add_child_Btn"
-        android:layout_width="252dp"
-        android:layout_height="89dp"
-        android:layout_marginBottom="250dp"
+        android:layout_width="199dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="35dp"
         android:background="@drawable/btn_main"
         android:text="Register a new Child"
         android:textColor="#ffffff"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/child_recycler_view"
+        app:layout_constraintBottom_toTopOf="@+id/tv_all_childs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_childs" />

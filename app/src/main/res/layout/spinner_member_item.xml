@@ -22,7 +22,7 @@
         android:layout_width="104dp"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_toEndOf="@+id/spinner_photo_item"
         android:text="Name"
         android:textColor="@color/black"

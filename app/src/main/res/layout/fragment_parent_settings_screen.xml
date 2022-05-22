@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="119dp"
-        android:layout_height="93dp"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
         android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -87,8 +87,8 @@
 
     <Button
         android:id="@+id/setting_save_password_Btn"
-        android:layout_width="88dp"
-        android:layout_height="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/btn_main"
         android:textColor="#ffffff"
         android:text="SAVE"
@@ -131,8 +131,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="97dp"
-        android:layout_height="56dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/btn_main"
         android:scrollbarSize="4dp"
         android:text="SAVE"
@@ -150,7 +150,7 @@
     <Button
         android:id="@+id/button2"
         android:layout_width="126dp"
-        android:layout_height="63dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/btn_main_2"
         android:text="DELETE PROFILE"
         android:textStyle="bold"
