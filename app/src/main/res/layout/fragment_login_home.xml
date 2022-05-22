@@ -118,7 +118,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/fragment_home_login_btn"
         app:layout_constraintEnd_toEndOf="@id/fragment_home_password_et"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.73"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragment_home_forgetpass_tv"
         app:layout_constraintVertical_bias="0.84000003" />
