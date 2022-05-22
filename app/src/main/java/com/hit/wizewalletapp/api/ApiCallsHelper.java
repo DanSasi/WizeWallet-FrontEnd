@@ -558,8 +558,29 @@ public class ApiCallsHelper {
             }
         });
 
+    }
 
 
+
+
+    public static void performGetRefreshToken(HashMap<String ,String> headerMap ,CustomCallBack<LoginResponse> callback ) {
+        Call<LoginResponse> call = RetrofitInstance.retrofitInterface.getRefreshToken(headerMap);
+        call.enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                if (response.isSuccessful() && response.code() == 200) {
+                    callback.onSuccesses(null);
+                } else if (response.code() == 400) {
+                    callback.onFailure("error 400");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+                callback.onFailure(t.getLocalizedMessage());
+            }
+
+        });
     }
 
 

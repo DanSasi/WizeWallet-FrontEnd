@@ -1,7 +1,11 @@
 package com.hit.wizewalletapp.views.fragments.child;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
+import android.location.LocationProvider;
 import android.os.Bundle;
 import android.os.Looper;
 import android.view.LayoutInflater;
@@ -13,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -37,6 +42,7 @@ import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
 import com.hit.wizewalletapp.utilities.Utilities;
 
+import java.security.Provider;
 import java.util.HashMap;
 
 
@@ -44,6 +50,7 @@ public class ChildAddTransactionFragment extends Fragment {
     EditText amount_et, description_et;
     Button save_btn;
     ImageButton backButton;
+    private final int REQUEST_CODE = 111;
 
 
     private FusedLocationProviderClient fusedLocationClient;
@@ -52,6 +59,8 @@ public class ChildAddTransactionFragment extends Fragment {
     private LocationCallback locationCallback;
     private LocationRequest locationRequest;
     private Location lastLocation;
+    LocationProvider provider;
+    LocationManager locationManager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -74,6 +83,7 @@ public class ChildAddTransactionFragment extends Fragment {
 
     }
 
+
     @SuppressLint("MissingPermission")
     private void initGoogleLocationApi() {
         if (fusedLocationClient == null) {
@@ -83,15 +93,19 @@ public class ChildAddTransactionFragment extends Fragment {
                 @Override
                 public void onLocationResult(@NonNull LocationResult locationResult) {
                     super.onLocationResult(locationResult);
-                    if(locationResult.getLocations().size() > 0) {
-                          lastLocation = locationResult.getLocations().get(locationResult.getLocations().size()-1);
-                            setGoogleMapsAndEditText(new LatLng(lastLocation.getLatitude(),lastLocation.getLongitude()));
+                    if (locationResult.getLocations().size() > 0) {
+                        lastLocation = locationResult.getLocations().get(locationResult.getLocations().size() - 1);
+                        setGoogleMapsAndEditText(new LatLng(lastLocation.getLatitude(), lastLocation.getLongitude()));
                     }
                 }
             };
-            fusedLocationClient.requestLocationUpdates(locationRequest,locationCallback,Looper.getMainLooper());
+
+
         }
+        fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, Looper.getMainLooper());
     }
+
+
 
 
     private void setGoogleMapsAndEditText(LatLng latLng) {

@@ -13,6 +13,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.HeaderMap;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface RetrofitInterface {
 
@@ -78,6 +79,9 @@ public interface RetrofitInterface {
 
     @POST("/auth/changepassword")
     Call<Void> onChangePassword(@HeaderMap HashMap<String,String> map,@Body HashMap<String,String> map2);
+
+    @POST("auth/refreshToken")
+    Call<LoginResponse> getRefreshToken(@HeaderMap HashMap<String,String> map2);
 
 }
 

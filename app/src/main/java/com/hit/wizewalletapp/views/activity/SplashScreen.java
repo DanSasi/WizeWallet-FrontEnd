@@ -14,6 +14,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hit.wizewalletapp.R;
+import com.hit.wizewalletapp.api.ApiCallsHelper;
+import com.hit.wizewalletapp.api.CustomCallBack;
+import com.hit.wizewalletapp.api.responses.LoginResponse;
+import com.hit.wizewalletapp.utilities.CacheUtilities;
+
+import java.util.HashMap;
 
 public class SplashScreen extends AppCompatActivity {
 
