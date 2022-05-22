@@ -22,7 +22,7 @@ public class Utilities {
     @Nullable
     public static LatLng getLatLng(String latitude,String longitude){
         if(!TextUtils.isEmpty(latitude) &&!TextUtils.isEmpty(longitude)){
-            return new LatLng(Double.parseDouble(latitude),Double.parseDouble(latitude));
+            return new LatLng(Double.parseDouble(latitude),Double.parseDouble(longitude));
         }
         return null;
     }
