@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +7,7 @@
     tools:context=".views.fragments.child.ChildAddTransactionFragment">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imagehome"
         android:layout_width="102dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
@@ -29,73 +29,85 @@
         android:src="@drawable/ic_arrow___left"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/add_transaction_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_main"
-        android:text="save"
-        android:textColor="#ffff"
-        android:textStyle="bold"
-        android:translationX="160dp"
-        android:translationY="580dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_child_password_et"
-        app:layout_constraintVertical_bias="0.368" />
 
     <EditText
         android:id="@+id/add_transaction_description_et"
         android:layout_width="303dp"
         android:layout_height="68dp"
         android:layout_marginStart="82dp"
-        android:layout_marginTop="404dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/search_bar"
-        android:drawableLeft="@drawable/location_icon"
+        android:drawableLeft="@drawable/description_icon"
         android:drawablePadding="5dp"
         android:ems="10"
+        android:hint="What did you buy?"
+        android:inputType="textPersonName"
         android:translationX="-30dp"
         android:translationY="50dp"
-        android:hint="Where did you pay?"
-        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/parent_add_transaction_amount_et" />
 
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:translationX="100dp"
-        android:translationY="150dp"
-        tools:context=".MapsActivity" />
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_transaction_description_et" />
 
     <EditText
         android:id="@+id/parent_add_transaction_amount_et"
         android:layout_width="307dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="82dp"
-        android:layout_marginTop="348dp"
+        android:layout_marginTop="176dp"
         android:layout_marginEnd="119dp"
-        android:translationX="-30dp"
-        android:translationY="40dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/money_icon"
         android:drawablePadding="5dp"
+
         android:ems="10"
         android:hint="How much did you pay?"
-
         android:inputType="phone"
+        android:translationX="-30dp"
+        android:translationY="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/add_transaction_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/btn_main"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins"
+        android:text="Add "
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="195dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/wizewallet_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
