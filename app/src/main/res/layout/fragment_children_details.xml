@@ -39,36 +39,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/details_chaild_edit_btn"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:background="@drawable/btn_main"
-        android:textColor="#ffffff"
-        android:text="EDIT"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_child_password_et"
-        app:layout_constraintVertical_bias="0.42" />
-
-    <Button
-        android:id="@+id/details_chaild_delete_btn"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:background="@drawable/btn_main"
-        android:textColor="#ffffff"
-        android:text="DELETE"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.665"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_child_password_et"
-        app:layout_constraintVertical_bias="0.42" />
-
     <EditText
         android:id="@+id/add_child_username_et"
         android:layout_width="355dp"

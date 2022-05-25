@@ -15,7 +15,6 @@ import com.hit.wizewalletapp.R;
 public class ParentTipsScreenFragment extends Fragment {
 
         ImageView backArrow;
-        private Button button;
 
       @Override
       public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,7 +24,6 @@ public class ParentTipsScreenFragment extends Fragment {
 
 
         backArrow = view.findViewById(R.id.details_arrow_back);
-        button = view.findViewById( R.id.con_btn);
 
 
         backArrow.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp());

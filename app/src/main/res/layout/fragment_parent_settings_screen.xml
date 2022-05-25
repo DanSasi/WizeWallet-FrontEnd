@@ -29,52 +29,12 @@
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/editText7"
-        android:layout_width="406dp"
-        android:layout_height="66dp"
-        android:drawableLeft="@drawable/email_icon"
-        android:drawablePadding="5dp"
-        android:background="@drawable/search_bar"
-        android:hint="Email"
-        app:layout_constraintBottom_toTopOf="@+id/editText6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="181dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="10dp"
-        android:text="Update Profile"
-        android:textAppearance="@style/balance_text"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="406dp"
-        android:layout_height="66dp"
-        android:background="@drawable/search_bar"
-        android:layout_marginTop="16dp"
-        android:drawableLeft="@drawable/name_icon"
-        android:drawablePadding="5dp"
-        android:hint="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
-
-    <EditText
         android:id="@+id/setting_current_password_et"
-        android:layout_width="406dp"
+        android:layout_width="350dp"
         android:layout_height="66dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="3dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="25dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/password_icon_4"
         android:drawablePadding="5dp"
@@ -89,26 +49,26 @@
         android:id="@+id/setting_save_password_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:background="@drawable/btn_main"
-        android:textColor="#ffffff"
         android:text="SAVE"
+        android:textColor="#ffffff"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setting_new_password_et"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintTop_toBottomOf="@+id/setting_new_password_et" />
 
     <EditText
         android:id="@+id/setting_new_password_et"
-        android:layout_width="406dp"
+        android:layout_width="350dp"
         android:layout_height="66dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="3dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/password_icon_4"
         android:drawablePadding="5dp"
-        android:background="@drawable/search_bar"
         android:hint="New Password"
         app:layout_constraintBottom_toTopOf="@+id/setting_save_password_Btn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,45 +80,16 @@
         android:id="@+id/textView18"
         android:layout_width="287dp"
         android:layout_height="41dp"
-        android:layout_marginTop="352dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="100dp"
         android:text="Change Password"
         android:textAppearance="@style/balance_text"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.379"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_main"
-        android:scrollbarSize="4dp"
-        android:text="SAVE"
-        android:textAppearance="@style/balance_text"
-        android:textColor="#ffffff"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView18"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6"
-        app:layout_constraintVertical_bias="0.363" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="126dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_main_2"
-        android:text="DELETE PROFILE"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setting_save_password_Btn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
