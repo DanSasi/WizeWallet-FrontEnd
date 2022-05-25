@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="160dp"
-        android:layout_height="133dp"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
         android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,31 +29,27 @@
 
     <ImageView
         android:id="@+id/details_arrow_back"
-        android:layout_width="26.5dp"
-        android:layout_height="26.5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginRight="316.5dp"
         android:src="@drawable/ic_arrow___left"
         app:layout_constraintBottom_toBottomOf="@+id/menu_parent_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/menu_parent_text" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
         android:fontFamily="@font/poppins"
         android:text="Our tips for you"
         android:textColor="#2C2C63"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_parent_text"
-        app:layout_constraintVertical_bias="0.19999999" />
+        app:layout_constraintTop_toBottomOf="@+id/menu_parent_text" />
 
     <TextView
         android:id="@+id/child_fragment_ballance_tv"
@@ -71,11 +67,12 @@
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/ic_arrow___left_circle"
         app:layout_constraintBottom_toBottomOf="@+id/child_fragment_ballance_tv"
-        app:layout_constraintStart_toEndOf="@+id/child_fragment_ballance_tv"
-        app:layout_constraintTop_toTopOf="@+id/child_fragment_ballance_tv" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -209,22 +206,22 @@
 
 
         <Button
-        android:id="@+id/con_btn"
-        android:layout_width="340dp"
-        android:layout_height="64dp"
-        android:text="CONTINUE"
-        android:layout_marginTop="385dp"
-        android:layout_marginLeft="30dp"
-            android:background="@drawable/btn_main"
-            android:textColor="#ffffff"
+            android:id="@+id/con_btn"
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="385dp"
             android:layout_marginBottom="10dp"
-        android:textSize="18sp"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:background="@drawable/btn_main"
+            android:text="CONTINUE"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.cardview.widget.CardView>
 
 

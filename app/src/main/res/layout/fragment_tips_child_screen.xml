@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="145dp"
-        android:layout_height="133dp"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
         android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,16 +44,15 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
         android:fontFamily="@font/poppins"
         android:text="Our tips for you"
         android:textColor="#2C2C63"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_parent_text"
-        app:layout_constraintVertical_bias="0.19999999" />
+        app:layout_constraintTop_toBottomOf="@+id/menu_parent_text" />
 
     <TextView
         android:id="@+id/child_fragment_ballance_tv"
@@ -71,11 +70,11 @@
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginTop="14dp"
         android:src="@drawable/ic_arrow___left_circle"
-        app:layout_constraintBottom_toBottomOf="@+id/child_fragment_ballance_tv"
-        app:layout_constraintStart_toEndOf="@+id/child_fragment_ballance_tv"
-        app:layout_constraintTop_toTopOf="@+id/child_fragment_ballance_tv" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"

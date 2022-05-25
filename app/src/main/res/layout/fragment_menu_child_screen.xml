@@ -48,16 +48,16 @@
 
 
 
-<!--    </LinearLayout>-->
+    <!--    </LinearLayout>-->
 
-<!--    <LinearLayout-->
-<!--        android:id="@+id/linearLayout3"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/linearLayout3"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
 
     <EditText
         android:id="@+id/editText2"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-<!--    </LinearLayout>-->
+    <!--    </LinearLayout>-->
 
 
     <LinearLayout
@@ -116,7 +116,7 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="102dp"
-        android:layout_height="173dp"
+        android:layout_height="100dp"
         android:src="@drawable/wizewallet_icon"
         app:layout_constraintBottom_toTopOf="@+id/editText2"
         app:layout_constraintEnd_toEndOf="parent"

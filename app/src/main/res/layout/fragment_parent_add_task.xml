@@ -10,14 +10,12 @@
         android:id="@+id/add_task_Parent_spinner2"
         android:layout_width="355dp"
         android:layout_height="73dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="28dp"
         android:tooltipText="add id"
-        app:layout_constraintBottom_toTopOf="@+id/parent_add_task_amount_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -45,8 +43,7 @@
         android:id="@+id/parent_add_task_amount_et"
         android:layout_width="355dp"
         android:layout_height="73dp"
-        android:layout_marginTop="332dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="35dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/money_icon"
         android:drawablePadding="5dp"
@@ -54,14 +51,14 @@
         android:hint="Child Amount"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_task_Parent_spinner2" />
 
     <EditText
         android:id="@+id/parent_add_task_message_et"
         android:layout_width="355dp"
         android:layout_height="73dp"
-        android:layout_marginTop="420dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="31dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/description_icon"
         android:drawablePadding="5dp"
@@ -69,38 +66,34 @@
         android:hint="Child Message"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parent_add_task_amount_et" />
 
     <Button
         android:id="@+id/parent_add_task_add_btn"
-        android:layout_width="101dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
         android:background="@drawable/btn_main"
-        android:textColor="#ffffff"
         android:backgroundTint="@null"
         android:fontFamily="@font/poppins"
         android:text="Add "
+        android:textColor="#ffffff"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parent_add_task_message_et"
-        app:layout_constraintVertical_bias="0.485" />
+        app:layout_constraintTop_toBottomOf="@+id/parent_add_task_message_et" />
 
     <ImageView
         android:id="@+id/child_request_imgbtn_backarrow"
-        android:layout_width="26.5dp"
-        android:layout_height="26.5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="316.5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/ic_arrow___left"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
