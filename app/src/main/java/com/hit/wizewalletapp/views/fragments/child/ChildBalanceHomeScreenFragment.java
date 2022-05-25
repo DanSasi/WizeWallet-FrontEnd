@@ -21,6 +21,7 @@ import com.hit.wizewalletapp.adapters.child.ChildTransListAdapter;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
+import com.hit.wizewalletapp.views.fragments.parent.ParentBalanceHomeScreenFragmentArgs;
 
 import java.util.List;
 
@@ -28,8 +29,8 @@ import java.util.List;
 public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTransListAdapter.OnItemClickListener  {
 
     ImageView transfer, task, more, tips;
-    TextView transferText, taskText, moreText, tipText, hellowText;
-    TextView ballance;
+    TextView transferText, taskText, moreText, tipText;
+    TextView ballance, helloText;
     private RecyclerView rv;
     private ProgressBar progressBar;
     private final ChildTransListAdapter childTransListAdapter= new ChildTransListAdapter();
@@ -39,7 +40,8 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_child_balance_home, container, false);
-
+        helloText = view.findViewById(R.id.child_user_name);
+        helloText.setText(String.format("Hello %s", ChildBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getName()));
         //get the refresh token
         String refreshToken = ChildBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
         ballance = view.findViewById(R.id.child_fragment_ballance_tv);

@@ -135,6 +135,9 @@
         <argument
             android:name="refreshToken"
             app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
         <action
             android:id="@+id/action_childBalanceHomeScreenFragment_to_childMenuFragment"
             app:destination="@id/childMenuFragment" />

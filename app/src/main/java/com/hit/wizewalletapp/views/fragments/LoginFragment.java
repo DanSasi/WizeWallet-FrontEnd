@@ -66,7 +66,7 @@ public class LoginFragment extends Fragment {
                     } else  {
                         Navigation.findNavController(getActivity(), R.id.nav_host)
                                 .navigate(LoginFragmentDirections
-                                        .actionLoginFragmentHomeToChildBalanceHomeScreenFragment(response.getRefreshToken()));
+                                        .actionLoginFragmentHomeToChildBalanceHomeScreenFragment(response.getRefreshToken(),response.getName()));
                     }
                 }
 
