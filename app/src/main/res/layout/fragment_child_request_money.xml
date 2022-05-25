@@ -8,32 +8,32 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="178dp"
-        android:layout_height="142dp"
+        android:layout_width="200dp"
+        android:layout_height="170dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="120dp"
         android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="299dp"
         android:layout_height="92dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
         android:text="Need more cash?               Request money"
         android:textAppearance="@style/balance_text"
         android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
         android:id="@+id/child_request_payment_amount_et"
         android:layout_width="355dp"
         android:layout_height="73dp"
-        android:layout_marginTop="332dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/money_icon"
         android:drawablePadding="5dp"
@@ -41,14 +41,14 @@
         android:hint="How much money?"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <EditText
         android:id="@+id/child_request_payment_desc_et"
         android:layout_width="355dp"
         android:layout_height="73dp"
-        android:layout_marginTop="420dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/description_icon"
         android:drawablePadding="5dp"
@@ -56,13 +56,14 @@
         android:hint="For what purpose?"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/child_request_payment_amount_et" />
 
     <Button
         android:id="@+id/child_request_payment_btn"
-        android:layout_width="129dp"
-        android:layout_height="67dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="122dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/btn_main"
         android:backgroundTint="@null"
         android:fontFamily="@font/poppins"
@@ -70,11 +71,10 @@
         android:textColor="#ffffff"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/child_request_payment_desc_et"
-        app:layout_constraintVertical_bias="0.485" />
+        app:layout_constraintTop_toBottomOf="@+id/child_request_payment_desc_et" />
 
     <ImageView
         android:id="@+id/child_request_imgbtn_backarrow"

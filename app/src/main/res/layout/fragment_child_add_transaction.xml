@@ -8,11 +8,12 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="134dp"
-        android:layout_height="107dp"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/wizewallet_icon"
-        android:translationX="250dp"
+        android:translationX="320dp"
+        android:translationY="-20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,14 +34,14 @@
 
     <Button
         android:id="@+id/add_transaction_btn"
-        android:layout_width="114dp"
-        android:layout_height="79dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/btn_main"
         android:text="save"
         android:textColor="#ffff"
         android:textStyle="bold"
-        android:translationX="150dp"
-        android:translationY="550dp"
+        android:translationX="160dp"
+        android:translationY="580dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.445"
@@ -58,17 +59,22 @@
         android:drawableLeft="@drawable/location_icon"
         android:drawablePadding="5dp"
         android:ems="10"
+        android:translationX="-30dp"
+        android:translationY="50dp"
         android:hint="Where did you pay?"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:translationX="100dp"
+        android:translationY="150dp"
         tools:context=".MapsActivity" />
 
     <EditText
@@ -78,6 +84,8 @@
         android:layout_marginStart="82dp"
         android:layout_marginTop="348dp"
         android:layout_marginEnd="119dp"
+        android:translationX="-30dp"
+        android:translationY="40dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/money_icon"
         android:drawablePadding="5dp"

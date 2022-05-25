@@ -8,61 +8,58 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="211dp"
-        android:layout_height="334dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="100dp"
+        android:layout_width="218dp"
+        android:layout_height="290dp"
+        android:layout_marginTop="84dp"
         android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/parent_add_task_id_et"
         android:layout_width="355dp"
         android:layout_height="61dp"
-        android:layout_marginTop="332dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/id_icon_child"
         android:drawablePadding="5dp"
-        android:background="@drawable/search_bar"
         android:ems="10"
         android:hint="Please Enter Child Id"
-        android:textStyle="bold"
         android:inputType="phone"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
         android:id="@+id/sendLink"
-        android:layout_width="111dp"
-        android:layout_height="68dp"
+        android:layout_width="109dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/btn_main"
-        android:textColor="#ffffff"
         android:text="Send Link"
         android:textAppearance="@style/balance_text"
+        android:textColor="#ffffff"
         android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parent_add_task_id_et"
-        app:layout_constraintVertical_bias="0.168" />
+        app:layout_constraintTop_toBottomOf="@+id/parent_add_task_id_et" />
 
     <ImageButton
         android:id="@+id/img_back_arrow_contact"
         android:layout_width="22dp"
         android:layout_height="20dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="88dp"
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/ic_arrow___left"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.368"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

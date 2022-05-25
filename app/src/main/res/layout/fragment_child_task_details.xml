@@ -19,22 +19,23 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="184dp"
         android:layout_height="202dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="112dp"
+        android:layout_marginTop="84dp"
         android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/child_request_message_tv"
         android:layout_width="355dp"
         android:layout_height="61dp"
-        android:layout_marginTop="324dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/description_icon"
         android:drawablePadding="5dp"
@@ -42,45 +43,46 @@
         android:inputType="textPersonName"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/child_request_details_amount_tv"
         android:layout_width="355dp"
         android:layout_height="61dp"
+        android:layout_marginTop="31dp"
         android:background="@drawable/search_bar"
-        android:layout_marginTop="408dp"
-        android:layout_marginEnd="24dp"
         android:drawableLeft="@drawable/money_icon"
         android:drawablePadding="5dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/child_request_message_tv" />
 
     <Button
         android:visibility="gone"
         android:id="@+id/accept_task_button"
-        android:layout_width="124dp"
-        android:layout_height="81dp"
-        android:layout_marginBottom="112dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="@drawable/btn_main"
         android:text="ACCEPT"
         android:textColor="#ffffff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="20dp" />
 
 
     <Button
         android:visibility="gone"
         android:id="@+id/finish_task_btn"
-        android:layout_width="124dp"
-        android:layout_height="81dp"
-        android:layout_marginBottom="112dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/btn_main"
         android:text="FINISH"
         android:textColor="#ffffff"
