@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="All Childs"
+        android:text="My Children's"
         android:textColor="#082431"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,8 +78,8 @@
 
     <Button
         android:id="@+id/add_child_Btn"
-        android:layout_width="199dp"
-        android:layout_height="53dp"
+        android:layout_width="182dp"
+        android:layout_height="60dp"
         android:layout_marginTop="35dp"
         android:background="@drawable/btn_main"
         android:text="Register a new Child"

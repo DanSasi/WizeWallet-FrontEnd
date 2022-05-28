@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
+    android:background="@color/zxing_transparent"
     android:layout_width="238dp"
     android:layout_height="69dp">
     <!--    android:layout_width="match_parent"-->
@@ -26,7 +26,7 @@
         android:layout_height="38dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
-        android:layout_toEndOf="@+id/spinner_photo_item"
+        android:layout_toEndOf="@+id/spinner_photo_item2"
         android:text="Name"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"

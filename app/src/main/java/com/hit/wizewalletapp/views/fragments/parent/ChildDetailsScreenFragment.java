@@ -3,6 +3,7 @@ package com.hit.wizewalletapp.views.fragments.parent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +19,7 @@ public class ChildDetailsScreenFragment extends Fragment {
 
     TextView childBalanceTv,childUsernameTv,childIdTv,childNameTv;
     ImageView childImageView;
-    Button arrowBack,EditButton,DeleteButton;
+    ImageView arrowBack;
 
 
 
@@ -38,14 +39,13 @@ public class ChildDetailsScreenFragment extends Fragment {
         childImageView = view.findViewById(R.id.add_child_imgv);
         childIdTv = view.findViewById(R.id.parent_add_task_id_et);
         childNameTv =view.findViewById(R.id.add_child_password_et);
-
-
+        arrowBack =view.findViewById(R.id.details_arrow_back);
         childUsernameTv.setText(email);
         childIdTv.setText(childId);
         childBalanceTv.setText(childBalance);
         childNameTv.setText(childName);
 
-
+        arrowBack.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp());
 //        childUsernameTv.setText(childModel.getName());
 //        childBalanceTv.setText(childModel.getBalance());
 //        childPasswordTv.setText(childModel.getPassword());
