@@ -29,7 +29,6 @@ public class LoginFragment extends Fragment {
 
     private EditText emailEditText, passwordEditText;
     private Spinner userSpinner;
-    private TextView forgetPass;
     private TextView logas;
     private TextView regisger , wellcomTv;
     private Button login;
@@ -84,7 +83,6 @@ public class LoginFragment extends Fragment {
         float v = 0 ;
         emailEditText = fragment.findViewById(R.id.fragment_home_email_et);
         passwordEditText = fragment.findViewById(R.id.fragment_home_password_et);
-        forgetPass = fragment.findViewById(R.id.fragment_home_forgetpass_tv);
         regisger = fragment.findViewById(R.id.fragment_home_register_tv);
         userSpinner = fragment.findViewById(R.id.fragment_home_spinner);
         login = fragment.findViewById(R.id.fragment_home_login_btn);
@@ -96,7 +94,6 @@ public class LoginFragment extends Fragment {
 
         emailEditText.setTranslationX(50);
         passwordEditText.setTranslationX(50);
-        forgetPass.setTranslationX(50);
         userSpinner.setTranslationX(50);
         login.setTranslationX(50);
         mainIconIv.setTranslationX(50);
@@ -105,7 +102,6 @@ public class LoginFragment extends Fragment {
 
         emailEditText.setAlpha(v);
         passwordEditText.setAlpha(v);
-        forgetPass.setAlpha(v);
         userSpinner.setAlpha(v);
         login.setAlpha(v);
         mainIconIv.setAlpha(v);
@@ -114,7 +110,6 @@ public class LoginFragment extends Fragment {
 
         emailEditText.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
         passwordEditText.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
-        forgetPass.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
         userSpinner.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
         login.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
         mainIconIv.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();

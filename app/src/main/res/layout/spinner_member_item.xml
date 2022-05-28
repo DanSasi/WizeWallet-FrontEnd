@@ -20,10 +20,10 @@
 
     <TextView
         android:id="@+id/parent_request_message_tv"
-        android:layout_width="104dp"
-        android:layout_height="49dp"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:layout_toEndOf="@+id/spinner_photo_item"
         android:text="Name"
         android:textColor="@color/black"
@@ -31,4 +31,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/spinner_photo_item"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
