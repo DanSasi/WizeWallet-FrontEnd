@@ -134,7 +134,7 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
         ApiCallsHelper.performGetChildBalance(token, new CustomCallBack<Integer>() {
             @Override
             public void onSuccesses(Integer response) {
-                ballance.setText("Nis: " + Integer.valueOf(response));
+                ballance.setText("Your Balance: " + Integer.valueOf(response));
             }
 
             @Override

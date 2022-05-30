@@ -203,12 +203,17 @@
 
     <TextView
         android:id="@+id/user_name"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="47dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:textSize="16dp"
+        android:drawableEnd="@drawable/smiley"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/purple_700"
+        android:textSize="16sp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
         app:layout_constraintStart_toEndOf="@+id/fragment_loging_icon_imgv"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Dan" />
