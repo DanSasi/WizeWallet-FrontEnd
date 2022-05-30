@@ -35,12 +35,13 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyVi
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView nameTxt;
         ImageView photo;
-        TextView bankTxt;
+        TextView balanceTv;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTxt = itemView.findViewById(R.id.parent_request_message_tv);
             photo = itemView.findViewById(R.id.spinner_photo_item);
+            balanceTv=itemView.findViewById(R.id.parent_request_balance_tv);
 
         }
 
@@ -63,7 +64,8 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull ChildListAdapter.MyViewHolder holder, int position) {
         final ChildModel childModel = childList.get(position);
-        holder.nameTxt.setText(childModel.getmName());
+        holder.nameTxt.setText("Name: "+childModel.getmName());
+        holder.balanceTv.setText("Balance: "+String.valueOf(childModel.getBalance()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,7 +75,6 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyVi
                 //holder.photo.setImageResource(photo);
             }
         });
-
 
 
 

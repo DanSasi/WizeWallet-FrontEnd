@@ -41,9 +41,10 @@ public class ChildAdapterSpinner extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View rootView = LayoutInflater.from(mContext).inflate(R.layout.item_childs, viewGroup, false);
+        TextView balanceTxt=rootView.findViewById(R.id.parent_request_balance_tv);
         TextView nameTxt = rootView.findViewById(R.id.parent_request_message_tv);
-        nameTxt.setText(childList.get(i).getmName());
-
+        nameTxt.setText("Name: "+ childList.get(i).getmName());
+        balanceTxt.setText("Balance: "+String.valueOf(childList.get(i).getBalance()));
 //        photo = rootView.findViewById(R.id.spinner_photo_item);
 //        nameTxt.setText(childList.get(i).getName());
 //        photo.setImageResource(childList.get(i).getPhoto());

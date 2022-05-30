@@ -215,7 +215,7 @@
 
     <Spinner
         android:id="@+id/fragment_Parent_spinner"
-        android:layout_width="198dp"
+        android:layout_width="200dp"
         android:layout_height="66dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="8dp"
