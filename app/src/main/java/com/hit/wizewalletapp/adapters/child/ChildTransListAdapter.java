@@ -36,13 +36,14 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
 
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView amount_tv,desc_tv;
+        TextView amount_tv,desc_tv,date_tv;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             amount_tv= itemView.findViewById(R.id.parent_request_amount_tv);
             desc_tv=itemView.findViewById(R.id.parent_request_message_tv);
+            date_tv=itemView.findViewById(R.id.parent_request_date_tv);
         }
 
     }
@@ -59,6 +60,7 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
         final ChildTransactionModel childTransactionModel=list.get(position);
         holder.desc_tv.setText(String.valueOf(childTransactionModel.getDesc()));
         holder.amount_tv.setText(String.valueOf(childTransactionModel.getAmount()));
+        holder.date_tv.setText(String.valueOf(childTransactionModel.getDate()));
         holder.itemView.setOnClickListener(v -> listener.onItemClick(childTransactionModel));
 
     }

@@ -6,9 +6,15 @@ import androidx.annotation.Nullable;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import java.util.Date;
+
 public class ChildTransactionModel {
     String description;
+
+
+    Date date;
     int amount;
+
 
     public String getLatitude() {
         return latitude == null? "" : latitude;
@@ -40,6 +46,15 @@ public class ChildTransactionModel {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
 

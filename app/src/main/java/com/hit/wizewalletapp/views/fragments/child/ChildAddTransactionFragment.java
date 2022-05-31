@@ -43,9 +43,11 @@ import com.hit.wizewalletapp.utilities.CacheUtilities;
 import com.hit.wizewalletapp.utilities.Utilities;
 
 import java.security.Provider;
+import java.util.Date;
 import java.util.HashMap;
 
 
+@SuppressWarnings("deprecation")
 public class ChildAddTransactionFragment extends Fragment {
     EditText amount_et, description_et;
     Button save_btn;
@@ -122,11 +124,14 @@ public class ChildAddTransactionFragment extends Fragment {
     private void save() {
         Integer amount = Integer.valueOf(amount_et.getText().toString());
         String desc = description_et.getText().toString();
+        Date date=new Date();
+        String temp= String.valueOf(date.getMonth()+1)+"/"+String.valueOf(date).substring(9,10) +"/"+String.valueOf(date).substring(24,28);
         if (Utilities.verifyAllTextNotEmpty(amount.toString(), desc)) {
             String token = CacheUtilities.getAcssesToken(requireContext());
             HashMap<String, Object> map = new HashMap<>();
             map.put("amount", amount);
             map.put("description", desc);
+            
             if(lastLocation != null){
 
                 map.put("latitude",String.valueOf(lastLocation.getLatitude()));
