@@ -17,6 +17,17 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.47" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/spinner_parent_item"
+        android:layout_width="54dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/parent_icon_three"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47" />
+
     <TextView
         android:id="@+id/parent_request_message_tv"
         android:layout_width="150dp"
@@ -45,14 +56,38 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 
     <TextView
         android:id="@+id/parent_request_date_tv"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_width="106dp"
+        android:layout_height="34dp"
         android:layout_marginStart="250dp"
         android:layout_marginEnd="8dp"
         android:text="Date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/spinner_photo_item"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/down_arrow"
+        android:layout_width="54dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/down_arrow"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/up_arrow"
+        android:layout_width="54dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/up_arrow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

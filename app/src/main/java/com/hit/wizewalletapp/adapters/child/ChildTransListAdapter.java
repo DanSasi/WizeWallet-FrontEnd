@@ -3,6 +3,7 @@ package com.hit.wizewalletapp.adapters.child;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.hit.wizewalletapp.R;
 
@@ -37,13 +38,18 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView amount_tv,desc_tv,date_tv;
-
+        ImageView up_arrow,down_arrow,spinner_parent_item,spinner_photo_item;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             amount_tv= itemView.findViewById(R.id.parent_request_amount_tv);
             desc_tv=itemView.findViewById(R.id.parent_request_message_tv);
             date_tv=itemView.findViewById(R.id.parent_request_date_tv);
+            up_arrow = itemView.findViewById(R.id.up_arrow);
+            down_arrow = itemView.findViewById(R.id.down_arrow);
+            spinner_parent_item = itemView.findViewById(R.id.spinner_parent_item);
+            spinner_photo_item = itemView.findViewById(R.id.spinner_photo_item);
+
         }
 
     }
@@ -63,9 +69,16 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
         holder.amount_tv.setText(String.valueOf(childTransactionModel.getAmount()));
         if(date != null){
             holder.date_tv.setText(String.valueOf(childTransactionModel.getDate()));
+            holder.down_arrow.setVisibility(View.VISIBLE);
+            holder.spinner_photo_item.setVisibility(View.VISIBLE);
+            holder.spinner_parent_item.setVisibility(View.GONE);
+
         }
         else {
             holder.date_tv.setVisibility(View.GONE);
+            holder.spinner_parent_item.setVisibility(View.VISIBLE);
+            holder.up_arrow.setVisibility(View.VISIBLE);
+            holder.spinner_photo_item.setVisibility(View.GONE);
         }
         holder.itemView.setOnClickListener(v -> listener.onItemClick(childTransactionModel));
 
