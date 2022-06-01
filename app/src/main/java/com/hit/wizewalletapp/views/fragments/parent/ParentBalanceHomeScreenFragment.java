@@ -24,6 +24,7 @@ import com.hit.wizewalletapp.adapters.child.ChildTransListAdapter;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
+import com.hit.wizewalletapp.views.fragments.child.ChildBalanceHomeScreenFragmentDirections;
 
 
 import java.util.List;
@@ -181,6 +182,20 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
         rv.setAdapter(childTransListAdapter);
         childTransListAdapter.setOnItemClickListener(this);
     }
+
+    @Override
+    public void onItemClick(ChildTransactionModel childModel) {
+        String date = childModel.getDate();
+        if (date != null) {
+            Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(ParentBalanceHomeScreenFragmentDirections.
+                   actionHomeParentFragmentToChildTransDetailsFragment(childModel.getDesc(), childModel.getAmount(), childModel.getLatitude(), childModel.getLongitude(), date));
+        } else
+        {
+            date = "";
+            Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(ParentBalanceHomeScreenFragmentDirections.
+                    actionHomeParentFragmentToChildTransDetailsFragment(childModel.getDesc(), childModel.getAmount(), childModel.getLatitude(), childModel.getLongitude(), date));
+        }
+    }
 //
 //    private void fetchData() {
 ////        List<ChildTransactionModel> list= (List<ChildTransactionModel>) rv.getAdapter();
@@ -190,27 +205,6 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
 //        ApiCallsHelper.performGetAllTransForChild(token,new CustomCallBack<List<ChildTransactionModel>>() {
 //            @Override
 //            public void onSuccesses(List<ChildTransactionModel> response) {
-//                childTransListAdapter.updateTransList(response);
-//            }
-//
-//            @Override
-//            public void onFailure(String msg) {
-//
-//            }
-//        });
-//
-//    }
-//
-//
-//
-    @Override
-    public void onItemClick(ChildTransactionModel childModel) {
-        Navigation.findNavController(requireActivity(),R.id.nav_host)
-                .navigate(ParentBalanceHomeScreenFragmentDirections.
-                 actionHomeParentFragmentToChildTransDetailsFragment(childModel.getDesc(),childModel.getAmount(),childModel.getLatitude(),childModel.getLongitude(),childModel.getDate()));
-    }
-//
-
-
+//                chi bn
 
 }

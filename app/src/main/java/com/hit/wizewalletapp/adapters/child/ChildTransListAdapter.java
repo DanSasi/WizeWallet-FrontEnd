@@ -58,9 +58,15 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         final ChildTransactionModel childTransactionModel=list.get(position);
+        String date = childTransactionModel.getDate();
         holder.desc_tv.setText(String.valueOf(childTransactionModel.getDesc()));
         holder.amount_tv.setText(String.valueOf(childTransactionModel.getAmount()));
-        holder.date_tv.setText(String.valueOf(childTransactionModel.getDate()));
+        if(date != null){
+            holder.date_tv.setText(String.valueOf(childTransactionModel.getDate()));
+        }
+        else {
+            holder.date_tv.setVisibility(View.GONE);
+        }
         holder.itemView.setOnClickListener(v -> listener.onItemClick(childTransactionModel));
 
     }

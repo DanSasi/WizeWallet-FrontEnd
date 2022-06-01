@@ -59,16 +59,21 @@ public class ChildTransDetailsFragment extends Fragment {
 
     private void initViews(View view) {
         desc = view.findViewById(R.id.child_trans_description_tv);
+        date = view.findViewById(R.id.child_trans_date);
         amount = view.findViewById(R.id.child_amount_trans_amount);
         back_arrow_btn = view.findViewById(R.id.img_back_arrow_trans_details);
-        date = view.findViewById(R.id.child_trans_date);
         String message_desc = ChildTransDetailsFragmentArgs.fromBundle(getArguments()).getDescription();
-        desc.setText(message_desc);
-        Integer amount_details = ChildTransDetailsFragmentArgs.fromBundle(getArguments()).getAmount();
-        amount.setText(amount_details.toString());
         String dateDetails = ChildTransDetailsFragmentArgs.fromBundle(getArguments()).getDate();
+        Integer amount_details = ChildTransDetailsFragmentArgs.fromBundle(getArguments()).getAmount();
         desc.setText(message_desc);
-        date.setText(dateDetails);
+        amount.setText(amount_details.toString());
+        if(dateDetails == "" ) {
+            view.findViewById(R.id.child_trans_date).setVisibility(View.GONE);
+        }else if(dateDetails != null)
+        {
+            date.setText(dateDetails);
+            date.setVisibility(View.VISIBLE);
+        }
 
         back_arrow_btn.setOnClickListener(new View.OnClickListener() {
             @Override
