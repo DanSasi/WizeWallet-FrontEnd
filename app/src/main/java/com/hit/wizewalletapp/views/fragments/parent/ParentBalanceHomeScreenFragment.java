@@ -207,7 +207,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
     public void onItemClick(ChildTransactionModel childModel) {
         Navigation.findNavController(requireActivity(),R.id.nav_host)
                 .navigate(ParentBalanceHomeScreenFragmentDirections.
-                 actionHomeParentFragmentToChildTransDetailsFragment(childModel.getDesc(),childModel.getAmount(),childModel.getLatitude(),childModel.getLongitude()));
+                 actionHomeParentFragmentToChildTransDetailsFragment(childModel.getDesc(),childModel.getAmount(),childModel.getLatitude(),childModel.getLongitude(),childModel.getDate()));
     }
 //
 

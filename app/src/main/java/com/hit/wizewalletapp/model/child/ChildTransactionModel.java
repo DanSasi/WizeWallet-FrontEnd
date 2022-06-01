@@ -12,7 +12,7 @@ public class ChildTransactionModel {
     String description;
 
 
-    Date date;
+    String createdat;
     int amount;
 
 
@@ -28,9 +28,10 @@ public class ChildTransactionModel {
     String longitude;
 
 
-    public ChildTransactionModel(Integer amount,String desc){
+    public ChildTransactionModel(Integer amount,String desc, String createdat){
         this.amount=amount;
         this.description=desc;
+        this.createdat = createdat;
     }
     public String getDesc() {
         return description;
@@ -49,12 +50,12 @@ public class ChildTransactionModel {
     }
 
 
-    public Date getDate() {
-        return date;
+    public String getDate() {
+        return createdat;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate(String createdat) {
+        this.createdat = createdat;
     }
 
 

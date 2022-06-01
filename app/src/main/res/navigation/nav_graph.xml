@@ -248,6 +248,9 @@
         <argument
             android:name="longtitude"
             app:argType="string" />
+        <argument
+            android:name="date"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/childRequestMoneyFragment"

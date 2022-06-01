@@ -22,7 +22,7 @@ import com.hit.wizewalletapp.utilities.Utilities;
 
 public class ChildTransDetailsFragment extends Fragment {
 
-    TextView amount, desc;
+    TextView amount, desc, date;
     ImageButton back_arrow_btn;
     private GoogleMap mGoogleMap;
 
@@ -61,11 +61,14 @@ public class ChildTransDetailsFragment extends Fragment {
         desc = view.findViewById(R.id.child_trans_description_tv);
         amount = view.findViewById(R.id.child_amount_trans_amount);
         back_arrow_btn = view.findViewById(R.id.img_back_arrow_trans_details);
-
+        date = view.findViewById(R.id.child_trans_date);
         String message_desc = ChildTransDetailsFragmentArgs.fromBundle(getArguments()).getDescription();
         desc.setText(message_desc);
         Integer amount_details = ChildTransDetailsFragmentArgs.fromBundle(getArguments()).getAmount();
         amount.setText(amount_details.toString());
+        String dateDetails = ChildTransDetailsFragmentArgs.fromBundle(getArguments()).getDate();
+        desc.setText(message_desc);
+        date.setText(dateDetails);
 
         back_arrow_btn.setOnClickListener(new View.OnClickListener() {
             @Override

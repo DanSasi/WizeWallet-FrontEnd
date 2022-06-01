@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -50,6 +51,7 @@ import java.util.HashMap;
 @SuppressWarnings("deprecation")
 public class ChildAddTransactionFragment extends Fragment {
     EditText amount_et, description_et;
+    TextView date_Tv;
     Button save_btn;
     ImageButton backButton;
     private final int REQUEST_CODE = 111;
@@ -125,13 +127,16 @@ public class ChildAddTransactionFragment extends Fragment {
         Integer amount = Integer.valueOf(amount_et.getText().toString());
         String desc = description_et.getText().toString();
         Date date=new Date();
-        String temp= String.valueOf(date.getMonth()+1)+"/"+String.valueOf(date).substring(9,10) +"/"+String.valueOf(date).substring(24,28);
-        if (Utilities.verifyAllTextNotEmpty(amount.toString(), desc)) {
+        String createdat= String.valueOf(date.getMonth()+1)+"/"+String.valueOf(date).substring(9,10) +"/"+String.valueOf(date).substring(24,28);
+        date_Tv.setText(createdat);
+
+        if (Utilities.verifyAllTextNotEmpty(amount.toString(), desc,createdat)) {
             String token = CacheUtilities.getAcssesToken(requireContext());
             HashMap<String, Object> map = new HashMap<>();
             map.put("amount", amount);
             map.put("description", desc);
-            
+            map.put("createdat", createdat);
+
             if(lastLocation != null){
 
                 map.put("latitude",String.valueOf(lastLocation.getLatitude()));
@@ -140,7 +145,7 @@ public class ChildAddTransactionFragment extends Fragment {
             ApiCallsHelper.performChildTransaction(token, map, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {
-                    ChildTransactionModel childTransactionModel = new ChildTransactionModel(amount, desc);
+                    ChildTransactionModel childTransactionModel = new ChildTransactionModel(amount, desc,createdat);
                     ChildListModel.instance.childAddTran(childTransactionModel);
                     Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp();
                 }
@@ -160,6 +165,7 @@ public class ChildAddTransactionFragment extends Fragment {
         description_et = view.findViewById(R.id.add_transaction_description_et);
         save_btn = view.findViewById(R.id.add_transaction_btn);
         backButton = view.findViewById(R.id.img_back_arrow_contact);
+        date_Tv = view.findViewById(R.id.child_add_transaction_tv);
     }
 
 }
