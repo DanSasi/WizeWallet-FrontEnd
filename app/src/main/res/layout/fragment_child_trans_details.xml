@@ -66,14 +66,15 @@
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="389dp"
+        android:layout_height="210dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/child_amount_trans_amount"
+        app:layout_constraintVertical_bias="0.67"
         tools:context=".MapsActivity" />
-
 
     <TextView
         android:id="@+id/child_trans_date"
@@ -83,7 +84,7 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="28dp"
         android:background="@drawable/search_bar"
-        android:drawableLeft="@drawable/money_icon"
+        android:drawableLeft="@drawable/calender_img"
         android:drawablePadding="5dp"
         android:ems="10"
         android:inputType="textPersonName"

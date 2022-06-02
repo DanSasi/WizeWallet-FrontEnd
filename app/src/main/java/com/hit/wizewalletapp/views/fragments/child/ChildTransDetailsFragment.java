@@ -46,7 +46,7 @@ public class ChildTransDetailsFragment extends Fragment {
             if (latLng != null) {
                 MarkerOptions markerOptions = new MarkerOptions();
                 markerOptions.position(latLng);
-                markerOptions.title("Test");
+                markerOptions.title("Israel");
                 mGoogleMap.clear();
                 mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18.0f));
                 mGoogleMap.addMarker(markerOptions);

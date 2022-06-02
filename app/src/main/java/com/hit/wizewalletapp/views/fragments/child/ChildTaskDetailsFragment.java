@@ -78,7 +78,7 @@ public class ChildTaskDetailsFragment extends Fragment {
 
                         @Override
                         public void onFailure(String msg) {
-                            Toast.makeText(requireContext(), "Error" + msg, Toast.LENGTH_LONG).show();
+                            Toast.makeText(requireContext(), "Task isn't completed", Toast.LENGTH_LONG).show();
                         }
                     });
 

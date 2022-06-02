@@ -3,6 +3,8 @@ package com.hit.wizewalletapp.views.fragments.child;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.location.LocationProvider;
@@ -46,6 +48,7 @@ import com.hit.wizewalletapp.utilities.Utilities;
 import java.security.Provider;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 
 
 @SuppressWarnings("deprecation")
@@ -54,6 +57,7 @@ public class ChildAddTransactionFragment extends Fragment {
     TextView date_Tv;
     Button save_btn;
     ImageButton backButton;
+    Geocoder geocoder;
     private final int REQUEST_CODE = 111;
 
 
@@ -111,11 +115,10 @@ public class ChildAddTransactionFragment extends Fragment {
 
 
 
-
     private void setGoogleMapsAndEditText(LatLng latLng) {
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
-        markerOptions.title("Test");
+        markerOptions.title("Israel");
         mGoogleMap.clear();
         mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18.0f));
         mGoogleMap.addMarker(markerOptions);
@@ -123,11 +126,13 @@ public class ChildAddTransactionFragment extends Fragment {
     }
 
 
+
+
     private void save() {
         Integer amount = Integer.valueOf(amount_et.getText().toString());
         String desc = description_et.getText().toString();
         Date date=new Date();
-        String createdat= String.valueOf(date.getMonth()+1)+"/"+String.valueOf(date).substring(9,10) +"/"+String.valueOf(date).substring(24,28);
+        String createdat= String.valueOf(date);
         date_Tv.setText(createdat);
 
         if (Utilities.verifyAllTextNotEmpty(amount.toString(), desc,createdat)) {

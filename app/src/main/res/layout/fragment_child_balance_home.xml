@@ -38,9 +38,9 @@
     <TextView
         android:id="@+id/textView9"
         style="@style/balance_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_width="140dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
         android:text="Transactions"
         android:textColor="#818197"
         android:textSize="19dp"
@@ -71,16 +71,16 @@
         style="@style/balance_text"
         android:layout_width="254dp"
         android:layout_height="62dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="236dp"
+        android:drawableEnd="@drawable/shekel"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
         android:textAlignment="center"
         android:textColor="#2C2C63"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:paddingStart="25dp"
-        android:paddingEnd="25dp"
-        android:drawableEnd="@drawable/shekel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.573"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -107,7 +107,6 @@
         android:layout_width="82dp"
         android:layout_height="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="2dp"
         android:layout_weight="1"
         android:clickable="true"
         android:focusable="true"
@@ -124,7 +123,6 @@
         style="@style/icon_texts"
         android:layout_width="82dp"
         android:layout_height="20dp"
-        android:layout_marginStart="2dp"
         android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:clickable="true"
@@ -143,15 +141,16 @@
         android:layout_width="64dp"
         android:layout_height="59dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="42dp"
         android:layout_weight="1"
         android:clickable="true"
         android:elevation="20dp"
         android:focusable="true"
         android:src="@drawable/transatct_child"
         app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_loging_icon_imgv" />
+        app:layout_constraintTop_toBottomOf="@+id/child_user_name" />
 
     <ImageView
 
@@ -175,15 +174,15 @@
     <ImageView
         android:id="@+id/imageView5"
         style="@style/icon_sizes"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="42dp"
         android:layout_weight="1"
         android:clickable="true"
         android:elevation="20dp"
         android:focusable="true"
         android:src="@drawable/task_icon_new_one"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_loging_icon_imgv"
+        app:layout_constraintTop_toBottomOf="@+id/child_user_name"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -221,20 +220,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/child_fragment_ballance_tv" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_trans_child"
-        android:layout_width="360dp"
-        android:layout_height="302dp"
+        android:layout_width="389dp"
+        android:layout_height="384dp"
         android:layout_marginStart="23dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="4dp"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.391"
         app:layout_constraintStart_toStartOf="parent">
 
     </androidx.recyclerview.widget.RecyclerView>
-
 
     <TextView
         android:id="@+id/child_user_name"
