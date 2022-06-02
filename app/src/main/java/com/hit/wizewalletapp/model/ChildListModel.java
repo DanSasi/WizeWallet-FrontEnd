@@ -1,5 +1,7 @@
 package com.hit.wizewalletapp.model;
 
+import android.graphics.Bitmap;
+
 import com.hit.wizewalletapp.model.child.ChildModel;
 import com.hit.wizewalletapp.model.child.ChildRequestModel;
 import com.hit.wizewalletapp.model.child.ChildTaskModel;
@@ -73,6 +75,11 @@ public class ChildListModel {
         public void addChildRequst(ChildRequestModel childRequestModel){
             childRequestModelList.add(childRequestModel);
         }
+
+    public interface saveImageListener {
+        void onComplete(String url);
+    }
+
 
 
 

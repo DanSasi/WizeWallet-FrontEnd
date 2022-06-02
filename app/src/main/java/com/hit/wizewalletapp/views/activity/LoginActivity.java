@@ -16,6 +16,7 @@ import com.hit.wizewalletapp.R;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private static final int MY_CAMERA_REQUEST_CODE = 100;
 
     
     @Override
@@ -32,6 +33,11 @@ public class LoginActivity extends AppCompatActivity {
                 ActivityCompat.requestPermissions(LoginActivity.this,
                         new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
             }
+        }
+        if (checkSelfPermission(Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.CAMERA},
+                    MY_CAMERA_REQUEST_CODE);
         }
     }
     @Override

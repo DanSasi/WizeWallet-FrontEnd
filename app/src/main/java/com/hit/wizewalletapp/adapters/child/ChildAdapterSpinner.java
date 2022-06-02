@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hit.wizewalletapp.model.child.ChildModel;
@@ -42,9 +43,22 @@ public class ChildAdapterSpinner extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         View rootView = LayoutInflater.from(mContext).inflate(R.layout.item_childs, viewGroup, false);
         TextView balanceTxt=rootView.findViewById(R.id.parent_request_balance_tv);
-        TextView nameTxt = rootView.findViewById(R.id.parent_request_message_tv);
+        TextView nameTxt = rootView.findViewById(R.id.spinner_gender_name_tv);
+
+        ImageView boyImage = rootView.findViewById(R.id.boy_image_icon);
+        ImageView girlImage = rootView.findViewById(R.id.girl_image_icon);
+        String gender = childList.get(i).getImg_url();
+        if(gender!= null){
+            if(gender.equals("Boy")){
+                girlImage.setVisibility(View.GONE);
+            }else if(gender.equals("Girl")){
+                boyImage.setVisibility(View.GONE);
+            }
+        }
         nameTxt.setText("Name: "+ childList.get(i).getmName());
         balanceTxt.setText("Balance: "+String.valueOf(childList.get(i).getBalance()));
+
+
 //        photo = rootView.findViewById(R.id.spinner_photo_item);
 //        nameTxt.setText(childList.get(i).getName());
 //        photo.setImageResource(childList.get(i).getPhoto());

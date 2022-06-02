@@ -79,7 +79,7 @@ public class ParentChildsFragment extends Fragment implements ChildListAdapter.O
         Navigation.findNavController(getActivity(), R.id.nav_host)
                 .navigate(ParentChildsFragmentDirections.actionChildListScreenToChildDetailsScreenFragment(
                         childModel.get_id(),
-                childModel.getBalance().toString(),childModel.getmName(),childModel.getUserName()));
+                childModel.getBalance().toString(),childModel.getmName(),childModel.getUserName(),childModel.getImg_url()));
     }
 }
 

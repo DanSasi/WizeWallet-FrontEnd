@@ -43,12 +43,12 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
             super(itemView);
 
             amount_tv= itemView.findViewById(R.id.parent_request_amount_tv);
-            desc_tv=itemView.findViewById(R.id.parent_request_message_tv);
+            desc_tv=itemView.findViewById(R.id.spinner_gender_name_tv);
             date_tv=itemView.findViewById(R.id.parent_request_date_tv);
             up_arrow = itemView.findViewById(R.id.up_arrow);
             down_arrow = itemView.findViewById(R.id.down_arrow);
             spinner_parent_item = itemView.findViewById(R.id.spinner_parent_item);
-            spinner_photo_item = itemView.findViewById(R.id.spinner_photo_item);
+            spinner_photo_item = itemView.findViewById(R.id.spinner_gender_image);
 
         }
 

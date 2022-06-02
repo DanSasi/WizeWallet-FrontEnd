@@ -18,7 +18,7 @@ import com.hit.wizewalletapp.R;
 public class ChildDetailsScreenFragment extends Fragment {
 
     TextView childBalanceTv,childUsernameTv,childIdTv,childNameTv;
-    ImageView childImageView;
+    ImageView boyImageView, girlImageView;
     ImageView arrowBack;
 
 
@@ -36,7 +36,7 @@ public class ChildDetailsScreenFragment extends Fragment {
         //ChildModel childModel = ChildListModel.instance.getChildById(childId);
         childBalanceTv= view.findViewById(R.id.parent_add_task_amount_et);
         childUsernameTv = view.findViewById(R.id.add_child_username_et);
-        childImageView = view.findViewById(R.id.add_child_imgv);
+
         childIdTv = view.findViewById(R.id.parent_add_task_id_et);
         childNameTv =view.findViewById(R.id.add_child_password_et);
         arrowBack =view.findViewById(R.id.details_arrow_back);
@@ -44,6 +44,16 @@ public class ChildDetailsScreenFragment extends Fragment {
         childIdTv.setText(childId);
         childBalanceTv.setText(childBalance);
         childNameTv.setText(childName);
+        boyImageView = view.findViewById(R.id.add_child_imgv);
+        girlImageView = view.findViewById(R.id.girl_image_view);
+        String gender = ChildDetailsScreenFragmentArgs.fromBundle(getArguments()).getImageUrl();
+        if(gender!= null ){
+            if(gender.equals("Boy")){
+                girlImageView.setVisibility(View.GONE);
+            }else if(gender.equals("Girl")){
+                boyImageView.setVisibility(View.GONE);
+            }
+        }
 
         arrowBack.setOnClickListener(v -> Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp());
 //        childUsernameTv.setText(childModel.getName());

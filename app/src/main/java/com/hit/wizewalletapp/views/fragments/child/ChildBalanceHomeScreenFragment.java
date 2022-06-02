@@ -28,7 +28,7 @@ import java.util.List;
 
 public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTransListAdapter.OnItemClickListener  {
 
-    ImageView transfer, task, more, tips;
+    ImageView transfer, task, more, tips , boyImage , girlImage;
     TextView transferText, taskText, moreText, tipText;
     TextView ballance, helloText;
     private RecyclerView rv;
@@ -42,6 +42,16 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
         View view = inflater.inflate(R.layout.fragment_child_balance_home, container, false);
         helloText = view.findViewById(R.id.child_user_name);
         helloText.setText(String.format("Hello %s", ChildBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getName()));
+        girlImage = view.findViewById(R.id.girl_icon_image_child);
+        boyImage = view.findViewById(R.id.fragment_loging_icon_imgv);
+        String gender = ChildBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getImgUrl();
+        if(gender != null){
+            if(gender.equals("Boy")){
+                girlImage.setVisibility(View.GONE);
+            }else if(gender.equals("Girl")){
+                boyImage.setVisibility(View.GONE);
+            }
+        }
         //get the refresh token
         String refreshToken = ChildBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
         ballance = view.findViewById(R.id.child_fragment_ballance_tv);

@@ -8,18 +8,17 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.views.generaldata.SpinnerModel;
 
-import com.hit.wizewalletapp.R;
 import java.util.List;
 
-
-public class SpinnerUserAdater extends BaseAdapter {
+public class SpinnerGenderAdapter extends BaseAdapter {
 
     private Context context;
     private List<SpinnerModel> spinnerModelList;
 
-    public SpinnerUserAdater(Context context, List<SpinnerModel> spinnerModels){
+    public SpinnerGenderAdapter(Context context, List<SpinnerModel> spinnerModels){
         this.context = context;
         this.spinnerModelList = spinnerModels ;
     }

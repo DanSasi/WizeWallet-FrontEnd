@@ -5,26 +5,22 @@ import com.hit.wizewalletapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpinnerData {
-
-    public static List<SpinnerModel> getSpinnerList(){
+public class SpinnerGenderData {
+    public static List<SpinnerModel> getSpinnerGenderList() {
         List<SpinnerModel> spinnerModelList = new ArrayList<>();
 
 
         SpinnerModel parentUser = new SpinnerModel();
-        parentUser.setName("Parent");
-        parentUser.setImage(R.drawable.parent_icon_three);
+        parentUser.setName("Boy");
+        parentUser.setImage(R.drawable.child_icon_new);
         spinnerModelList.add(parentUser);
 
         SpinnerModel childUser = new SpinnerModel();
-        childUser.setName("Child");
-        childUser.setImage(R.drawable.children_image);
+        childUser.setName("Girl");
+        childUser.setImage(R.drawable.girl_icon);
         spinnerModelList.add(childUser);
 
 
         return spinnerModelList;
-
     }
-
-
 }

@@ -44,7 +44,7 @@ public class ChildTaskListAdapter extends RecyclerView.Adapter<ChildTaskListAdap
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             amount_VH_Tv = itemView.findViewById(R.id.parent_request_amount_tv);
-            message_Vh_Tv = itemView.findViewById(R.id.parent_request_message_tv);
+            message_Vh_Tv = itemView.findViewById(R.id.spinner_gender_name_tv);
             completed_task_checkBox = itemView.findViewById(R.id.is_completed_task);
         }
 

@@ -18,10 +18,53 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/add_child_imgv"
+        android:layout_width="205dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/children_image"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_gender_add_child"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:visibility="gone"
+        android:id="@+id/child_image_spinner"
         android:layout_width="168dp"
         android:layout_height="153dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/child_icon_new"
+        android:src="@drawable/children_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/parent_add_task_amount_et"
+        android:layout_width="291dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/search_bar"
+        android:drawableLeft="@drawable/money_icon"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Child Balance"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_username_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_gender_add_child" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:visibility="gone"
+        android:id="@+id/girl_image_spinner"
+        android:layout_width="168dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/children_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +79,7 @@
         android:text="Register"
         android:textColor="#ffffff"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,13 +90,16 @@
         android:layout_width="291dp"
         android:layout_height="53dp"
         android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/email_icon"
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Child Email"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/parent_add_task_id_et"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/parent_add_task_amount_et" />
 
@@ -61,6 +108,7 @@
         android:layout_width="291dp"
         android:layout_height="53dp"
         android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/password_icon_4"
         android:drawablePadding="5dp"
@@ -68,36 +116,24 @@
         android:hint="Password"
         android:inputType="textPersonName"
         android:password="true"
+        app:layout_constraintBottom_toTopOf="@+id/parent_add_task_name_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/parent_add_task_id_et" />
-
-    <EditText
-        android:id="@+id/parent_add_task_amount_et"
-        android:layout_width="291dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/search_bar"
-        android:drawableLeft="@drawable/money_icon"
-        android:drawablePadding="5dp"
-        android:ems="10"
-        android:hint="Child Balance"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_child_img_filter_btn" />
 
     <EditText
         android:id="@+id/parent_add_task_name_et"
         android:layout_width="291dp"
         android:layout_height="53dp"
         android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/name_icon"
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Child Name"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_child_password_et" />
@@ -107,12 +143,14 @@
         android:layout_width="291dp"
         android:layout_height="53dp"
         android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/id_icon_child"
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Child Id"
         android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/add_child_password_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_child_username_et" />
@@ -129,14 +167,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.utils.widget.ImageFilterButton
-        android:id="@+id/add_child_img_filter_btn"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="10dp"
+    <Spinner
+        android:id="@+id/spinner_gender_add_child"
+        android:layout_width="254dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_child_imgv"
-        app:srcCompat="@drawable/camera_icon_two" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

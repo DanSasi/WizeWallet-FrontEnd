@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/spinner_photo_item"
+        android:id="@+id/spinner_gender_image"
         android:layout_width="40dp"
         android:layout_height="32dp"
         android:layout_marginStart="8dp"
@@ -17,15 +17,15 @@
         app:layout_constraintVertical_bias="0.428" />
 
     <TextView
-        android:id="@+id/parent_request_message_tv"
+        android:id="@+id/spinner_gender_name_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_toEndOf="@+id/spinner_photo_item"
+        android:layout_toEndOf="@+id/spinner_gender_image"
         android:text="User: "
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/spinner_photo_item"
+        app:layout_constraintStart_toEndOf="@+id/spinner_gender_image"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

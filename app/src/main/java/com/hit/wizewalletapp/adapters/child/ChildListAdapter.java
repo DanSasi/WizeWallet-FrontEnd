@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -34,15 +35,15 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyVi
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView nameTxt;
-        ImageView photo;
+        ImageView imageView,boyImage,girlImage;
         TextView balanceTv;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameTxt = itemView.findViewById(R.id.parent_request_message_tv);
-            photo = itemView.findViewById(R.id.spinner_photo_item);
+            nameTxt = itemView.findViewById(R.id.spinner_gender_name_tv);
             balanceTv=itemView.findViewById(R.id.parent_request_balance_tv);
-
+            boyImage = itemView.findViewById(R.id.boy_image_icon);
+            girlImage = itemView.findViewById(R.id.girl_image_icon);
         }
 
     }
@@ -64,8 +65,18 @@ public class ChildListAdapter extends RecyclerView.Adapter<ChildListAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull ChildListAdapter.MyViewHolder holder, int position) {
         final ChildModel childModel = childList.get(position);
+        String gender = childModel.getImg_url();
         holder.nameTxt.setText("Name: "+childModel.getmName());
         holder.balanceTv.setText("Balance: "+String.valueOf(childModel.getBalance()));
+        if(gender != null){
+            if(gender.equals("Boy")){
+                holder.girlImage.setVisibility(View.GONE);
+            }else if(gender.equals("Girl"))
+            {
+                holder.boyImage.setVisibility(View.GONE);
+            }
+        }
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

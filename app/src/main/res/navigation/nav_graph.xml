@@ -109,6 +109,9 @@
             android:name="name"
             app:argType="string" />
         <argument android:name="email" />
+        <argument
+            android:name="image_url"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/childTasksScreenFragment"
@@ -147,6 +150,9 @@
         <action
             android:id="@+id/action_childBalanceHomeScreenFragment_to_childTransDetailsFragment"
             app:destination="@id/childTransDetailsFragment" />
+        <argument
+            android:name="img_url"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/loginFragmentHome"

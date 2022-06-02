@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/spinner_photo_item"
+        android:id="@+id/spinner_gender_image"
         android:layout_width="54dp"
         android:layout_height="85dp"
         android:layout_marginStart="4dp"
@@ -17,17 +17,17 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/parent_request_message_tv"
+        android:id="@+id/spinner_gender_name_tv"
         android:layout_width="256dp"
         android:layout_height="29dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_toEndOf="@+id/spinner_photo_item"
+        android:layout_toEndOf="@+id/spinner_gender_image"
         android:text="Task"
         android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/is_completed_task"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/spinner_photo_item"
+        app:layout_constraintStart_toEndOf="@+id/spinner_gender_image"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -39,8 +39,8 @@
         android:text="amount"
         app:layout_constraintEnd_toStartOf="@+id/is_completed_task"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/spinner_photo_item"
-        app:layout_constraintTop_toBottomOf="@+id/parent_request_message_tv" />
+        app:layout_constraintStart_toEndOf="@+id/spinner_gender_image"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_gender_name_tv" />
 
     <CheckBox
         android:id="@+id/is_completed_task"

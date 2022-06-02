@@ -9,40 +9,46 @@
     <!--    android:layout_height="wrap_content">-->
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/spinner_photo_item2"
-        android:layout_width="52dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="4dp"
-        android:src="@drawable/child_icon_new"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.454" />
-
     <TextView
-        android:id="@+id/parent_request_message_tv"
+        android:id="@+id/spinner_gender_name_tv"
         android:layout_width="150dp"
         android:layout_height="20dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/spinner_photo_item2"
         android:text="Name"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/spinner_photo_item2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/girl_image_icon"
+        android:layout_width="55dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/girl_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/boy_image_icon"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/child_icon_new"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/parent_request_balance_tv"
         android:layout_width="150dp"
         android:layout_height="20dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Balance"
-        app:layout_constraintEnd_toEndOf="@+id/parent_request_message_tv"
-        app:layout_constraintStart_toEndOf="@+id/spinner_photo_item"
-        app:layout_constraintTop_toBottomOf="@+id/parent_request_message_tv" />
+        app:layout_constraintEnd_toEndOf="@+id/spinner_gender_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_gender_name_tv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
