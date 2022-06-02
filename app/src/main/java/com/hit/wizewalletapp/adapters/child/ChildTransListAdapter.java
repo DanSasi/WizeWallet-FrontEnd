@@ -44,7 +44,6 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
 
             amount_tv= itemView.findViewById(R.id.parent_request_amount_tv);
             desc_tv=itemView.findViewById(R.id.spinner_gender_name_tv);
-            date_tv=itemView.findViewById(R.id.parent_request_date_tv);
             up_arrow = itemView.findViewById(R.id.up_arrow);
             down_arrow = itemView.findViewById(R.id.down_arrow);
             spinner_parent_item = itemView.findViewById(R.id.spinner_parent_item);
@@ -68,16 +67,16 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
         holder.desc_tv.setText(String.valueOf(childTransactionModel.getDesc()));
         holder.amount_tv.setText(String.valueOf(childTransactionModel.getAmount()));
         if(date != null){
-            holder.date_tv.setText(String.valueOf(childTransactionModel.getDate()));
             holder.down_arrow.setVisibility(View.VISIBLE);
+            holder.up_arrow.setVisibility(View.GONE);
             holder.spinner_photo_item.setVisibility(View.VISIBLE);
             holder.spinner_parent_item.setVisibility(View.GONE);
 
         }
         else {
-            holder.date_tv.setVisibility(View.GONE);
             holder.spinner_parent_item.setVisibility(View.VISIBLE);
             holder.up_arrow.setVisibility(View.VISIBLE);
+            holder.down_arrow.setVisibility(View.GONE);
             holder.spinner_photo_item.setVisibility(View.GONE);
         }
         holder.itemView.setOnClickListener(v -> listener.onItemClick(childTransactionModel));
