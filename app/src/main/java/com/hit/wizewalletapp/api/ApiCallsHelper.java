@@ -26,7 +26,7 @@ public class ApiCallsHelper {
                 if (response.isSuccessful() && response.code() == 200) {
                     callback.onSuccesses(response.body());
                 } else if (response.code() == 400) {
-                    callback.onFailure("wrong email or password/already have user");
+                    callback.onFailure("wrong email or password");
                 }
             }
 
@@ -46,7 +46,7 @@ public class ApiCallsHelper {
                 if (response.isSuccessful() && response.code() == 200) {
                     callback.onSuccesses(null);
                 } else if (response.code() == 400) {
-                    callback.onFailure("wrong email or password/already have user");
+                    callback.onFailure("wrong email or password");
                 }
             }
 
@@ -78,7 +78,7 @@ public class ApiCallsHelper {
                 if (response.isSuccessful() && response.code() == 200) {
                     callback.onSuccesses(null);
                 } else if (response.code() == 400) {
-                    callback.onFailure("wrong email or password/already have user");
+                    callback.onFailure("wrong email or password");
                 }
             }
 
@@ -132,7 +132,7 @@ public class ApiCallsHelper {
                     callback.onSuccesses(response.body().children);
                 } else if (response.code() == 400) {
                     //5. Post Error the data to the caller
-                    callback.onFailure("wrong email or password/already have user");
+                    callback.onFailure("wrong email or password");
                 }
             }
 
@@ -160,7 +160,7 @@ public class ApiCallsHelper {
                     callback.onSuccesses(response.body());
                 } else if (response.code() == 400) {
                     //5. Post Error the data to the caller
-                    callback.onFailure("wrong email or password/already have user");
+                    callback.onFailure("wrong email or password");
                 }
             }
 
@@ -204,7 +204,7 @@ public class ApiCallsHelper {
                 if (response.isSuccessful() && response.code() == 200) {
                     callback.onSuccesses(null);
                 } else if (response.code() == 400) {
-                    callback.onFailure("wrong email or password/already have user");
+                    callback.onFailure("wrong email or password");
                 }
             }
 
@@ -235,7 +235,7 @@ public class ApiCallsHelper {
                     callback.onSuccesses(childList);
                 } else if (response.code() == 400) {
                     //5. Post Error the data to the caller
-                    callback.onFailure("wrong email or password/already have user");
+                    callback.onFailure("wrong email or password");
                 }
             }
 
@@ -336,7 +336,7 @@ public class ApiCallsHelper {
                     callback.onSuccesses(response.body().balance);
                 } else if (response.code() == 400) {
                     //5. Post Error the data to the caller
-                    callback.onFailure("wrong email or password/already have user");
+                    callback.onFailure("wrong email or password");
                 }
             }
 
@@ -381,7 +381,7 @@ public class ApiCallsHelper {
                 if (response.isSuccessful() && response.code() == 200) {
                     callback.onSuccesses(null);
                 } else if (response.code() == 400) {
-                    callback.onFailure("wrong email or password/already have user");
+                    callback.onFailure("wrong email or password");
                 }
             }
 
