@@ -38,8 +38,9 @@
 
     <ImageView
         android:id="@+id/arrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
         android:layout_marginEnd="118dp"
         android:layout_weight="1"
         android:src="@drawable/ic_baseline_arrow_back_24"
@@ -52,71 +53,31 @@
     <TextView
         android:id="@+id/menu_topic"
         style="@style/text_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="70dp"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
         android:layout_weight="3"
         android:letterSpacing="0.1"
         android:text="Menu"
         android:textColor="@color/topic_black"
         android:textSize="16sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintStart_toEndOf="@+id/arrow"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="334dp"
-        android:layout_height="49dp"
-        android:background="@drawable/search_bar"
-        android:drawableEnd="@drawable/ic_search"
-        android:hint="Search"
-        android:letterSpacing="0.1"
-        android:paddingStart="25dp"
-        android:paddingEnd="25dp"
-        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <!--    </LinearLayout>-->
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
-        app:layout_constraintVertical_bias="0.174">
-
-        <TextView
-            style="@style/text_style"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0sp"
-            android:layout_marginTop="0dp"
-            android:letterSpacing="0.1"
-            android:text="Shortcuts"
-            android:textSize="14sp"
-            android:textStyle="normal" />
-
-    </LinearLayout>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
         android:background="@drawable/bg_menu_list1"
-        android:layout_marginTop="200dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText2" />
+        app:layout_constraintTop_toTopOf="@+id/menu_topic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
