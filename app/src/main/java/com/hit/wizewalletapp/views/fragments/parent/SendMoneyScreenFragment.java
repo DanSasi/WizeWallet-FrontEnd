@@ -26,6 +26,7 @@ import com.hit.wizewalletapp.utilities.Utilities;
 import com.hit.wizewalletapp.model.child.ChildModel;
 import com.hit.wizewalletapp.R;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -107,12 +108,15 @@ public class SendMoneyScreenFragment extends Fragment {
         String amount = amountEt.getText().toString();
         String _id = spinner.getSelectedItem().toString();
         String description=descriptionEt.getText().toString();
+        Date date=new Date();
+        String date1=date.toString();
         if (Utilities.verifyAllTextNotEmpty(amount,_id,description)) {
             String token = CacheUtilities.getAcssesToken(requireContext());
             HashMap<String, Object> userTaskMap = new HashMap<>();
             userTaskMap.put("_id",_id);
             userTaskMap.put("amount", Integer.parseInt(amount));
             userTaskMap.put("description",description);
+            userTaskMap.put("createdat",date1);
             ApiCallsHelper.performAddBalanceForChild(token,userTaskMap, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {

@@ -60,6 +60,7 @@ public class ChildTaskListAdapter extends RecyclerView.Adapter<ChildTaskListAdap
     @Override
     public void onBindViewHolder(@NonNull ChildTaskListAdapter.MyViewHolder holder, int position) {
         final TaskChildModel childModel = list.get(position);
+        String date = childModel.getDate();
         holder.message_Vh_Tv.setText(String.valueOf(childModel.getMessage()));
         holder.amount_VH_Tv.setText(String.valueOf(childModel.getAmount()));
         holder.completed_task_checkBox.setChecked(childModel.isCompleted());

@@ -16,12 +16,13 @@ import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
 
+import java.util.Date;
 import java.util.HashMap;
 
 
 public class AcceptOrRejectFragment extends Fragment {
     TextView message_Tv;
-    TextView amount_Tv;
+    TextView amount_Tv,date_Tv;
     Button accept_Btn;
     Button reject_Btn;
     @Override
@@ -42,6 +43,9 @@ public class AcceptOrRejectFragment extends Fragment {
         message_Tv.setText(message_desc);
         Integer amount_desc = AcceptOrRejectFragmentArgs.fromBundle(getArguments()).getAmount();
         amount_Tv.setText(amount_desc.toString());
+        Date date=new Date();
+        String createdat= String.valueOf(date);
+        date_Tv.setText(createdat);
         accept_Btn.setVisibility(View.VISIBLE);
         reject_Btn.setVisibility(View.VISIBLE);
         reject_Btn.setOnClickListener(new View.OnClickListener() {

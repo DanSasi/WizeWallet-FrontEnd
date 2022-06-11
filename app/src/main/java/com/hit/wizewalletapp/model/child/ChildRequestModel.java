@@ -7,6 +7,7 @@ public class ChildRequestModel {
     public String message;
     public Integer amount;
     public String _id;
+    String createdat;
 
     public ChildRequestModel(String mMessage, Integer mAmount){
         message = mMessage;
@@ -31,5 +32,15 @@ public class ChildRequestModel {
     public void setmAmount(Integer mAmount) {
         this.amount = mAmount;
     }
+
+    public String getDate() {
+        return createdat;
+    }
+
+    public void setDate(String createdat) {
+        this.createdat = createdat;
+    }
+
+
 
 }

@@ -14,6 +14,8 @@ public class TaskChildModel {
     boolean isCompleted;
     String message;
     int amount;
+    String createdat;
+
 
     public boolean isCompleted() {
         return isCompleted;
@@ -75,6 +77,15 @@ public class TaskChildModel {
     int kidid;
     String _id;
     int __v;
+
+
+    public String getDate() {
+        return createdat;
+    }
+
+    public void setDate(String createdat) {
+        this.createdat = createdat;
+    }
 
 
 }
