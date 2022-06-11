@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +34,7 @@ public class LoginFragment extends Fragment {
     private TextView regisger , wellcomTv;
     private Button login;
     private ImageView mainIconIv;
+    private ProgressBar progressBar_login;
     private SpinnerUserAdater adapter;
 
 
@@ -46,6 +48,7 @@ public class LoginFragment extends Fragment {
 
         login.setOnClickListener(v -> preformLogin());
         return myFragmet;
+
     }
 
     private void preformLogin() {
@@ -53,6 +56,7 @@ public class LoginFragment extends Fragment {
         String password = passwordEditText.getText().toString();
         String item = userSpinner.getSelectedItem().toString();
         boolean isChild = item.equals("Child");
+        progressBar_login.setVisibility(View.VISIBLE);
         if (Utilities.verifyAllTextNotEmpty(email, password)) {
             ApiCallsHelper.performLogin(email, password,isChild, new CustomCallBack<LoginResponse>() {
                 @Override
@@ -89,6 +93,7 @@ public class LoginFragment extends Fragment {
         mainIconIv = fragment.findViewById(R.id.fragment_loging_icon_imgv);
         wellcomTv = fragment.findViewById(R.id.fragment_login_man_tv);
         logas = fragment.findViewById(R.id.fragment_home_log_as);
+        progressBar_login = fragment.findViewById(R.id.progressBar2);
         adapter = new SpinnerUserAdater(getContext(), SpinnerData.getSpinnerList());
         userSpinner.setAdapter(adapter);
 

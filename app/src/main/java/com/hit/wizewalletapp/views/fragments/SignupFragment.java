@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -30,6 +31,7 @@ public class SignupFragment extends Fragment {
 
     private EditText emailEditText, passwordEditText, userFullName;
     private Button userSignUpButton;
+    private ProgressBar progressBar_signUp;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.signup_tab_fragment, container, false);
@@ -43,12 +45,14 @@ public class SignupFragment extends Fragment {
         emailEditText = root.findViewById(R.id.etrEmail);
         passwordEditText = root.findViewById(R.id.compassword);
         userSignUpButton = root.findViewById(R.id.SignUp);
+        progressBar_signUp = root.findViewById(R.id.progressBar3);
     }
 
     private void preformSignUp() {
         String name = userFullName.getText().toString();
         String email = emailEditText.getText().toString();
         String password = passwordEditText.getText().toString();
+        progressBar_signUp.setVisibility(View.VISIBLE);
         if (Utilities.verifyAllTextNotEmpty(email, password,name)) {
             HashMap<String, String> bodyMap = new HashMap<>();
             bodyMap.put("email",email );
@@ -58,6 +62,7 @@ public class SignupFragment extends Fragment {
                 @Override
                 public void onSuccesses(Void response) {
                     Navigation.findNavController(requireActivity(), R.id.nav_host).navigateUp();
+
                 }
 
                 @Override
