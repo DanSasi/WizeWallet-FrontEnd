@@ -25,6 +25,10 @@ public class ChildTransactionModel {
     }
 
     String latitude;
+
+
+
+    Boolean istransact;
     String longitude;
 
 
@@ -58,6 +62,13 @@ public class ChildTransactionModel {
         this.createdat = createdat;
     }
 
+    public Boolean getIstranact() {
+        return istransact;
+    }
+
+    public void setIstranact(Boolean istranact) {
+        this.istransact = istranact;
+    }
 
 
 }

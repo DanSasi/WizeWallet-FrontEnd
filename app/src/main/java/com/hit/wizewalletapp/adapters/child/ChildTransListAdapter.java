@@ -45,6 +45,7 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
             amount_tv= itemView.findViewById(R.id.parent_request_amount_tv);
             desc_tv=itemView.findViewById(R.id.spinner_gender_name_tv);
             up_arrow = itemView.findViewById(R.id.up_arrow);
+            date_tv = itemView.findViewById(R.id.date_rv_item);
             down_arrow = itemView.findViewById(R.id.down_arrow);
             spinner_parent_item = itemView.findViewById(R.id.spinner_parent_item);
             spinner_photo_item = itemView.findViewById(R.id.spinner_gender_image);
@@ -63,17 +64,19 @@ public class ChildTransListAdapter extends RecyclerView.Adapter<ChildTransListAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         final ChildTransactionModel childTransactionModel=list.get(position);
-        String date = childTransactionModel.getDate();
-        holder.desc_tv.setText(String.valueOf(childTransactionModel.getDesc()));
-        holder.amount_tv.setText(String.valueOf(childTransactionModel.getAmount()));
-        if(date != null){
+
+        holder.desc_tv.setText(String.valueOf("Description:  " +childTransactionModel.getDesc()));
+        holder.amount_tv.setText(String.valueOf("Amount :  " + childTransactionModel.getAmount()));
+        holder.date_tv.setText(String.valueOf("Date: " + childTransactionModel.getDate()));
+        Boolean isTransact = childTransactionModel.getIstranact();
+        if(isTransact==true){
             holder.down_arrow.setVisibility(View.VISIBLE);
             holder.up_arrow.setVisibility(View.GONE);
             holder.spinner_photo_item.setVisibility(View.VISIBLE);
             holder.spinner_parent_item.setVisibility(View.GONE);
 
         }
-        else {
+        else if(isTransact == false){
             holder.spinner_parent_item.setVisibility(View.VISIBLE);
             holder.up_arrow.setVisibility(View.VISIBLE);
             holder.down_arrow.setVisibility(View.GONE);
