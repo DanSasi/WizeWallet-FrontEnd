@@ -43,9 +43,7 @@ public class AcceptOrRejectFragment extends Fragment {
         message_Tv.setText(message_desc);
         Integer amount_desc = AcceptOrRejectFragmentArgs.fromBundle(getArguments()).getAmount();
         amount_Tv.setText(amount_desc.toString());
-        Date date=new Date();
-        String createdat= String.valueOf(date);
-        date_Tv.setText(createdat);
+
         accept_Btn.setVisibility(View.VISIBLE);
         reject_Btn.setVisibility(View.VISIBLE);
         reject_Btn.setOnClickListener(new View.OnClickListener() {

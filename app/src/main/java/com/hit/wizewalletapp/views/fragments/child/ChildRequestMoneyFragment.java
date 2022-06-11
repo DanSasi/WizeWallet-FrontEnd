@@ -20,6 +20,7 @@ import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
 import com.hit.wizewalletapp.utilities.Utilities;
 
+import java.util.Date;
 import java.util.HashMap;
 
 
@@ -53,11 +54,14 @@ public class ChildRequestMoneyFragment extends Fragment {
 
         String amount = requestMoneyAmount.getText().toString();
         String message = requestMoneyMessage.getText().toString();
+        Date date=new Date();
+        String date1=date.toString();
         if(Utilities.verifyAllTextNotEmpty(amount,message)){
             String token = CacheUtilities.getAcssesToken(requireContext());
             HashMap<String,Object> bodyRequest = new HashMap<>();
             bodyRequest.put("message",message);
             bodyRequest.put("amount",Integer.parseInt(amount));
+            bodyRequest.put("createdat",date1);
             ApiCallsHelper.performChildRequestAmount(token, bodyRequest, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {
