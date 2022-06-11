@@ -50,7 +50,10 @@ public class ParentMoneyRequestsFragment extends Fragment implements ChildReques
     private void initRecyclerView(View view) {
         rv =view.findViewById(R.id.parent_requests_rv);
         rv.setHasFixedSize(true);
-        rv.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(listAdapter);
         listAdapter.setOnItemClickListener(this);
 

@@ -43,7 +43,10 @@ public class ChildTasksScreenFragment extends Fragment implements ChildTaskListA
     private void initRecyclerView(View view) {
         childTaskRv = view.findViewById(R.id.child_task_rv);
         childTaskRv.setHasFixedSize(true);
-        childTaskRv.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        childTaskRv.setLayoutManager(linearLayoutManager);
         childTaskRv.setAdapter(listAdapter);
         listAdapter.setOnItemClickListener(this);
 

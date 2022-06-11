@@ -68,7 +68,10 @@ public class ParentChildsFragment extends Fragment implements ChildListAdapter.O
     private void initRecyclerView(View view) {
         recyclerView = view.findViewById(R.id.child_recycler_view);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(listAdapter);
         listAdapter.setOnItemClickListener(this);
     }

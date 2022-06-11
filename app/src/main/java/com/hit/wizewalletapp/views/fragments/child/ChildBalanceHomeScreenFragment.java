@@ -117,7 +117,10 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
     private void initViewRv(View view) {
         rv= view.findViewById(R.id.rv_trans_child);
         rv.setHasFixedSize(true);
-        rv.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(childTransListAdapter);
         childTransListAdapter.setOnItemClickListener(this);
 
