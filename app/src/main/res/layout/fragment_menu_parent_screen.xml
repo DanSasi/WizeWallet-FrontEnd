@@ -36,26 +36,27 @@
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:layout_constraintTop_toTopOf="parent">-->
 
+
+    <!--    </LinearLayout>-->
+
+
     <ImageView
         android:id="@+id/arrow"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="118dp"
+        android:layout_width="38dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
         android:layout_weight="1"
         android:src="@drawable/ic_baseline_arrow_back_24"
-        app:layout_constraintBottom_toBottomOf="@+id/menu_topic"
-        app:layout_constraintEnd_toStartOf="@+id/menu_topic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/menu_topic"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/menu_topic"
         style="@style/text_style"
-        android:layout_width="50dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="25dp"
+        android:layout_width="67dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="36dp"
         android:layout_weight="3"
         android:letterSpacing="0.1"
         android:text="Menu"
@@ -65,10 +66,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-    <!--    </LinearLayout>-->
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
