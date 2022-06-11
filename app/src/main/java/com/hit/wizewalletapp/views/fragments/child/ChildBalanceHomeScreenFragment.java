@@ -21,7 +21,6 @@ import com.hit.wizewalletapp.adapters.child.ChildTransListAdapter;
 import com.hit.wizewalletapp.api.ApiCallsHelper;
 import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
-import com.hit.wizewalletapp.views.fragments.parent.ParentBalanceHomeScreenFragmentArgs;
 
 import java.util.List;
 
@@ -105,7 +104,7 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
                             .actionChildBalanceHomeScreenFragmentToChildAddTransaction()));
 
 
-        progressBar = view.findViewById(R.id.progressBar);
+        progressBar = view.findViewById(R.id.progressBar_balane_parent);
         /////////////////////////////////////////////////////////////Done/////////////////////////////////////////////////////////////
         initViewRv(view);
         fetchData();

@@ -1,5 +1,7 @@
 package com.hit.wizewalletapp.views.fragments.child;
 
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -19,12 +21,18 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.hit.wizewalletapp.R;
 import com.hit.wizewalletapp.utilities.Utilities;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
 
 public class ChildTransDetailsFragment extends Fragment {
 
     TextView amount, desc, date;
     ImageButton back_arrow_btn;
     private GoogleMap mGoogleMap;
+    Geocoder gecoder;
+    List<Address> addresses ;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,13 +48,18 @@ public class ChildTransDetailsFragment extends Fragment {
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         supportMapFragment.getMapAsync(googleMap -> {
             mGoogleMap = googleMap;
+
             String lat = ChildTransDetailsFragmentArgs.fromBundle(getArguments()).getLatitude();
             String lng = ChildTransDetailsFragmentArgs.fromBundle(getArguments()).getLongtitude();
             LatLng latLng = Utilities.getLatLng(lat, lng);
             if (latLng != null) {
                 MarkerOptions markerOptions = new MarkerOptions();
                 markerOptions.position(latLng);
-                markerOptions.title("Israel");
+                try {
+                    markerOptions.title("You Bought there: ").snippet(getTheAddress(lat,lng));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 mGoogleMap.clear();
                 mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18.0f));
                 mGoogleMap.addMarker(markerOptions);
@@ -55,6 +68,12 @@ public class ChildTransDetailsFragment extends Fragment {
             }
         });
 
+    }
+
+    private String getTheAddress(String lat, String lng) throws IOException {
+        gecoder = new Geocoder(requireContext(), Locale.getDefault());
+        addresses = gecoder.getFromLocation(Double.parseDouble(lat),Double.parseDouble(lng),1);
+        return addresses.get(0).getAddressLine(0).toString();
     }
 
     private void initViews(View view) {

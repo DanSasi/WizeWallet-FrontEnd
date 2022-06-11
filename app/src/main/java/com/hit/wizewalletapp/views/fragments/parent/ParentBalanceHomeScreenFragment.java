@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
     TextView nameTxt;
     ImageView photo;
     String refreshToken ="";
+    ProgressBar progressBar ;
     private RecyclerView rv;
     private final ChildTransListAdapter childTransListAdapter= new ChildTransListAdapter();
 
@@ -49,6 +51,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_parent_balance_home, container, false);
         helloText = view.findViewById(R.id.user_name);
+        progressBar = view.findViewById(R.id.progressBar_balane_parent);
         helloText.setText(String.format("Hello %s",ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getName()));
         refreshToken = ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
 
@@ -57,9 +60,11 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
         /////////////////////////////////////////////////////////////Childs/////////////////////////////////////////////////////////////
 
         childs = view.findViewById(R.id.imageView4);
-        childs.setOnClickListener(v->Navigation.findNavController(requireActivity(),R.id.nav_host)
+        childs.setOnClickListener(v->
+                Navigation.findNavController(requireActivity(),R.id.nav_host)
                 .navigate(ParentBalanceHomeScreenFragmentDirections.
                         actionHomeParentFragmentToChildListScreen()));
+
 
         childText = view.findViewById(R.id.textView6);
         childText.setOnClickListener(v->Navigation.findNavController(requireActivity(),R.id.nav_host)
