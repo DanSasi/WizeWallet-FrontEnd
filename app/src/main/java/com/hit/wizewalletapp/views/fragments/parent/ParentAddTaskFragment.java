@@ -26,6 +26,7 @@ import com.hit.wizewalletapp.api.CustomCallBack;
 import com.hit.wizewalletapp.utilities.CacheUtilities;
 import com.hit.wizewalletapp.utilities.Utilities;
 
+import java.text.DateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -92,15 +93,15 @@ public class ParentAddTaskFragment extends Fragment {
         String id=spinner.getSelectedItem().toString();
         String amount = addTaskAmountEt.getText().toString();
         String message = addTaskMessage.getText().toString();
-        Date date=new Date();
-        String date1=date.toString();
+        Date date = new Date();
+        String stringDate = DateFormat.getDateInstance().format(date);
         if (Utilities.verifyAllTextNotEmpty(id, amount, message)) {
             String token = CacheUtilities.getAcssesToken(requireContext());
             HashMap<String, Object> userTaskMap = new HashMap<>();
             userTaskMap.put("kidid", id);
             userTaskMap.put("amount", amount);
             userTaskMap.put("message", message);
-            userTaskMap.put("createdat",date1);
+            userTaskMap.put("createdat",stringDate);
             ApiCallsHelper.performAddTasks(token, userTaskMap, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {

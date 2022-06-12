@@ -46,6 +46,7 @@ import com.hit.wizewalletapp.utilities.CacheUtilities;
 import com.hit.wizewalletapp.utilities.Utilities;
 
 import java.security.Provider;
+import java.text.DateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
@@ -131,16 +132,16 @@ public class ChildAddTransactionFragment extends Fragment {
     private void save() {
         Integer amount = Integer.valueOf(amount_et.getText().toString());
         String desc = description_et.getText().toString();
-        Date date=new Date();
-        String createdat= String.valueOf(date);
-        date_Tv.setText(createdat);
+        Date date = new Date();
+        String stringDate = DateFormat.getDateInstance().format(date);
+        date_Tv.setText(stringDate);
 
-        if (Utilities.verifyAllTextNotEmpty(amount.toString(), desc,createdat)) {
+        if (Utilities.verifyAllTextNotEmpty(amount.toString(), desc,stringDate)) {
             String token = CacheUtilities.getAcssesToken(requireContext());
             HashMap<String, Object> map = new HashMap<>();
             map.put("amount", amount);
             map.put("description", desc);
-            map.put("createdat", createdat);
+            map.put("createdat", stringDate);
 
             if(lastLocation != null){
 
@@ -150,7 +151,7 @@ public class ChildAddTransactionFragment extends Fragment {
             ApiCallsHelper.performChildTransaction(token, map, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {
-                    ChildTransactionModel childTransactionModel = new ChildTransactionModel(amount, desc,createdat);
+                    ChildTransactionModel childTransactionModel = new ChildTransactionModel(amount, desc,stringDate);
                     ChildListModel.instance.childAddTran(childTransactionModel);
                     Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp();
                 }

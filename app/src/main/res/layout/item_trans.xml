@@ -5,12 +5,13 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/search_bar"
-    android:layout_height="wrap_content">
+    android:layout_height="85dp"
+    >
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/spinner_gender_image"
         android:layout_width="78dp"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_marginStart="4dp"
         android:src="@drawable/transaction_icon_three"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,7 +22,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/spinner_parent_item"
         android:layout_width="78dp"
-        android:layout_height="99dp"
+        android:layout_height="70dp"
         android:layout_marginStart="4dp"
         android:src="@drawable/parent_icon_three"
         app:layout_constraintBottom_toBottomOf="parent"
