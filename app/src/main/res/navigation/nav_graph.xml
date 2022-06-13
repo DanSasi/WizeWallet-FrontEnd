@@ -12,13 +12,19 @@
         tools:layout="@layout/fragment_parent_balance_home" >
         <action
             android:id="@+id/action_homeParentFragment_to_parentTasksScreen"
-            app:destination="@id/parentTasksScreen" />
+            app:destination="@id/parentTasksScreen"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_homeParentFragment_to_parentTipsScreen"
-            app:destination="@id/parentTipsScreen" />
+            app:destination="@id/parentTipsScreen"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_homeParentFragment_to_childListScreen"
-            app:destination="@id/childListScreen" />
+            app:destination="@id/childListScreen"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <argument
             android:name="refreshToken"
             app:argType="string" />
@@ -27,12 +33,16 @@
             app:argType="string" />
         <action
             android:id="@+id/action_homeParentFragment_to_parentMenuScreen"
-            app:destination="@id/parentMenuScreen" />
+            app:destination="@id/parentMenuScreen"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
-            app:restoreState="true"
-            app:launchSingleTop="true"
             android:id="@+id/action_homeParentFragment_to_childTransDetailsFragment"
-            app:destination="@id/childTransDetailsFragment" />
+            app:destination="@id/childTransDetailsFragment"
+            app:enterAnim="@anim/to_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/from_left"
+            app:restoreState="true" />
     </fragment>
     <fragment
         android:id="@+id/parentTasksScreen"
@@ -40,10 +50,14 @@
         android:label="ParentTasksScreen" >
         <action
             android:id="@+id/action_parentTasksScreen_to_parentAddTaskFragment"
-            app:destination="@id/parentAddTaskFragment" />
+            app:destination="@id/parentAddTaskFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_parentTasksScreen_to_childTaskDetailsFragment"
-            app:destination="@id/childTaskDetailsFragment" />
+            app:destination="@id/childTaskDetailsFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
     </fragment>
     <fragment
         android:id="@+id/parentTipsScreen"
@@ -55,25 +69,36 @@
         android:label="ParentMenuScreen" >
         <action
             android:id="@+id/action_parentMenuScreen_to_sendMoneyScreen"
-            app:destination="@id/sendMoneyScreen" />
+            app:destination="@id/sendMoneyScreen"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <argument
             android:name="refreshToken"
             app:argType="string" />
         <action
             android:id="@+id/action_parentMenuScreen_to_parentSettingsFragmentScreen"
-            app:destination="@id/parentSettingsFragmentScreen" />
+            app:destination="@id/parentSettingsFragmentScreen"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_parentMenuScreen_to_childLinkFragmentScreen"
-            app:destination="@id/childLinkFragmentScreen" />
+            app:destination="@id/childLinkFragmentScreen"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_parentMenuScreen_to_loginFragmentHome"
-            app:destination="@id/loginFragmentHome" />
+            app:destination="@id/loginFragmentHome"
+            app:enterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_parentMenuScreen_to_parentMoneyRequests"
-            app:destination="@id/parentMoneyRequests" />
+            app:destination="@id/parentMoneyRequests"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_parentMenuScreen_to_homeParentFragment"
-            app:destination="@id/homeParentFragment" />
+            app:destination="@id/homeParentFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
     </fragment>
     <fragment
         android:id="@+id/sendMoneyScreen"
@@ -82,7 +107,9 @@
         tools:layout="@layout/fragment_send_money_screen" >
         <action
             android:id="@+id/action_sendMoneyScreen_to_paymentSplashScreen"
-            app:destination="@id/paymentSplashScreen" />
+            app:destination="@id/paymentSplashScreen"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
     </fragment>
     <fragment
         android:id="@+id/childListScreen"
@@ -91,10 +118,14 @@
         tools:layout="@layout/fragment_child_list_screen" >
         <action
             android:id="@+id/action_childListScreen_to_addChildFragment"
-            app:destination="@id/addChildFragment" />
+            app:destination="@id/addChildFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_childListScreen_to_childDetailsScreenFragment"
-            app:destination="@id/childDetailsScreenFragment" />
+            app:destination="@id/childDetailsScreenFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
     </fragment>
     <fragment
         android:id="@+id/addChildFragment"
@@ -126,7 +157,9 @@
         android:label="ChildTasksScreenFragment" >
         <action
             android:id="@+id/action_childTasksScreenFragment_to_childTaskDetailsFragment"
-            app:destination="@id/childTaskDetailsFragment" />
+            app:destination="@id/childTaskDetailsFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
     </fragment>
     <fragment
         android:id="@+id/childBalanceHomeScreenFragment"
@@ -135,13 +168,19 @@
         tools:layout="@layout/fragment_child_balance_home" >
         <action
             android:id="@+id/action_childBalanceHomeScreenFragment2_to_childMenuFragment"
-            app:destination="@id/childMenuFragment" />
+            app:destination="@id/childMenuFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_childBalanceHomeScreenFragment2_to_childTipsFragment"
-            app:destination="@id/childTipsFragment" />
+            app:destination="@id/childTipsFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_childBalanceHomeScreenFragment2_to_childTasksScreenFragment"
-            app:destination="@id/childTasksScreenFragment" />
+            app:destination="@id/childTasksScreenFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <argument
             android:name="refreshToken"
             app:argType="string" />
@@ -150,13 +189,19 @@
             app:argType="string" />
         <action
             android:id="@+id/action_childBalanceHomeScreenFragment_to_childMenuFragment"
-            app:destination="@id/childMenuFragment" />
+            app:destination="@id/childMenuFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_childBalanceHomeScreenFragment_to_child_add_transaction"
-            app:destination="@id/child_add_transaction" />
+            app:destination="@id/child_add_transaction"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_childBalanceHomeScreenFragment_to_childTransDetailsFragment"
-            app:destination="@id/childTransDetailsFragment" />
+            app:destination="@id/childTransDetailsFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <argument
             android:name="img_url"
             app:argType="string" />
@@ -168,13 +213,17 @@
         tools:layout="@layout/fragment_login_home" >
         <action
             android:id="@+id/action_loginFragmentHome_to_signupTabFragment"
-            app:destination="@id/signupTabFragment" />
+            app:destination="@id/signupTabFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_loginFragmentHome_to_childBalanceHomeScreenFragment"
-            app:destination="@id/childBalanceHomeScreenFragment" />
+            app:destination="@id/childBalanceHomeScreenFragment"
+            app:enterAnim="@anim/to_right" />
         <action
             android:id="@+id/action_loginFragmentHome_to_homeParentFragment"
-            app:destination="@id/homeParentFragment" />
+            app:destination="@id/homeParentFragment"
+            app:enterAnim="@anim/to_right" />
     </fragment>
 
     <fragment
@@ -186,13 +235,18 @@
             app:argType="string" />
         <action
             android:id="@+id/action_childMenuFragment_to_loginFragmentHome"
-            app:destination="@id/loginFragmentHome" />
+            app:destination="@id/loginFragmentHome"
+            app:enterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_childMenuFragment_to_childRequestMoneyFragment"
-            app:destination="@id/childRequestMoneyFragment" />
+            app:destination="@id/childRequestMoneyFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_childMenuFragment_to_parentSettingsFragmentScreen"
-            app:destination="@id/parentSettingsFragmentScreen" />
+            app:destination="@id/parentSettingsFragmentScreen"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
     </fragment>
 
     <fragment
@@ -277,10 +331,14 @@
         tools:layout="@layout/fragment_parent_money_requests" >
         <action
             android:id="@+id/action_parentMoneyRequests_to_acceptOrRejectFragment"
-            app:destination="@id/acceptOrRejectFragment" />
+            app:destination="@id/acceptOrRejectFragment"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_parentMoneyRequests_to_parentMenuScreen"
-            app:destination="@id/parentMenuScreen" />
+            app:destination="@id/parentMenuScreen"
+            app:enterAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left" />
     </fragment>
     <fragment
         android:id="@+id/acceptOrRejectFragment"
@@ -298,10 +356,12 @@
             app:argType="string" />
         <action
             android:id="@+id/action_acceptOrRejectFragment_to_rejectSplashFragment"
-            app:destination="@id/rejectSplashFragment" />
+            app:destination="@id/rejectSplashFragment"
+            app:popEnterAnim="@anim/from_left" />
         <action
             android:id="@+id/action_acceptOrRejectFragment_to_acceptedSplashFragment"
-            app:destination="@id/acceptedSplashFragment" />
+            app:destination="@id/acceptedSplashFragment"
+            app:popEnterAnim="@anim/from_left" />
     </fragment>
     <fragment
         android:id="@+id/paymentSplashScreen"
