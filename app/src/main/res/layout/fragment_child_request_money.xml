@@ -24,6 +24,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:text="Need more cash?               Request money"
+        android:textAlignment="center"
         android:textAppearance="@style/balance_text"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -248,7 +248,7 @@
         android:paddingStart="25dp"
         android:paddingEnd="25dp"
         android:textColor="@color/purple_700"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintStart_toEndOf="@+id/fragment_loging_icon_imgv"
         app:layout_constraintTop_toTopOf="parent"
