@@ -77,9 +77,10 @@
 
     <Button
         android:id="@+id/fragment_home_login_btn"
-        android:layout_width="103dp"
+        android:layout_width="wrap_content"
         android:layout_height="56dp"
 
+        android:layout_marginEnd="25dp"
         android:background="@drawable/btn_main"
         android:text="Login"
         android:textAppearance="@style/balance_text"
@@ -129,7 +130,6 @@
         android:id="@+id/fragment_home_spinner"
         android:layout_width="209dp"
         android:layout_height="49dp"
-        android:layout_marginStart="5dp"
         android:layout_marginEnd="35dp"
         app:layout_constraintBottom_toTopOf="@+id/fragment_home_email_et"
         app:layout_constraintEnd_toEndOf="parent"

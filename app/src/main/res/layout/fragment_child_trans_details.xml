@@ -8,12 +8,12 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="184dp"
+        android:layout_width="wrap_content"
         android:layout_height="202dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="112dp"
         android:src="@drawable/wizewallet_icon"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -32,9 +32,11 @@
 
     <TextView
         android:id="@+id/child_trans_description_tv"
-        android:layout_width="316dp"
+        android:layout_width="0dp"
         android:layout_height="56dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/description_icon"
         android:drawablePadding="5dp"
@@ -48,9 +50,11 @@
 
     <TextView
         android:id="@+id/child_amount_trans_amount"
-        android:layout_width="316dp"
+        android:layout_width="0dp"
         android:layout_height="56dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/money_icon"
         android:drawablePadding="5dp"
@@ -64,9 +68,11 @@
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="389dp"
+        android:layout_width="0dp"
         android:layout_height="210dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,11 +83,11 @@
 
     <TextView
         android:id="@+id/child_trans_date"
-        android:layout_width="316dp"
+        android:layout_width="0dp"
         android:layout_height="56dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/calender_img"
         android:drawablePadding="5dp"
