@@ -29,14 +29,11 @@
 
     <ImageView
         android:id="@+id/details_arrow_back"
-        android:layout_width="26.5dp"
-        android:layout_height="26.5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="316.5dp"
-        android:src="@drawable/ic_arrow___left"
-        app:layout_constraintBottom_toBottomOf="@+id/menu_parent_text"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/back_arrow_updated"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

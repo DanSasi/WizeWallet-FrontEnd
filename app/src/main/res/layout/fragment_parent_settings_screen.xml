@@ -17,13 +17,13 @@
 
     <ImageButton
         android:id="@+id/img_back_arrow_contact"
-        android:layout_width="20dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
         android:clickable="true"
         android:focusable="true"
-        android:src="@drawable/ic_arrow___left"
+        android:src="@drawable/back_arrow_updated"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />

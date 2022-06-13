@@ -50,33 +50,31 @@
 
     <ImageView
         android:id="@+id/IV01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/menu_parent_text"
-        app:layout_constraintEnd_toStartOf="@+id/menu_parent_text"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/menu_parent_text"
-        app:srcCompat="@drawable/ic_arrow___left" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow_updated" />
 
     <TextView
         android:id="@+id/menu_parent_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:fontFamily="@font/poppins"
+        android:layout_marginEnd="30dp"
 
+        android:fontFamily="@font/poppins"
         android:paddingLeft="80dp"
         android:paddingTop="30dp"
         android:paddingRight="50dp"
         android:text="Send Money"
         android:textColor="#082431"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintStart_toEndOf="@+id/IV01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView

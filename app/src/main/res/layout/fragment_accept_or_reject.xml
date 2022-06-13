@@ -9,16 +9,15 @@
 
     <ImageButton
         android:id="@+id/img_back_arrow_task_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
         android:clickable="true"
         android:focusable="true"
-        android:src="@drawable/ic_arrow___left"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        android:src="@drawable/back_arrow_updated"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
 
