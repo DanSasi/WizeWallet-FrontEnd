@@ -30,18 +30,17 @@
 
     <EditText
         android:id="@+id/setting_current_password_et"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="66dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/password_icon_4"
         android:drawablePadding="5dp"
         android:hint="Current Password"
         app:layout_constraintBottom_toTopOf="@+id/setting_new_password_et"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
@@ -61,18 +60,17 @@
 
     <EditText
         android:id="@+id/setting_new_password_et"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="66dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/password_icon_4"
         android:drawablePadding="5dp"
         android:hint="New Password"
         app:layout_constraintBottom_toTopOf="@+id/setting_save_password_Btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/setting_current_password_et" />
 

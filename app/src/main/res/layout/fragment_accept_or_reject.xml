@@ -34,9 +34,11 @@
 
     <TextView
         android:id="@+id/child_request_message_tv"
-        android:layout_width="355dp"
+        android:layout_width="0dp"
         android:layout_height="61dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="77dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/description_icon"
         android:drawablePadding="5dp"
@@ -49,9 +51,11 @@
 
     <TextView
         android:id="@+id/child_request_details_amount_tv"
-        android:layout_width="355dp"
+        android:layout_width="0dp"
         android:layout_height="61dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/search_bar"
         android:drawableLeft="@drawable/money_icon"
         android:drawablePadding="5dp"

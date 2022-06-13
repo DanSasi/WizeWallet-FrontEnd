@@ -177,11 +177,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_trans_child"
-        android:layout_width="360dp"
+        android:layout_width="0dp"
         android:layout_height="302dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
