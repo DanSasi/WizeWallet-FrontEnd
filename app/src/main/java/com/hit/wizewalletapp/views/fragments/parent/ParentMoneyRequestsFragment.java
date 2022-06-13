@@ -37,7 +37,7 @@ public class ParentMoneyRequestsFragment extends Fragment implements ChildReques
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_parent_money_requests, container, false);
-
+        String token = CacheUtilities.getAcssesToken(requireContext());
         rv =view.findViewById(R.id.parent_requests_rv);
         initRecyclerView(view);
         arrowBack = view.findViewById(R.id.child_task_back_arrow);

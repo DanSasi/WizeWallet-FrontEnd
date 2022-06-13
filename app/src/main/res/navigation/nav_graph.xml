@@ -71,12 +71,19 @@
         <action
             android:id="@+id/action_parentMenuScreen_to_parentMoneyRequests"
             app:destination="@id/parentMoneyRequests" />
+        <action
+            android:id="@+id/action_parentMenuScreen_to_homeParentFragment"
+            app:destination="@id/homeParentFragment" />
     </fragment>
     <fragment
         android:id="@+id/sendMoneyScreen"
         android:name="com.hit.wizewalletapp.views.fragments.parent.SendMoneyScreenFragment"
         android:label="activity_send_money_screen"
-        tools:layout="@layout/fragment_send_money_screen" />
+        tools:layout="@layout/fragment_send_money_screen" >
+        <action
+            android:id="@+id/action_sendMoneyScreen_to_paymentSplashScreen"
+            app:destination="@id/paymentSplashScreen" />
+    </fragment>
     <fragment
         android:id="@+id/childListScreen"
         android:name="com.hit.wizewalletapp.views.fragments.parent.ParentChildsFragment"
@@ -271,6 +278,9 @@
         <action
             android:id="@+id/action_parentMoneyRequests_to_acceptOrRejectFragment"
             app:destination="@id/acceptOrRejectFragment" />
+        <action
+            android:id="@+id/action_parentMoneyRequests_to_parentMenuScreen"
+            app:destination="@id/parentMenuScreen" />
     </fragment>
     <fragment
         android:id="@+id/acceptOrRejectFragment"
@@ -286,6 +296,27 @@
         <argument
             android:name="_id"
             app:argType="string" />
+        <action
+            android:id="@+id/action_acceptOrRejectFragment_to_rejectSplashFragment"
+            app:destination="@id/rejectSplashFragment" />
+        <action
+            android:id="@+id/action_acceptOrRejectFragment_to_acceptedSplashFragment"
+            app:destination="@id/acceptedSplashFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/paymentSplashScreen"
+        android:name="com.hit.wizewalletapp.views.generaldata.PaymentSplashScreen"
+        android:label="activity_payment_splash_screen"
+        tools:layout="@layout/activity_payment_splash_screen" />
+    <fragment
+        android:id="@+id/rejectSplashFragment"
+        android:name="com.hit.wizewalletapp.views.generaldata.RejectSplashFragment"
+        android:label="fragment_reject_splash"
+        tools:layout="@layout/fragment_reject_splash" />
+    <fragment
+        android:id="@+id/acceptedSplashFragment"
+        android:name="com.hit.wizewalletapp.views.generaldata.AcceptedSplashFragment"
+        android:label="fragment_accepted_splash"
+        tools:layout="@layout/fragment_accepted_splash" />
 
 </navigation>

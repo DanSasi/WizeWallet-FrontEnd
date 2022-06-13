@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/new_background"
-    tools:context=".views.generaldata.PaymentSplashScreen">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.generaldata.RejectSplashFragment">
 
     <ImageView
         android:id="@+id/imageView"
@@ -40,7 +39,6 @@
             android:layout_marginLeft="20sp"
             android:fontFamily="@font/poppins"
             android:letterSpacing="0.05"
-            android:text="Wize"
             android:textColor="@color/black"
             android:textSize="45sp"
             android:textStyle="bold"
@@ -57,7 +55,6 @@
             android:layout_marginLeft="10sp"
             android:fontFamily="@font/poppins"
             android:letterSpacing="0.05"
-            android:text="Wallet"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="normal"
@@ -76,13 +73,11 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="184dp"
         android:fontFamily="@font/poppins"
-        android:text="Transfer completed"
+        android:text="Request Rejected"
         android:textColor="@color/black"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

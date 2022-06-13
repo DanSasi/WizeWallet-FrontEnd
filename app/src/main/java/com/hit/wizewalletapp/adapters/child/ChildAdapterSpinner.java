@@ -34,6 +34,12 @@ public class ChildAdapterSpinner extends BaseAdapter {
        return childList.get(i).get_id();
     }
 
+
+
+
+
+
+
     @Override
     public long getItemId(int i) {
         return i;

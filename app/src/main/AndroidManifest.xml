@@ -46,7 +46,7 @@
             android:name=".views.activity.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".views.activity.PaymentSplashScreen"
+            android:name=".views.generaldata.PaymentSplashScreen"
             android:exported="true" />
         <activity
             android:name=".views.activity.SplashScreen"

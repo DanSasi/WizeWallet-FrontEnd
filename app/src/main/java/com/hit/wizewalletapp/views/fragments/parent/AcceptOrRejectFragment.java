@@ -55,7 +55,8 @@ public class AcceptOrRejectFragment extends Fragment {
                 ApiCallsHelper.onRejectChildRequest(token, bodyMap, new CustomCallBack<Void>() {
                     @Override
                     public void onSuccesses(Void response) {
-                        Navigation.findNavController(requireActivity(), R.id.nav_host).navigateUp();
+                        Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(AcceptOrRejectFragmentDirections.
+                               actionAcceptOrRejectFragmentToRejectSplashFragment());
                     }
 
                     @Override
@@ -76,7 +77,8 @@ public class AcceptOrRejectFragment extends Fragment {
                 ApiCallsHelper.onAcceptChildRequest(token, bodyMap, new CustomCallBack<Void>() {
                     @Override
                     public void onSuccesses(Void response) {
-                        Navigation.findNavController(requireActivity(), R.id.nav_host).navigateUp();
+                        Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(AcceptOrRejectFragmentDirections
+                                .actionAcceptOrRejectFragmentToAcceptedSplashFragment());
                     }
 
                     @Override

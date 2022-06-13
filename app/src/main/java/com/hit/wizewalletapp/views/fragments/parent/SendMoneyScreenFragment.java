@@ -121,7 +121,8 @@ public class SendMoneyScreenFragment extends Fragment {
             ApiCallsHelper.performAddBalanceForChild(token,userTaskMap, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {
-                    Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp();
+                    Navigation.findNavController(requireActivity(),R.id.nav_host).navigate(SendMoneyScreenFragmentDirections.
+                            actionSendMoneyScreenToPaymentSplashScreen());
                 }
 
                 @Override
