@@ -68,6 +68,7 @@ public class ChildRequestMoneyFragment extends Fragment {
                 public void onSuccesses(Void response) {
                     ChildRequestModel childRequestModel = new ChildRequestModel(message,Integer.parseInt(amount));
                     ChildListModel.instance.addChildRequst(childRequestModel);
+                    Toast.makeText(requireActivity(),"The Money Request has been sent to your parents! !",Toast.LENGTH_LONG).show();
                     Navigation.findNavController(requireActivity(),R.id.nav_host).navigateUp();
                 }
 

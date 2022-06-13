@@ -61,6 +61,7 @@ public class SignupFragment extends Fragment {
             ApiCallsHelper.performRegister(bodyMap, new CustomCallBack<Void>() {
                 @Override
                 public void onSuccesses(Void response) {
+                    Toast.makeText(getActivity(),"Registration Completed!", Toast.LENGTH_LONG).show();
                     Navigation.findNavController(requireActivity(), R.id.nav_host).navigateUp();
 
                 }

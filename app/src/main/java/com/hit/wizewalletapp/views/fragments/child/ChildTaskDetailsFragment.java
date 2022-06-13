@@ -53,6 +53,7 @@ public class ChildTaskDetailsFragment extends Fragment {
                 ApiCallsHelper.onCompletedTask(token, bodyMap, new CustomCallBack<Void>() {
                     @Override
                     public void onSuccesses(Void response) {
+                        Toast.makeText(requireActivity(),"The request has been sent!", Toast.LENGTH_LONG).show();
                         Navigation.findNavController(requireActivity(), R.id.nav_host).navigateUp();
                     }
 
@@ -73,6 +74,7 @@ public class ChildTaskDetailsFragment extends Fragment {
                     ApiCallsHelper.onAcceptedTask(token, bodyMap, new CustomCallBack<Void>() {
                         @Override
                         public void onSuccesses(Void response) {
+                            Toast.makeText(requireActivity(),"The request was accepted, the payment was transferred successfully!",Toast.LENGTH_LONG).show();
                             Navigation.findNavController(requireActivity(), R.id.nav_host).navigateUp();
                         }
 

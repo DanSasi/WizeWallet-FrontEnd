@@ -153,12 +153,13 @@ public class ChildAddTransactionFragment extends Fragment {
                 public void onSuccesses(Void response) {
                     ChildTransactionModel childTransactionModel = new ChildTransactionModel(amount, desc,stringDate);
                     ChildListModel.instance.childAddTran(childTransactionModel);
+                    Toast.makeText(getActivity(),"Transaction Completed", Toast.LENGTH_LONG).show();
                     Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp();
                 }
 
                 @Override
                 public void onFailure(String msg) {
-                    Toast.makeText(getActivity(), "Please, check your balance", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "Your balance is not sufficient to confirm the request.", Toast.LENGTH_LONG).show();
                 }
             });
 

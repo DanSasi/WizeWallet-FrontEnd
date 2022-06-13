@@ -107,6 +107,7 @@ public class ParentAddTaskFragment extends Fragment {
                 public void onSuccesses(Void response) {
                 ChildTaskModel childTaskModel = new ChildTaskModel(Integer.parseInt(id),message,Integer.parseInt(amount));
                 ChildListModel.instance.addTran(childTaskModel);
+                Toast.makeText(getActivity(),"The task was sent successfully!", Toast.LENGTH_LONG).show();
                 Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp();
 
                 }

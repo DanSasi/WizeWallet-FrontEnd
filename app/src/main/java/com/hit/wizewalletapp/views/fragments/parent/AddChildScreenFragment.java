@@ -111,6 +111,7 @@ public class AddChildScreenFragment extends Fragment {
                 public void onSuccesses(Void response) {
                     ChildModel childModel = new ChildModel(gender, balance, userEmail, id, password,name);
                     ChildListModel.instance.addChild(childModel);
+                    Toast.makeText(getActivity(),name + " " + "was added to the Children list", Toast.LENGTH_LONG).show();
                     Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp();
                 }
                 @Override

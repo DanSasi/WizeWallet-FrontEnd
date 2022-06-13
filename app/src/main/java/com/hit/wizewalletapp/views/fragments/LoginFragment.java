@@ -63,10 +63,12 @@ public class LoginFragment extends Fragment {
                 public void onSuccesses(LoginResponse response) {
                     CacheUtilities.saveToken(getContext(),"authorization "+response.getRefreshToken(),"authorization "+response.getAccessToken());
                     if (!isChild) {
+                        Toast.makeText(requireActivity(), "Wellcome! " + response.getName(),Toast.LENGTH_LONG).show();
                         Navigation.findNavController(getActivity(), R.id.nav_host)
                                 .navigate(LoginFragmentDirections
                                 .actionLoginFragmentHomeToHomeParentFragment(response.getRefreshToken(), response.getName()));
                     } else  {
+                        Toast.makeText(requireActivity(), "Wellcome! " + response.getName(),Toast.LENGTH_LONG).show();
                         Navigation.findNavController(getActivity(), R.id.nav_host)
                                 .navigate(LoginFragmentDirections
                                         .actionLoginFragmentHomeToChildBalanceHomeScreenFragment(response.getRefreshToken(),response.getName(),response.getImg_url()));

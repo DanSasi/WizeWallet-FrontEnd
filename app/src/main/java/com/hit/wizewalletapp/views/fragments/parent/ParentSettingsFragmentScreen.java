@@ -59,6 +59,7 @@ public class ParentSettingsFragmentScreen extends Fragment {
                 ApiCallsHelper.performOnChangePassword(token, bodyMap, new CustomCallBack<Void>() {
                     @Override
                     public void onSuccesses(Void response) {
+                        Toast.makeText(requireActivity(),"Password changed successfully!",Toast.LENGTH_LONG).show();
                         Navigation.findNavController(requireActivity(), R.id.nav_host).navigateUp();
                     }
 

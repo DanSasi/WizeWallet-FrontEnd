@@ -46,6 +46,7 @@ public class ChildLinkFragmentScreen extends Fragment {
             ApiCallsHelper.preformLinkChildToParent(token, Integer.parseInt(kidId), new CustomCallBack<ServerResponse>() {
                 @Override
                 public void onSuccesses(ServerResponse response) {
+                    Toast.makeText(requireActivity(), "Kid id: "  +kidId + " " + "was added the Children list!",Toast.LENGTH_LONG).show();
                     Navigation.findNavController(requireActivity(), R.id.nav_host).navigateUp();
                 }
                 @Override
