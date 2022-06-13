@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class AcceptOrRejectFragment extends Fragment {
     TextView amount_Tv,date_Tv;
     Button accept_Btn;
     Button reject_Btn;
+    ImageButton backButton;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -39,10 +41,12 @@ public class AcceptOrRejectFragment extends Fragment {
         reject_Btn = view.findViewById(R.id.child_reject_request);
         message_Tv = view.findViewById(R.id.child_request_message_tv);
         amount_Tv = view.findViewById(R.id.child_request_details_amount_tv);
+        backButton = view.findViewById(R.id.img_back_arrow_task_details);
         String message_desc = AcceptOrRejectFragmentArgs.fromBundle(getArguments()).getMessage();
         message_Tv.setText(message_desc);
         Integer amount_desc = AcceptOrRejectFragmentArgs.fromBundle(getArguments()).getAmount();
         amount_Tv.setText(amount_desc.toString());
+        backButton.setOnClickListener(v -> Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp());
 
         accept_Btn.setVisibility(View.VISIBLE);
         reject_Btn.setVisibility(View.VISIBLE);

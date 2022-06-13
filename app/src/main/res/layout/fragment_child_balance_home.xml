@@ -33,16 +33,19 @@
     <TextView
         android:id="@+id/textView9"
         style="@style/balance_text"
-        android:layout_width="140dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="235dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="10dp"
         android:text="Transactions"
         android:textColor="#818197"
         android:textSize="19dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rv_trans_child"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/child_fragment_ballance_tv" />
 
@@ -67,9 +70,11 @@
     <TextView
         android:id="@+id/child_fragment_ballance_tv"
         style="@style/balance_text"
-        android:layout_width="254dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="21dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
         android:drawableEnd="@drawable/shekel"
         android:paddingStart="25dp"
         android:paddingEnd="25dp"
@@ -77,6 +82,7 @@
         android:textColor="#2C2C63"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_more" />
@@ -156,7 +162,7 @@
         android:layout_width="63dp"
         android:layout_height="54dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="40dp"
         android:layout_weight="1"
         android:clickable="true"
         android:elevation="20dp"
@@ -164,7 +170,7 @@
         android:src="@drawable/tips_first_icon"
         app:layout_constraintEnd_toStartOf="@+id/imageView8"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/child_user_name" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -172,7 +178,7 @@
         android:layout_width="57dp"
         android:layout_height="54dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"
         android:layout_weight="1"
         android:clickable="true"
@@ -182,7 +188,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toStartOf="@+id/imageView6"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/child_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_loging_icon_imgv"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -191,7 +197,7 @@
         android:layout_width="43dp"
         android:layout_height="54dp"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="25dp"
         android:layout_weight="1"
         android:clickable="true"
@@ -226,32 +232,32 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
+        app:layout_constraintTop_toBottomOf="@+id/child_fragment_ballance_tv">
 
     </androidx.recyclerview.widget.RecyclerView>
 
     <TextView
         android:id="@+id/child_user_name"
-        android:layout_width="193dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="6dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="175dp"
         android:drawableEnd="@drawable/smiley"
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:paddingStart="25dp"
         android:paddingEnd="25dp"
         android:textColor="@color/purple_700"
-        android:textSize="16dp"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/child_fragment_ballance_tv"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintStart_toEndOf="@+id/fragment_loging_icon_imgv"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Dan" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
