@@ -46,6 +46,7 @@ public class ChildTasksScreenFragment extends Fragment implements ChildTaskListA
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setReverseLayout(true);
         linearLayoutManager.setStackFromEnd(true);
+        linearLayoutManager.onSaveInstanceState();
         childTaskRv.setLayoutManager(linearLayoutManager);
         childTaskRv.setAdapter(listAdapter);
         listAdapter.setOnItemClickListener(this);

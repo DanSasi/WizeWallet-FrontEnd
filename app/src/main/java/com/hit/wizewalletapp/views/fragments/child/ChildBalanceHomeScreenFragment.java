@@ -44,12 +44,12 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
         girlImage = view.findViewById(R.id.girl_icon_image_child);
         boyImage = view.findViewById(R.id.fragment_loging_icon_imgv);
         String gender = ChildBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getImgUrl();
-        if(gender != null){
+
             if(gender.equals("Boy")){
                 girlImage.setVisibility(View.GONE);
             }else if(gender.equals("Girl")){
                 boyImage.setVisibility(View.GONE);
-            }
+
         }
         //get the refresh token
         String refreshToken = ChildBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
@@ -119,6 +119,7 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setReverseLayout(true);
         linearLayoutManager.setStackFromEnd(true);
+        linearLayoutManager.onSaveInstanceState();
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(childTransListAdapter);
         childTransListAdapter.setOnItemClickListener(this);
@@ -161,16 +162,9 @@ public class ChildBalanceHomeScreenFragment extends Fragment implements  ChildTr
 
     @Override
     public void onItemClick(ChildTransactionModel childModel) {
-        String date = childModel.getDate();
-        if (date != null) {
-            Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(ChildBalanceHomeScreenFragmentDirections.
-                    actionChildBalanceHomeScreenFragmentToChildTransDetailsFragment(childModel.getDesc(), childModel.getAmount(), childModel.getLatitude(), childModel.getLongitude(), date));
-        } else
-        {
-            Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(ChildBalanceHomeScreenFragmentDirections.
-                    actionChildBalanceHomeScreenFragmentToChildTransDetailsFragment(childModel.getDesc(), childModel.getAmount(), childModel.getLatitude(), childModel.getLongitude(),""));
-        }
 
+            Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(ChildBalanceHomeScreenFragmentDirections.
+                    actionChildBalanceHomeScreenFragmentToChildTransDetailsFragment(childModel.getDesc(), childModel.getAmount(), childModel.getLatitude(), childModel.getLongitude(), childModel.getDate()));
 
     }
 }

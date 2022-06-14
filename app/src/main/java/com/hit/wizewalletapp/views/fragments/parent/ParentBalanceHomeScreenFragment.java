@@ -1,7 +1,10 @@
 package com.hit.wizewalletapp.views.fragments.parent;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -39,6 +43,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
     TextView nameTxt;
     ImageView photo;
     String refreshToken ="";
+    private static int selectedPosition = 0;
     ProgressBar progressBar ;
     private RecyclerView rv;
     private final ChildTransListAdapter childTransListAdapter= new ChildTransListAdapter();
@@ -56,6 +61,7 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
         refreshToken = ParentBalanceHomeScreenFragmentArgs.fromBundle(getArguments()).getRefreshToken();
 
         childAdapter = new ChildAdapterSpinner(getContext());
+
 
         /////////////////////////////////////////////////////////////Childs/////////////////////////////////////////////////////////////
 
@@ -116,13 +122,18 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
 
         spinner = view.findViewById(R.id.fragment_Parent_spinner);
 
+
         spinner.setAdapter(childAdapter);
+        spinner.setSelection(selectedPosition);
+
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectChildId = String.valueOf(childAdapter.getItem(position));
+                selectedPosition = position;
                 fetchTransactionsForChild(selectChildId);
+
             }
 
             @Override
@@ -193,16 +204,9 @@ public class ParentBalanceHomeScreenFragment extends Fragment  implements  Child
 
     @Override
     public void onItemClick(ChildTransactionModel childModel) {
-        String date = childModel.getDate();
-        if (date != null) {
+
             Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(ParentBalanceHomeScreenFragmentDirections.
-                   actionHomeParentFragmentToChildTransDetailsFragment(childModel.getDesc(), childModel.getAmount(), childModel.getLatitude(), childModel.getLongitude(), date));
-        } else
-        {
-            date = "";
-            Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(ParentBalanceHomeScreenFragmentDirections.
-                    actionHomeParentFragmentToChildTransDetailsFragment(childModel.getDesc(), childModel.getAmount(), childModel.getLatitude(), childModel.getLongitude(), date));
-        }
+                   actionHomeParentFragmentToChildTransDetailsFragment(childModel.getDesc(), childModel.getAmount(), childModel.getLatitude(), childModel.getLongitude(), childModel.getDate()));
     }
 //
 //    private void fetchData() {
