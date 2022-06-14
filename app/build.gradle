@@ -57,6 +57,8 @@ dependencies {
     implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
     implementation 'com.squareup.picasso:picasso:2.5.2'
     def nav_version = "2.4.2"
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 
     // Java language implementation
     implementation "androidx.navigation:navigation-fragment:$nav_version"

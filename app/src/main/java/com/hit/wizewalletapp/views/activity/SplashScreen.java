@@ -7,48 +7,42 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.hit.wizewalletapp.R;
-import com.hit.wizewalletapp.api.ApiCallsHelper;
-import com.hit.wizewalletapp.api.CustomCallBack;
-import com.hit.wizewalletapp.api.responses.LoginResponse;
-import com.hit.wizewalletapp.utilities.CacheUtilities;
-
-import java.util.HashMap;
 
 public class SplashScreen extends AppCompatActivity {
 
 
     //variables
-    Animation topAnim, bottomAnim;
+    Animation topAnim;
     ImageView image;
-    TextView power;
-    LinearLayout name;
 
+    float v = 0;
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        LottieAnimationView animationView = findViewById(R.id.lottieAnimationView);
+        animationView.onStartTemporaryDetach();
 
-        //Animation
-        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
-        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
-        //Hooks
+
+
+        topAnim = AnimationUtils.loadAnimation(SplashScreen.this,R.anim.top_animation);
+
         image = findViewById(R.id.imageView);
-        name = findViewById(R.id.lin1);
-        power = findViewById(R.id.textView9);
-
-
         image.setAnimation(topAnim);
-        name.setAnimation(bottomAnim);
-        power.setAnimation(bottomAnim);
+
+
+
 
         new Handler().postDelayed(new Runnable() {
             @Override
