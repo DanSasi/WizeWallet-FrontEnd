@@ -24,7 +24,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
         android:layout_weight="1"
-        android:src="@drawable/back_arrow_updated"
+        android:src="@drawable/icon_left_removebg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -29,7 +30,7 @@ import java.util.Locale;
 public class ChildTransDetailsFragment extends Fragment {
 
     TextView amount, desc, date;
-    ImageButton back_arrow_btn;
+    ImageView back_arrow_btn;
     private GoogleMap mGoogleMap;
     Geocoder gecoder;
     List<Address> addresses ;

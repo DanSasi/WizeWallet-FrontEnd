@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.hit.wizewalletapp.R;
@@ -23,7 +24,7 @@ import java.util.HashMap;
 
 public class ParentSettingsFragmentScreen extends Fragment {
 
-    ImageButton back_arrow;
+    ImageView back_arrow;
 
     EditText currentPasswordEt;
     EditText newPasswordEt;

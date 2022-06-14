@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -36,7 +37,7 @@ public class ParentChildsFragment extends Fragment implements ChildListAdapter.O
         initRecyclerView(view);
         initViews(view);
         fetchData();
-        ImageButton backArrow = view.findViewById(R.id.img_back_arrow_contact);
+        ImageView backArrow = view.findViewById(R.id.img_back_arrow_contact);
         backArrow.setOnClickListener(v->Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp());
         Button addChildBtn = view.findViewById(R.id.add_child_Btn);
         addChildBtn.setOnClickListener(Navigation.createNavigateOnClickListener(ParentChildsFragmentDirections.actionChildListScreenToAddChildFragment()));
@@ -45,7 +46,7 @@ public class ParentChildsFragment extends Fragment implements ChildListAdapter.O
     }
 
     private void initViews(View view) {
-        ImageButton backArrow = view.findViewById(R.id.img_back_arrow_contact);
+        ImageView backArrow = view.findViewById(R.id.img_back_arrow_contact);
         backArrow.setOnClickListener(v ->Navigation.findNavController(getActivity(), R.id.nav_host).navigateUp());
         Button addChildBtn = view.findViewById(R.id.add_child_Btn);
         addChildBtn.setOnClickListener(Navigation.createNavigateOnClickListener(ParentChildsFragmentDirections.actionChildListScreenToAddChildFragment()));

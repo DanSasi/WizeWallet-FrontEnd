@@ -36,12 +36,11 @@
 
     <ImageView
         android:id="@+id/child_task_back_arrow"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
-        android:outlineSpotShadowColor="#200E32"
-        android:src="@drawable/back_arrow_updated"
+        android:src="@drawable/icon_left_removebg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

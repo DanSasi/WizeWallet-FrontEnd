@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,7 +27,7 @@ public class AcceptOrRejectFragment extends Fragment {
     TextView amount_Tv,date_Tv;
     Button accept_Btn;
     Button reject_Btn;
-    ImageButton backButton;
+    ImageView backButton;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

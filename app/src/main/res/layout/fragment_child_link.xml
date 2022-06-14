@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/parent_add_task_id_et" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/img_back_arrow_contact"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -57,7 +57,7 @@
         android:layout_marginTop="28dp"
         android:clickable="true"
         android:focusable="true"
-        android:src="@drawable/back_arrow_updated"
+        android:src="@drawable/icon_left_removebg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />

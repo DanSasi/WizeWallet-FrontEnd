@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,7 +58,7 @@ public class ChildAddTransactionFragment extends Fragment {
     EditText amount_et, description_et;
     TextView date_Tv;
     Button save_btn;
-    ImageButton backButton;
+    ImageView backButton;
     Geocoder geocoder;
     private final int REQUEST_CODE = 111;
 

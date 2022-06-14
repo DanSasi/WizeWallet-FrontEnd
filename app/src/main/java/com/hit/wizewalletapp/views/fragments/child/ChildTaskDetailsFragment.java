@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ public class ChildTaskDetailsFragment extends Fragment {
 
     TextView amount, desc;
     Button finish_btn,accept_btn;
-    ImageButton back_arrow;
+    ImageView back_arrow;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
