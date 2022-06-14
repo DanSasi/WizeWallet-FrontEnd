@@ -22,13 +22,14 @@
 
     <TextView
         android:id="@+id/fragment_login_man_tv"
-        android:layout_width="269dp"
+        android:layout_width="0dp"
         android:layout_height="46dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/poppins"
         android:text="Welcome to  WizeWallet!"
+        android:textAlignment="center"
         android:textColor="@color/purple_700"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -96,11 +97,14 @@
 
     <TextView
         android:id="@+id/fragment_home_register_tv"
-        android:layout_width="206dp"
+        android:layout_width="0dp"
         android:layout_height="41dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:clickable="true"
         android:fontFamily="@font/poppins"
         android:text="Not Registerd? Click here"
+        android:textAlignment="center"
         android:textColor="@color/purple_700"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
