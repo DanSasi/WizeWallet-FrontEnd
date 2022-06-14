@@ -7,6 +7,7 @@
     android:background="@drawable/new_background"
     tools:context=".views.generaldata.PaymentSplashScreen">
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="213dp"
@@ -14,75 +15,39 @@
         android:src="@drawable/wizewallet_icon"
         app:layout_constraintBottom_toTopOf="@+id/payment_text3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31" />
-
-    <LinearLayout
-        android:id="@+id/lin2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:textAlignment="center"
-        app:flow_horizontalAlign="center"
-        app:flow_verticalAlign="center"
-        app:layout_constraintBottom_toTopOf="@+id/payment_text3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.767">
-
-        <TextView
-            android:id="@+id/payment_text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20sp"
-            android:fontFamily="@font/poppins"
-            android:letterSpacing="0.05"
-            android:text="Wize"
-            android:textColor="@color/black"
-            android:textSize="45sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.291" />
-
-        <TextView
-            android:id="@+id/payment_text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10sp"
-            android:fontFamily="@font/poppins"
-            android:letterSpacing="0.05"
-            android:text="Wallet"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.291" />
-    </LinearLayout>
+        app:layout_constraintVertical_bias="0.741" />
 
     <TextView
         android:id="@+id/payment_text3"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="184dp"
         android:fontFamily="@font/poppins"
-        android:text="Transfer completed"
+        android:text="Transfer Completed!"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="277dp"
+        android:layout_height="175dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payment_text3"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/accepted" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,7 +25,7 @@ public class AcceptedSplashFragment extends Fragment {
     Animation topAnim, bottomAnim;
     ImageView image;
     TextView power;
-    LinearLayout name;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,11 +36,9 @@ public class AcceptedSplashFragment extends Fragment {
         bottomAnim = AnimationUtils.loadAnimation(requireContext(),R.anim.bottom_animation);
 
         image = view.findViewById(R.id.imageView);
-        name = view.findViewById(R.id.lin2);
         power = view.findViewById(R.id.payment_text3);
 
         image.setAnimation(topAnim);
-        name.setAnimation(bottomAnim);
         power.setAnimation(bottomAnim);
         handler_now();
         return view ;
